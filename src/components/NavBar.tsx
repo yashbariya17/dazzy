@@ -1,7 +1,9 @@
 const NavBar = () => {
   return (
     <nav className="navbar-main space-y-3 bg-amber-950 text-white py-5">
-      <div className="text-center font-bold text-4xl">logo</div>
+      <div className="mx-auto w-fit">
+        <img src="/images/logo.png" alt="Dazzy Logo" className="w-32 " />
+      </div>
       <section className="flex justify-center gap-10 font-semibold items-center">
         <div className="relative">
           Home <span className="absolute w-full h-0.5 top-full block"></span>

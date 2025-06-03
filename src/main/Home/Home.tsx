@@ -6,16 +6,17 @@ import { useCallback } from "react";
 type ProductsType = {
   name: string;
   url: string;
+  className?: string;
 }[];
 
 const Products: ProductsType = [
   {
     name: "cholcloate bar",
-    url: "",
+    url: "/images/1stimg.png",
   },
   {
     name: "centerfilled cholcloate",
-    url: "",
+    url: "/images/2ndimg.png",
   },
   {
     name: "decorative cholcloate",
@@ -23,15 +24,15 @@ const Products: ProductsType = [
   },
   {
     name: "penut cholcloate",
-    url: "",
+    url: "/images/4thimg.png",
   },
   {
     name: "nought bar",
-    url: "",
+    url: "/images/5thimg.png",
   },
   {
     name: "waffer rolls",
-    url: "",
+    url: "/images/6thimg.png",
   },
   {
     name: "toffe",
@@ -47,7 +48,7 @@ const Products: ProductsType = [
   },
   {
     name: "lollipop",
-    url: "",
+    url: "/images/10thimg.png",
   },
 ];
 
@@ -121,8 +122,8 @@ const Home = () => {
                 className="bg-white relative w-[150px]  flex  justify-center gap-2 rounded-lg shadow-2xl items-center pt-6 pb-2 "
               >
                 <img
-                  src="/vite.svg"
-                  className="h-10 absolute top-0 -translate-y-1/2"
+                  src={i.url}
+                  className={`h-[100px] absolute top-0 -translate-y-[80%] ${i.className}`}
                 />
                 <p className="text-center uppercase text-gray-600 w-[60%]">
                   {i.name}
@@ -305,27 +306,27 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="bg-[#111] text-white py-16 px-4 flex flex-col md:flex-row items-center justify-center relative mt-20">
-          <div className="md:w-1/2 flex justify-center">
+        <section className="bg-[#111] text-white py-16 px-4 flex flex-col md:flex-row items-center  relative mt-20">
+          <div className="w-auto h-[600px] flex justify-center ">
             <img
               src="/images/footeraboveboard.png"
               alt="Chef"
               className="rounded-lg w-full h-full object-cover"
             />
           </div>
-          <div className="md:w-1/2 mt-10 md:mt-0 px-6 relative">
-            <div className="text-orange-500 text-sm font-semibold mb-2 flex items-center gap-2">
+          <div className="w-fit mt-10 md:mt-0 px-6 relative">
+            <div className="text-orange-500 text-sm font-semibold mb-2 flex items-center gap-2 mx-auto w-fit">
               <span>🍽</span> TESTIMONIALS <span>🍽</span>
             </div>
-            <h2 className="text-3xl font-bold text-white mb-6">
+            <div className="text-3xl font-bold text-white mb-6 mx-auto w-fit">
               What Our Clients Say
-            </h2>
+            </div>
             <div className="bg-white text-gray-800 rounded-xl shadow-lg p-6 max-w-xl relative">
               <div className="flex items-center mb-4">
                 <img
-                  src="/path/to/profile.jpg"
+                  src="images/user.jpg"
                   alt="Albert Flores"
-                  className="w-12 h-12 rounded-full mr-4"
+                  className="w-12 h-12 rounded-full mr-4 object-cover"
                 />
                 <div>
                   <h3 className="font-bold text-lg">Albert Flores</h3>
