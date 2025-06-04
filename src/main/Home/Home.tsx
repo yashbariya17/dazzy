@@ -70,10 +70,10 @@ const Home = () => {
   );
 
   return (
-    <div>
+    <div className="w-full overflow-x-hidden">
       <NavBar />
       <section className="h-[500px] bg-gray-400"></section>
-      <div className="uppercase text-white bg-red-500 font-semibold flex justify-center gap-16 text-lg py-2">
+      <div className="uppercase text-white bg-red-500 font-semibold flex justify-center md:gap-16 text-lg py-2 flex-col md:flex-row gap-2 items-center">
         <p>fssai & iso certiefied</p>
         <p>25+ year experience</p>
         <p>100%veg</p>
@@ -98,10 +98,10 @@ const Home = () => {
         </p>
 
         <div
-          className="bg-amber-100 mt-[8rem] h-[550px] w-full bg-cover bg-bottom bg-no-repeat"
+          className="bg-amber-100 mt-[8rem] h-auto lg:h-[550px] w-full bg-cover bg-bottom bg-no-repeat"
           style={{ backgroundImage: "url('/images/rooftop.png')" }}
         >
-          <div className="grid grid-cols-5 grid-rows-2 justify-center px-5 gap-y-[8rem] gap-x-[4rem] relative -top-10 w-fit mx-auto">
+          <div className="grid  grid-cols-2  justify-items-center md:grid-cols-4 lg:grid-cols-5 grid-rows-2 justify-center px-5 gap-y-[8rem] gap-x-[4rem] relative -top-10 ">
             {Products.map((i) => (
               <motion.div
                 initial={{
@@ -151,7 +151,7 @@ const Home = () => {
           A Wide Range Of Confectionery Items
         </p>
 
-        <div className="w-[80%] mx-auto relative mt-10">
+        <div className=" w-[55%] lg:w-[80%] mx-auto relative mt-10">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex ">
               {Array(10)
@@ -184,29 +184,29 @@ const Home = () => {
             {">"}
           </button>
         </div>
-        <section className="h-[400px] overflow-hidden mt-16 grid grid-cols-2">
-          <div className="h-[800px] rounded-tr-[250px] bg-red-500 w-[500px] relative">
+        <section className="h-[700px] lg:h-[400px] overflow-hidden mt-16 grid lg:grid-cols-2 ">
+          <div className="h-[350px] lg:h-[800px] rounded-tr-[250px] bg-red-500 lg:w-[500px] w-[300px] relative">
             <div
-              className="absolute h-[270px] w-[450px] bg-gray-500 right-0 translate-x-[20%] translate-y-[30%] bg-cover"
+              className="absolute h-[180px] lg:h-[270px] w-[300px] lg:w-[450px] bg-gray-500 right-0 translate-x-[30%] lg:translate-x-[20%] translate-y-[80%] lg:translate-y-[30%] bg-contain lg:bg-cover "
               style={{
                 backgroundImage: "url('/images/25ywarsdashboard.png')",
               }}
             ></div>
           </div>
-          <div className="translate-y-[8%]">
+          <div className="translate-y-[8%] justify-self-center">
             <h2 className="font-bold capitalize text-5xl text-red-500 tracking-wider">
               25 Years
             </h2>
             <p className="font-bold uppercase">
               expierience in food industries
             </p>
-            <p className="w-[400px]">
+            <p className="lg:w-[400px] text-wrap w-[300px]">
               some asjhlsf asdnaf jfamf easf jpfhbfg fcasohefsa fvsbfs cazobihaf
               afhbpbfas bopa adphfa afhp0ihf ohifas dfsphgsd asfhjnvzxofs
               fzpjpjasfjz jopzdfml hbasfoitg ajzfhjs fdsojppofzm nsdgpni asdfjas
               sfohins asdohihfdap asdphph
             </p>
-            <button className="bg-black text-white px-4 py-2 mt-4">
+            <button className="bg-black text-white px-4 py-2 mt-4 sm:mb-10 lg:mb-0">
               Read More
             </button>
           </div>
@@ -274,13 +274,13 @@ const Home = () => {
           className="h-[700px] overflow-hidden mr-10 ml-10 mt-20 relative bg-cover bg-center"
           style={{ backgroundImage: "url('/images/uperportion.png')" }}
         >
-          <div className="flex justify-end h-full">
-            <div className="bg-red-600 rounded-3xl h-[250px] w-[500px] flex flex-col gap-3 justify-center mr-20 mt-auto mb-auto">
-              <h2 className="text-white text-3xl font-semibold text-center">
+          <div className="flex lg:justify-end h-full">
+            <div className="bg-red-600 rounded-3xl h-[450px] lg:h-[250px] w-auto md:w-[500px] flex flex-col gap-3 justify-center ml-5 mr-5 lg:ml-0  lg:mr-20 mt-auto mb-auto">
+              <h2 className="text-white lg:text-3xl font-semibold text-center">
                 ABOUT DAZZY
               </h2>
-              <div className="flex gap-5 justify-center text-center mt-5">
-                <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
+              <div className="flex flex-col md:flex-row gap-5 justify-center text-center mt-5 items-center">
+                <div className="text-white font-bold lg:text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
                   150 +{" "}
                   <p className="text-white text-xs font-light">
                     Product Rating

@@ -4,7 +4,7 @@ const NavBar = () => {
       <div className="mx-auto w-fit">
         <img src="/images/logo.png" alt="Dazzy Logo" className="w-32 " />
       </div>
-      <section className="flex justify-center gap-10 font-semibold items-center">
+      <section className="flex flex-col md:flex-row justify-center gap-10 font-semibold items-center">
         <div className="relative">
           Home <span className="absolute w-full h-0.5 top-full block"></span>
         </div>
