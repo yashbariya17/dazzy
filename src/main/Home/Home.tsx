@@ -154,17 +154,17 @@ const Home = () => {
         <div className=" w-[55%] lg:w-[80%] mx-auto relative mt-10">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex ">
-              {Array(10)
+              {Array(6)
                 .fill("")
                 .map((_, index) => (
                   <div
-                    className="relative flex-[0_0_200px] mr-5 flex justify-center"
+                    className="relative flex-[0_0_180px] mr-5 flex justify-center"
                     key={index}
                   >
                     <img
-                      src={"./vite.svg"}
+                      src={`/images/logos/logo_${index+1}.png`}
                       alt={`Slide ${index + 1}`}
-                      className="w-16 object-cover"
+                      className="w-32 object-contain aspect-auto mix-blend-color-burn"
                     />
                   </div>
                 ))}
@@ -306,7 +306,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="bg-[#111] text-white py-16 px-4 flex flex-col md:flex-row items-center  relative mt-20">
+        <section className="bg-[#111] text-white flex flex-col md:flex-row items-center  relative mt-20">
           <div className="w-auto h-[600px] flex justify-center ">
             <img
               src="/images/footeraboveboard.png"
