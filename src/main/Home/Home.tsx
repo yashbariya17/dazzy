@@ -1,4 +1,3 @@
-import NavBar from "../../components/NavBar";
 import { motion } from "motion/react";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback } from "react";
@@ -71,7 +70,6 @@ const Home = () => {
 
   return (
     <div className="w-full overflow-x-hidden">
-      <NavBar />
       <section className="h-[500px] bg-gray-400"></section>
       <div className="uppercase text-white bg-red-500 font-semibold flex justify-center md:gap-16 text-lg py-2 flex-col md:flex-row gap-2 items-center">
         <p>fssai & iso certiefied</p>
@@ -162,7 +160,7 @@ const Home = () => {
                     key={index}
                   >
                     <img
-                      src={`/images/logos/logo_${index+1}.png`}
+                      src={`/images/logos/logo_${index + 1}.png`}
                       alt={`Slide ${index + 1}`}
                       className="w-32 object-contain aspect-auto mix-blend-color-burn"
                     />
@@ -244,7 +242,7 @@ const Home = () => {
                     <img
                       src={`/images/product${index + 1}.png`}
                       alt={`Slide ${index + 1}`}
-                      className="absolute z-99 top-[0%] mt-4 w-[175px] h-auto object-contain"
+                      className="absolute z-99 top-[15%] sm:top-[0%] mt-4 w-[125px] sm:w-[175px] h-auto object-contain"
                     />
 
                     <button className="bg-red-600 text-white w-[100px] py-2 mt-auto mb-6 z-10">
@@ -270,6 +268,7 @@ const Home = () => {
             {">"}
           </button>
         </div>
+
         <section
           className="h-[700px] overflow-hidden mr-10 ml-10 mt-20 relative bg-cover bg-center"
           style={{ backgroundImage: "url('/images/uperportion.png')" }}
@@ -306,22 +305,22 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="bg-[#111] text-white flex flex-col md:flex-row items-center  relative mt-20">
-          <div className="w-auto h-[600px] flex justify-center ">
+        <section className="bg-[#111] text-white flex flex-col md:flex-row items-center  relative mt-20 ">
+          <div className="w-auto h-[600px] flex justify-center relative ">
             <img
               src="/images/footeraboveboard.png"
               alt="Chef"
-              className="rounded-lg w-full h-full object-cover"
+              className="rounded-lg w-full h-full object-cover "
             />
           </div>
-          <div className="w-fit mt-10 md:mt-0 px-6 relative">
+          <div className="w-fit md:top-12 md:mt-0 px-6 relative md:right-10 ">
             <div className="text-orange-500 text-sm font-semibold mb-2 flex items-center gap-2 mx-auto w-fit">
               <span>🍽</span> TESTIMONIALS <span>🍽</span>
             </div>
             <div className="text-3xl font-bold text-white mb-6 mx-auto w-fit">
               What Our Clients Say
             </div>
-            <div className="bg-white text-gray-800 rounded-xl shadow-lg p-6 max-w-xl relative">
+            <div className="bg-white text-gray-800 rounded-xl shadow-lg p-6 max-w-xl relative border-orange-500 border-t-4 h-[250px] flex flex-col  justify-center  ">
               <div className="flex items-center mb-4">
                 <img
                   src="images/user.jpg"
@@ -339,38 +338,62 @@ const Home = () => {
                 mus Ut id lorem ac enim the vestibulum blandit nec sit amet
                 felis. Fusce quis diam odio Cras mattis mi quis tincidunt
               </p>
-              <div className="absolute top-4 right-4 text-orange-500 text-3xl font-bold">
+              <div className="absolute top-0 right-4 text-orange-500 text-[4.5rem] font-bold">
                 ”
               </div>
             </div>
-            <div className="flex mt-6 space-x-4">
+            <div className="flex mt-6 space-x-4 mx-auto w-fit *:text-2xl *:font-extrabold *:grid *:place-items-center  pb-16 sm:pb-0">
               <button className="w-10 h-10 rounded-full border border-red-600 text-red-600 hover:bg-red-600 hover:text-white flex items-center justify-center transition duration-300">
-                ←
+                <svg
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    {" "}
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M11.7071 4.29289C12.0976 4.68342 12.0976 5.31658 11.7071 5.70711L6.41421 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H6.41421L11.7071 18.2929C12.0976 18.6834 12.0976 19.3166 11.7071 19.7071C11.3166 20.0976 10.6834 20.0976 10.2929 19.7071L3.29289 12.7071C3.10536 12.5196 3 12.2652 3 12C3 11.7348 3.10536 11.4804 3.29289 11.2929L10.2929 4.29289C10.6834 3.90237 11.3166 3.90237 11.7071 4.29289Z"
+                      fill="#ffffff"
+                    ></path>{" "}
+                  </g>
+                </svg>
               </button>
               <button className="w-10 h-10 rounded-full bg-red-600 text-white hover:bg-red-700 flex items-center justify-center transition duration-300">
-                →
+                <svg
+                  width="20px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    {" "}
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
+                      fill="#ffffff"
+                    ></path>{" "}
+                  </g>
+                </svg>
               </button>
             </div>
           </div>
         </section>
-        <footer className="bg-[#3b1e1d] text-[#f2e9df] py-10 relative mt-20">
-          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#ed1c24] rounded-2xl px-8 py-4 flex justify-between items-center w-[90%] max-w-4xl text-white font-medium text-center text-sm md:text-base">
-            <div className="w-1/3 font-light">Address</div>
-            <div className="w-1/3 font-light">Mail</div>
-            <div className="w-1/3 font-light">Customer care no</div>
-          </div>
-
-          <div className="mt-16 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto px-4">
-            <img
-              src="/images/dazzyfooterlogo.png"
-              alt="Dazzy Logo"
-              className="w-32 mb-6 md:mb-0"
-            />
-            <h2 className="text-3xl font-extrabold text-center md:text-right">
-              footer details
-            </h2>
-          </div>
-        </footer>
       </section>
     </div>
   );
