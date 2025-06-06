@@ -149,14 +149,14 @@ const Home = () => {
           A Wide Range Of Confectionery Items
         </p>
 
-        <div className=" w-[55%] lg:w-[80%] mx-auto relative mt-10">
+        <div className=" w-[54%] lg:w-[80%] mx-auto relative mt-10">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex ">
               {Array(6)
                 .fill("")
                 .map((_, index) => (
                   <div
-                    className="relative flex-[0_0_180px] mr-5 flex justify-center"
+                    className="relative flex-[0_0_180px] md:mr-5 flex justify-center"
                     key={index}
                   >
                     <img
@@ -171,27 +171,56 @@ const Home = () => {
 
           <button
             onClick={scrollPrev}
-            className="absolute top-1/2 -translate-x-full  -translate-1/2 bg-red-500 aspect-square h-12 leading-2  font-bold text-4xl text-white rounded-full"
+            className="absolute top-1/2 -translate-x-full -translate-y-1/2 bg-red-500 aspect-square h-12 font-bold text-white text-4xl rounded-full flex items-center justify-center"
+            aria-label="Previous"
           >
-            {"<"}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
           </button>
+
           <button
             onClick={scrollNext}
-            className="absolute top-1/2 left-full -translate-1/2  bg-red-500 text-white aspect-square h-12 leading-3  font-bold text-4xl rounded-full"
+            className="absolute top-1/2 left-full -translate-y-1/2 md:-translate-y-0 md:-translate-1/2 bg-red-500 text-white aspect-square h-12 font-bold text-4xl rounded-full flex items-center justify-center"
+            aria-label="Next"
           >
-            {">"}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
           </button>
         </div>
-        <section className="h-[700px] lg:h-[400px] overflow-hidden mt-16 grid lg:grid-cols-2 ">
+        <section className="h-[800px] lg:h-[400px] overflow-hidden mt-16 grid lg:grid-cols-2 ">
           <div className="h-[350px] lg:h-[800px] rounded-tr-[250px] bg-red-500 lg:w-[500px] w-[300px] relative">
             <div
-              className="absolute h-[180px] lg:h-[270px] w-[300px] lg:w-[450px] bg-gray-500 right-0 translate-x-[30%] lg:translate-x-[20%] translate-y-[80%] lg:translate-y-[30%] bg-contain lg:bg-cover "
+              className="absolute h-[180px] lg:h-[270px] w-[280px] lg:w-[450px] bg-gray-500 right-10 md:right-0 translate-x-[30%] lg:translate-x-[20%] translate-y-[80%] lg:translate-y-[30%] bg-contain lg:bg-cover "
               style={{
                 backgroundImage: "url('/images/25ywarsdashboard.png')",
               }}
             ></div>
           </div>
-          <div className="translate-y-[8%] justify-self-center">
+          <div className="md:translate-y-[8%] justify-self-center">
             <h2 className="font-bold capitalize text-5xl text-red-500 tracking-wider">
               25 Years
             </h2>
@@ -199,7 +228,12 @@ const Home = () => {
               expierience in food industries
             </p>
             <p className="lg:w-[400px] text-wrap w-[300px]">
-            Snacking makes life differently tasteful, and that's why snacking begins delightfully with Anand Jolliz. Anand Jolliz is a namkeen brand based in Gujarat for more than 20 years with a promise to deliver the first-rate quality. It has thrived in the market with only one objective - to provide happiness through the unbeatable taste of its namkeen products.
+              Snacking makes life differently tasteful, and that's why snacking
+              begins delightfully with Anand Jolliz. Anand Jolliz is a namkeen
+              brand based in Gujarat for more than 20 years with a promise to
+              deliver the first-rate quality. It has thrived in the market with
+              only one objective - to provide happiness through the unbeatable
+              taste of its namkeen products.
             </p>
             <button className="bg-black text-white px-4 py-2 mt-4 sm:mb-10 lg:mb-0">
               Read More
@@ -242,7 +276,7 @@ const Home = () => {
                       className="absolute z-99 top-[15%] sm:top-[0%] mt-4 w-[125px] sm:w-[175px] h-auto object-contain"
                     />
 
-                    <button className="bg-red-600 text-white w-[100px] py-2 mt-auto mb-6 z-10">
+                    <button className="bg-red-600 text-white w-20 md:w-[100px] py-1 md:py-2 mt-auto mb-6 z-10 text-[12px]">
                       READ MORE
                     </button>
 
@@ -254,15 +288,43 @@ const Home = () => {
 
           <button
             onClick={scrollSlidePrev}
-            className="absolute top-1/2 -translate-x-full  -translate-1/2 bg-red-500 aspect-square h-12 leading-2  font-bold text-4xl text-white rounded-full"
+            className="absolute top-1/2 -translate-x-full -translate-y-1/2 bg-red-500 aspect-square h-12 font-bold text-white rounded-full flex items-center justify-center"
+            aria-label="Previous Slide"
           >
-            {"<"}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
           </button>
           <button
             onClick={scrollSlideNext}
-            className="absolute top-1/2 left-full -translate-1/2  bg-red-500 text-white aspect-square h-12 leading-3  font-bold text-4xl rounded-full"
+            className="absolute top-1/2 left-full -translate-y-1/2 md:-translate-x-1/2 bg-red-500 text-white aspect-square h-12 font-bold rounded-full flex items-center justify-center"
+            aria-label="Next Slide"
           >
-            {">"}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
           </button>
         </div>
 
