@@ -192,7 +192,7 @@ const Home = () => {
 
           <button
             onClick={scrollNext}
-            className="absolute top-1/2 left-full -translate-y-1/2 md:-translate-y-0 md:-translate-1/2 bg-red-500 text-white aspect-square h-12 font-bold text-4xl rounded-full flex items-center justify-center"
+            className="absolute top-1/2 left-full -translate-y-1/2 md:-translate-y-1/2 md:-translate-1/2 bg-red-500 text-white aspect-square h-12 font-bold text-4xl rounded-full flex items-center justify-center"
             aria-label="Next"
           >
             <svg
