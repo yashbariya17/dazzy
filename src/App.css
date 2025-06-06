@@ -1,3 +1,11 @@
 .navbar-main span {
+  transition: all 0.4s;
   background: linear-gradient(to right, gold, lightyellow, gold);
+  position: relative;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+.navbar-active span {
+  transform: scale(1);
 }

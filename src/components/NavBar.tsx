@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router";
+
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const itemVariants = {
@@ -85,10 +87,23 @@ const NavBar = () => {
 
       {!isMobile ? (
         <section className="flex justify-center gap-10 font-semibold items-center">
-          <div className="relative">
+          <NavLink
+          to={"/"}
+          className={({ isActive }) =>
+            ` ${isActive ? "navbar-active" : ""} relative`
+          }
+        >
             Home <span className="absolute w-full h-0.5 top-full block"></span>
-          </div>
-          <div>About Us</div>
+          </NavLink>
+          <NavLink
+          to="/about-us"
+          className={({ isActive }) =>
+            ` ${isActive ? "navbar-active" : ""} relative`
+          }
+        >
+          About Us
+          <span className="absolute w-full h-0.5 top-full block"></span>
+        </NavLink>
           <div>Product</div>
           <div>Gifting</div>
           <div>Contact Us</div>
