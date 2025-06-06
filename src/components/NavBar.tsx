@@ -88,22 +88,22 @@ const NavBar = () => {
       {!isMobile ? (
         <section className="flex justify-center gap-10 font-semibold items-center">
           <NavLink
-          to={"/"}
-          className={({ isActive }) =>
-            ` ${isActive ? "navbar-active" : ""} relative`
-          }
-        >
+            to={"/"}
+            className={({ isActive }) =>
+              ` ${isActive ? "navbar-active" : ""} relative`
+            }
+          >
             Home <span className="absolute w-full h-0.5 top-full block"></span>
           </NavLink>
           <NavLink
-          to="/about-us"
-          className={({ isActive }) =>
-            ` ${isActive ? "navbar-active" : ""} relative`
-          }
-        >
-          About Us
-          <span className="absolute w-full h-0.5 top-full block"></span>
-        </NavLink>
+            to="/about-us"
+            className={({ isActive }) =>
+              ` ${isActive ? "navbar-active" : ""} relative`
+            }
+          >
+            About Us
+            <span className="absolute w-full h-0.5 top-full block"></span>
+          </NavLink>
           <div>Product</div>
           <div>Gifting</div>
           <div>Contact Us</div>
@@ -127,8 +127,15 @@ const NavBar = () => {
               whileTap={{ scale: 0.95 }}
               className=" relative p-0 !no-underline"
             >
-              Home{" "}
-              <span className="absolute w-full h-0.5 top-full block"></span>
+              <NavLink
+                to={"/"}
+                className={({ isActive }) =>
+                  ` ${isActive ? "navbar-active" : ""} relative`
+                }
+              >
+                Home{" "}
+                <span className="absolute w-full h-0.5 top-full block"></span>
+              </NavLink>
             </motion.li>
             <motion.li
               variants={itemVariants}
@@ -136,7 +143,15 @@ const NavBar = () => {
               whileTap={{ scale: 0.95 }}
               className="no-underline"
             >
-              About Us
+              <NavLink
+                to="/about-us"
+                className={({ isActive }) =>
+                  ` ${isActive ? "navbar-active" : ""} relative`
+                }
+              >
+                About Us
+                <span className="absolute w-full h-0.5 top-full block"></span>
+              </NavLink>
             </motion.li>
             <motion.li variants={itemVariants} className="no-underline">
               Product
