@@ -201,10 +201,7 @@ const Home = () => {
               expierience in food industries
             </p>
             <p className="lg:w-[400px] text-wrap w-[300px]">
-              some asjhlsf asdnaf jfamf easf jpfhbfg fcasohefsa fvsbfs cazobihaf
-              afhbpbfas bopa adphfa afhp0ihf ohifas dfsphgsd asfhjnvzxofs
-              fzpjpjasfjz jopzdfml hbasfoitg ajzfhjs fdsojppofzm nsdgpni asdfjas
-              sfohins asdohihfdap asdphph
+            Snacking makes life differently tasteful, and that's why snacking begins delightfully with Anand Jolliz. Anand Jolliz is a namkeen brand based in Gujarat for more than 20 years with a promise to deliver the first-rate quality. It has thrived in the market with only one objective - to provide happiness through the unbeatable taste of its namkeen products.
             </p>
             <button className="bg-black text-white px-4 py-2 mt-4 sm:mb-10 lg:mb-0">
               Read More
