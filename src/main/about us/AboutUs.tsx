@@ -81,9 +81,12 @@ const AboutUs = () => {
   return (
     <main className="relative bg-[#fff8f0] min-h-[2200px] overflow-hidden">
       {/* Header */}
-      <section className="text-center py-12 md:py-16 bg-gradient-to-b from-yellow-600 to-amber-800 text-white text-3xl md:text-4xl font-bold tracking-wide">
-        About Us
-        <p className="text-lg md:text-xl mt-2 font-light tracking-widest">
+      <section
+        className="h-[500px] bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/premium-chocolates.jpg')" }}
+      ></section>
+      <section className="text-center py-12 md:py-16 bg-[#2D0B05] text-[#E5C387]">
+        <p className="text-5xl md:text-7xl tracking-widest font-[Cinzel]">
           25 YEARS OF SWEET MEMORIES
         </p>
       </section>
