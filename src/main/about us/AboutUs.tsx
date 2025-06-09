@@ -51,13 +51,13 @@ const TimelineBlock = ({
       animate={visible ? "visible" : "hidden"}
       variants={animation}
       transition={{ duration: 0.6 }}
-      className={`absolute w-1/2 px-8 top-0 ${
-        side === "left" ? "left-0 text-right" : "right-0 text-left"
+      className={`w-full md:w-1/2 px-4 md:px-8 mb-6 md:mb-0 absolute ${
+        side === "left" ? "md:left-0 md:text-right" : "md:right-0 md:text-left"
       }`}
     >
       <div className="bg-white shadow-lg rounded-xl p-4 border-2 border-red-300">
-        <h3 className="text-2xl font-bold mb-2">{title}</h3>
-        <p className="text-gray-700 mb-2">{description}</p>
+        <h3 className="text-xl md:text-2xl font-bold mb-2">{title}</h3>
+        <p className="text-gray-700 mb-2 text-sm md:text-base">{description}</p>
         <img
           src={image}
           alt={title}
@@ -74,23 +74,24 @@ const AboutUs = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setStep((prev) => (prev < aboutData.length ? prev + 1 : prev));
-    }, 2000); // every 2s a new panel appears
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <main className="relative bg-[#fff8f0] min-h-[1800px] overflow-hidden">
+    <main className="relative bg-[#fff8f0] min-h-[2200px] overflow-hidden">
       {/* Header */}
-      <section className="text-center py-16 bg-gradient-to-b from-yellow-600 to-amber-800 text-white text-4xl font-bold tracking-wide">
+      <section className="text-center py-12 md:py-16 bg-gradient-to-b from-yellow-600 to-amber-800 text-white text-3xl md:text-4xl font-bold tracking-wide">
         About Us
-        <p className="text-xl mt-2 font-light tracking-widest">
+        <p className="text-lg md:text-xl mt-2 font-light tracking-widest">
           25 YEARS OF SWEET MEMORIES
         </p>
       </section>
 
-      {/* Road */}
-      <div className="relative h-[1400px] flex justify-center">
-        <div className="absolute top-0 h-full w-[8px] bg-black z-0">
+      {/* Road & Timeline */}
+      <div className="relative h-[1600px] flex justify-center">
+        {/* Road */}
+        <div className="absolute top-0 h-full w-[6px] bg-black z-0">
           <div
             className="w-[4px] h-full mx-auto"
             style={{
@@ -100,26 +101,80 @@ const AboutUs = () => {
           ></div>
         </div>
 
-        {/* Truck Animation */}
+        {/* Truck */}
         <motion.img
           src="/images/truck.png"
           alt="truck"
           initial={{ y: -100 }}
-          animate={{ y: step * 400 }}
+          animate={{ y: Math.min(step, aboutData.length - 1) * 400 }}
           transition={{ type: "tween", duration: 1 }}
-          className="absolute left-1/2 -translate-x-1/2 z-10 w-[80px]"
+          className="absolute left-1/2 -translate-x-1/2 z-10 w-16 md:w-[80px]"
         />
 
-        {/* Timeline Blocks */}
+        {/* Timeline Panels */}
         {aboutData.map((data, i) => (
           <div
             key={i}
-            className="absolute top-[100px] left-0 right-0"
+            className="absolute w-full flex justify-center md:justify-between items-start"
             style={{ top: `${i * 400 + 100}px` }}
           >
-            <TimelineBlock {...data} visible={step > i} />
+            <TimelineBlock {...data} visible={step > i - 1} />
           </div>
         ))}
+      </div>
+
+      {/* Design & Team Section */}
+      <div className="w-full flex flex-col items-center mt-20 px-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4 text-center">
+          Vision of Company
+        </h2>
+        <p className="max-w-3xl text-center text-gray-700 mb-12 text-sm md:text-base">
+          All DAZZY brands are created by individuals who prioritize the
+          consumer, utilizing the finest ingredients and cutting-edge production
+          technology. We adhere to transparent quality control standards to
+          build trust and credibility. This commitment results in exceptional
+          quality and a delightful experience.
+        </p>
+
+        <h3 className="text-2xl md:text-3xl font-bold text-red-600 mb-2 text-center">
+          Team Our Team
+        </h3>
+        <p className="text-center text-gray-600 mb-10 text-sm md:text-base">
+          A Wide Range Of Confectionery Items
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-6 max-w-5xl">
+          {[
+            {
+              name: "Ralph Edwards",
+              role: "Chef Lead",
+              image: "/images/chef1.jpg",
+            },
+            {
+              name: "Leslie Alexander",
+              role: "Chef Assistant",
+              image: "/images/chef2.jpg",
+            },
+            {
+              name: "Ronald Richards",
+              role: "Chef Assistant",
+              image: "/images/chef3.jpg",
+            },
+          ].map((member, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl shadow-md w-64 sm:w-72 p-4 flex flex-col items-center border border-red-300"
+            >
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover mb-4"
+              />
+              <h4 className="text-lg font-semibold">{member.name}</h4>
+              <p className="text-gray-500 text-sm">{member.role}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   );
