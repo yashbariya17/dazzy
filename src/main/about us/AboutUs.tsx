@@ -30,7 +30,6 @@ type TimelineBlockProps = {
   description: string;
   image: string;
   side: "right" | "left";
-  visible: boolean;
 };
 
 const TimelineBlock = ({
@@ -38,19 +37,22 @@ const TimelineBlock = ({
   description,
   image,
   side,
-  visible,
 }: TimelineBlockProps) => {
-  const animation = {
-    hidden: { opacity: 0, x: side === "left" ? -100 : 100 },
-    visible: { opacity: 1, x: 0 },
-  };
-
   return (
     <motion.div
-      initial="hidden"
-      animate={visible ? "visible" : "hidden"}
-      variants={animation}
-      transition={{ duration: 0.6 }}
+      initial={{
+        opacity: 0,
+        x: side === "left" ? -100 : 100,
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+      }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      viewport={{
+        once: true,
+        amount: 0.5,
+      }}
       className={`w-full md:w-1/2 px-4 md:px-8 mb-6 md:mb-0 absolute ${
         side === "left" ? "md:left-0 md:text-right" : "md:right-0 md:text-left"
       }`}
@@ -91,10 +93,8 @@ const AboutUs = () => {
         </p>
       </section>
 
-      {/* Road & Timeline */}
       <div className="relative h-[1600px] flex justify-center">
-        {/* Road */}
-        <div className="absolute top-0 h-full w-[6px] bg-black z-0">
+        <div className="absolute top-0 h-full w-[100px] bg-black z-0 ">
           <div
             className="w-[4px] h-full mx-auto"
             style={{
@@ -104,7 +104,6 @@ const AboutUs = () => {
           ></div>
         </div>
 
-        {/* Truck */}
         <motion.img
           src="/images/truck.png"
           alt="truck"
@@ -114,14 +113,13 @@ const AboutUs = () => {
           className="absolute left-1/2 -translate-x-1/2 z-10 w-16 md:w-[80px]"
         />
 
-        {/* Timeline Panels */}
         {aboutData.map((data, i) => (
           <div
             key={i}
             className="absolute w-full flex justify-center md:justify-between items-start"
             style={{ top: `${i * 400 + 100}px` }}
           >
-            <TimelineBlock {...data} visible={step > i - 1} />
+            <TimelineBlock {...data} />
           </div>
         ))}
       </div>
