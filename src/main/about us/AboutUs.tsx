@@ -143,7 +143,7 @@ const AboutUs = () => {
         </p>
 
         <h3 className="text-2xl md:text-3xl font-bold text-red-600 mb-2 text-center">
-          Team Our Team
+          Our Team
         </h3>
         <p className="text-center text-gray-600 mb-10 text-sm md:text-base">
           A Wide Range Of Confectionery Items

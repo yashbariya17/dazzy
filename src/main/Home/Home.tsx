@@ -70,7 +70,13 @@ const Home = () => {
 
   return (
     <div className="w-full overflow-x-hidden">
-      <section className="h-[500px] bg-gray-400"></section>
+      <section
+        className="h-[500px] bg-gray-400 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://www.dazzyconfectionery.com/wp-content/uploads/2017/05/premium-chocolates.jpg')",
+        }}
+      ></section>
       <div className="uppercase text-white bg-red-500 font-semibold flex justify-center md:gap-16 text-lg py-2 flex-col md:flex-row gap-2 items-center">
         <p>fssai & iso certiefied</p>
         <p>25+ year experience</p>
