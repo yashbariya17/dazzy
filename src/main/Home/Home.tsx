@@ -157,7 +157,7 @@ const Home = () => {
                 .fill("")
                 .map((_, index) => (
                   <div
-                    className="relative flex-[0_0_180px] md:mr-5 flex justify-center"
+                    className="relative flex-[0_0_15%] md:mr-5 flex justify-center"
                     key={index}
                   >
                     <img
@@ -229,12 +229,17 @@ const Home = () => {
               expierience in food industries
             </p>
             <p className="lg:w-[400px] text-wrap w-[300px]">
-              Snacking makes life differently tasteful, and that's why snacking
-              begins delightfully with Anand Jolliz. Anand Jolliz is a namkeen
-              brand based in Gujarat for more than 20 years with a promise to
-              deliver the first-rate quality. It has thrived in the market with
-              only one objective - to provide happiness through the unbeatable
-              taste of its namkeen products.
+              Established in 1995 in Baroda, Gujarat, Dazzy Food Industries
+              began as a confectionery distribution company founded by Mr.
+              Deepak Kanani. With strong support from his brothers, the company
+              grew steadily, guided by the motto: “To Deliver the Best.” In
+              2002, Dazzy launched its own production line, expanding into
+              lollipops, chocolates, candies, toffees, and éclairs. Known for
+              innovation in both product and packaging, Dazzy has created
+              bestselling items that stand out in the market. Today, Dazzy is a
+              trusted name in the Indian confectionery industry with a growing
+              pan-India presence and a focus on quality, creativity, and market
+              expansion.
             </p>
             <button className="bg-black text-white px-4 py-2 mt-4 sm:mb-10 lg:mb-0">
               Read More
