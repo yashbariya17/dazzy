@@ -149,6 +149,7 @@ const Home = () => {
           A Wide Range Of Confectionery Items
         </p>
 
+        <data> </data>
         <div className=" w-[54%] lg:w-[80%] mx-auto relative mt-10">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex ">
@@ -275,7 +276,6 @@ const Home = () => {
                       alt={`Slide ${index + 1}`}
                       className="absolute z-99 top-[15%] sm:top-[0%] mt-4 w-[125px] sm:w-[175px] h-auto object-contain"
                     />
-
                     <button className="bg-red-600 text-white w-20 md:w-[100px] py-1 md:py-2 mt-auto mb-6 z-10 text-[12px]">
                       READ MORE
                     </button>
@@ -363,7 +363,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-
         <section className="bg-[#111] text-white flex flex-col md:flex-row items-center  relative mt-20 ">
           <div className="w-auto h-[600px] flex justify-center relative ">
             <img
