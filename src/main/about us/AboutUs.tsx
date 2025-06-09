@@ -122,6 +122,12 @@ const AboutUs = () => {
           </div>
         ))}
       </div>
+      <div className="w-full bg-[#2d0000] text-white text-center py-4 flex flex-wrap justify-center gap-8 text-sm md:text-base font-medium tracking-wide">
+        <span>FSSAI & ISO CERTIFIED</span>
+        <span>25+ YEAR EXPERIENCE</span>
+        <span>100% VEG</span>
+        <span>PAN INDIA DELIVERY</span>
+      </div>
 
       {/* Design & Team Section */}
       <div className="w-full flex flex-col items-center mt-20 px-4">
