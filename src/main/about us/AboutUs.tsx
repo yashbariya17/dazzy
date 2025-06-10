@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const aboutData = [
   {
@@ -29,60 +28,98 @@ type TimelineBlockProps = {
   title: string;
   description: string;
   image: string;
-  side: "right" | "left";
+  blockNo: number;
 };
 
 const TimelineBlock = ({
   title,
   description,
   image,
-  side,
+  blockNo,
 }: TimelineBlockProps) => {
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        x: side === "left" ? -100 : 100,
-      }}
-      whileInView={{
-        opacity: 1,
-        x: 0,
-      }}
-      transition={{ duration: 0.6, delay: 0.2 }}
-      viewport={{
-        once: true,
-        amount: 0.5,
-      }}
-      className={`w-full md:w-1/2 px-4 md:px-8 mb-6 md:mb-0 absolute ${
-        side === "left" ? "md:left-0 md:text-right" : "md:right-0 md:text-left"
-      }`}
-    >
-      <div className="bg-white shadow-lg rounded-xl p-4 border-2 border-red-300">
-        <h3 className="text-xl md:text-2xl font-bold mb-2">{title}</h3>
-        <p className="text-gray-700 mb-2 text-sm md:text-base">{description}</p>
+    <>
+      <motion.div
+        initial={{
+          opacity: 0,
+          x: blockNo === 2 ? 100 : -100,
+        }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+        }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{
+          once: true,
+          amount: 0.5,
+        }}
+        className={`${
+          blockNo === 2 ? "col-start-3" : "col-start-1"
+        } row-start-${blockNo} w-full px-10 my-auto  col-span-1 row-span-1 `}
+      >
+        <div className="px-[8rem] " style={{ wordSpacing: "2px" }}>
+          <h3 className="font-semibold mb-2 text-red-500 font-cursive text-[4rem]">
+            {title}
+          </h3>
+          <p className="mb-2 text-sm md:text-base font-semibold">
+            {description}
+          </p>
+        </div>
+      </motion.div>
+      <motion.div
+        initial={{
+          opacity: 0,
+          x: blockNo === 2 ? -100 : 100,
+        }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+        }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{
+          once: true,
+          amount: 0.5,
+        }}
+        className={`${
+          blockNo === 2 ? "col-start-1" : "col-start-3"
+        } row-start-${blockNo} w-full h-full  col-span-1 row-span-1  flex justify-center items-center relative`}
+      >
         <img
           src={image}
           alt={title}
-          className="w-full h-40 object-cover rounded-md"
+          className="h-[90%] aspect-square rounded-full border-6 border-solid border-red-500 object-cover relative z-10"
         />
-      </div>
-    </motion.div>
+        <div
+          className={`${
+            blockNo === 2 ? "-right-8" : "-left-8"
+          } absolute bg-red-500 h-2 w-[50%]  z-0`}
+        >
+          <span
+            className={`${
+              blockNo === 2 ? "left-full" : ""
+            } block rounded-full bg-red-500 aspect-square h-6 absolute top-1/2  -translate-y-1/2`}
+          >
+            {" "}
+          </span>
+        </div>
+      </motion.div>
+    </>
   );
 };
 
 const AboutUs = () => {
-  const [step, setStep] = useState(0);
+  const { scrollY } = useScroll();
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setStep((prev) => (prev < aboutData.length ? prev + 1 : prev));
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
+  const top = useSpring(scrollY, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
+  const y = useTransform(top, (i) => Math.max(0, Math.min(i - 100, 1200)));
 
   return (
     <main className="relative bg-[#fff8f0] min-h-[2200px] overflow-hidden">
-      {/* Header */}
       <section
         className="h-[500px] bg-cover bg-center"
         style={{ backgroundImage: "url('/images/premium-chocolates.jpg')" }}
@@ -92,9 +129,8 @@ const AboutUs = () => {
           25 YEARS OF SWEET MEMORIES
         </p>
       </section>
-
-      <div className="relative h-[1600px] flex justify-center">
-        <div className="absolute top-0 h-full w-[100px] bg-black z-0 ">
+      <div className="relative h-[1500px] grid grid-cols-[1fr_auto_1fr] grid-rows-3">
+        <div className=" h-full w-[100px] bg-black col-span-1 col-start-2 row-span-3 ">
           <div
             className="w-[4px] h-full mx-auto"
             style={{
@@ -107,20 +143,14 @@ const AboutUs = () => {
         <motion.img
           src="/images/truck.png"
           alt="truck"
-          initial={{ y: -100 }}
-          animate={{ y: Math.min(step, aboutData.length - 1) * 400 }}
-          transition={{ type: "tween", duration: 1 }}
+          style={{
+            top: y,
+          }}
           className="absolute left-1/2 -translate-x-1/2 z-10 w-16 md:w-[80px]"
         />
 
-        {aboutData.map((data, i) => (
-          <div
-            key={i}
-            className="absolute w-full flex justify-center md:justify-between items-start"
-            style={{ top: `${i * 400 + 100}px` }}
-          >
-            <TimelineBlock {...data} />
-          </div>
+        {aboutData.map((i, no) => (
+          <TimelineBlock {...i} blockNo={no + 1} />
         ))}
       </div>
       <div className="w-full bg-[#2d0000] text-white text-center py-4 flex flex-wrap justify-center gap-8 text-sm md:text-base font-medium tracking-wide">
