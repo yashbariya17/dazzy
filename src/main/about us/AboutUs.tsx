@@ -53,9 +53,13 @@ const TimelineBlock = ({
           once: true,
           amount: 0.5,
         }}
-        className={`${
-          blockNo === 2 ? "col-start-3" : "col-start-1"
-        } row-start-${blockNo} w-full px-10 my-auto  col-span-1 row-span-1 `}
+        className={`${blockNo === 2 ? "col-start-3" : "col-start-1"} ${
+          blockNo === 1
+            ? "row-start-1"
+            : blockNo === 2
+            ? "row-start-2"
+            : "row-start-3"
+        }  w-full px-10 my-auto  col-span-1 row-span-1 `}
       >
         <div className="px-[8rem] " style={{ wordSpacing: "2px" }}>
           <h3 className="font-semibold mb-2 text-red-500 font-cursive text-[4rem]">
@@ -80,9 +84,13 @@ const TimelineBlock = ({
           once: true,
           amount: 0.5,
         }}
-        className={`${
-          blockNo === 2 ? "col-start-1" : "col-start-3"
-        } row-start-${blockNo} w-full h-full  col-span-1 row-span-1  flex justify-center items-center relative`}
+        className={`${blockNo === 2 ? "col-start-1" : "col-start-3"} ${
+          blockNo === 1
+            ? "row-start-1"
+            : blockNo === 2
+            ? "row-start-2"
+            : "row-start-3"
+        } w-full h-full  col-span-1 row-span-1  flex justify-center items-center relative`}
       >
         <img
           src={image}
@@ -99,7 +107,7 @@ const TimelineBlock = ({
               blockNo === 2 ? "left-full" : ""
             } block rounded-full bg-red-500 aspect-square h-6 absolute top-1/2  -translate-y-1/2`}
           >
-            {" "} 
+            {" "}
           </span>
         </div>
       </motion.div>
