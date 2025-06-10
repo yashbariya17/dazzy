@@ -1,4 +1,5 @@
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import './aboutus.css'
 
 const aboutData = [
   {
@@ -53,16 +54,15 @@ const TimelineBlock = ({
           once: true,
           amount: 0.5,
         }}
-        className={`${blockNo === 2 ? "col-start-3" : "col-start-1"} ${
-          blockNo === 1
+        className={`${blockNo === 2 ? "col-start-3" : "col-start-1"} ${blockNo === 1
             ? "row-start-1"
             : blockNo === 2
-            ? "row-start-2"
-            : "row-start-3"
-        }  w-full px-10 my-auto  col-span-1 row-span-1 `}
+              ? "row-start-2"
+              : "row-start-3"
+          }  w-full px-10 my-auto  col-span-1 row-span-1 `}
       >
         <div className="px-[8rem] " style={{ wordSpacing: "2px" }}>
-          <h3 className="font-semibold mb-2 text-red-500 font-cursive text-[4rem]">
+          <h3 className="mb-2 cream-cake-font text-red-500 font-cursive text-[4rem]">
             {title}
           </h3>
           <p className="mb-2 text-sm md:text-base font-semibold">
@@ -84,13 +84,12 @@ const TimelineBlock = ({
           once: true,
           amount: 0.5,
         }}
-        className={`${blockNo === 2 ? "col-start-1" : "col-start-3"} ${
-          blockNo === 1
+        className={`${blockNo === 2 ? "col-start-1" : "col-start-3"} ${blockNo === 1
             ? "row-start-1"
             : blockNo === 2
-            ? "row-start-2"
-            : "row-start-3"
-        } w-full h-full  col-span-1 row-span-1  flex justify-center items-center relative`}
+              ? "row-start-2"
+              : "row-start-3"
+          } w-full h-full  col-span-1 row-span-1  flex justify-center items-center relative`}
       >
         <img
           src={image}
@@ -98,14 +97,12 @@ const TimelineBlock = ({
           className="h-[90%] aspect-square rounded-full border-6 border-solid border-red-500 object-cover relative z-10"
         />
         <div
-          className={`${
-            blockNo === 2 ? "-right-8" : "-left-8"
-          } absolute bg-red-500 h-2 w-[50%]  z-0`}
+          className={`${blockNo === 2 ? "-right-8" : "-left-8"
+            } absolute bg-red-500 h-2 w-[50%]  z-0`}
         >
           <span
-            className={`${
-              blockNo === 2 ? "left-full" : ""
-            } block rounded-full bg-red-500 aspect-square h-6 absolute top-1/2  -translate-y-1/2`}
+            className={`${blockNo === 2 ? "left-full" : ""
+              } block rounded-full bg-red-500 aspect-square h-6 absolute top-1/2  -translate-y-1/2`}
           >
             {" "}
           </span>
@@ -125,9 +122,29 @@ const AboutUs = () => {
   });
 
   const y = useTransform(top, (i) => Math.max(0, Math.min(i - 100, 1200)));
+  const teamMembers = [
+    {
+      name: "Ralph Edwards",
+      role: "Chef Lead",
+      image: "chef1.jpg",
+      borderColor: "border-red-500",
+    },
+    {
+      name: "Leslie Alexander",
+      role: "Chef Assistant",
+      image: "chef2.jpg",
+      borderColor: "border-orange-400",
+    },
+    {
+      name: "Ronald Richards",
+      role: "Chef Assistant",
+      image: "chef3.jpg",
+      borderColor: "border-red-500",
+    },
+  ];
 
   return (
-    <main className="relative bg-[#fff8f0] min-h-[2200px] overflow-hidden">
+    <main className="relative bg-[#fff8f0] min-h-[2100px] overflow-hidden">
       <section
         className="h-[500px] bg-cover bg-center"
         style={{ backgroundImage: "url('/images/premium-chocolates.jpg')" }}
@@ -169,8 +186,8 @@ const AboutUs = () => {
       </div>
 
       {/* Design & Team Section */}
-      <div className="w-full flex flex-col items-center mt-20 px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4 text-center">
+      <div className="w-full flex flex-col items-center mt-10 px-4">
+        <h2 className="text-8xl md:text-8xl text-red-600 mb-4 text-center cream-cake-font">
           Vision of Company
         </h2>
         <p className="max-w-3xl text-center text-gray-700 mb-12 text-sm md:text-base">
@@ -181,44 +198,38 @@ const AboutUs = () => {
           quality and a delightful experience.
         </p>
 
-        <h3 className="text-2xl md:text-3xl font-bold text-red-600 mb-2 text-center">
-          Our Team
+        <h3 className="text-8xl md:text-8xl text-red-600 mb-2 text-center cream-cake-font">
+          Team Our Team
         </h3>
-        <p className="text-center text-gray-600 mb-10 text-sm md:text-base">
+        <p className="text-center text-gray-600 mb-10 text-xs md:text-xl ">
           A Wide Range Of Confectionery Items
         </p>
+        <div className="w-[60%] mx-auto relative mt-10">
+          <div className="overflow-hidden">
+            <div className="flex px-10">
+              {teamMembers.map((member, index) => (
+                <div
+                  key={index}
+                  className="relative  flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33%] h-[300px] mr-6 flex flex-col items-center "
+                >
+                  <img
+                    src={`/images/chef${index + 1}.jpg`}
+                    alt={`Slide ${index + 1}`}
+                    className="absolute z-99 top-[15%] sm:top-[0%] mt-4 w-[125px] sm:w-[175px] h-auto object-contain"
+                  />
 
-        <div className="flex flex-wrap justify-center gap-6 max-w-5xl">
-          {[
-            {
-              name: "Ralph Edwards",
-              role: "Chef Lead",
-              image: "/images/chef1.jpg",
-            },
-            {
-              name: "Leslie Alexander",
-              role: "Chef Assistant",
-              image: "/images/chef2.jpg",
-            },
-            {
-              name: "Ronald Richards",
-              role: "Chef Assistant",
-              image: "/images/chef3.jpg",
-            },
-          ].map((member, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-md w-64 sm:w-72 p-4 flex flex-col items-center border border-red-300"
-            >
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover mb-4"
-              />
-              <h4 className="text-lg font-semibold">{member.name}</h4>
-              <p className="text-gray-500 text-sm">{member.role}</p>
+                  <div className="bg-white absolute bottom-0 w-full h-[50%] rounded-t-[70px]">
+                    <div className="mt-20 pb-8 px-4 text-center">
+                      <h3 className="text-lg font-semibold text-gray-900">
+                        {member.name}
+                      </h3>
+                      <p className="text-sm text-gray-500">{member.role}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </main>
