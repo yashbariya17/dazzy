@@ -99,7 +99,7 @@ const TimelineBlock = ({
               blockNo === 2 ? "left-full" : ""
             } block rounded-full bg-red-500 aspect-square h-6 absolute top-1/2  -translate-y-1/2`}
           >
-            {" "}
+            {" "} 
           </span>
         </div>
       </motion.div>
