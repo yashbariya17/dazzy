@@ -106,7 +106,15 @@ const NavBar = () => {
           </NavLink>
           <div>Product</div>
           <div>Gifting</div>
-          <div>Contact Us</div>
+          <NavLink
+            to="/contact-us"
+            className={({ isActive }) =>
+              ` ${isActive ? "navbar-active" : ""} relative`
+            }
+          >
+            Contact Us
+            <span className="absolute w-full h-0.5 top-full block"></span>
+          </NavLink>
           <button className="bg-red-500 px-4 py-2">Download Catlog</button>
         </section>
       ) : (
