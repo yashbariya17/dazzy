@@ -215,10 +215,10 @@ const Home = () => {
             </svg>
           </button>
         </div>
-        <section className="h-[800px] lg:h-[400px] overflow-hidden mt-16 grid lg:grid-cols-2 ">
+        <section className="h-[800px] lg:h-[550px] overflow-hidden mt-16 grid lg:grid-cols-2 ">
           <div className="h-[350px] lg:h-[800px] rounded-tr-[250px] bg-red-500 lg:w-[500px] w-[300px] relative">
             <div
-              className="absolute h-[180px] lg:h-[270px] w-[280px] lg:w-[450px] bg-gray-500 right-10 md:right-0 translate-x-[30%] lg:translate-x-[20%] translate-y-[80%] lg:translate-y-[30%] bg-contain lg:bg-cover "
+              className="absolute h-[180px] lg:h-[300px] w-[280px] lg:w-[480px] bg-gray-500 right-10 md:right-0 translate-x-[30%] lg:translate-x-[20%] translate-y-[80%] lg:translate-y-[45%] bg-contain lg:bg-cover "
               style={{
                 backgroundImage: "url('/images/25ywarsdashboard.png')",
               }}
