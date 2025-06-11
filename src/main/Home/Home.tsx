@@ -155,12 +155,12 @@ const Home = () => {
         <data> </data>
         <div className=" w-[54%] lg:w-[80%] mx-auto relative mt-10">
           <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex ">
+            <div className="flex -ml-4">
               {Array(6)
                 .fill("")
                 .map((_, index) => (
                   <div
-                    className="relative flex-[0_0_15%] md:mr-5 flex justify-center"
+                    className="relative flex-[0_0_100%]  lg:flex-[0_0_20%] md:pl-4 flex justify-center"
                     key={index}
                   >
                     <img
@@ -379,7 +379,7 @@ const Home = () => {
               className="rounded-lg w-full h-full object-cover "
             />
           </div>
-          <div className="w-fit md:top-12 md:mt-0 px-6 relative md:right-10 ">
+          <div className="w-fit top-12 md:mt-0 px-6 relative md:right-10 ">
             <div className="text-orange-500 text-sm font-semibold mb-2 flex items-center gap-2 mx-auto w-fit">
               <span>🍽</span> TESTIMONIALS <span>🍽</span>
             </div>
