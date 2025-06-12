@@ -40,8 +40,8 @@ const NavBar = () => {
   }, []);
 
   return (
-    <motion.nav className="navbar-main bg-amber-950 text-white py-5">
-      <div className="grid grid-cols-3 items-center px-4 md:px-8">
+    <motion.nav className="navbar-main bg-[#391e1e]  text-white py-5">
+      <div className="grid grid-cols-3 items-center px-4 md:px-8 mb-3">
         <div className="" />
 
         <div className="flex justify-center">
@@ -86,7 +86,7 @@ const NavBar = () => {
       </div>
 
       {!isMobile ? (
-        <section className="flex justify-center gap-10 font-semibold items-center">
+        <section className="max-w-[800px] mx-auto flex justify-center gap-10 font-semibold items-center">
           <NavLink
             to={"/"}
             className={({ isActive }) =>
@@ -119,7 +119,7 @@ const NavBar = () => {
         </section>
       ) : (
         <section
-          className={`flex-col  justify-center  font-semibold items-center mt-4  ${
+          className={`container flex-col  justify-center  font-semibold items-center mt-4  ${
             isOpen ? "flex" : "hidden"
           }`}
         >

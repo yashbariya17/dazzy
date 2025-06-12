@@ -71,18 +71,21 @@ const Home = () => {
   return (
     <div className="w-full overflow-x-hidden">
       <section
-        className="h-[500px] bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/choclatebigslider.png')" }}
+        className="h-[500px] bg-cover bg-center  bg-gray-700"
+        // style={{ backgroundImage: "url('/images/choclatebigslider.png')" }}
       ></section>
-      <div className="uppercase text-white bg-red-500 font-semibold flex justify-center md:gap-16 text-lg py-2 flex-col md:flex-row gap-2 items-center">
+
+<section className="bg-[#eb0029]">
+      <div className="max-w-[1000px] uppercase text-white  mx-auto font-semibold flex justify-center md:gap-16 text-lg py-2 flex-col md:flex-row gap-2 items-center">
         <p>fssai & iso certiefied</p>
         <p>25+ year experience</p>
         <p>100%veg</p>
         <p>pan india delivery</p>
       </div>
-      <section className="pt-8 bg-amber-100 ">
+</section>
+      <section className="pt-8 bg-[#f4f1ea] ">
         <h2
-          className="text-red-500 text-center text-5xl font-bold "
+          className="text-[#eb0029] text-center text-5xl font-bold "
           style={{
             wordSpacing: "6px",
           }}
@@ -100,15 +103,18 @@ const Home = () => {
         </p>
 
         <div
-          className="bg-amber-100 mt-[8rem] h-auto lg:h-[550px] w-full bg-cover bg-bottom bg-no-repeat"
+          className="bg-[#f4f1ea] mt-[8rem] h-auto lg:h-[550px] w-full bg-cover bg-bottom bg-no-repeat"
           style={{ backgroundImage: "url('/images/rooftop.png')" }}
         >
-          <div className="grid  grid-cols-2  justify-items-center md:grid-cols-4 lg:grid-cols-5 grid-rows-2 justify-center px-5 gap-y-[8rem] gap-x-[4rem] relative -top-10 ">
+          <div className="max-w-[1000px] mx-auto grid  grid-cols-2  justify-items-center md:grid-cols-4 lg:grid-cols-5 grid-rows-2 justify-center px-5 gap-y-[8rem] gap-x-[4rem] relative -top-10 ">
             {Products.map((i) => (
-              <motion.div
-                initial={{
+              <div
+                key={i.name}
+                className="bg-white relative w-[150px]  flex  justify-center gap-2 rounded-lg shadow-2xl items-center pt-6 pb-2 "
+              >
+                <motion.img initial={{
                   opacity: 0,
-                  y: "75%",
+                  y: "-75%",
                 }}
                 whileInView={{
                   opacity: 1,
@@ -116,28 +122,26 @@ const Home = () => {
                 }}
                 viewport={{
                   once: true,
+                  amount:0.5
                 }}
                 transition={{
-                  delay: 0.2,
+                  delay: 0.4,
+                  duration:0.4
                 }}
-                key={i.name}
-                className="bg-white relative w-[150px]  flex  justify-center gap-2 rounded-lg shadow-2xl items-center pt-6 pb-2 "
-              >
-                <img
                   src={i.url}
-                  className={`h-[100px] absolute top-0 -translate-y-[80%] ${i.className}`}
+                  className={`h-[100px]  absolute top-0 -translate-y-[80%] ${i.className}`}
                 />
                 <p className="text-center uppercase text-gray-600 w-[60%]">
                   {i.name}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
       </section>
-      <section className=" bg-amber-100 ">
+      <section className=" bg-[#f4f1ea] ">
         <h2
-          className="text-red-500 text-center text-5xl font-bold "
+          className="text-[#eb0029] text-center text-5xl font-bold "
           style={{
             wordSpacing: "6px",
           }}
@@ -153,9 +157,8 @@ const Home = () => {
           A Wide Range Of Confectionery Items
         </p>
 
-        <data> </data>
-        <div className=" w-[54%] lg:w-[80%] mx-auto relative mt-10">
-          <div className="overflow-hidden" ref={emblaRef}>
+        <div className=" w-[54%] lg:w-[80%] max-w-[1000px] mx-auto relative mt-10 ">
+          <div className="overflow-hidden relative " ref={emblaRef}>
             <div className="flex -ml-4">
               {Array(6)
                 .fill("")
@@ -172,11 +175,11 @@ const Home = () => {
                   </div>
                 ))}
             </div>
-          </div>
-
+          
+ </div>
           <button
             onClick={scrollPrev}
-            className="absolute top-1/2 -translate-x-full -translate-y-1/2 bg-red-500 aspect-square h-12 font-bold text-white text-4xl rounded-full flex items-center justify-center"
+            className="absolute top-1/2 -translate-x-full -translate-y-1/2 bg-[#eb0029] aspect-square h-12 font-bold text-white text-4xl rounded-full flex items-center justify-center"
             aria-label="Previous"
           >
             <svg
@@ -197,7 +200,7 @@ const Home = () => {
 
           <button
             onClick={scrollNext}
-            className="absolute top-1/2 left-full -translate-y-1/2 md:-translate-y-1/2 md:-translate-1/2 bg-red-500 text-white aspect-square h-12 font-bold text-4xl rounded-full flex items-center justify-center"
+            className="absolute top-1/2 left-full   -translate-y-1/2 bg-[#eb0029] text-white aspect-square h-12 font-bold text-4xl rounded-full flex items-center justify-center"
             aria-label="Next"
           >
             <svg
@@ -215,9 +218,10 @@ const Home = () => {
               />
             </svg>
           </button>
+         
         </div>
         <section className="h-[800px] lg:h-[550px] overflow-hidden mt-16 grid lg:grid-cols-2 ">
-          <div className="h-[350px] lg:h-[800px] rounded-tr-[250px] bg-red-500 lg:w-[500px] w-[300px] relative">
+          <div className="h-[350px] lg:h-[800px] rounded-tr-[250px] bg-[#eb0029] lg:w-[500px] w-[300px] relative">
             <div
               className="absolute h-[180px] lg:h-[300px] w-[280px] lg:w-[480px] bg-gray-500 right-10 md:right-0 translate-x-[30%] lg:translate-x-[20%] translate-y-[80%] lg:translate-y-[45%] bg-contain lg:bg-cover "
               style={{
@@ -226,7 +230,7 @@ const Home = () => {
             ></div>
           </div>
           <div className="md:translate-y-[8%] justify-self-center">
-            <h2 className="font-bold capitalize text-5xl text-red-500 tracking-wider">
+            <h2 className="font-bold capitalize text-5xl text-[#eb0029] tracking-wider">
               25 Years
             </h2>
             <p className="font-bold uppercase">
@@ -251,10 +255,10 @@ const Home = () => {
           </div>
         </section>
       </section>
-      <img src="/images/choclatebigslider.png" />
-      <section className="pt-8 bg-amber-100 ">
+      <img src="/images/choclatebigslider.png"  />
+      <section className="pt-8 bg-[#f4f1ea] ">
         <h2
-          className="text-red-500 text-center text-7xl font-semibold "
+          className="text-[#eb0029] text-center text-7xl font-semibold "
           style={{
             wordSpacing: "6px",
           }}
@@ -270,7 +274,7 @@ const Home = () => {
           A Wide Range Of Confectionery Items
         </p>
 
-        <div className="w-[60%] mx-auto relative mt-10">
+        <div className="w-[60%] max-w-[1000px] mx-auto relative mt-10">
           <div className="overflow-hidden" ref={emblaSlideRef}>
             <div className="flex px-10">
               {Array(3)
@@ -297,7 +301,7 @@ const Home = () => {
 
           <button
             onClick={scrollSlidePrev}
-            className="absolute top-1/2 -translate-x-full -translate-y-1/2 bg-red-500 aspect-square h-12 font-bold text-white rounded-full flex items-center justify-center"
+            className="absolute top-1/2 -translate-x-full -translate-y-1/2 bg-[#eb0029] aspect-square h-12 font-bold text-white rounded-full flex items-center justify-center"
             aria-label="Previous Slide"
           >
             <svg
@@ -317,7 +321,7 @@ const Home = () => {
           </button>
           <button
             onClick={scrollSlideNext}
-            className="absolute top-1/2 left-full -translate-y-1/2 md:-translate-x-1/2 bg-red-500 text-white aspect-square h-12 font-bold rounded-full flex items-center justify-center"
+            className="absolute top-1/2 left-full -translate-y-1/2  bg-[#eb0029] text-white aspect-square h-12 font-bold rounded-full flex items-center justify-center"
             aria-label="Next Slide"
           >
             <svg
@@ -341,7 +345,7 @@ const Home = () => {
           className="h-[700px] overflow-hidden mr-10 ml-10 mt-20 relative bg-cover bg-center"
           style={{ backgroundImage: "url('/images/uperportion.png')" }}
         >
-          <div className="flex lg:justify-end h-full">
+          <div className="flex lg:justify-end h-full max-w-[1000px] mx-auto">
             <div className="bg-red-600 rounded-3xl h-[450px] lg:h-[250px] w-auto md:w-[500px] flex flex-col gap-3 justify-center ml-5 mr-5 lg:ml-0  lg:mr-20 mt-auto mb-auto">
               <h2 className="text-white lg:text-3xl font-semibold text-center">
                 ABOUT DAZZY

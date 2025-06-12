@@ -1,8 +1,8 @@
 
 const Footer = () => {
   return (
-    <footer className="bg-[#3b1e1d] text-[#f2e9df] py-10 relative mt-20">
-      <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#ed1c24] rounded-2xl px-8 py-4 flex justify-between items-center w-[90%] max-w-4xl text-white font-medium text-center text-sm md:text-base">
+    <footer className="bg-[#3b1e1d] text-[#f2e9df] py-10 relative mt-20 ">
+      <div className="max-w-[1000px] mx-auto absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#ed1c24] rounded-2xl px-8 py-4 flex justify-between items-center w-[90%]  text-white font-medium text-center text-sm md:text-base">
         <div className="w-1/3 font-light">Address</div>
         <div className="w-1/3 font-light">Mail</div>
         <div className="w-1/3 font-light">Customer care no</div>
