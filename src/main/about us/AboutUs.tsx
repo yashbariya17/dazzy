@@ -121,7 +121,7 @@ const AboutUs = () => {
     restDelta: 0.001,
   });
 
-  const y = useTransform(top, (i) => Math.max(0, Math.min(i - 100, 1200)));
+  const y = useTransform(top, (i) => Math.max(0, Math.min(i , 1200)));
   const teamMembers = [
     {
       name: "Ralph Edwards",

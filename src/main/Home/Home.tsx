@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback } from "react";
+import AnimatedNumber from "../../components/AnimatedNumber";
 
 type ProductsType = {
   name: string;
@@ -75,14 +76,14 @@ const Home = () => {
         // style={{ backgroundImage: "url('/images/choclatebigslider.png')" }}
       ></section>
 
-<section className="bg-[#eb0029]">
-      <div className="max-w-[1000px] uppercase text-white  mx-auto font-semibold flex justify-center md:gap-16 text-lg py-2 flex-col md:flex-row gap-2 items-center">
-        <p>fssai & iso certiefied</p>
-        <p>25+ year experience</p>
-        <p>100%veg</p>
-        <p>pan india delivery</p>
-      </div>
-</section>
+      <section className="bg-[#eb0029]">
+        <div className="max-w-[1000px] uppercase text-white  mx-auto font-semibold flex justify-center md:gap-16 text-lg py-2 flex-col md:flex-row gap-2 items-center">
+          <p>fssai & iso certiefied</p>
+          <p>25+ year experience</p>
+          <p>100%veg</p>
+          <p>pan india delivery</p>
+        </div>
+      </section>
       <section className="pt-8 bg-[#f4f1ea] ">
         <h2
           className="text-[#eb0029] text-center text-5xl font-bold "
@@ -90,7 +91,6 @@ const Home = () => {
             wordSpacing: "6px",
           }}
         >
-      
           Our Products
         </h2>
         <p
@@ -112,22 +112,23 @@ const Home = () => {
                 key={i.name}
                 className="bg-white relative w-[150px]  flex  justify-center gap-2 rounded-lg shadow-2xl items-center pt-6 pb-2 "
               >
-                <motion.img initial={{
-                  opacity: 0,
-                  y: "-75%",
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                  amount:0.5
-                }}
-                transition={{
-                  delay: 0.4,
-                  duration:0.4
-                }}
+                <motion.img
+                  initial={{
+                    opacity: 0,
+                    y: "-75%",
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                    amount: 0.5,
+                  }}
+                  transition={{
+                    delay: 0.4,
+                    duration: 0.4,
+                  }}
                   src={i.url}
                   className={`h-[100px]  absolute top-0 -translate-y-[80%] ${i.className}`}
                 />
@@ -175,8 +176,7 @@ const Home = () => {
                   </div>
                 ))}
             </div>
-          
- </div>
+          </div>
           <button
             onClick={scrollPrev}
             className="absolute top-1/2 -translate-x-full -translate-y-1/2 bg-[#eb0029] aspect-square h-12 font-bold text-white text-4xl rounded-full flex items-center justify-center"
@@ -218,7 +218,6 @@ const Home = () => {
               />
             </svg>
           </button>
-         
         </div>
         <section className="h-[800px] lg:h-[550px] overflow-hidden mt-16 grid lg:grid-cols-2 ">
           <div className="h-[350px] lg:h-[800px] rounded-tr-[250px] bg-[#eb0029] lg:w-[500px] w-[300px] relative">
@@ -255,7 +254,7 @@ const Home = () => {
           </div>
         </section>
       </section>
-      <img src="/images/choclatebigslider.png"  />
+      <img src="/images/choclatebigslider.png" />
       <section className="pt-8 bg-[#f4f1ea] ">
         <h2
           className="text-[#eb0029] text-center text-7xl font-semibold "
@@ -352,16 +351,17 @@ const Home = () => {
               </h2>
               <div className="flex flex-col md:flex-row gap-5 justify-center text-center mt-5 items-center">
                 <div className="text-white font-bold lg:text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-                  150 +{" "}
+                  <AnimatedNumber value={150} /> +{" "}
                   <p className="text-white text-xs font-light">
                     Product Rating
                   </p>
                 </div>
                 <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-                  36 <p className="text-white text-xs font-light">Brands</p>
+                  <AnimatedNumber value={36} />{" "}
+                  <p className="text-white text-xs font-light">Brands</p>
                 </div>
                 <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-                  15+{" "}
+                  <AnimatedNumber value={15} />+{" "}
                   <p className="text-white text-xs font-light">
                     Export Destination
                   </p>
