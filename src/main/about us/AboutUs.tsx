@@ -54,6 +54,7 @@ const TimelineBlock = ({
         viewport={{
           once: true,
           amount: 0.5,
+          margin: "0px 0px -40% 0px",
         }}
         className={`${blockNo === 2 ? "col-start-3" : "col-start-1"} ${
           blockNo === 1
@@ -61,7 +62,7 @@ const TimelineBlock = ({
             : blockNo === 2
             ? "row-start-2"
             : "row-start-3"
-        }  w-full px-10 my-auto  col-span-1 row-span-1 `}
+        } hidden md:block  w-full px-10 my-auto  col-span-1 row-span-1 `}
       >
         <div
           className="px-[8rem] "
@@ -88,6 +89,7 @@ const TimelineBlock = ({
         viewport={{
           once: true,
           amount: 0.5,
+          margin: "0px 0px -40% 0px",
         }}
         className={`${blockNo === 2 ? "col-start-1" : "col-start-3"} ${
           blockNo === 1
@@ -95,7 +97,7 @@ const TimelineBlock = ({
             : blockNo === 2
             ? "row-start-2"
             : "row-start-3"
-        } w-full h-full  col-span-1 row-span-1  flex justify-center items-center relative`}
+        } hidden md:flex w-full h-full  col-span-1 row-span-1  justify-center items-center relative`}
       >
         <img
           src={image}
@@ -116,6 +118,59 @@ const TimelineBlock = ({
           </span>
         </div>
       </motion.div>
+      <div
+        className="md:hidden h-[100vh] w-full flex flex-col items-center justify-center"
+        style={{
+          gridRowStart: blockNo,
+        }}
+      >
+        <motion.img
+          initial={{
+            y: 100,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          viewport={{
+            once: true,
+            amount: "all",
+          }}
+          transition={{
+            duration: 0.4,
+          }}
+          src={image}
+          alt={title}
+          className="w-[80%] max-w-[200px] aspect-square rounded-full border-6 border-solid border-red-500 object-cover relative z-10 mx-auto mt-2"
+        />
+        <motion.div
+          className="px-[2rem] "
+          style={{ wordSpacing: "2px" }}
+          initial={{
+            y: 100,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          viewport={{
+            once: true,
+            amount: "all",
+          }}
+          transition={{
+            duration: 0.4,
+          }}
+        >
+          <h3 className="mb-1 cream-cake-font text-red-500 font-cursive text-[3.5rem] text-center">
+            {title}
+          </h3>
+          <p className="mb-2 text-sm md:text-base font-semibold">
+            {description}
+          </p>
+        </motion.div>
+      </div>
     </>
   )
 }
@@ -149,7 +204,7 @@ const AboutUs = () => {
 
   const y = useTransform(
     top,
-    [sectionTop - 90 - window.innerHeight / 2, sectionTop + sectionHeight],
+    [sectionTop - 80 - window.innerHeight / 2, sectionTop + sectionHeight],
     [0, sectionHeight]
   )
 
@@ -187,9 +242,9 @@ const AboutUs = () => {
       </section>
       <div
         ref={ref}
-        className="relative h-[1500px] grid grid-cols-[1fr_auto_1fr] grid-rows-3 overflow-hidden"
+        className="relative h-auto md:h-[1500px] grid grid-cols-[1fr_auto] md:grid-cols-[1fr_auto_1fr] grid-rows-3 overflow-hidden"
       >
-        <div className=" h-full w-[100px] bg-black col-span-1 col-start-2 row-span-3 ">
+        <div className=" h-full w-[100px] bg-black col-span-1 col-start-2 row-span-3 relative ">
           <div
             className="w-[4px] h-full mx-auto"
             style={{
@@ -197,16 +252,15 @@ const AboutUs = () => {
                 "repeating-linear-gradient(to bottom, white 0, white 30px, transparent 30px, transparent 50px)",
             }}
           ></div>
+          <motion.img
+            src="/images/truck.png"
+            alt="truck"
+            style={{
+              top: y,
+            }}
+            className="absolute left-1/2 -translate-x-1/2 z-10 w-[125px] md:w-[156px] !max-w-max"
+          />
         </div>
-
-<motion.img
-  src="/images/truck.png"
-  alt="truck"
-  style={{
-    top: y,
-  }}
-  className="absolute left-1/2 -translate-x-1/2 z-10 w-[125px] md:w-[156px]"
-/>
 
         {aboutData.map((i, no) => (
           <TimelineBlock
