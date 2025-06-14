@@ -199,14 +199,14 @@ const AboutUs = () => {
           ></div>
         </div>
 
-        <motion.img
-          src="/images/truck.png"
-          alt="truck"
-          style={{
-            top: y,
-          }}
-          className="absolute left-1/2 -translate-x-1/2 z-10 w-16 md:w-[80px]"
-        />
+<motion.img
+  src="/images/truck.png"
+  alt="truck"
+  style={{
+    top: y,
+  }}
+  className="absolute left-1/2 -translate-x-1/2 z-10 w-[125px] md:w-[156px]"
+/>
 
         {aboutData.map((i, no) => (
           <TimelineBlock

@@ -20,7 +20,7 @@ const Products: ProductsType = [
   },
   {
     name: "decorative cholcloate",
-    url: "",
+    url: "/images/DECORATIVE-CHOCOLATE.png",
   },
   {
     name: "penut cholcloate",
@@ -36,15 +36,15 @@ const Products: ProductsType = [
   },
   {
     name: "toffe",
-    url: "",
+    url: "/images/TOFFEE.png",
   },
   {
     name: "jelly",
-    url: "",
+    url: "/images/JELLY.png",
   },
   {
     name: "candy",
-    url: "",
+    url: "/images/CANDY.png",
   },
   {
     name: "lollipop",
