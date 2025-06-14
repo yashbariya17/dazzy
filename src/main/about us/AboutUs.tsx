@@ -1,5 +1,6 @@
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import './aboutus.css'
+import { motion, useScroll, useSpring, useTransform } from "framer-motion"
+import "./aboutus.css"
+import { useEffect, useRef, useState } from "react"
 
 const aboutData = [
   {
@@ -23,14 +24,14 @@ const aboutData = [
     image: "/images/factory.jpg",
     side: "right",
   },
-] as const;
+] as const
 
 type TimelineBlockProps = {
-  title: string;
-  description: string;
-  image: string;
-  blockNo: number;
-};
+  title: string
+  description: string
+  image: string
+  blockNo: number
+}
 
 const TimelineBlock = ({
   title,
@@ -54,14 +55,18 @@ const TimelineBlock = ({
           once: true,
           amount: 0.5,
         }}
-        className={`${blockNo === 2 ? "col-start-3" : "col-start-1"} ${blockNo === 1
+        className={`${blockNo === 2 ? "col-start-3" : "col-start-1"} ${
+          blockNo === 1
             ? "row-start-1"
             : blockNo === 2
-              ? "row-start-2"
-              : "row-start-3"
-          }  w-full px-10 my-auto  col-span-1 row-span-1 `}
+            ? "row-start-2"
+            : "row-start-3"
+        }  w-full px-10 my-auto  col-span-1 row-span-1 `}
       >
-        <div className="px-[8rem] " style={{ wordSpacing: "2px" }}>
+        <div
+          className="px-[8rem] "
+          style={{ wordSpacing: "2px" }}
+        >
           <h3 className="mb-2 cream-cake-font text-red-500 font-cursive text-[4rem]">
             {title}
           </h3>
@@ -84,12 +89,13 @@ const TimelineBlock = ({
           once: true,
           amount: 0.5,
         }}
-        className={`${blockNo === 2 ? "col-start-1" : "col-start-3"} ${blockNo === 1
+        className={`${blockNo === 2 ? "col-start-1" : "col-start-3"} ${
+          blockNo === 1
             ? "row-start-1"
             : blockNo === 2
-              ? "row-start-2"
-              : "row-start-3"
-          } w-full h-full  col-span-1 row-span-1  flex justify-center items-center relative`}
+            ? "row-start-2"
+            : "row-start-3"
+        } w-full h-full  col-span-1 row-span-1  flex justify-center items-center relative`}
       >
         <img
           src={image}
@@ -97,31 +103,56 @@ const TimelineBlock = ({
           className="h-[90%] aspect-square rounded-full border-6 border-solid border-red-500 object-cover relative z-10"
         />
         <div
-          className={`${blockNo === 2 ? "-right-8" : "-left-8"
-            } absolute bg-red-500 h-2 w-[50%]  z-0`}
+          className={`${
+            blockNo === 2 ? "-right-8" : "-left-8"
+          } absolute bg-red-500 h-2 w-[50%]  z-0`}
         >
           <span
-            className={`${blockNo === 2 ? "left-full" : ""
-              } block rounded-full bg-red-500 aspect-square h-6 absolute top-1/2  -translate-y-1/2`}
+            className={`${
+              blockNo === 2 ? "left-full" : ""
+            } block rounded-full bg-red-500 aspect-square h-6 absolute top-1/2  -translate-y-1/2`}
           >
             {" "}
           </span>
         </div>
       </motion.div>
     </>
-  );
-};
+  )
+}
 
 const AboutUs = () => {
-  const { scrollY } = useScroll();
+  const ref = useRef<HTMLDivElement>(null)
+  const { scrollY } = useScroll()
+  const [sectionTop, setSectionTop] = useState(0)
+  const [sectionHeight, setSectionHeight] = useState(0)
+
+  useEffect(() => {
+    const el = ref.current
+    if (el) {
+      const onResize = () => {
+        const rect = el.getBoundingClientRect()
+        const scrollTop = window.scrollY || window.pageYOffset
+        setSectionTop(rect.top + scrollTop)
+        setSectionHeight(el.offsetHeight)
+      }
+      onResize()
+      window.addEventListener("resize", onResize)
+      return () => window.removeEventListener("resize", onResize)
+    }
+  }, [])
 
   const top = useSpring(scrollY, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001,
-  });
+  })
 
-  const y = useTransform(top, (i) => Math.max(0, Math.min(i , 1200)));
+  const y = useTransform(
+    top,
+    [sectionTop - 90 - window.innerHeight / 2, sectionTop + sectionHeight],
+    [0, sectionHeight]
+  )
+
   const teamMembers = [
     {
       name: "Ralph Edwards",
@@ -141,7 +172,7 @@ const AboutUs = () => {
       image: "chef3.jpg",
       borderColor: "border-red-500",
     },
-  ];
+  ]
 
   return (
     <main className="relative bg-[#fff8f0] min-h-[2100px] overflow-hidden">
@@ -154,7 +185,10 @@ const AboutUs = () => {
           25 YEARS OF SWEET MEMORIES
         </p>
       </section>
-      <div className="relative h-[1500px] grid grid-cols-[1fr_auto_1fr] grid-rows-3">
+      <div
+        ref={ref}
+        className="relative h-[1500px] grid grid-cols-[1fr_auto_1fr] grid-rows-3 overflow-hidden"
+      >
         <div className=" h-full w-[100px] bg-black col-span-1 col-start-2 row-span-3 ">
           <div
             className="w-[4px] h-full mx-auto"
@@ -175,7 +209,10 @@ const AboutUs = () => {
         />
 
         {aboutData.map((i, no) => (
-          <TimelineBlock {...i} blockNo={no + 1} />
+          <TimelineBlock
+            {...i}
+            blockNo={no + 1}
+          />
         ))}
       </div>
       <div className="w-full bg-[#2d0000] text-white text-center py-4 flex flex-wrap justify-center gap-8 text-sm md:text-base font-medium tracking-wide">
@@ -233,7 +270,7 @@ const AboutUs = () => {
         </div>
       </div>
     </main>
-  );
-};
+  )
+}
 
-export default AboutUs;
+export default AboutUs
