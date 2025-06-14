@@ -202,12 +202,12 @@ const AboutUs = () => {
     restDelta: 0.001,
   })
 
+
   const y = useTransform(
     top,
     [sectionTop - 80 - window.innerHeight / 2, sectionTop + sectionHeight],
     [0, sectionHeight]
   )
-
   const teamMembers = [
     {
       name: "Ralph Edwards",
@@ -231,15 +231,11 @@ const AboutUs = () => {
 
   return (
     <main className="relative bg-[#fff8f0] min-h-[2100px] overflow-hidden">
-      <section
-        className="h-[500px] bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/premium-chocolates.jpg')" }}
-      ></section>
+      <section className="h-[500px] bg-cover bg-center" style={{ backgroundImage: "url('/images/premium-chocolates.jpg')" }} />
       <section className="text-center py-12 md:py-16 bg-[#2D0B05] text-[#E5C387]">
-        <p className="text-5xl md:text-7xl tracking-widest font-[Cinzel]">
-          25 YEARS OF SWEET MEMORIES
-        </p>
+        <p className="text-5xl md:text-7xl tracking-widest font-[Cinzel]">25 YEARS OF SWEET MEMORIES</p>
       </section>
+
       <div
         ref={ref}
         className="relative h-auto md:h-[1500px] grid grid-cols-[1fr_auto] md:grid-cols-[1fr_auto_1fr] grid-rows-3 overflow-hidden"
@@ -269,6 +265,8 @@ const AboutUs = () => {
           />
         ))}
       </div>
+
+      {/* Highlights */}
       <div className="w-full bg-[#2d0000] text-white text-center py-4 flex flex-wrap justify-center gap-8 text-sm md:text-base font-medium tracking-wide">
         <span>FSSAI & ISO CERTIFIED</span>
         <span>25+ YEAR EXPERIENCE</span>
@@ -276,51 +274,39 @@ const AboutUs = () => {
         <span>PAN INDIA DELIVERY</span>
       </div>
 
-      {/* Design & Team Section */}
+      {/* Vision and Our Team */}
       <div className="w-full flex flex-col items-center mt-10 px-4">
-        <h2 className="text-8xl md:text-8xl text-red-600 mb-4 text-center cream-cake-font">
-          Vision of Company
-        </h2>
+        <h2 className="text-8xl text-red-600 mb-4 text-center cream-cake-font">Vision of Company</h2>
         <p className="max-w-3xl text-center text-gray-700 mb-12 text-sm md:text-base">
-          All DAZZY brands are created by individuals who prioritize the
-          consumer, utilizing the finest ingredients and cutting-edge production
-          technology. We adhere to transparent quality control standards to
-          build trust and credibility. This commitment results in exceptional
+          All DAZZY brands are created by individuals who prioritize the consumer, utilizing the finest ingredients and cutting-edge production
+          technology. We adhere to transparent quality control standards to build trust and credibility. This commitment results in exceptional
           quality and a delightful experience.
         </p>
 
-        <h3 className="text-8xl md:text-8xl text-red-600 mb-2 text-center cream-cake-font">
-          Our Team
-        </h3>
-        <p className="text-center text-gray-600 mb-10 text-xs md:text-xl ">
-          A Wide Range Of Confectionery Items
-        </p>
-        <div className="w-[60%] mx-auto relative mt-10">
-          <div className="overflow-hidden">
-            <div className="flex px-10">
-              {teamMembers.map((member, index) => (
-                <div
-                  key={index}
-                  className="relative  flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33%] h-[300px] mr-6 flex flex-col items-center "
-                >
-                  <img
-                    src={`/images/chef${index + 1}.jpg`}
-                    alt={`Slide ${index + 1}`}
-                    className="absolute z-99 top-[15%] sm:top-[0%] mt-4 w-[125px] sm:w-[175px] h-auto object-contain"
-                  />
+        <h3 className="text-8xl text-red-600 mb-2 text-center cream-cake-font">Our Team</h3>
+        <p className="text-center text-gray-600 mb-10 text-xs md:text-xl">A Wide Range Of Confectionery Items</p>
 
-                  <div className="bg-white absolute bottom-0 w-full h-[50%] rounded-t-[70px]">
-                    <div className="mt-20 pb-8 px-4 text-center">
-                      <h3 className="text-lg font-semibold text-gray-900">
-                        {member.name}
-                      </h3>
-                      <p className="text-sm text-gray-500">{member.role}</p>
-                    </div>
-                  </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mt-10 px-4 max-w-6xl w-full">
+          {teamMembers.map((member, idx) => (
+            <div key={idx} className="bg-white rounded-t-[140px] shadow-lg pt-10 pb-6 px-4 relative flex flex-col items-center">
+              <img
+                src={`/images/${member.image}`}
+                alt={member.name}
+                className={`w-[180px] h-[180px] object-cover rounded-t-[100px] ${member.borderColor} border-[6px]`}
+              />
+              <div className="absolute top-[210px] left-1/2 transform -translate-x-1/2 z-10">
+                <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center shadow-md border-4 border-white">
+                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.88L8.91 12.7C8.96 12.47 9 12.24 9 12C9 11.76 8.96 11.53 8.91 11.3L15.96 7.11C16.5 7.63 17.22 7.97 18 7.97C19.66 7.97 21 6.63 21 4.97C21 3.31 19.66 1.97 18 1.97C16.34 1.97 15 3.31 15 4.97C15 5.21 15.04 5.44 15.09 5.67L8.04 9.86C7.5 9.34 6.78 9 6 9C4.34 9 3 10.34 3 12C3 13.66 4.34 15 6 15C6.78 15 7.5 14.66 8.04 14.14L15.16 18.32C15.11 18.54 15.08 18.77 15.08 19C15.08 20.66 16.42 22 18.08 22C19.74 22 21.08 20.66 21.08 19C21.08 17.34 19.74 16 18.08 16Z" />
+                  </svg>
                 </div>
-              ))}
+              </div>
+              <div className="mt-14 text-center">
+                <h3 className="text-lg font-semibold text-gray-800">{member.name}</h3>
+                <p className="text-sm text-gray-500">{member.role}</p>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </main>
