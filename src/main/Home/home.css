@@ -1,0 +1,9 @@
+@font-face {
+font-family: 'CreamCake';
+src: url('/fonts/Cream-Cake.otf') format('opentype');
+font-weight: normal;
+font-style: normal;
+}
+.cream-cake-font{
+  font-family: "CreamCake";
+}
