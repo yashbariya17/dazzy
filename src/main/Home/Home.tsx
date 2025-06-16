@@ -25,6 +25,7 @@ const Products: ProductsType = [
   {
     name: "penut cholcloate",
     url: "/images/4thimg.png",
+    className:'left-[0px]'
   },
   {
     name: "nought bar",
@@ -37,6 +38,7 @@ const Products: ProductsType = [
   {
     name: "toffe",
     url: "/images/TOFFEE.png",
+    className: "left-[25px] top-[10px]",
   },
   {
     name: "jelly",
