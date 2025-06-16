@@ -219,16 +219,16 @@ const Home = () => {
             </svg>
           </button>
         </div>
-        <section className="h-[800px] lg:h-[550px] overflow-hidden mt-16 grid lg:grid-cols-2 ">
-          <div className="h-[350px] lg:h-[800px] rounded-tr-[250px] bg-[#eb0029] lg:w-[500px] w-[300px] relative">
+        <section className="md:h-[650px] lg:h-[550px] max-w-[1000px] mx-auto lg:mr-auto overflow-hidden mt-16 md:mt-8 lg:mt-16 grid md:grid-cols-2 content-center">
+          <div className="h-[350px] md:h-[600px] rounded-tr-[250px] bg-[#eb0029] lg:w-[400px] w-[280px] relative">
             <div
-              className="absolute h-[180px] lg:h-[300px] w-[280px] lg:w-[480px] bg-gray-500 right-10 md:right-0 translate-x-[30%] lg:translate-x-[20%] translate-y-[80%] lg:translate-y-[45%] bg-contain lg:bg-cover "
+              className="absolute h-[180px] md:bg-cover md:h-[250px] lg:h-[300px] w-[280px] xs:w-[320px] lg:w-[400px] bg-gray-500 right-10 md:right-0 translate-x-[30%] lg:translate-x-[20%] translate-y-[80%] lg:translate-y-[45%] bg-contain lg:bg-cover "
               style={{
                 backgroundImage: "url('/images/25ywarsdashboard.png')",
               }}
             ></div>
           </div>
-          <div className="md:translate-y-[8%] justify-self-center">
+          <div className="md:translate-y-[8%] justify-self-center items-center !h-fit md:h-auto">
             <h2 className="font-bold capitalize text-5xl text-[#eb0029] tracking-wider">
               25 Years
             </h2>
@@ -248,7 +248,7 @@ const Home = () => {
               pan-India presence and a focus on quality, creativity, and market
               expansion.
             </p>
-            <button className="bg-black text-white px-4 py-2 mt-4 sm:mb-10 lg:mb-0">
+            <button className="bg-black text-white px-4 py-2 my-4 sm:mb-10 lg:mb-0">
               Read More
             </button>
           </div>
@@ -376,7 +376,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="bg-[#111] text-white flex flex-col md:flex-row items-center  relative mt-20 ">
+        <section className="bg-[#111] text-white flex flex-col md:flex-row items-center  relative mt-20  ">
           <div className="w-auto h-[600px] flex justify-center relative ">
             <img
               src="/images/footeraboveboard.png"
@@ -391,7 +391,7 @@ const Home = () => {
             <div className="text-3xl font-bold text-white mb-6 mx-auto w-fit">
               What Our Clients Say
             </div>
-            <div className="bg-white text-gray-800 rounded-xl shadow-lg p-6 max-w-xl relative border-orange-500 border-t-4 h-[250px] flex flex-col  justify-center  ">
+            <div className="bg-white text-gray-800 rounded-xl lg:h-[315px] shadow-lg p-6 max-w-xl relative border-orange-500 border-t-4 h-[250px] flex flex-col  justify-center  ">
               <div className="flex items-center mb-4">
                 <img
                   src="images/user.jpg"
