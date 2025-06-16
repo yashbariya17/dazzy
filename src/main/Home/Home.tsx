@@ -86,7 +86,7 @@ const Home = () => {
       </section>
       <section className="pt-8 bg-[#f4f1ea] ">
         <h2
-          className="text-[#eb0029] text-center text-6xl cream-cake-font"
+          className="text-[#eb0029] text-center text-5xl font-bold "
           style={{
             wordSpacing: "6px",
           }}
@@ -142,7 +142,7 @@ const Home = () => {
       </section>
       <section className=" bg-[#f4f1ea] ">
         <h2
-          className="text-[#eb0029] text-center text-6xl cream-cake-font"
+          className="text-[#eb0029] text-center text-5xl font-bold "
           style={{
             wordSpacing: "6px",
           }}
@@ -229,7 +229,7 @@ const Home = () => {
             ></div>
           </div>
           <div className="md:translate-y-[8%] justify-self-center">
-            <h2 className="capitalize text-5xl text-[#eb0029] tracking-wider cream-cake-font">
+            <h2 className="font-bold capitalize text-5xl text-[#eb0029] tracking-wider">
               25 Years
             </h2>
             <p className="font-bold uppercase">
@@ -257,7 +257,7 @@ const Home = () => {
       <img src="/images/choclatebigslider.png" />
       <section className="pt-8 bg-[#f4f1ea] ">
         <h2
-          className="text-[#eb0029] text-center text-7xl cream-cake-font"
+          className="text-[#eb0029] text-center text-7xl font-semibold "
           style={{
             wordSpacing: "6px",
           }}
@@ -345,8 +345,8 @@ const Home = () => {
           style={{ backgroundImage: "url('/images/uperportion.png')" }}
         >
           <div className="flex lg:justify-end h-full max-w-[1000px] mx-auto">
-            <div className="bg-red-600 rounded-3xl h-[450px] lg:h-[250px] w-auto md:w-[500px] flex flex-col gap-3 justify-center ml-5 mr-5 lg:ml-0  lg:mr-20 mt-auto mb-auto">
-              <h2 className="text-white lg:text-4xl text-center">
+            <div className="bg-red-600 rounded-[50px] h-[450px] lg:h-[250px] w-auto md:w-[500px] flex flex-col gap-3 justify-center ml-5 mr-5 lg:ml-0  lg:mr-20 mt-auto mb-auto">
+              <h2 className="text-white lg:text-3xl font-semibold text-center">
                 ABOUT DAZZY
               </h2>
               <div className="flex flex-col md:flex-row gap-5 justify-center text-center mt-5 items-center">
@@ -376,7 +376,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="bg-[#111] text-white flex flex-col md:flex-row justify-between items-center relative mt-20 ">
+        <section className="bg-[#111] text-white flex flex-col md:flex-row items-center  relative mt-20 ">
           <div className="w-auto h-[600px] flex justify-center relative ">
             <img
               src="/images/footeraboveboard.png"
