@@ -25,7 +25,7 @@ const Products: ProductsType = [
   {
     name: "penut cholcloate",
     url: "/images/4thimg.png",
-    className:'left-[0px]'
+    className: "left-[0px]",
   },
   {
     name: "nought bar",
@@ -221,39 +221,37 @@ const Home = () => {
             </svg>
           </button>
         </div>
-        <section className="md:h-[650px] lg:h-[550px] max-w-[1000px] mx-auto lg:mr-auto overflow-hidden mt-16 md:mt-8 lg:mt-16 grid md:grid-cols-2 content-center">
-          <div className="h-[350px] md:h-[600px] rounded-tr-[250px] bg-[#eb0029] lg:w-[400px] w-[280px] relative">
-            <div
-              className="absolute h-[180px] md:bg-cover md:h-[250px] lg:h-[300px] w-[280px] xs:w-[320px] lg:w-[400px] bg-gray-500 right-10 md:right-0 translate-x-[30%] lg:translate-x-[20%] translate-y-[80%] lg:translate-y-[45%] bg-contain lg:bg-cover "
-              style={{
-                backgroundImage: "url('/images/25ywarsdashboard.png')",
-              }}
-            ></div>
-          </div>
-          <div className="md:translate-y-[8%] justify-self-center items-center !h-fit md:h-auto">
-            <h2 className="font-bold capitalize text-5xl text-[#eb0029] tracking-wider">
-              25 Years
-            </h2>
-            <p className="font-bold uppercase">
-              expierience in food industries
-            </p>
-            <p className="lg:w-[400px] text-wrap w-[300px]">
-              Established in 1995 in Baroda, Gujarat, Dazzy Food Industries
-              began as a confectionery distribution company founded by Mr.
-              Deepak Kanani. With strong support from his brothers, the company
-              grew steadily, guided by the motto: “To Deliver the Best.” In
-              2002, Dazzy launched its own production line, expanding into
-              lollipops, chocolates, candies, toffees, and éclairs. Known for
-              innovation in both product and packaging, Dazzy has created
-              bestselling items that stand out in the market. Today, Dazzy is a
-              trusted name in the Indian confectionery industry with a growing
-              pan-India presence and a focus on quality, creativity, and market
-              expansion.
-            </p>
-            <button className="bg-black text-white px-4 py-2 my-4 sm:mb-10 lg:mb-0">
-              Read More
-            </button>
-          </div>
+        <section className="relative isolate">
+          <div className="absolute h-full w-full bg-[#eb0029]  -left-[20%] md:-left-[60%] rounded-tr-[250px] z-[-1] "></div>
+          <section className="md:h-[650px] lg:h-[550px] max-w-[1000px] mx-auto  lg:mr-auto  mt-16 md:mt-8 lg:mt-16 grid md:grid-cols-2">
+            <img src='/images/25ywarsdashboard.png' className="w-[90%] sm:w-[70%] md:w-[90%] xl:w-[600px] xl:-translate-x-[30%] !max-w-max md:my-auto  mx-auto lg:mr-auto lg:ml-0 my-8 " />
+            <div className="bg-[#f4f1ea] pt-8 md:ml-auto">
+            <div className="justify-self-center items-center !h-fit md:h-auto">
+              <h2 className="font-bold capitalize text-5xl text-[#eb0029] tracking-wider">
+                25 Years
+              </h2>
+              <p className="font-bold uppercase">
+                expierience in food industries
+              </p>
+              <p className="lg:w-[400px] text-wrap w-[300px]">
+                Established in 1995 in Baroda, Gujarat, Dazzy Food Industries
+                began as a confectionery distribution company founded by Mr.
+                Deepak Kanani. With strong support from his brothers, the
+                company grew steadily, guided by the motto: “To Deliver the
+                Best.” In 2002, Dazzy launched its own production line,
+                expanding into lollipops, chocolates, candies, toffees, and
+                éclairs. Known for innovation in both product and packaging,
+                Dazzy has created bestselling items that stand out in the
+                market. Today, Dazzy is a trusted name in the Indian
+                confectionery industry with a growing pan-India presence and a
+                focus on quality, creativity, and market expansion.
+              </p>
+              <button className="bg-black text-white px-4 py-2 my-4 sm:mb-10 lg:mb-0">
+                Read More
+              </button>
+            </div>
+            </div>
+          </section>
         </section>
       </section>
       <img src="/images/choclatebigslider.png" />
