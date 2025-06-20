@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback } from "react";
 import AnimatedNumber from "../../components/AnimatedNumber";
+import { TextAnimation } from "../../components/TextAnimation";
 
 type ProductsType = {
   name: string;
@@ -87,14 +88,7 @@ const Home = () => {
         </div>
       </section>
       <section className="pt-8 bg-[#f4f1ea] ">
-        <h2
-          className="text-[#eb0029] text-center text-5xl font-bold "
-          style={{
-            wordSpacing: "6px",
-          }}
-        >
-          Our Products
-        </h2>
+        <TextAnimation text="Our Products" />
         <p
           className="text-center mt-2 text-gray-500 "
           style={{
@@ -143,14 +137,7 @@ const Home = () => {
         </div>
       </section>
       <section className=" bg-[#f4f1ea] ">
-        <h2
-          className="text-[#eb0029] text-center text-5xl font-bold "
-          style={{
-            wordSpacing: "6px",
-          }}
-        >
-          Our Brands
-        </h2>
+        <TextAnimation text="Our Brands" />
         <p
           className="text-center mt-2 text-gray-500 "
           style={{
@@ -224,46 +211,42 @@ const Home = () => {
         <section className="relative isolate">
           <div className="absolute h-full w-full bg-[#eb0029]  -left-[20%] md:-left-[60%] rounded-tr-[250px] z-[-1] "></div>
           <section className="md:h-[650px] lg:h-[550px] max-w-[1000px] mx-auto  lg:mr-auto  mt-16 md:mt-8 lg:mt-16 grid md:grid-cols-2">
-            <img src='/images/25ywarsdashboard.png' className="w-[90%] sm:w-[70%] md:w-[90%] xl:w-[600px] xl:-translate-x-[30%] !max-w-max md:my-auto  mx-auto lg:mr-auto lg:ml-0 my-8 " />
+            <img
+              src="/images/25ywarsdashboard.png"
+              className="w-[90%] sm:w-[70%] md:w-[90%] xl:w-[600px] xl:-translate-x-[30%] !max-w-max md:my-auto  mx-auto lg:mr-auto lg:ml-0 my-8 "
+            />
             <div className="bg-[#f4f1ea] pt-8 md:ml-auto">
-            <div className="justify-self-center items-center !h-fit md:h-auto">
-              <h2 className="font-bold capitalize text-5xl text-[#eb0029] tracking-wider">
-                25 Years
-              </h2>
-              <p className="font-bold uppercase">
-                expierience in food industries
-              </p>
-              <p className="lg:w-[400px] text-wrap w-[300px]">
-                Established in 1995 in Baroda, Gujarat, Dazzy Food Industries
-                began as a confectionery distribution company founded by Mr.
-                Deepak Kanani. With strong support from his brothers, the
-                company grew steadily, guided by the motto: “To Deliver the
-                Best.” In 2002, Dazzy launched its own production line,
-                expanding into lollipops, chocolates, candies, toffees, and
-                éclairs. Known for innovation in both product and packaging,
-                Dazzy has created bestselling items that stand out in the
-                market. Today, Dazzy is a trusted name in the Indian
-                confectionery industry with a growing pan-India presence and a
-                focus on quality, creativity, and market expansion.
-              </p>
-              <button className="bg-black text-white px-4 py-2 my-4 sm:mb-10 lg:mb-0">
-                Read More
-              </button>
-            </div>
+              <div className="justify-self-center items-center !h-fit md:h-auto">
+                <h2 className="font-bold capitalize text-5xl text-[#eb0029] tracking-wider">
+                  25 Years
+                </h2>
+                <p className="font-bold uppercase">
+                  expierience in food industries
+                </p>
+                <p className="lg:w-[400px] text-wrap w-[300px]">
+                  Established in 1995 in Baroda, Gujarat, Dazzy Food Industries
+                  began as a confectionery distribution company founded by Mr.
+                  Deepak Kanani. With strong support from his brothers, the
+                  company grew steadily, guided by the motto: “To Deliver the
+                  Best.” In 2002, Dazzy launched its own production line,
+                  expanding into lollipops, chocolates, candies, toffees, and
+                  éclairs. Known for innovation in both product and packaging,
+                  Dazzy has created bestselling items that stand out in the
+                  market. Today, Dazzy is a trusted name in the Indian
+                  confectionery industry with a growing pan-India presence and a
+                  focus on quality, creativity, and market expansion.
+                </p>
+                <button className="bg-black text-white px-4 py-2 my-4 sm:mb-10 lg:mb-0">
+                  Read More
+                </button>
+              </div>
             </div>
           </section>
         </section>
       </section>
       <img src="/images/choclatebigslider.png" />
       <section className="pt-8 bg-[#f4f1ea] ">
-        <h2
-          className="text-[#eb0029] text-center text-7xl font-semibold "
-          style={{
-            wordSpacing: "6px",
-          }}
-        >
-          Best Sellers
-        </h2>
+        <TextAnimation text="Best Sellers" />
         <p
           className="text-center mt-2 text-gray-500 "
           style={{
@@ -286,13 +269,13 @@ const Home = () => {
                     <img
                       src={`/images/product${index + 1}.png`}
                       alt={`Slide ${index + 1}`}
-                      className="absolute z-99 top-[15%] sm:top-[0%] mt-4 w-[125px] sm:w-[175px] h-auto object-contain"
+                      className="absolute z-99 top-[15%] sm:top-[0%] mt-4 w-[125px] sm:w-[175px] h-auto object-contain float"
                     />
                     <button className="bg-red-600 text-white w-20 md:w-[100px] py-1 md:py-2 mt-auto mb-6 z-10 text-[12px]">
                       READ MORE
                     </button>
 
-                    <div className="bg-white absolute bottom-0 w-full h-[50%] rounded-t-[70px]"></div>
+                    <div className="bg-white absolute bottom-0 w-full h-[50%] rounded-t-[70px] shadow-xl"></div>
                   </div>
                 ))}
             </div>
