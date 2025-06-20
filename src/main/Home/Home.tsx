@@ -1,6 +1,6 @@
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import useEmblaCarousel from "embla-carousel-react";
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import AnimatedNumber from "../../components/AnimatedNumber";
 import { TextAnimation } from "../../components/TextAnimation";
 
@@ -72,8 +72,81 @@ const Home = () => {
     [emblaSlideApi]
   );
 
+  const [aboutModal, setAboutModal] = useState(false);
+
   return (
     <div className="w-full overflow-x-hidden">
+      <AnimatePresence mode="wait">
+        {aboutModal && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+            }}
+            exit={{
+              opacity: 0,
+            }}
+            transition={{
+              duration: 0.3,
+            }}
+            className="bg-[rgba(0,0,0,0.3)] fixed h-screen w-full z-10 top-0 flex justify-center items-center"
+            onClick={() => {
+              setAboutModal(false);
+              document.body.style.overflow = "auto";
+            }}
+          >
+            <motion.section
+              className="rounded-xl max-w-[90%]"
+              animate={{
+                backgroundColor: "#f4f1ea",
+              }}
+              transition={{
+                delay: 0.3,
+              }}
+            >
+              <motion.img
+                layoutId="aboutImage"
+                className="w-[600px] max-w-full h-auto rounded-lg"
+                src="/images/25ywarsdashboard.png"
+                transition={{
+                  duration: 0.3,
+                }}
+              />
+              <motion.div
+                className="*:text-center space-y-3 grid"
+                initial={{ gridTemplateRows: "0fr" }}
+                animate={{
+                  gridTemplateRows: "1fr",
+                }}
+                transition={{
+                  delay: 0.4,
+                }}
+              >
+                <div className="overflow-hidden">
+                  <TextAnimation text="25 Years" />
+                  <p className="font-bold uppercase">
+                    expierience in food industries
+                  </p>
+                  <p className="text-wrap w-[500px] mx-auto pb-2">
+                    Established in 1995 in Baroda, Gujarat, Dazzy Food
+                    Industries began as a confectionery distribution company
+                    founded by Mr. Deepak Kanani. With strong support from his
+                    brothers, the company grew steadily, guided by the motto:
+                    “To Deliver the Best.” In 2002, Dazzy launched its own
+                    production line, expanding into lollipops, chocolates,
+                    candies, toffees, and éclairs. Known for innovation in both
+                    product and packaging, Dazzy has created bestselling items
+                    that stand out in the market. Today, Dazzy is a trusted name
+                    in the Indian confectionery industry with a growing
+                    pan-India presence and a focus on quality, creativity, and
+                    market expansion.
+                  </p>
+                </div>
+              </motion.div>
+            </motion.section>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <section
         className="h-[500px] bg-cover bg-center  bg-gray-700"
         // style={{ backgroundImage: "url('/images/choclatebigslider.png')" }}
@@ -211,7 +284,8 @@ const Home = () => {
         <section className="relative isolate">
           <div className="absolute h-full w-full bg-[#eb0029]  -left-[20%] md:-left-[60%] rounded-tr-[250px] z-[-1] "></div>
           <section className="md:h-[650px] lg:h-[550px] max-w-[1000px] mx-auto  lg:mr-auto  mt-16 md:mt-8 lg:mt-16 grid md:grid-cols-2">
-            <img
+            <motion.img
+              layoutId="aboutImage"
               src="/images/25ywarsdashboard.png"
               className="w-[90%] sm:w-[70%] md:w-[90%] xl:w-[600px] xl:-translate-x-[30%] !max-w-max md:my-auto  mx-auto lg:mr-auto lg:ml-0 my-8 "
             />
@@ -236,7 +310,13 @@ const Home = () => {
                   confectionery industry with a growing pan-India presence and a
                   focus on quality, creativity, and market expansion.
                 </p>
-                <button className="bg-black text-white px-4 py-2 my-4 sm:mb-10 lg:mb-0">
+                <button
+                  className="bg-black text-white px-4 py-2 my-4 sm:mb-10 lg:mb-0"
+                  onClick={() => {
+                    setAboutModal(true);
+                    document.body.style.overflow = "hidden";
+                  }}
+                >
                   Read More
                 </button>
               </div>
