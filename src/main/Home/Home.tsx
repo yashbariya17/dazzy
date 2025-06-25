@@ -10,7 +10,7 @@ type ProductsType = {
   className?: string;
 }[];
 
-const Products: ProductsType = [
+export const ProductsList: ProductsType = [
   {
     name: "cholcloate bar",
     url: "/images/1stimg.png",
@@ -176,7 +176,7 @@ const Home = () => {
           style={{ backgroundImage: "url('/images/rooftop.png')" }}
         >
           <div className="max-w-[1000px] mx-auto grid  grid-cols-2  justify-items-center md:grid-cols-4 lg:grid-cols-5 grid-rows-2 justify-center px-5 gap-y-[8rem] gap-x-[4rem] relative -top-10 ">
-            {Products.map((i) => (
+            {ProductsList.map((i) => (
               <div
                 key={i.name}
                 className="bg-white relative w-[150px]  flex  justify-center gap-2 rounded-lg shadow-2xl items-center pt-6 pb-2 "
@@ -310,7 +310,22 @@ const Home = () => {
                   confectionery industry with a growing pan-India presence and a
                   focus on quality, creativity, and market expansion.
                 </p>
-                <button
+                <motion.button
+                  initial="rest"
+                  animate="rest"
+                  whileHover="hover"
+                  variants={{
+                    rest: { rotate: 0, scale: 1 },
+                    hover: {
+                      rotate: 3,
+                      scale: 1.07,
+                      transition: {
+                        type: "spring",
+                        stiffness: 280,
+                        damping: 18,
+                      },
+                    },
+                  }}
                   className="bg-black text-white px-4 py-2 my-4 sm:mb-10 lg:mb-0"
                   onClick={() => {
                     setAboutModal(true);
@@ -318,7 +333,7 @@ const Home = () => {
                   }}
                 >
                   Read More
-                </button>
+                </motion.button>
               </div>
             </div>
           </section>

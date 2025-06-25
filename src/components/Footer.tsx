@@ -17,34 +17,90 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row gap-10 w-full justify-between">
           <div>
             <h3 className="text-lg font-semibold mb-2">About Us</h3>
-            <p className="text-sm">Dazzy Foods is your go-to brand for fresh, flavorful experiences. Since 1998, we’ve been serving happiness with every bite.</p>
+            <p className="text-sm">
+              Dazzy Foods is your go-to brand for fresh, flavorful experiences.
+              Since 1998, we’ve been serving happiness with every bite.
+            </p>
           </div>
+          <div className="flex justify-between items-center">
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
+              <ul className="text-sm space-y-1">
+                <li>
+                  <a href="/about" className="hover:underline">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="/contact" className="hover:underline">
+                    Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a href="/careers" className="hover:underline">
+                    Careers
+                  </a>
+                </li>
+                <li>
+                  <a href="/faq" className="hover:underline">
+                    FAQs
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-          <div>
-            <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
-            <ul className="text-sm space-y-1">
-              <li><a href="/about" className="hover:underline">About Us</a></li>
-              <li><a href="/contact" className="hover:underline">Contact Us</a></li>
-              <li><a href="/careers" className="hover:underline">Careers</a></li>
-              <li><a href="/faq" className="hover:underline">FAQs</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-2">Follow Us</h3>
-            <ul className="text-sm space-y-1">
-              <li><a href="https://facebook.com/dazzyfoods" target="_blank" rel="noopener noreferrer" className="hover:underline">Facebook</a></li>
-              <li><a href="https://instagram.com/dazzyfoods" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a></li>
-              <li><a href="https://twitter.com/dazzyfoods" target="_blank" rel="noopener noreferrer" className="hover:underline">Twitter</a></li>
-              <li><a href="https://linkedin.com/company/dazzyfoods" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a></li>
-            </ul>
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Follow Us</h3>
+              <ul className="text-sm space-y-1">
+                <li>
+                  <a
+                    href="https://facebook.com/dazzyfoods"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    Facebook
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://instagram.com/dazzyfoods"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/dazzyfoods"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    Twitter
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://linkedin.com/company/dazzyfoods"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Text */}
       <div className="text-center text-sm mt-10 px-4">
-        © {new Date().getFullYear()} Dazzy Foods. All rights reserved.
+        © {new Date().getFullYear()} winkelpix All rights reserved.
       </div>
     </footer>
   );

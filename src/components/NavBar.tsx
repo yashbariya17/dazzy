@@ -104,7 +104,15 @@ const NavBar = () => {
             About Us
             <span className="absolute w-full h-0.5 top-full block"></span>
           </NavLink>
-          <div>Product</div>
+          <NavLink
+            to="/products"
+            className={({ isActive }) =>
+              ` ${isActive ? "navbar-active" : ""} relative`
+            }
+          >
+           Product
+            <span className="absolute w-full h-0.5 top-full block"></span>
+          </NavLink>
           <div>Gifting</div>
           <NavLink
             to="/contact-us"
@@ -134,6 +142,7 @@ const NavBar = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               className=" relative p-0 !no-underline"
+              onClick={()=>setIsOpen(false)}
             >
               <NavLink
                 to={"/"}
@@ -150,6 +159,7 @@ const NavBar = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               className="no-underline"
+              onClick={()=>setIsOpen(false)}
             >
               <NavLink
                 to="/about-us"
@@ -162,7 +172,15 @@ const NavBar = () => {
               </NavLink>
             </motion.li>
             <motion.li variants={itemVariants} className="no-underline">
-              Product
+              <NavLink
+                to="/products"
+                className={({ isActive }) =>
+                  ` ${isActive ? "navbar-active" : ""} relative`
+                }
+              >
+                Product
+                <span className="absolute w-full h-0.5 top-full block"></span>
+              </NavLink>
             </motion.li>
             <motion.li variants={itemVariants} className=" no-underline">
               Gifting
