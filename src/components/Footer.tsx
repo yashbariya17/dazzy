@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { NavLink } from "react-router";
 const Footer = () => {
   return (
     <footer className="bg-[#3b1e1d] text-[#f2e9df] py-10 relative mt-20">
@@ -15,83 +17,76 @@ const Footer = () => {
         />
 
         <div className="flex flex-col md:flex-row gap-10 w-full justify-between">
-          <div>
+          <div className="w-[70%]">
             <h3 className="text-lg font-semibold mb-2">About Us</h3>
             <p className="text-sm">
               Dazzy Foods is your go-to brand for fresh, flavorful experiences.
               Since 1998, we’ve been serving happiness with every bite.
             </p>
           </div>
-          <div className="flex justify-between items-center">
-            <div>
+          <div className="flex justify-between items-center flex-1 gap-2">
+            <div className="flex-1">
               <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
               <ul className="text-sm space-y-1">
-                <li>
-                  <a href="/about" className="hover:underline">
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a href="/contact" className="hover:underline">
-                    Contact Us
-                  </a>
-                </li>
-                <li>
-                  <a href="/careers" className="hover:underline">
-                    Careers
-                  </a>
-                </li>
-                <li>
-                  <a href="/faq" className="hover:underline">
-                    FAQs
-                  </a>
-                </li>
+                {[
+                  { label: "About Us", href: "/about-us" },
+                  { label: "Contact Us", href: "/contact-us" },
+                  { label: "Products", href: "/products" },
+                  // { label: "FAQs", href: "/faq" },
+                ].map((item, index) => (
+                  <motion.li
+                    key={index}
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                    className="no-underline"
+                  >
+                    <NavLink
+                      to={item.href}
+                      className={({ isActive }) =>
+                        ` ${isActive ? "navbar-active" : ""} relative`
+                      }
+                    >
+                      {item.label}
+                    </NavLink>
+                  </motion.li>
+                ))}
               </ul>
             </div>
 
-            <div>
+            <div className="flex-1">
               <h3 className="text-lg font-semibold mb-2">Follow Us</h3>
               <ul className="text-sm space-y-1">
-                <li>
-                  <a
-                    href="https://facebook.com/dazzyfoods"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline"
+                {[
+                  {
+                    label: "Facebook",
+                    href: "https://facebook.com/dazzyfoods",
+                  },
+                  {
+                    label: "Instagram",
+                    href: "https://instagram.com/dazzyfoods",
+                  },
+                  { label: "Twitter", href: "https://twitter.com/dazzyfoods" },
+                  {
+                    label: "LinkedIn",
+                    href: "https://linkedin.com/company/dazzyfoods",
+                  },
+                ].map((item, index) => (
+                  <motion.li
+                    key={index}
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                    className="no-underline"
                   >
-                    Facebook
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://instagram.com/dazzyfoods"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline"
-                  >
-                    Instagram
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://twitter.com/dazzyfoods"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline"
-                  >
-                    Twitter
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://linkedin.com/company/dazzyfoods"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline"
-                  >
-                    LinkedIn
-                  </a>
-                </li>
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className=""
+                    >
+                      {item.label}
+                    </a>
+                  </motion.li>
+                ))}
               </ul>
             </div>
           </div>
