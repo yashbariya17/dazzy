@@ -3,6 +3,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useState } from "react";
 import AnimatedNumber from "../../components/AnimatedNumber";
 import { TextAnimation } from "../../components/TextAnimation";
+import MouseComponent from "../../components/MouseComponent";
 
 type ProductsType = {
   name: string;
@@ -310,30 +311,17 @@ const Home = () => {
                   confectionery industry with a growing pan-India presence and a
                   focus on quality, creativity, and market expansion.
                 </p>
-                <motion.button
-                  initial="rest"
-                  animate="rest"
-                  whileHover="hover"
-                  variants={{
-                    rest: { rotate: 0, scale: 1 },
-                    hover: {
-                      rotate: 3,
-                      scale: 1.07,
-                      transition: {
-                        type: "spring",
-                        stiffness: 280,
-                        damping: 18,
-                      },
-                    },
-                  }}
-                  className="bg-black text-white px-4 py-2 my-4 sm:mb-10 lg:mb-0"
-                  onClick={() => {
-                    setAboutModal(true);
-                    document.body.style.overflow = "hidden";
-                  }}
-                >
-                  Read More
-                </motion.button>
+                <MouseComponent className="my-4 sm:mb-10 lg:mb-0 rounded-lg ">
+                  <motion.button
+                    className="bg-black text-white px-4 py-2 "
+                    onClick={() => {
+                      setAboutModal(true);
+                      document.body.style.overflow = "hidden";
+                    }}
+                  >
+                    Read More
+                  </motion.button>
+                </MouseComponent>
               </div>
             </div>
           </section>
