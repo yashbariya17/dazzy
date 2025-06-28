@@ -17,12 +17,30 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/ByPrice" element={<ByPrice />} />
-          <Route path="/ByBrands" element={<ByPrice />} />
+          <Route
+            path="/"
+            element={<Home />}
+          />
+          <Route
+            path="/about-us"
+            element={<AboutUs />}
+          />
+          <Route
+            path="/contact-us"
+            element={<ContactUs />}
+          />
+          <Route
+            path="/products"
+            element={<Products />}
+          />
+          <Route
+            path="/ByPrice"
+            element={<ByPrice />}
+          />
+          <Route
+            path="/ByBrands"
+            element={<ByBrands />}
+          />
         </Routes>
         <Footer />
       </BrowserRouter>
