@@ -32,6 +32,9 @@ const Footer = () => {
                   { label: "About Us", href: "/about-us" },
                   { label: "Contact Us", href: "/contact-us" },
                   { label: "Products", href: "/products" },
+                  { label: "By Price", href: "/ByPrice" },
+                  { label: "By Brands", href: "/ByBrands" },
+                
                   // { label: "FAQs", href: "/faq" },
                 ].map((item, index) => (
                   <motion.li

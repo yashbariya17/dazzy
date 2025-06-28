@@ -6,6 +6,7 @@ import AboutUs from "./main/about us/AboutUs";
 import ContactUs from "./main/ContactUs/ContactUs";
 import { BrowserRouter, Routes, Route } from "react-router";
 import Products from "./main/Products/Products";
+import ByPrice from "./main/Products/ByPrice";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/ByPrice" element={<ByPrice />} />
+          <Route path="/ByBrands" element={<ByPrice />} />
         </Routes>
       <Footer />
       </BrowserRouter>
