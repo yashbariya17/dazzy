@@ -259,7 +259,7 @@ const DropDown = ({ title }: { title: string }) => {
               }}
               onClick={() => {
                 setOpen(false)
-                navigate("/")
+                navigate("/product")
               }}
             >
               All Variants
