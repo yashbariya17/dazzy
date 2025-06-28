@@ -209,8 +209,21 @@ const DropDown = ({ title }: { title: string }) => {
   const navigate = useNavigate()
 
   return (
-    <div className="text-white relative">
-      <button onClick={() => setOpen(!open)}>{title}</button>
+    <div
+      className="text-white relative"
+      onMouseEnter={() => {
+        setOpen(true)
+      }}
+      onMouseLeave={() => {
+        setOpen(false)
+      }}
+    >
+      <button
+        className="cursor-pointer"
+        onClick={() => setOpen(!open)}
+      >
+        {title}
+      </button>
 
       <AnimatePresence>
         {open && (
@@ -236,10 +249,10 @@ const DropDown = ({ title }: { title: string }) => {
                 y: -10,
               },
             }}
-            className="absolute z-50 bg-white rounded-md shadow-lg overflow-hidden top-[110%]"
+            className="absolute z-50 left-1/2 -translate-x-1/2 bg-[#391e1e] rounded-md shadow-lg overflow-hidden"
           >
             <motion.div
-              className="relative px-4 py-2 cursor-pointer text-[#eb0029] text-nowrap"
+              className="relative px-4 py-2 cursor-pointer text-white text-nowrap"
               variants={{
                 hidden: { y: 30, opacity: 0 },
                 visible: { y: 0, opacity: 1 },
@@ -252,7 +265,7 @@ const DropDown = ({ title }: { title: string }) => {
               All Variants
             </motion.div>
             <motion.div
-              className="relative px-4 py-2 cursor-pointer text-[#eb0029] text-nowrap"
+              className="relative px-4 py-2 cursor-pointer text-white text-nowrap"
               variants={{
                 hidden: { y: 30, opacity: 0 },
                 visible: { y: 0, opacity: 1 },
@@ -265,7 +278,7 @@ const DropDown = ({ title }: { title: string }) => {
               All Brands
             </motion.div>
             <motion.div
-              className="relative px-4 py-2 cursor-pointer text-[#eb0029] text-nowrap"
+              className="relative px-4 py-2 cursor-pointer text-white text-nowrap"
               variants={{
                 hidden: { y: 30, opacity: 0 },
                 visible: { y: 0, opacity: 1 },
