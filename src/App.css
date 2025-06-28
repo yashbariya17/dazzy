@@ -1,11 +1,18 @@
-.navbar-main span {
+.navbar-main .underline-bar {
   transition: all 0.4s;
   background: linear-gradient(to right, gold, lightyellow, gold);
-  position: relative;
-  transform: scale(0);
-  transform-origin: center;
+  display: block;
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
+.navbar-main a:hover .underline-bar {
+  transform: scaleX(1);
+}
+
+.navbar-active .underline-bar {
+  transform: scaleX(1);
+}
 .navbar-active span {
   transform: scale(1);
 }
