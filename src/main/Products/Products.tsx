@@ -9,8 +9,9 @@ type productType = {
 
 const productObj: productType = {
   "chocolate bar": [
-    { name: "some", url: "/images/DECORATIVE-CHOCOLATE.png" },
+    { name: "Choclate", url: "/images/DECORATIVE-CHOCOLATE.png" },
     { name: "someassa", url: "/images/DECORATIVE-CHOCOLATE.png" },
+    { name: "someassa", url: "/images/DECORATIVE-CHOCOLATE.png" }
   ],
   "centerfilled chocolate": [],
   "decorative chocolate": [],
