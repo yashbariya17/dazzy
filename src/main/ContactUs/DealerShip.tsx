@@ -1,3 +1,5 @@
+import AnimatedNumber from "../../components/AnimatedNumber"
+
 const DealerShip = () => {
   return (
     <main className="bg-[#fff8f0] overflow-hidden pt-10">
@@ -22,27 +24,32 @@ const DealerShip = () => {
         </div>
 
         {/* About Dazzy Card */}
-        <div className="flex items-center justify-center">
-          <div className="bg-[#d92128] text-white p-10 rounded-3xl w-full max-w-md text-center shadow-lg">
-            <h2 className="text-2xl font-bold mb-6">ABOUT DAZZY</h2>
-            <div className="grid grid-cols-3 gap-4 text-center text-lg font-semibold">
-              <div>
-                <div className="text-2xl">150+</div>
-                <div className="text-sm mt-1">Product Range</div>
-              </div>
-              <div>
-                <div className="text-2xl">36</div>
-                <div className="text-sm mt-1">Brands</div>
-              </div>
-              <div>
-                <div className="text-2xl">15+</div>
-                <div className="text-sm mt-1">Export Destinations</div>
-              </div>
+        <div className="bg-red-600 rounded-[50px] h-[450px] lg:h-[300px] w-auto md:w-[500px] flex flex-col gap-3 justify-center ml-5 mr-5 lg:ml-0  lg:mr-20 mt-auto mb-auto">
+          <h2 className="text-white lg:text-4xl font-semibold text-center">
+            ABOUT DAZZY
+          </h2>
+          <div className="flex flex-col md:flex-row gap-5 justify-center text-center mt-5 items-center">
+            <div className="text-white font-bold lg:text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
+              <AnimatedNumber value={150} /> +{" "}
+              <p className="text-white text-xs font-light">Product Rating</p>
             </div>
-            <p className="text-sm mt-6">
-              A Wide Range Of Confectionery Items
-            </p>
+            <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
+              <AnimatedNumber value={36} />{" "}
+              <p className="text-white text-xs font-light">Brands</p>
+            </div>
+            <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
+              <AnimatedNumber value={15} />+{" "}
+              <p className="text-white text-xs font-light">
+                Export Destination
+              </p>
+            </div>
           </div>
+          <p
+            className="text-center mt-2 text-white"
+            style={{ wordSpacing: "2px" }}
+          >
+            A Wide Range Of Confectionery Items
+          </p>
         </div>
       </div>
 
@@ -110,7 +117,7 @@ const DealerShip = () => {
         </div>
       </div>
     </main>
-  );
-};
+  )
+}
 
-export default DealerShip;
+export default DealerShip

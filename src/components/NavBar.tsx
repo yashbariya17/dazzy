@@ -2,6 +2,36 @@ import { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { NavLink, useNavigate } from "react-router"
 
+const Products = [
+  {
+    name: "all variants",
+    url: "/products",
+  },
+  {
+    name: "all brands",
+    url: "/ByBrands",
+  },
+  {
+    name: "by price",
+    url: "/ByPrice",
+  },
+]
+
+const ContactUs = [
+  {
+    name: "contact us",
+    url: "/contact-us",
+  },
+  {
+    name: "dealership",
+    url: "/dealership",
+  },
+  {
+    name: "join dazzy fam",
+    url: "/joinDazzyFamily",
+  },
+]
+
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const itemVariants = {
@@ -111,17 +141,15 @@ const NavBar = () => {
             About Us
             <span className="absolute w-full h-0.5 top-full block"></span>
           </NavLink>
-          <DropDown title="Product" />
+          <DropDown
+            title="Product"
+            list={Products}
+          />
           <div>Gifting</div>
-          <NavLink
-            to="/contact-us"
-            className={({ isActive }) =>
-              ` ${isActive ? "navbar-active" : ""} relative`
-            }
-          >
-            Contact Us
-            <span className="absolute w-full h-0.5 top-full block"></span>
-          </NavLink>
+          <DropDown
+            title="Contact Us"
+            list={ContactUs}
+          />
           <button className="bg-red-500 px-4 py-2">Download Catlog</button>
         </section>
       ) : (
@@ -174,7 +202,10 @@ const NavBar = () => {
               variants={itemVariants}
               className="no-underline"
             >
-              <DropDown title="Product" />
+              <DropDown
+                title="Product"
+                list={Products}
+              />
             </motion.li>
             <motion.li
               variants={itemVariants}
@@ -186,7 +217,10 @@ const NavBar = () => {
               variants={itemVariants}
               className=" no-underline"
             >
-              Contact Us
+              <DropDown
+                title="Contact Us"
+                list={ContactUs}
+              />
             </motion.li>
             <motion.li
               variants={itemVariants}
@@ -203,7 +237,13 @@ const NavBar = () => {
 
 export default NavBar
 
-const DropDown = ({ title }: { title: string }) => {
+const DropDown = ({
+  title,
+  list,
+}: {
+  title: string
+  list: { name: string; url: string }[]
+}) => {
   const [open, setOpen] = useState(false)
 
   const navigate = useNavigate()
@@ -251,45 +291,22 @@ const DropDown = ({ title }: { title: string }) => {
             }}
             className="absolute z-50 left-1/2 -translate-x-1/2 bg-[#391e1e] rounded-md shadow-lg overflow-hidden"
           >
-            <motion.div
-              className="relative px-4 py-2 cursor-pointer text-white text-nowrap"
-              variants={{
-                hidden: { y: 30, opacity: 0 },
-                visible: { y: 0, opacity: 1 },
-              }}
-              onClick={() => {
-                setOpen(false)
-                navigate("/products")
-              }}
-            >
-              All Variants
-            </motion.div>
-            <motion.div
-              className="relative px-4 py-2 cursor-pointer text-white text-nowrap"
-              variants={{
-                hidden: { y: 30, opacity: 0 },
-                visible: { y: 0, opacity: 1 },
-              }}
-              onClick={() => {
-                setOpen(false)
-                navigate("/ByBrands")
-              }}
-            >
-              All Brands
-            </motion.div>
-            <motion.div
-              className="relative px-4 py-2 cursor-pointer text-white text-nowrap"
-              variants={{
-                hidden: { y: 30, opacity: 0 },
-                visible: { y: 0, opacity: 1 },
-              }}
-              onClick={() => {
-                setOpen(false)
-                navigate("/ByPrice")
-              }}
-            >
-              By Price
-            </motion.div>
+            {list.map((i) => (
+              <motion.div
+                key={i.name}
+                className="capitalize relative px-4 py-2 cursor-pointer text-white text-nowrap text-center"
+                variants={{
+                  hidden: { y: 30, opacity: 0 },
+                  visible: { y: 0, opacity: 1 },
+                }}
+                onClick={() => {
+                  setOpen(false)
+                  navigate(i.url)
+                }}
+              >
+                {i.name}
+              </motion.div>
+            ))}
           </motion.div>
         )}
       </AnimatePresence>

@@ -7,13 +7,13 @@ const ByBrands = () => {
         <h2 className="text-white text-xl font-semibold">By Brands</h2>
       </section>
 
-      <section className="pt-16 pb-20 mx-auto max-w-[1000px]">
-        <div className="flex w-full flex-wrap gap-y-16">
+      <section className="pt-16 pb-20 mx-auto max-w-[1000px] px-10 lg:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full  gap-y-16 ">
           {Array(6)
             .fill("")
             .map((_, index) => (
               <div
-                className="relative flex-[0_0_100%]  lg:flex-[0_0_20%] md:pl-4 flex justify-center"
+                className="relative  flex justify-center px-10 mx-auto"
                 key={index}
               >
                 <motion.img

@@ -8,8 +8,8 @@ import { BrowserRouter, Routes, Route } from "react-router"
 import Products from "./main/Products/Products"
 import ByPrice from "./main/Products/ByPrice"
 import ByBrands from "./main/Products/ByBrands"
-import DealerShip from "./main/ContactUs/DealerShip";
-import JoinDazzyFamily from "./main/ContactUs/JoinDazzyFam";
+import DealerShip from "./main/ContactUs/DealerShip"
+import JoinDazzyFamily from "./main/ContactUs/JoinDazzyFam"
 
 function App() {
   return (
@@ -40,6 +40,14 @@ function App() {
           <Route
             path="/ByBrands"
             element={<ByBrands />}
+          />
+          <Route
+            path="/joinDazzyFamily"
+            element={<JoinDazzyFamily />}
+          />
+          <Route
+            path="/dealerShip"
+            element={<DealerShip />}
           />
         </Routes>
         <Footer />
