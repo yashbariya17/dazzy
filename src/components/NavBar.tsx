@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { NavLink } from "react-router";
+import { useEffect, useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
+import { NavLink, useNavigate } from "react-router"
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
   const itemVariants = {
     open: {
       y: 0,
@@ -19,7 +19,7 @@ const NavBar = () => {
         y: { stiffness: 1000 },
       },
     },
-  };
+  }
   const navVariants = {
     open: {
       transition: { staggerChildren: 0.07, delayChildren: 0.2 },
@@ -27,17 +27,17 @@ const NavBar = () => {
     closed: {
       transition: { staggerChildren: 0.05, staggerDirection: -1 },
     },
-  };
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 767);
+  }
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 767)
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
+      setIsMobile(window.innerWidth < 768)
+    }
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
 
   return (
     <motion.nav className="navbar-main bg-[#391e1e]  text-white py-5">
@@ -45,11 +45,18 @@ const NavBar = () => {
         <div className="" />
 
         <div className="flex justify-center">
-          <img src="/images/logo.png" alt="Dazzy Logo" className="w-32" />
+          <img
+            src="/images/logo.png"
+            alt="Dazzy Logo"
+            className="w-32"
+          />
         </div>
 
         <div className="flex justify-end md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
             {isOpen ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -104,15 +111,7 @@ const NavBar = () => {
             About Us
             <span className="absolute w-full h-0.5 top-full block"></span>
           </NavLink>
-          <NavLink
-            to="/products"
-            className={({ isActive }) =>
-              ` ${isActive ? "navbar-active" : ""} relative`
-            }
-          >
-           Product
-            <span className="absolute w-full h-0.5 top-full block"></span>
-          </NavLink>
+          <DropDown title="Product" />
           <div>Gifting</div>
           <NavLink
             to="/contact-us"
@@ -142,7 +141,7 @@ const NavBar = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               className=" relative p-0 !no-underline"
-              onClick={()=>setIsOpen(false)}
+              onClick={() => setIsOpen(false)}
             >
               <NavLink
                 to={"/"}
@@ -159,7 +158,7 @@ const NavBar = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               className="no-underline"
-              onClick={()=>setIsOpen(false)}
+              onClick={() => setIsOpen(false)}
             >
               <NavLink
                 to="/about-us"
@@ -171,31 +170,116 @@ const NavBar = () => {
                 <span className="absolute w-full h-0.5 top-full block"></span>
               </NavLink>
             </motion.li>
-            <motion.li variants={itemVariants} className="no-underline">
-              <NavLink
-                to="/products"
-                className={({ isActive }) =>
-                  ` ${isActive ? "navbar-active" : ""} relative`
-                }
-              >
-                Product
-                <span className="absolute w-full h-0.5 top-full block"></span>
-              </NavLink>
+            <motion.li
+              variants={itemVariants}
+              className="no-underline"
+            >
+              <DropDown title="Product" />
             </motion.li>
-            <motion.li variants={itemVariants} className=" no-underline">
+            <motion.li
+              variants={itemVariants}
+              className=" no-underline"
+            >
               Gifting
             </motion.li>
-            <motion.li variants={itemVariants} className=" no-underline">
+            <motion.li
+              variants={itemVariants}
+              className=" no-underline"
+            >
               Contact Us
             </motion.li>
-            <motion.li variants={itemVariants} className="bg-red-500 px-4 py-2">
+            <motion.li
+              variants={itemVariants}
+              className="bg-red-500 px-4 py-2"
+            >
               Download Catlog
             </motion.li>
           </motion.ul>
         </section>
       )}
     </motion.nav>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar
+
+const DropDown = ({ title }: { title: string }) => {
+  const [open, setOpen] = useState(false)
+
+  const navigate = useNavigate()
+
+  return (
+    <div className="text-white relative">
+      <button onClick={() => setOpen(!open)}>{title}</button>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={{
+              hidden: { opacity: 0, y: -10 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: {
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20,
+                  delayChildren: 0.2,
+                  staggerChildren: 0.1,
+                },
+              },
+              exit: {
+                opacity: 0,
+                y: -10,
+              },
+            }}
+            className="absolute z-50 bg-white rounded-md shadow-lg overflow-hidden top-[110%]"
+          >
+            <motion.div
+              className="relative px-4 py-2 cursor-pointer text-[#eb0029] text-nowrap"
+              variants={{
+                hidden: { y: 30, opacity: 0 },
+                visible: { y: 0, opacity: 1 },
+              }}
+              onClick={() => {
+                setOpen(false)
+                navigate("/")
+              }}
+            >
+              All Variants
+            </motion.div>
+            <motion.div
+              className="relative px-4 py-2 cursor-pointer text-[#eb0029] text-nowrap"
+              variants={{
+                hidden: { y: 30, opacity: 0 },
+                visible: { y: 0, opacity: 1 },
+              }}
+              onClick={() => {
+                setOpen(false)
+                navigate("/ByBrands")
+              }}
+            >
+              All Brands
+            </motion.div>
+            <motion.div
+              className="relative px-4 py-2 cursor-pointer text-[#eb0029] text-nowrap"
+              variants={{
+                hidden: { y: 30, opacity: 0 },
+                visible: { y: 0, opacity: 1 },
+              }}
+              onClick={() => {
+                setOpen(false)
+                navigate("/ByPrice")
+              }}
+            >
+              By Price
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
