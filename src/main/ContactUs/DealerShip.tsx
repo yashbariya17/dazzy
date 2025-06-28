@@ -6,7 +6,7 @@ const DealerShip = () => {
       <section className="h-[150px] bg-gray-500 flex items-center justify-center mb-10">
         <h2 className="text-white text-xl font-semibold">Dealership</h2>
       </section>
-      <div className="max-w-4xl mx-auto text-center border border-dashed border-gray-400 p-4 text-sm text-gray-700 mb-8">
+      <div className="max-w-4xl mx-auto text-center p-4 text-sm text-gray-700 mb-8">
         All DAZZY brands are created by individuals who prioritize the consumer,
         utilizing the finest ingredients and cutting-edge production technology.
         We adhere to transparent quality control standards to build trust and

@@ -5,6 +5,9 @@ const JoinDazzyFamily = () => {
 
     return (
         <main className="relative bg-[#fff8f0] overflow-hidden">
+            <section className="h-[150px] bg-gray-500 flex items-center justify-center mb-10">
+        <h2 className="text-white text-xl font-semibold">Join Dazzy Family</h2>
+      </section>
             <div className="min-h-screen p-10 flex">
                 <div className="w-1/2">
                     <iframe
