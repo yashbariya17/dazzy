@@ -7,6 +7,8 @@ import ContactUs from "./main/ContactUs/ContactUs";
 import { BrowserRouter, Routes, Route } from "react-router";
 import Products from "./main/Products/Products";
 import ByPrice from "./main/Products/ByPrice";
+import DealerShip from "./main/ContactUs/DealerShip";
+import JoinDazzyFamily from "./main/ContactUs/JoinDazzyFam";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/ByPrice" element={<ByPrice />} />
           <Route path="/ByBrands" element={<ByPrice />} />
+          <Route path="/DealerShip" element={<DealerShip />} />JoinDazzyFamily
+          <Route path="/JoinDazzyFamily" element={<JoinDazzyFamily />} />
         </Routes>
       <Footer />
       </BrowserRouter>
