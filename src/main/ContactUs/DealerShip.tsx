@@ -3,7 +3,7 @@ import AnimatedNumber from "../../components/AnimatedNumber"
 const DealerShip = () => {
   return (
     <main className="bg-[#fff8f0] overflow-hidden ">
-      <section className="h-[150px] bg-gray-500 flex items-center justify-center mb-10">
+      <section className="h-[200px] bg-gray-500 flex items-center justify-center mb-10">
         <h2 className="text-white text-xl font-semibold">Dealership</h2>
       </section>
       <div className="max-w-4xl mx-auto text-center p-4 text-sm text-gray-700 mb-8">

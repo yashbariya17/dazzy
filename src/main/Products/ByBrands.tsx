@@ -3,7 +3,7 @@ import { motion } from "motion/react"
 const ByBrands = () => {
   return (
     <div className="w-full overflow-x-hidden ">
-      <section className="h-[100px] bg-gray-500 flex items-center justify-center">
+      <section className="h-[200px] bg-gray-500 flex items-center justify-center">
         <h2 className="text-white text-xl font-semibold">By Brands</h2>
       </section>
 

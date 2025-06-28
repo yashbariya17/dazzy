@@ -11,11 +11,11 @@ const priceOptions = [
 const ByPrice = () => {
   return (
     <div className="w-full overflow-x-hidden">
-      <section className="h-[100px] bg-gray-500 flex items-center justify-center">
+      <section className="h-[200px] bg-gray-500 flex items-center justify-center">
         <h2 className="text-white text-xl font-semibold">By Price</h2>
       </section>
 
-      <section className="pt-16 pb-20 bg-[#f4f1ea]">
+      <section className="py-[10rem] bg-[#f4f1ea]">
         <div className="max-w-[1000px] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 place-items-center px-4">
           {priceOptions.map((coin, index) => (
             <motion.div
