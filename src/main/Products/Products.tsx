@@ -8,30 +8,30 @@ type productType = {
 }
 
 const productObj: productType = {
-  "cholcloate bar": [{ name: "some", url: "/images/DECORATIVE-CHOCOLATE.png" }],
-  "centerfilled cholcloate": [],
-  "decorative cholcloate": [],
-  "penut cholcloate": [],
+  "chocolate bar": [
+    { name: "some", url: "/images/DECORATIVE-CHOCOLATE.png" },
+    { name: "someassa", url: "/images/DECORATIVE-CHOCOLATE.png" },
+  ],
+  "centerfilled chocolate": [],
+  "decorative chocolate": [],
+  "peanut chocolate": [],
   "nought bar": [],
-  "waffer rolls": [],
-  toffe: [],
+  "wafer rolls": [],
+  toffee: [],
   jelly: [],
   candy: [],
   lollipop: [],
 }
 
 const Products = () => {
-  const ref = useRef<HTMLElement>(null)
+  const ref = useRef<HTMLDivElement>(null)
 
   const [open, setOpen] = useState<string>("")
 
   return (
     <div className="w-full ">
       <section className="h-[500px] bg-cover bg-center  bg-gray-700"></section>
-      <section
-        className="pt-8 bg-[#f4f1ea] "
-        ref={ref}
-      >
+      <section className="pt-8 bg-[#f4f1ea] ">
         <TextAnimation text="Our Products" />
         <p
           className="text-center mt-2 text-gray-500 "
@@ -42,33 +42,45 @@ const Products = () => {
           A Wide Range Of Confectionery Items
         </p>
         {open ? (
-          <section className="max-w-[1000px] grid grid-cols-2 px-6 lg:px-0 mx-auto pt-[8rem]">
-            <div className="space-y-[8rem] pb-16">
+          <section className="max-w-[1240px]  grid  md:grid-cols-[auto_1fr] gap-16 px-6 mx-auto pt-[8rem] pb-10">
+            <div className="space-y-3 mx-auto">
+              <h2 className="font-semibold text-xl pb-4">
+                Product Categories{" "}
+                <span className="block w-[20%] h-1 bg-[#eb0029] rounded-full"></span>
+              </h2>
               {ProductsList.map((i) => (
                 <motion.div
                   key={i.name}
-                  className="bg-white relative w-[150px]  flex  justify-center gap-2 rounded-lg shadow-2xl items-center pt-6 pb-2 min-h-[80px]"
+                  className="bg-white w-[270px] rounded-full shadow-2xl py-2 group"
                   layoutId={i.name}
                 >
-                  <motion.img
-                    src={i.url}
-                    className={`h-[100px] -translate-y-[80%] top-0  absolute ${i.className}`}
-                  />
                   <p
-                    className={`text-center uppercase  w-[60%] cursor-pointer transition-colors duration-300 ${
-                      i.name === open ? "text-sky-500" : "text-gray-600"
+                    className={`uppercase text-[15px] hover:text-[#eb0029]  w-full pl-6 pr-5 cursor-pointer transition-colors duration-300 flex justify-between ${
+                      i.name === open ? "text-[#eb0029]" : "text-gray-600"
                     }`}
                     onClick={() => {
-                      ref.current?.scrollIntoView({ behavior: "smooth" })
+                      if (window.innerWidth < 640) {
+                        ref.current?.scrollIntoView({ behavior: "smooth" })
+                      }
                       setOpen(i.name)
                     }}
                   >
                     {i.name}
+                    <span
+                      className={`block text-center leading-5 group-hover:bg-[#eb0029] transition-colors duration-300 aspect-square h-5 text-white rounded-full ${
+                        i.name === open ? "bg-[#eb0029]" : "bg-gray-400"
+                      }`}
+                    >
+                      {productObj[i.name].length}
+                    </span>
                   </p>
                 </motion.div>
               ))}
             </div>
-            <motion.div className="flex flex-wrap justify-between">
+            <div
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 justify-between"
+              ref={ref}
+            >
               {productObj[open].map((i) => (
                 <motion.div
                   initial={{
@@ -82,9 +94,10 @@ const Products = () => {
                   viewport={{
                     once: true,
                     amount: "all",
+                    margin: "0px 0px 150px 0px",
                   }}
                   key={i.name}
-                  className="h-[280px] w-[200px] py-4 bg-white shadow-xl rounded-2xl grid grid-rows-[1fr_auto]"
+                  className="h-[280px] w-[200px] py-4 bg-white shadow-xl rounded-2xl grid grid-rows-[1fr_auto] mx-auto"
                 >
                   <img
                     src={i.url}
@@ -93,7 +106,7 @@ const Products = () => {
                   <p className="py-2 text-center">{i.name}</p>
                 </motion.div>
               ))}
-            </motion.div>
+            </div>
           </section>
         ) : (
           <div className="bg-[#f4f1ea] mt-[8rem] h-auto lg:h-[550px] w-full bg-cover bg-bottom bg-no-repeat">
