@@ -30,7 +30,7 @@ const Products = () => {
 
   return (
     <div className="w-full ">
-      <section className="h-[500px] bg-cover bg-center  bg-gray-700"></section>
+      <section className="h-[200px] bg-cover bg-center  bg-gray-500"></section>
       <section className="pt-8 bg-[#f4f1ea] ">
         <TextAnimation text="Our Products" />
         <p
