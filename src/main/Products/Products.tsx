@@ -2,7 +2,7 @@ import { ProductsList } from "../Home/Home"
 import { TextAnimation } from "../../components/TextAnimation"
 import { motion } from "motion/react"
 import { useRef, useState } from "react"
-import { FiShoppingBag, FiEye } from "react-icons/fi"
+import { FiShoppingBag ,FiEye} from "react-icons/fi";
 
 type productType = {
   [key: string]: { name: string; url: string }[]
@@ -86,9 +86,9 @@ const Products = () => {
                 Product Categories
                 <span className="block w-[20%] h-1 bg-[#eb0029] rounded-full mt-1"></span>
               </h2>
-              {ProductsList.map((i) => (
+              {ProductsList.map((i,index) => (
                 <motion.div
-                  key={i.name}
+                  key={index}
                   className="bg-white w-[270px] rounded-full shadow-2xl py-2 group"
                   layoutId={i.name}
                 >
@@ -120,12 +120,12 @@ const Products = () => {
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-6"
               ref={ref}
             >
-              {productObj[open].map((i) => (
+              {productObj[open].map((i,index) => (
                 <motion.div
                   initial={{ y: "50%", opacity: 0 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: "all", margin: "0px 0px 150px 0px" }}
-                  key={i.name}
+                  key={index}
                   className="w-[240px] h-[340px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 transition hover:shadow-lg mx-auto"
                 >
                   {/* Product Image */}
@@ -140,7 +140,7 @@ const Products = () => {
                       <FiShoppingBag size={16} /> Read More
                     </button>
                     <button className="flex items-center gap-1 text-gray-600 text-sm hover:underline transition">
-                      <FiEye size={16} /> Quick View
+                    <FiEye size={16} /> Quick View
                     </button>
                   </div>
                 </motion.div>
