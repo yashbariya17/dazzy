@@ -2,18 +2,59 @@ import { ProductsList } from "../Home/Home"
 import { TextAnimation } from "../../components/TextAnimation"
 import { motion } from "motion/react"
 import { useRef, useState } from "react"
+import { FiShoppingBag, FiEye } from "react-icons/fi"
 
 type productType = {
   [key: string]: { name: string; url: string }[]
 }
 
-const productObj: productType = {
+const productObj: productType ={
   "chocolate bar": [
-    { name: "Choclate", url: "/images/DECORATIVE-CHOCOLATE.png" },
-    { name: "someassa", url: "/images/DECORATIVE-CHOCOLATE.png" },
-    { name: "someassa", url: "/images/DECORATIVE-CHOCOLATE.png" }
+    { "name": "3 Pm Fruits Biscuits", "url": "/images/chocolatebar/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Biskins Duo", "url": "/images/chocolatebar/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/chocolatebar/JELLY.png" },
+    { "name": "Celio Crunchy", "url": "/images/chocolatebar/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/chocolatebar/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/chocolatebar/largeimage.png" },
+    { "name": "Celio Crunchy", "url": "/images/chocolatebar/largeimage.png" },
+    
+    { "name": "3 Pm Fruits Biscuits", "url": "/images/chocolatebar/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Biskins Duo", "url": "/images/chocolatebar/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/chocolatebar/JELLY.png" },
+    { "name": "Celio Crunchy", "url": "/images/chocolatebar/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/chocolatebar/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/chocolatebar/largeimage.png" },
+    { "name": "Celio Crunchy", "url": "/images/chocolatebar/largeimage.png" },
+    
+    { "name": "3 Pm Fruits Biscuits", "url": "/images/chocolatebar/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Biskins Duo", "url": "/images/chocolatebar/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/chocolatebar/JELLY.png" },
+    { "name": "Celio Crunchy", "url": "/images/chocolatebar/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/chocolatebar/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/chocolatebar/largeimage.png" }
   ],
-  "centerfilled chocolate": [],
+ "centerfilled chocolate": [
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" }
+  ],
   "decorative chocolate": [],
   "peanut chocolate": [],
   "nought bar": [],
@@ -26,28 +67,24 @@ const productObj: productType = {
 
 const Products = () => {
   const ref = useRef<HTMLDivElement>(null)
-
   const [open, setOpen] = useState<string>("")
 
   return (
-    <div className="w-full ">
-      <section className="h-[200px] bg-cover bg-center  bg-gray-500"></section>
-      <section className="pt-8 bg-[#f4f1ea] ">
+    <div className="w-full">
+      <section className="h-[200px] bg-cover bg-center bg-gray-500"></section>
+
+      <section className="pt-8 bg-[#f4f1ea]">
         <TextAnimation text="Our Products" />
-        <p
-          className="text-center mt-2 text-gray-500 "
-          style={{
-            wordSpacing: "2px",
-          }}
-        >
+        <p className="text-center mt-2 text-gray-500" style={{ wordSpacing: "2px" }}>
           A Wide Range Of Confectionery Items
         </p>
+
         {open ? (
-          <section className="max-w-[1240px]  grid  md:grid-cols-[auto_1fr] gap-16 px-6 mx-auto pt-[8rem] pb-10">
+          <section className="max-w-[1240px] grid md:grid-cols-[auto_1fr] gap-16 px-6 mx-auto pt-20 pb-10">
             <div className="space-y-3 mx-auto">
               <h2 className="font-semibold text-xl pb-4">
-                Product Categories{" "}
-                <span className="block w-[20%] h-1 bg-[#eb0029] rounded-full"></span>
+                Product Categories
+                <span className="block w-[20%] h-1 bg-[#eb0029] rounded-full mt-1"></span>
               </h2>
               {ProductsList.map((i) => (
                 <motion.div
@@ -56,7 +93,7 @@ const Products = () => {
                   layoutId={i.name}
                 >
                   <p
-                    className={`uppercase text-[15px] hover:text-[#eb0029]  w-full pl-6 pr-5 cursor-pointer transition-colors duration-300 flex justify-between ${
+                    className={`uppercase text-[15px] hover:text-[#eb0029] w-full pl-6 pr-5 cursor-pointer transition-colors duration-300 flex justify-between ${
                       i.name === open ? "text-[#eb0029]" : "text-gray-600"
                     }`}
                     onClick={() => {
@@ -78,66 +115,54 @@ const Products = () => {
                 </motion.div>
               ))}
             </div>
+
             <div
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 justify-between"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-6"
               ref={ref}
             >
               {productObj[open].map((i) => (
                 <motion.div
-                  initial={{
-                    y: "50%",
-                    opacity: 0,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  viewport={{
-                    once: true,
-                    amount: "all",
-                    margin: "0px 0px 150px 0px",
-                  }}
+                  initial={{ y: "50%", opacity: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: "all", margin: "0px 0px 150px 0px" }}
                   key={i.name}
-                  className="h-[280px] w-[200px] py-4 bg-white shadow-xl rounded-2xl grid grid-rows-[1fr_auto] mx-auto"
+                  className="w-[240px] h-[340px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 transition hover:shadow-lg mx-auto"
                 >
-                  <img
-                    src={i.url}
-                    className="w-[90%]"
-                  />
-                  <p className="py-2 text-center">{i.name}</p>
+                  {/* Product Image */}
+                  <img src={i.url} className="w-[80%] h-[150px] object-contain mt-4" />
+
+                  {/* Title */}
+                  <p className="text-center text-base font-semibold mt-4">{i.name}</p>
+
+                  {/* Buttons */}
+                  <div className="flex justify-center gap-4 mt-4">
+                    <button className="flex items-center gap-1 text-green-700 text-sm hover:underline transition">
+                      <FiShoppingBag size={16} /> Read More
+                    </button>
+                    <button className="flex items-center gap-1 text-gray-600 text-sm hover:underline transition">
+                      <FiEye size={16} /> Quick View
+                    </button>
+                  </div>
                 </motion.div>
               ))}
             </div>
           </section>
         ) : (
           <div className="bg-[#f4f1ea] mt-[8rem] h-auto lg:h-[550px] w-full bg-cover bg-bottom bg-no-repeat">
-            <div className="max-w-[1000px] mx-auto grid  grid-cols-2  justify-items-center md:grid-cols-4 lg:grid-cols-5 grid-rows-2 justify-center px-5 gap-y-[8rem] gap-x-[4rem] relative -top-10 ">
+            <div className="max-w-[1000px] mx-auto grid grid-cols-2 justify-items-center md:grid-cols-4 lg:grid-cols-5 grid-rows-2 justify-center px-5 gap-y-[8rem] gap-x-[4rem] relative -top-10 ">
               {ProductsList.map((i) => (
                 <motion.div
                   key={i.name}
-                  className="bg-white relative w-[150px]  flex  justify-center gap-2 rounded-lg shadow-2xl 
-                  items-center pt-6 pb-2  "
+                  className="bg-white relative w-[150px] flex justify-center gap-2 rounded-lg shadow-2xl items-center pt-6 pb-2"
                   layoutId={i.name}
                 >
                   <motion.img
-                    initial={{
-                      opacity: 0,
-                      y: "-75%",
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    viewport={{
-                      once: true,
-                      amount: 0.5,
-                    }}
-                    transition={{
-                      delay: 0.4,
-                      duration: 0.4,
-                    }}
+                    initial={{ opacity: 0, y: "-75%" }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ delay: 0.4, duration: 0.4 }}
                     src={i.url}
-                    className={`h-[100px]  absolute top-0 -translate-y-[80%] ${i.className}`}
+                    className={`h-[100px] absolute top-0 -translate-y-[80%] ${i.className}`}
                   />
                   <p
                     className="text-center uppercase text-gray-600 w-[60%] cursor-pointer"
