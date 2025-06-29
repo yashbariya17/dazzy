@@ -6,8 +6,8 @@ const ContactUs = () => {
       </section>
       {/* Wrapper to scale entire content */}
       <div className="transform scale-[0.8] origin-top mx-auto">
-        <div className="min-h-screen p-10 flex">
-          <div className="w-1/2">
+        <div className="min-h-screen md:p-10 flex flex-col md:flex-row gap-8 ">
+          <div className="md:w-1/2 ">
             <iframe
               title="Ahmedabad Map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.8028975180253!2d72.57136231542126!3d23.033863921837776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f288a5e2ef%3A0x5d5f3ee40f79a7be!2sAhmedabad%2C%20Gujarat%2C%20India!5e0!3m2!1sen!2sus!4v1718027738241!5m2!1sen!2sus"
@@ -20,7 +20,7 @@ const ContactUs = () => {
               className="h-full"
             ></iframe>
           </div>
-          <div className="w-1/2 bg-[#240404] p-10 flex flex-col justify-center space-y-4">
+          <div className="md:w-1/2 bg-[#240404] p-10 flex flex-col justify-center space-y-4">
             <div>
               <label className="text-white block mb-1">Name</label>
               <input

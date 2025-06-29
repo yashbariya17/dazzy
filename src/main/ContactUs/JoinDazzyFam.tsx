@@ -7,9 +7,9 @@ const JoinDazzyFamily = () => {
 
       {/* Scaled wrapper */}
       <div className="transform scale-[0.8] origin-top">
-        <div className="min-h-screen p-10 flex">
+        <div className="min-h-screen md:p-10 flex flex-col md:flex-row gap-8 lg:gap-0">
           {/* Image replacing the map */}
-          <div className="w-1/2">
+          <div className="w-auto md:w-1/2">
             <img
               src="/images/largeimage.png"
               alt="Ahmedabad"
@@ -17,7 +17,7 @@ const JoinDazzyFamily = () => {
             />
           </div>
 
-          <div className="w-1/2 bg-[#240404] p-10 flex flex-col justify-center space-y-4">
+          <div className="w-auto md:w-1/2 bg-[#240404] p-10 flex flex-col justify-center space-y-4">
             <div>
               <label className="text-white block mb-1">Name</label>
               <input
