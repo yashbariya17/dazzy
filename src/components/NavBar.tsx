@@ -139,7 +139,38 @@ const ContactUs = [
     ),
   },
 ];
-
+const upIcon = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="lucide lucide-chevron-up-icon lucide-chevron-up"
+  >
+    <path d="m18 15-6-6-6 6" />
+  </svg>
+);
+const downIcon = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="lucide lucide-chevron-down-icon lucide-chevron-down"
+  >
+    <path d="m6 9 6 6 6-6" />
+  </svg>
+);
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hoverMenu, setHoverMenu] = useState<null | "product" | "contact">(
@@ -229,24 +260,8 @@ const NavBar = () => {
 
       {!isMobile ? (
         <section className="max-w-[800px] mx-auto flex justify-center gap-10 font-semibold items-center">
-          <NavLink
-            to={"/"}
-            className={({ isActive }) =>
-              ` ${isActive ? "navbar-active" : ""} relative`
-            }
-          >
-            Home{" "}
-            <span className="absolute underline-bar underline-bar w-full h-0.5 top-full block"></span>
-          </NavLink>
-          <NavLink
-            to="/about-us"
-            className={({ isActive }) =>
-              ` ${isActive ? "navbar-active" : ""} relative`
-            }
-          >
-            About Us
-            <span className="absolute underline-bar w-full h-0.5 top-full block"></span>
-          </NavLink>
+          <NavItemLink to={"/"}>Home</NavItemLink>
+          <NavItemLink to="/about-us">About Us</NavItemLink>
           <div
             className="relative"
             onMouseEnter={() => {
@@ -257,52 +272,8 @@ const NavBar = () => {
               closeTimeout.current = setTimeout(() => setHoverMenu(null), 300);
             }}
           >
-            <button className="relative">
-              Product
-              <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span>
-            </button>
-
-            <AnimatePresence>
-              {hoverMenu === "product" && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.3 }}
-                  className="
-          absolute top-full left-1/2 -translate-x-1/2 mt-10
-          rounded-xl
-          bg-[#391e1e]
-          shadow-lg
-          text-white
-          w-52
-          z-50
-          py-2
-        "
-                >
-                  {Products.map((item) => (
-                    <NavLink
-                      key={item.name}
-                      to={item.url}
-                      className={({ isActive }) =>
-                        `relative block px-4 py-2 ${
-                          isActive ? "navbar-active" : ""
-                        }`
-                      }
-                      onClick={() => setHoverMenu(null)}
-                    >
-                      <div className="flex gap-2 items-center">
-                        {item.icon}
-                        <span className="relative inline-block">
-                          {item.name}
-                          <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span>
-                        </span>
-                      </div>
-                    </NavLink>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
+            <button className="relative">Product</button>
+            <DropdownMenu items={Products} isOpen={hoverMenu === "product"} />
           </div>
 
           <div>
@@ -319,50 +290,8 @@ const NavBar = () => {
               closeTimeout.current = setTimeout(() => setHoverMenu(null), 300);
             }}
           >
-            <button className="relative">
-              Contact
-              <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span>
-            </button>
-
-            <AnimatePresence>
-              {hoverMenu === "contact" && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.3 }}
-                  className="
-          absolute top-full left-1/2 -translate-x-1/2 mt-10
-          rounded-xl
-                    bg-[#391e1e]
-
-           shadow-2xl
-          text-white w-52 z-50 py-2
-        "
-                >
-                  {ContactUs.map((item) => (
-                    <NavLink
-                      key={item.name}
-                      to={item.url}
-                      className={({ isActive }) =>
-                        `relative block px-4 py-2 ${
-                          isActive ? "navbar-active" : ""
-                        }`
-                      }
-                      onClick={() => setHoverMenu(null)}
-                    >
-                      <div className="flex gap-2 items-center">
-                        {item.icon}
-                        <span className="relative inline-block">
-                          {item.name}
-                          <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span>
-                        </span>
-                      </div>
-                    </NavLink>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
+            <button className="relative">Contact</button>
+            <DropdownMenu items={ContactUs} isOpen={hoverMenu === "contact"} />
           </div>
 
           <button className="bg-red-500 px-4 py-2">Download Catlog</button>
@@ -379,48 +308,34 @@ const NavBar = () => {
             initial={false}
             animate={isMobile ? (isOpen ? "open" : "closed") : false}
           >
-            <motion.li
-              variants={itemVariants}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className=" relative p-0 !no-underline"
+            <MobileNavItem
+              to="/"
+              label="Home"
               onClick={() => setIsOpen(false)}
-            >
-              <NavLink
-                to={"/"}
-                className={({ isActive }) =>
-                  ` ${isActive ? "navbar-active" : ""} relative`
-                }
-              >
-                Home{" "}
-                <span className="absolute underline-bar w-full h-0.5 top-full block"></span>
-              </NavLink>
-            </motion.li>
-            <motion.li
-              variants={itemVariants}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="no-underline"
+              itemVariants={itemVariants}
+            />
+            <MobileNavItem
+              to="/about-us"
+              label="About Us"
               onClick={() => setIsOpen(false)}
-            >
-              <NavLink
-                to="/about-us"
-                className={({ isActive }) =>
-                  ` ${isActive ? "navbar-active" : ""} relative`
-                }
-              >
-                About Us
-                <span className="absolute underline-bar w-full h-0.5 top-full block"></span>
-              </NavLink>
-            </motion.li>
+              itemVariants={itemVariants}
+            />
             <motion.li variants={itemVariants} className="no-underline">
-              <DropDown title="Product" list={Products} />
+              <AccordionDropDown
+                title="Product"
+                list={Products}
+                closeMobileMenu={() => setIsOpen(false)}
+              />
             </motion.li>
             <motion.li variants={itemVariants} className=" no-underline">
               Gifting
             </motion.li>
             <motion.li variants={itemVariants} className=" no-underline">
-              <DropDown title="Contact Us" list={ContactUs} />
+              <AccordionDropDown
+                title="Contact Us"
+                list={ContactUs}
+                closeMobileMenu={() => setIsOpen(false)}
+              />
             </motion.li>
             <motion.li variants={itemVariants} className="bg-red-500 px-4 py-2">
               Download Catlog
@@ -434,76 +349,179 @@ const NavBar = () => {
 
 export default NavBar;
 
-const DropDown = ({
+export const NavItemLink = ({
+  to,
+  children,
+  onClick,
+}: {
+  to: string;
+  children: React.ReactNode;
+  onClick?: () => void;
+}) => (
+  <NavLink
+    to={to}
+    onClick={onClick}
+    className={({ isActive }) => `${isActive ? "navbar-active" : ""} relative`}
+  >
+    {children}
+    <span className="absolute underline-bar w-full h-0.5 top-full block"></span>
+  </NavLink>
+);
+export const AccordionDropDown = ({
   title,
   list,
+  closeMobileMenu,
 }: {
   title: string;
   list: { name: string; url: string; icon: any }[];
+  closeMobileMenu: () => void;
 }) => {
   const [open, setOpen] = useState(false);
-
   const navigate = useNavigate();
 
+  const toggleOpen = () => setOpen(!open);
+
   return (
-    <div
-      className="text-white relative"
-      onMouseEnter={() => {
-        setOpen(true);
-      }}
-      onMouseLeave={() => {
-        setOpen(false);
-      }}
-    >
-      <button className="cursor-pointer" onClick={() => setOpen(!open)}>
-        {title}
+    <div className="w-full">
+      <button
+        onClick={toggleOpen}
+        className="flex justify-between items-center w-full px-4 py-2 text-white font-semibold"
+      >
+        <span>{title}</span>
+        <span className="ml-2">{open ? upIcon : downIcon}</span>
       </button>
 
       <AnimatePresence>
         {open && (
-          <motion.div
+          <motion.ul
             initial="hidden"
             animate="visible"
             exit="exit"
             variants={{
-              hidden: { opacity: 0, y: -10 },
+              hidden: { opacity: 0, height: 0 },
               visible: {
                 opacity: 1,
-                y: 0,
+                height: "auto",
                 transition: {
                   type: "spring",
                   stiffness: 300,
                   damping: 20,
-                  delayChildren: 0.2,
-                  staggerChildren: 0.1,
+                  delayChildren: 0.1,
+                  staggerChildren: 0.07,
                 },
               },
               exit: {
                 opacity: 0,
-                y: -10,
+                height: 0,
               },
             }}
-            className="absolute underline-bar z-50 left-1/2 -translate-x-1/2 bg-[#391e1e] rounded-md shadow-lg overflow-hidden"
+            className="bg-[#391e1e] rounded-md overflow-hidden"
           >
-            {list.map((i) => (
-              <motion.div
-                key={i.name}
-                className="capitalize relative px-4 py-2 cursor-pointer text-white text-nowrap text-center flex gap-2"
+            {list.map((item) => (
+              <motion.li
+                key={item.name}
+                className="flex items-center gap-2 px-6 py-2 text-white border-t border-[#4c2d2d]"
                 variants={{
-                  hidden: { y: 30, opacity: 0 },
+                  hidden: { y: 20, opacity: 0 },
                   visible: { y: 0, opacity: 1 },
                 }}
                 onClick={() => {
                   setOpen(false);
-                  navigate(i.url);
+                  closeMobileMenu();
+                  navigate(item.url);
                 }}
               >
-                {i?.icon} {i.name}
-              </motion.div>
+                <NavLink
+                  to={item.url}
+                  className={({ isActive }) =>
+                    `relative block px-4 py-2 ${
+                      isActive ? "navbar-active" : ""
+                    }`
+                  }
+                  onClick={() => closeMobileMenu()}
+                >
+                  {({ isActive }) => (
+                    <div className="flex gap-2 items-center">
+                      {item.icon}
+                      <span className="relative inline-block">
+                        {item.name}
+                        {isActive && (
+                          <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span>
+                        )}
+                      </span>
+                    </div>
+                  )}
+                </NavLink>
+              </motion.li>
             ))}
-          </motion.div>
+          </motion.ul>
         )}
       </AnimatePresence>
     </div>
   );
 };
+export const DropdownMenu = ({
+  items,
+  isOpen,
+}: {
+  items: any[];
+  isOpen: boolean;
+}) => (
+  <AnimatePresence>
+    {isOpen && (
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -10 }}
+        transition={{ duration: 0.3 }}
+        className="
+          absolute top-full left-1/2 -translate-x-1/2 mt-10
+          rounded-xl bg-[#391e1e]
+          shadow-2xl text-white w-52 z-50 py-2
+        "
+      >
+        {items.map((item) => (
+          <NavLink
+            key={item.name}
+            to={item.url}
+            className={({ isActive }) =>
+              `relative block px-4 py-2 ${isActive ? "navbar-active" : ""}`
+            }
+          >
+            <div className="flex gap-2 items-center">
+              {item.icon}
+              <span className="relative inline-block">
+                {item.name}
+                <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span>
+              </span>
+            </div>
+          </NavLink>
+        ))}
+      </motion.div>
+    )}
+  </AnimatePresence>
+);
+
+export const MobileNavItem = ({
+  to,
+  label,
+  onClick,
+  itemVariants,
+}: {
+  to: string;
+  label: string;
+  onClick: () => void;
+  itemVariants: any;
+}) => (
+  <motion.li
+    variants={itemVariants}
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.95 }}
+    className="no-underline"
+    onClick={onClick}
+  >
+    <NavItemLink to={to} onClick={onClick}>
+      {label}
+    </NavItemLink>
+  </motion.li>
+);
