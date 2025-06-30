@@ -3,6 +3,7 @@ import { TextAnimation } from "../../components/TextAnimation"
 import { motion } from "motion/react"
 import { useRef, useState } from "react"
 import { FiShoppingBag ,FiEye} from "react-icons/fi";
+import ViewMore from "./components/ViewMore";
 
 type productType = {
   [key: string]: { name: string; url: string }[]
@@ -68,6 +69,8 @@ const productObj: productType ={
 const Products = () => {
   const ref = useRef<HTMLDivElement>(null)
   const [open, setOpen] = useState<string>("")
+  const [selectedProduct, setSelectedProduct] = useState<any | null>(null);
+
 
   return (
     <div className="w-full">
@@ -80,6 +83,7 @@ const Products = () => {
         </p>
 
         {open ? (
+          <>
           <section className="max-w-[1240px] grid md:grid-cols-[auto_1fr] gap-16 px-6 mx-auto pt-20 pb-10">
             <div className="space-y-3 mx-auto">
               <h2 className="font-semibold text-xl pb-4">
@@ -136,7 +140,7 @@ const Products = () => {
 
                   {/* Buttons */}
                   <div className="flex justify-center gap-4 mt-4">
-                    <button className="flex items-center gap-1 text-green-700 text-sm hover:underline transition">
+                    <button  onClick={() => setSelectedProduct(i)} className="flex items-center gap-1 text-green-700 text-sm hover:underline hover:cursor-pointer transition">
                       <FiShoppingBag size={16} /> Read More
                     </button>
                     <button className="flex items-center gap-1 text-gray-600 text-sm hover:underline transition">
@@ -147,6 +151,8 @@ const Products = () => {
               ))}
             </div>
           </section>
+          {selectedProduct && (<ViewMore selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct} />)}
+          </>
         ) : (
           <div className="bg-[#f4f1ea] mt-[8rem] h-auto lg:h-[550px] w-full bg-cover bg-bottom bg-no-repeat">
             <div className="max-w-[1000px] mx-auto grid grid-cols-2 justify-items-center md:grid-cols-4 lg:grid-cols-5 grid-rows-2 justify-center px-5 gap-y-[8rem] gap-x-[4rem] relative -top-10 ">
