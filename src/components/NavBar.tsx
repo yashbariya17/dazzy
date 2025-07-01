@@ -110,19 +110,35 @@ const NavBar = () => {
               ` ${isActive ? "navbar-active" : ""} relative`
             }
           >
-           Product
+            Product
             <span className="absolute w-full h-0.5 top-full block"></span>
           </NavLink>
           <div>Gifting</div>
-          <NavLink
-            to="/contact-us"
-            className={({ isActive }) =>
-              ` ${isActive ? "navbar-active" : ""} relative`
-            }
-          >
-            Contact Us
-            <span className="absolute w-full h-0.5 top-full block"></span>
-          </NavLink>
+          <div className="relative group transition duration-900 ease-in">
+            <NavLink
+              to="/contact-us"
+              className={({ isActive }) =>
+                ` ${isActive ? "navbar-active" : ""} relative`
+              }
+            >
+              Contact Us
+              <span className="absolute w-full h-0.5 top-full block"></span>
+            </NavLink>
+            <div className="absolute left-0  hidden   group-hover:flex flex-col bg-white text-gray-800 shadow-md rounded-md overflow-hidden z-50">
+              <NavLink
+                to="/join-us"
+                className="px-4 py-2 hover:bg-gray-100 whitespace-nowrap"
+              >
+                Join Us
+              </NavLink>
+              <NavLink
+                to="/dealership"
+                className="px-4 py-2 hover:bg-gray-100 whitespace-nowrap"
+              >
+                Dealership
+              </NavLink>
+            </div>
+          </div>
           <button className="bg-red-500 px-4 py-2">Download Catlog</button>
         </section>
       ) : (
@@ -142,7 +158,7 @@ const NavBar = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               className=" relative p-0 !no-underline"
-              onClick={()=>setIsOpen(false)}
+              onClick={() => setIsOpen(false)}
             >
               <NavLink
                 to={"/"}
@@ -159,7 +175,7 @@ const NavBar = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               className="no-underline"
-              onClick={()=>setIsOpen(false)}
+              onClick={() => setIsOpen(false)}
             >
               <NavLink
                 to="/about-us"
