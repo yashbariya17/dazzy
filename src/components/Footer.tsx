@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { NavLink } from "react-router";
+import { motion } from "framer-motion"
+import { NavLink } from "react-router"
 const Footer = () => {
   return (
     <footer className="bg-[#3b1e1d] text-[#f2e9df] py-10 relative mt-20">
@@ -32,6 +32,9 @@ const Footer = () => {
                   { label: "About Us", href: "/about-us" },
                   { label: "Contact Us", href: "/contact-us" },
                   { label: "Products", href: "/products" },
+                  { label: "By Price", href: "/ByPrice" },
+                  { label: "By Brands", href: "/ByBrands" },
+                  { label: "Dealership", href: "/DealerShip" },
                   // { label: "FAQs", href: "/faq" },
                 ].map((item, index) => (
                   <motion.li
@@ -98,7 +101,7 @@ const Footer = () => {
         © {new Date().getFullYear()} winkelpix All rights reserved.
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

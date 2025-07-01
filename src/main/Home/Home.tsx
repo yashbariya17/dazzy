@@ -1,30 +1,31 @@
-import { AnimatePresence, motion } from "motion/react";
-import useEmblaCarousel from "embla-carousel-react";
-import { useCallback, useState } from "react";
-import AnimatedNumber from "../../components/AnimatedNumber";
-import { TextAnimation } from "../../components/TextAnimation";
+import { AnimatePresence, motion } from "motion/react"
+import useEmblaCarousel from "embla-carousel-react"
+import { useCallback, useState } from "react"
+import AnimatedNumber from "../../components/AnimatedNumber"
+import { TextAnimation } from "../../components/TextAnimation"
+import MouseComponent from "../../components/MouseComponent"
 
 type ProductsType = {
-  name: string;
-  url: string;
-  className?: string;
-}[];
+  name: string
+  url: string
+  className?: string
+}[]
 
 export const ProductsList: ProductsType = [
   {
-    name: "cholcloate bar",
+    name: "chocolate bar",
     url: "/images/1stimg.png",
   },
   {
-    name: "centerfilled cholcloate",
+    name: "centerfilled chocolate",
     url: "/images/2ndimg.png",
   },
   {
-    name: "decorative cholcloate",
+    name: "decorative chocolate",
     url: "/images/DECORATIVE-CHOCOLATE.png",
   },
   {
-    name: "penut cholcloate",
+    name: "peanut chocolate",
     url: "/images/4thimg.png",
     className: "left-[0px]",
   },
@@ -33,11 +34,11 @@ export const ProductsList: ProductsType = [
     url: "/images/5thimg.png",
   },
   {
-    name: "waffer rolls",
+    name: "wafer rolls",
     url: "/images/6thimg.png",
   },
   {
-    name: "toffe",
+    name: "toffee",
     url: "/images/TOFFEE.png",
     className: "left-[25px] top-[10px]",
   },
@@ -53,26 +54,26 @@ export const ProductsList: ProductsType = [
     name: "lollipop",
     url: "/images/10thimg.png",
   },
-];
+]
 
 const Home = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
 
-  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi])
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi])
 
-  const [emblaSlideRef, emblaSlideApi] = useEmblaCarousel({ loop: true });
+  const [emblaSlideRef, emblaSlideApi] = useEmblaCarousel({ loop: true })
 
   const scrollSlidePrev = useCallback(
     () => emblaSlideApi?.scrollPrev(),
     [emblaSlideApi]
-  );
+  )
   const scrollSlideNext = useCallback(
     () => emblaSlideApi?.scrollNext(),
     [emblaSlideApi]
-  );
+  )
 
-  const [aboutModal, setAboutModal] = useState(false);
+  const [aboutModal, setAboutModal] = useState(false)
 
   return (
     <div className="w-full overflow-x-hidden">
@@ -91,8 +92,8 @@ const Home = () => {
             }}
             className="bg-[rgba(0,0,0,0.3)] fixed h-screen w-full z-10 top-0 flex justify-center items-center"
             onClick={() => {
-              setAboutModal(false);
-              document.body.style.overflow = "auto";
+              setAboutModal(false)
+              document.body.style.overflow = "auto"
             }}
           >
             <motion.section
@@ -221,7 +222,10 @@ const Home = () => {
         </p>
 
         <div className=" w-[54%] lg:w-[80%] max-w-[1000px] mx-auto relative mt-10 ">
-          <div className="overflow-hidden relative " ref={emblaRef}>
+          <div
+            className="overflow-hidden relative "
+            ref={emblaRef}
+          >
             <div className="flex -ml-4">
               {Array(6)
                 .fill("")
@@ -310,30 +314,17 @@ const Home = () => {
                   confectionery industry with a growing pan-India presence and a
                   focus on quality, creativity, and market expansion.
                 </p>
-                <motion.button
-                  initial="rest"
-                  animate="rest"
-                  whileHover="hover"
-                  variants={{
-                    rest: { rotate: 0, scale: 1 },
-                    hover: {
-                      rotate: 3,
-                      scale: 1.07,
-                      transition: {
-                        type: "spring",
-                        stiffness: 280,
-                        damping: 18,
-                      },
-                    },
-                  }}
-                  className="bg-black text-white px-4 py-2 my-4 sm:mb-10 lg:mb-0"
-                  onClick={() => {
-                    setAboutModal(true);
-                    document.body.style.overflow = "hidden";
-                  }}
-                >
-                  Read More
-                </motion.button>
+                <MouseComponent className="my-4 sm:mb-10 lg:mb-0 rounded-lg ">
+                  <motion.button
+                    className="bg-black text-white px-4 py-2 "
+                    onClick={() => {
+                      setAboutModal(true)
+                      document.body.style.overflow = "hidden"
+                    }}
+                  >
+                    Read More
+                  </motion.button>
+                </MouseComponent>
               </div>
             </div>
           </section>
@@ -352,7 +343,10 @@ const Home = () => {
         </p>
 
         <div className="w-[60%] max-w-[1000px] mx-auto relative mt-10">
-          <div className="overflow-hidden" ref={emblaSlideRef}>
+          <div
+            className="overflow-hidden"
+            ref={emblaSlideRef}
+          >
             <div className="flex px-10">
               {Array(3)
                 .fill("")
@@ -499,7 +493,10 @@ const Home = () => {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                  <g
+                    id="SVGRepo_bgCarrier"
+                    strokeWidth="0"
+                  ></g>
                   <g
                     id="SVGRepo_tracerCarrier"
                     strokeLinecap="round"
@@ -523,7 +520,10 @@ const Home = () => {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                  <g
+                    id="SVGRepo_bgCarrier"
+                    strokeWidth="0"
+                  ></g>
                   <g
                     id="SVGRepo_tracerCarrier"
                     strokeLinecap="round"
@@ -545,7 +545,7 @@ const Home = () => {
         </section>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
