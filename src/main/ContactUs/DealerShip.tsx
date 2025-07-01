@@ -94,13 +94,29 @@ const DealerShip = () => {
                 className="w-full p-2 rounded-md bg-[#f4f2e9] text-black"
               />
             </div>
+            <div>
+              <label className="text-white block mb-1">City</label>
+              <input
+  type="text"
+  placeholder="Your City Here"
+  className="w-full p-2 rounded-md bg-[#f4f2e9] text-black"
+/>
+            </div>
+            <div>
+              <label className="text-white block mb-1">State</label>
+              <input
+  type="text"
+  placeholder="Your State Here"
+  className="w-full p-2 rounded-md bg-[#f4f2e9] text-black"
+/>
+            </div>
           </div>
 
           <div>
             <label className="block mb-1">Message Subject</label>
             <input
               type="text"
-              placeholder="Briefly describe the subject of your message."
+              placeholder="Describe the subject of your message."
               className="w-full p-2 rounded-md bg-[#f4f2e9] text-black"
             />
           </div>
