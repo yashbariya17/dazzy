@@ -13,7 +13,7 @@ const productObj: productType = {
   "chocolate bar": [
     {
       name: "Black & White Bar",
-      url: "/images/chocolatebar/Black & White Bar.png",
+    url: "/images/chocolatebar/Black & White Bar.png",
     },
     {
       name: "Cocoa Milk Choclate Bar",
@@ -158,7 +158,6 @@ const Products = () => {
 
                 {productObj[open].map((i) => (
                   <motion.div
-<<<<<<< HEAD
                     initial={{ y: "50%", opacity: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4 }}
@@ -175,22 +174,6 @@ const Products = () => {
                       src={i.url}
                       className="w-[80%] h-[150px] object-contain mt-4"
                     />
-=======
-  initial={{ y: "50%", opacity: 0 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{
-    once: true,
-    amount: "all",
-    margin: "0px 0px 150px 0px",
-  }}
-  key={i.name}
-  className="w-[160px] h-[280px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[340px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
->
-  <img
-    src={i.url}
-    className="w-[80%] h-[120px] object-contain mt-4"
-  />
->>>>>>> 5ef1b9ad65d7ccd4aee71e5c7986605033ad7603
 
   <p className="text-center text-sm sm:text-base font-semibold mt-2">
     {i.name}
