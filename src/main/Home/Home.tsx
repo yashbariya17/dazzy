@@ -129,18 +129,7 @@ const Home = () => {
                     expierience in food industries
                   </p>
                   <p className="text-wrap w-[500px] mx-auto pb-2">
-                    Established in 1995 in Baroda, Gujarat, Dazzy Food
-                    Industries began as a confectionery distribution company
-                    founded by Mr. Deepak Kanani. With strong support from his
-                    brothers, the company grew steadily, guided by the motto:
-                    “To Deliver the Best.” In 2002, Dazzy launched its own
-                    production line, expanding into lollipops, chocolates,
-                    candies, toffees, and éclairs. Known for innovation in both
-                    product and packaging, Dazzy has created bestselling items
-                    that stand out in the market. Today, Dazzy is a trusted name
-                    in the Indian confectionery industry with a growing
-                    pan-India presence and a focus on quality, creativity, and
-                    market expansion.
+                   Founded in 2001, Dazzy is a family-owned confectionery house producing high-quality sugar candies and moulded chocolate specialties. With decades of experience, Dazzy is now one of the largest and most trusted confectionery manufacturers in the world.
                   </p>
                 </div>
               </motion.div>
@@ -302,17 +291,7 @@ const Home = () => {
                   expierience in food industries
                 </p>
                 <p className="lg:w-[400px] text-wrap w-[300px]">
-                  Established in 1995 in Baroda, Gujarat, Dazzy Food Industries
-                  began as a confectionery distribution company founded by Mr.
-                  Deepak Kanani. With strong support from his brothers, the
-                  company grew steadily, guided by the motto: “To Deliver the
-                  Best.” In 2002, Dazzy launched its own production line,
-                  expanding into lollipops, chocolates, candies, toffees, and
-                  éclairs. Known for innovation in both product and packaging,
-                  Dazzy has created bestselling items that stand out in the
-                  market. Today, Dazzy is a trusted name in the Indian
-                  confectionery industry with a growing pan-India presence and a
-                  focus on quality, creativity, and market expansion.
+                  Founded in 2001, Dazzy is a family-owned confectionery house producing high-quality sugar candies and moulded chocolate specialties. With decades of experience, Dazzy is now one of the largest and most trusted confectionery manufacturers in the world.
                 </p>
                 <MouseComponent className="my-4 sm:mb-10 lg:mb-0 rounded-lg ">
                   <motion.button

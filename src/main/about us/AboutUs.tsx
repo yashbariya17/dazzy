@@ -279,9 +279,7 @@ const AboutUs = () => {
       <div className="w-full flex flex-col items-center mt-10 px-4">
         <h2 className="text-8xl text-red-600 mb-4 text-center cream-cake-font">Vision of Company</h2>
         <p className="max-w-3xl text-center text-gray-700 mb-12 text-sm md:text-base">
-          All DAZZY brands are created by individuals who prioritize the consumer, utilizing the finest ingredients and cutting-edge production
-          technology. We adhere to transparent quality control standards to build trust and credibility. This commitment results in exceptional
-          quality and a delightful experience.
+          At Dazzy, our mission is to craft exceptional confectionery that brings joy to everyday moments—through consistent quality, affordability, and a consumer-first approach. Guided by a vision to be a trusted global brand, we create our products using the finest ingredients, advanced technology, and transparent quality practices. This commitment ensures every bite delivers delight, trust, and a memorable experience.
         </p>
 
         <h3 className="text-8xl text-red-600 mb-2 text-center cream-cake-font">Our Team</h3>

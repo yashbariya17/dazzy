@@ -29,16 +29,6 @@ const ContactUs = () => {
                 className="w-full p-2 rounded-md bg-[#f4f2e9]"
               />
             </div>
-
-            <div>
-              <label className="text-white block mb-1">Company</label>
-              <input
-                type="text"
-                placeholder="Company name"
-                className="w-full p-2 rounded-md bg-[#f4f2e9]"
-              />
-            </div>
-
             <div>
               <label className="text-white block mb-1">Phone</label>
               <input
@@ -56,12 +46,11 @@ const ContactUs = () => {
                 className="w-full p-2 rounded-md bg-[#f4f2e9]"
               />
             </div>
-
             <div>
               <label className="text-white block mb-1">Message Subject</label>
               <input
                 type="text"
-                placeholder="Briefly describe the subject of your message."
+                placeholder="Describe the subject of your message."
                 className="w-full p-2 rounded-md bg-[#f4f2e9]"
               />
             </div>

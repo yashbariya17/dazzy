@@ -154,12 +154,11 @@ const Products = () => {
                 ))}
               </div>
 
-              <div
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-6"
-                ref={ref}
-              >
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6" ref={ref}>
+
                 {productObj[open].map((i) => (
                   <motion.div
+<<<<<<< HEAD
                     initial={{ y: "50%", opacity: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4 }}
@@ -176,23 +175,40 @@ const Products = () => {
                       src={i.url}
                       className="w-[80%] h-[150px] object-contain mt-4"
                     />
+=======
+  initial={{ y: "50%", opacity: 0 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{
+    once: true,
+    amount: "all",
+    margin: "0px 0px 150px 0px",
+  }}
+  key={i.name}
+  className="w-[160px] h-[280px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[340px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
+>
+  <img
+    src={i.url}
+    className="w-[80%] h-[120px] object-contain mt-4"
+  />
+>>>>>>> 5ef1b9ad65d7ccd4aee71e5c7986605033ad7603
 
-                    <p className="text-center text-base font-semibold mt-4">
-                      {i.name}
-                    </p>
+  <p className="text-center text-sm sm:text-base font-semibold mt-2">
+    {i.name}
+  </p>
 
-                    <div className="flex justify-center gap-4 mt-4">
-                      <button
-                        onClick={() => setSelectedProduct(i)}
-                        className="flex items-center gap-1 text-green-700 text-sm hover:underline hover:cursor-pointer transition"
-                      >
-                        <FiShoppingBag size={16} /> Read More
-                      </button>
-                      <button className="flex items-center gap-1 text-gray-600 text-sm hover:underline transition">
-                        <FiEye size={16} /> Quick View
-                      </button>
-                    </div>
-                  </motion.div>
+  <div className="flex justify-center gap-3 mt-2 text-xs sm:text-sm">
+    <button
+      onClick={() => setSelectedProduct(i)}
+      className="flex items-center gap-1 text-green-700 hover:underline hover:cursor-pointer transition"
+    >
+      <FiShoppingBag size={14} /> Read More
+    </button>
+    <button className="flex items-center gap-1 text-gray-600 hover:underline transition">
+      <FiEye size={14} /> Quick View
+    </button>
+  </div>
+</motion.div>
+
                 ))}
               </div>
             </section>

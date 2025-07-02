@@ -28,15 +28,6 @@ const JoinDazzyFamily = () => {
             </div>
 
             <div>
-              <label className="text-white block mb-1">Company</label>
-              <input
-                type="text"
-                placeholder="Company name"
-                className="w-full p-2 rounded-md bg-[#f4f2e9]"
-              />
-            </div>
-
-            <div>
               <label className="text-white block mb-1">Phone</label>
               <input
                 type="text"
@@ -53,16 +44,31 @@ const JoinDazzyFamily = () => {
                 className="w-full p-2 rounded-md bg-[#f4f2e9]"
               />
             </div>
-
+<div>
+              <label className="text-white block mb-1">Applying For </label>
+              <input
+                type="text"
+                placeholder="Add Your Designation"
+                className="w-full p-2 rounded-md bg-[#f4f2e9]"
+              />
+            </div>
             <div>
               <label className="text-white block mb-1">Message Subject</label>
               <input
                 type="text"
-                placeholder="Briefly describe the subject of your message."
+                placeholder="Describe the subject of your message." 
                 className="w-full p-2 rounded-md bg-[#f4f2e9]"
               />
             </div>
-
+             {/* ✅ Upload Resume Field */}
+            <div>
+              <label className="text-white block mb-1">Upload Resume</label>
+              <input
+                type="file"
+                accept=".pdf,.doc,.docx"
+                className="w-full p-2 rounded-md bg-[#f4f2e9] text-black file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-[#d92128] file:text-white hover:file:opacity-90"
+              />
+            </div>
             <div>
               <label className="text-white block mb-1">Message</label>
               <textarea
