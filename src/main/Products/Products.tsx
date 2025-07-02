@@ -13,7 +13,7 @@ const productObj: productType = {
   "chocolate bar": [
     {
       name: "Black & White Bar",
-    url: "/images/chocolatebar/Black & White Bar.png",
+      url: "/images/chocolatebar/Black & White Bar.png",
     },
     {
       name: "Cocoa Milk Choclate Bar",
@@ -128,7 +128,6 @@ const Products = () => {
                   <motion.div
                     key={index}
                     className="bg-white w-[270px] rounded-full shadow-2xl py-2 group"
-                    layoutId={i.name}
                   >
                     <p
                       className={`uppercase text-[15px] hover:text-[#eb0029] w-full pl-6 pr-5 cursor-pointer transition-colors duration-300 flex justify-between ${
@@ -154,44 +153,44 @@ const Products = () => {
                 ))}
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6" ref={ref}>
-
+              <div
+                className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6"
+                ref={ref}
+              >
                 {productObj[open].map((i) => (
                   <motion.div
                     initial={{ y: "50%", opacity: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4 }}
                     viewport={{
                       once: true,
                       amount: "all",
                       margin: "0px 0px 150px 0px",
                     }}
                     key={i.name}
-                    className="w-[240px] h-[340px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
+                    className="w-[160px] h-[280px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[340px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
                   >
                     <motion.img
                       layoutId={i.name}
                       src={i.url}
-                      className="w-[80%] h-[150px] object-contain mt-4"
+                      className="w-[80%] h-[120px] object-contain mt-4"
                     />
 
-  <p className="text-center text-sm sm:text-base font-semibold mt-2">
-    {i.name}
-  </p>
+                    <p className="text-center text-sm sm:text-base font-semibold mt-2">
+                      {i.name}
+                    </p>
 
-  <div className="flex justify-center gap-3 mt-2 text-xs sm:text-sm">
-    <button
-      onClick={() => setSelectedProduct(i)}
-      className="flex items-center gap-1 text-green-700 hover:underline hover:cursor-pointer transition"
-    >
-      <FiShoppingBag size={14} /> Read More
-    </button>
-    <button className="flex items-center gap-1 text-gray-600 hover:underline transition">
-      <FiEye size={14} /> Quick View
-    </button>
-  </div>
-</motion.div>
-
+                    <div className="flex justify-center gap-3 mt-2 text-xs sm:text-sm">
+                      <button
+                        onClick={() => setSelectedProduct(i)}
+                        className="flex items-center gap-1 text-green-700 hover:underline hover:cursor-pointer transition"
+                      >
+                        <FiShoppingBag size={14} /> Read More
+                      </button>
+                      <button className="flex items-center gap-1 text-gray-600 hover:underline transition">
+                        <FiEye size={14} /> Quick View
+                      </button>
+                    </div>
+                  </motion.div>
                 ))}
               </div>
             </section>
