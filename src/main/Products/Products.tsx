@@ -126,6 +126,7 @@ const Products = () => {
                 </h2>
                 {ProductsList.map((i, index) => (
                   <motion.div
+                  layoutId={i.name}
                     key={index}
                     className="bg-white w-[270px] rounded-full shadow-2xl py-2 group"
                   >
