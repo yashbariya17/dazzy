@@ -1,6 +1,6 @@
 import { ProductsList } from "../Home/Home";
 import { TextAnimation } from "../../components/TextAnimation";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
 import { useRef, useState } from "react";
 import { FiShoppingBag, FiEye } from "react-icons/fi";
 import ViewMore from "./components/ViewMore";
@@ -162,6 +162,7 @@ const Products = () => {
                   <motion.div
                     initial={{ y: "50%", opacity: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4 }}
                     viewport={{
                       once: true,
                       amount: "all",
@@ -170,7 +171,8 @@ const Products = () => {
                     key={i.name}
                     className="w-[240px] h-[340px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
                   >
-                    <img
+                    <motion.img
+                      layoutId={i.name}
                       src={i.url}
                       className="w-[80%] h-[150px] object-contain mt-4"
                     />
@@ -194,12 +196,14 @@ const Products = () => {
                 ))}
               </div>
             </section>
-            {selectedProduct && (
-              <ViewMore
-                selectedProduct={selectedProduct}
-                setSelectedProduct={setSelectedProduct}
-              />
-            )}
+            <AnimatePresence>
+              {selectedProduct && (
+                <ViewMore
+                  selectedProduct={selectedProduct}
+                  setSelectedProduct={setSelectedProduct}
+                />
+              )}
+            </AnimatePresence>
           </>
         ) : (
           <div className="bg-[#f4f1ea] mt-[8rem] h-auto lg:h-[550px] w-full bg-cover bg-bottom bg-no-repeat">
