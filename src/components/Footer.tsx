@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
 
         <div className="flex-1">
-          <img src="/path-to-your-logo1.png" alt="Dazzy Logo" className="h-12 mb-4" />
+<img src="/images/EDLOGO.png" alt="Dazzy Logo" className="h-12 mb-4" />
           <h3 className="text-lg font-semibold">DAZZY FOOD PRIVATE LIMITED</h3>
           <p className="text-sm mt-2 leading-relaxed">
             <i className="fa fa-location-dot mr-2"></i>
@@ -25,7 +25,7 @@ const Footer = () => {
         <div className="hidden md:block h-[200px] border-1 border-amber-800 mx-4"/>
 
         <div className="flex-1">
-          <img src="/path-to-your-logo2.png" alt="Dazzy Products Logo" className="h-12 mb-4" />
+          <img src="/images/DPPLLOGO.png" alt="Dazzy Products Logo" className="h-12 mb-4" />
           <h3 className="text-lg font-semibold">DAZZY PRODUCTS PVT. LTD.</h3>
           <p className="text-sm mt-2 leading-relaxed">
             <i className="fa fa-location-dot mr-2"></i>
@@ -38,7 +38,7 @@ const Footer = () => {
         <div className="hidden md:block h-[200px] border-1 border-amber-800 mx-4"/>
 
         <div className="flex-1">
-          <img src="/path-to-your-logo3.png" alt="Dazzy Food Industries Logo" className="h-12 mb-4" />
+          <img src="/images/DFILOGO.png" alt="Dazzy Food Industries Logo" className="h-12 mb-4" />
           <h3 className="text-lg font-semibold">DAZZY FOOD INDUSTRIES</h3>
           <p className="text-sm mt-2 leading-relaxed">
             <i className="fa fa-location-dot mr-2"></i>
@@ -52,7 +52,6 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
         <div className="flex-1">
           <div className="mt-8">
-            <img src="/path-to-qr-code.png" alt="QR Code" className="" />
             <p className="text-sm">
               <i className="fa fa-envelope mr-2"></i>
               <a href="mailto:info@dazzyconfectionery.com" className="hover:underline">info@dazzyconfectionery.com</a>
@@ -79,11 +78,11 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex-1">
-          <div className="flex mt-8 space-x-3">
+          {/* <div className="flex mt-8 space-x-3">
             <img src="/chocolate1.png" alt="Chocolate 1" className="h-16" />
             <img src="/chocolate2.png" alt="Chocolate 2" className="h-16" />
             <img src="/chocolate3.png" alt="Chocolate 3" className="h-16" />
-          </div>
+          </div> */}
         </div>
         </div>
     </footer>
