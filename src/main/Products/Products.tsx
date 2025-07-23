@@ -54,41 +54,264 @@ const productObj: productType = {
   ],
   "centerfilled chocolate": [
     {
-      name: "Truffle Bluberry",
-      url: "/images/centerfilledchocolate/Truffle Bluberry.png",
+      "name": "0069",
+      "url": "/images/centerfilledchocolate/0069.png"
     },
     {
-      name: "Dazzy Dlove Choclate",
-      url: "/images/centerfilledchocolate/Dazzy Dlove Choclate.png",
+      "name": "BELGIAM GIFT BOX",
+      "url": "/images/centerfilledchocolate/BELGIAM GIFT BOX.png"
     },
     {
-      name: "Truffle Rajbhog",
-      url: "/images/centerfilledchocolate/Truffle Rajbhog.png",
+      "name": "BELGIUM 125 PCS",
+      "url": "/images/centerfilledchocolate/BELGIUM 125 PCS.png"
     },
     {
-      name: "Truffle Blueberry",
-      url: "/images/centerfilledchocolate/Truffle Blueberry.png",
+      "name": "BLISS DARK",
+      "url": "/images/centerfilledchocolate/BLISS DARK.png"
     },
     {
-      name: "Truffle Pistachio",
-      url: "/images/centerfilledchocolate/Truffle Pistachio.png",
+      "name": "BLISS STRAWBERRY",
+      "url": "/images/centerfilledchocolate/BLISS STRAWBERRY.png"
     },
-    // { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
-    // { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
-    // { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
-    // { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
-    // { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
-    // { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
-    // { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
-    // { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
-    // { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
-    // { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
-    // { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
-    // { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
-    // { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
-    // { "name": "Celio Crunchy", "url": "/images/centerfilledchocolate/DECORATIVE-CHOCOLATE.png" },
+    {
+      "name": "BLISS WHITE",
+      "url": "/images/centerfilledchocolate/BLISS WHITE.png"
+    },
+    {
+      "name": "BOLIVIA 70 PCS BOX",
+      "url": "/images/centerfilledchocolate/BOLIVIA 70 PCS BOX.png"
+    },
+    {
+      "name": "BOLIVIA CONTAINER",
+      "url": "/images/centerfilledchocolate/BOLIVIA CONTAINER.png"
+    },
+    {
+      "name": "BOLIVIA GIFT BOXX",
+      "url": "/images/centerfilledchocolate/BOLIVIA GIFT BOXX.png"
+    },
+    {
+      "name": "BOLIVIA150 PCS BOX",
+      "url": "/images/centerfilledchocolate/BOLIVIA150 PCS BOX.png"
+    },
+    {
+      "name": "BREVO 125 PCS BOX",
+      "url": "/images/centerfilledchocolate/BREVO 125 PCS BOX.png"
+    },
+    {
+      "name": "BREVO CONTAINER",
+      "url": "/images/centerfilledchocolate/BREVO CONTAINER.png"
+    },
+    {
+      "name": "BREVO GIFT BOX",
+      "url": "/images/centerfilledchocolate/BREVO GIFT BOX.png"
+    },
+    {
+      "name": "COCOS TRUFFLES BOX",
+      "url": "/images/centerfilledchocolate/COCOS TRUFFLES BOX.png"
+    },
+    {
+      "name": "COCOS TRUFFLES POUCH",
+      "url": "/images/centerfilledchocolate/COCOS TRUFFLES POUCH.png"
+    },
+    {
+      "name": "D LOVE GOLD 150 PCS",
+      "url": "/images/centerfilledchocolate/D LOVE GOLD 150 PCS.png"
+    },
+    {
+      "name": "Dazzy Dlove Choclate",
+      "url": "/images/centerfilledchocolate/Dazzy Dlove Choclate.png"
+    },
+    {
+      "name": "DELIGHT BLUEBERRY 70PCS BOX",
+      "url": "/images/centerfilledchocolate/DELIGHT BLUEBERRY 70PCS BOX.png"
+    },
+    {
+      "name": "DELIGHT BLUEBERRY 150PCS BOX",
+      "url": "/images/centerfilledchocolate/DELIGHT BLUEBERRY 150PCS BOX.png"
+    },
+    {
+      "name": "DELIGHT CASHEWNUT 70PCS BOX",
+      "url": "/images/centerfilledchocolate/DELIGHT CASHEWNUT 70PCS BOX.png"
+    },
+    {
+      "name": "DELIGHT CASHEWNUT 150PCS BOX",
+      "url": "/images/centerfilledchocolate/DELIGHT CASHEWNUT 150PCS BOX.png"
+    },
+    {
+      "name": "DELIGHT MANGO 70PCS BOX",
+      "url": "/images/centerfilledchocolate/DELIGHT MANGO 70PCS BOX.png"
+    },
+    {
+      "name": "DELIGHT MANGO150PCS BOX",
+      "url": "/images/centerfilledchocolate/DELIGHT MANGO150PCS BOX.png"
+    },
+    {
+      "name": "DELIGHT PISTACHIO 70PCS BOX",
+      "url": "/images/centerfilledchocolate/DELIGHT PISTACHIO 70PCS BOX.png"
+    },
+    {
+      "name": "DELIGHT PISTACHIO 150PCS BOX",
+      "url": "/images/centerfilledchocolate/DELIGHT PISTACHIO 150PCS BOX.png"
+    },
+    {
+      "name": "DELIGHT RAJBHOG 70PCS BOX",
+      "url": "/images/centerfilledchocolate/DELIGHT RAJBHOG 70PCS BOX.png"
+    },
+    {
+      "name": "DELIGHT RAJBHOG 150PCS BOX",
+      "url": "/images/centerfilledchocolate/DELIGHT RAJBHOG 150PCS BOX.png"
+    },
+    {
+      "name": "DELIGHT STRAWBERRY150 PCS BOX",
+      "url": "/images/centerfilledchocolate/DELIGHT STRAWBERRY150 PCS BOX.png"
+    },
+    {
+      "name": "DELOVE PINK",
+      "url": "/images/centerfilledchocolate/DELOVE PINK.png"
+    },
+    {
+      "name": "DLOVE GOLD POUCH",
+      "url": "/images/centerfilledchocolate/DLOVE GOLD POUCH.png"
+    },
+    {
+      "name": "DLOVE GREEN POUH",
+      "url": "/images/centerfilledchocolate/DLOVE GREEN POUH.png"
+    },
+    {
+      "name": "DLOVE PINK POUCH",
+      "url": "/images/centerfilledchocolate/DLOVE PINK POUCH.png"
+    },
+    {
+      "name": "DLOVE RED",
+      "url": "/images/centerfilledchocolate/DLOVE RED.png"
+    },
+    {
+      "name": "TRUFFLE BLUE BERRY GIFT BOX",
+      "url": "/images/centerfilledchocolate/TRUFFLE BLUE BERRY GIFT BOX.png"
+    },
+    {
+      "name": "Truffle Blueberry",
+      "url": "/images/centerfilledchocolate/Truffle Blueberry.png"
+    },
+    {
+      "name": "TRUFFLE BUEBERRY 150 PCS",
+      "url": "/images/centerfilledchocolate/TRUFFLE BUEBERRY 150 PCS.png"
+    },
+    {
+      "name": "TRUFFLE MILK 70 PCS",
+      "url": "/images/centerfilledchocolate/TRUFFLE MILK 70 PCS.png"
+    },
+    {
+      "name": "TRUFFLE MILK 150 PCS",
+      "url": "/images/centerfilledchocolate/TRUFFLE MILK 150 PCS.png"
+    },
+    {
+      "name": "TRUFFLE PISTACHIO 70 PCS",
+      "url": "/images/centerfilledchocolate/TRUFFLE PISTACHIO 70 PCS.png"
+    },
+    {
+      "name": "TRUFFLE PISTACHIO 150 PCS",
+      "url": "/images/centerfilledchocolate/TRUFFLE PISTACHIO 150 PCS.png"
+    },
+    {
+      "name": "Truffle Pistachio",
+      "url": "/images/centerfilledchocolate/Truffle Pistachio.png"
+    },
+    {
+      "name": "TRUFFLE RAJBHOG 70 PCS",
+      "url": "/images/centerfilledchocolate/TRUFFLE RAJBHOG 70 PCS.png"
+    },
+    {
+      "name": "TRUFFLE RAJBHOG 150 PCS",
+      "url": "/images/centerfilledchocolate/TRUFFLE RAJBHOG 150 PCS.png"
+    },
+    {
+      "name": "TRUFFLE RAJBHOG GIFT BOX",
+      "url": "/images/centerfilledchocolate/TRUFFLE RAJBHOG GIFT BOX.png"
+    },
+    {
+      "name": "Truffle Rajbhog",
+      "url": "/images/centerfilledchocolate/Truffle Rajbhog.png"
+    },
+    {
+      "name": "TRUFFLE STRAWBERRY 70 PCS",
+      "url": "/images/centerfilledchocolate/TRUFFLE STRAWBERRY 70 PCS.png"
+    },
+    {
+      "name": "TRUFFLE STRAWBERRY 150 PCS",
+      "url": "/images/centerfilledchocolate/TRUFFLE STRAWBERRY 150 PCS.png"
+    },
+    {
+      "name": "TRUFFLES BLUE POUCH",
+      "url": "/images/centerfilledchocolate/TRUFFLES BLUE POUCH.png"
+    },
+    {
+      "name": "TRUFFLES CONTAINER 2",
+      "url": "/images/centerfilledchocolate/TRUFFLES CONTAINER 2.png"
+    },
+    {
+      "name": "TRUFFLES CONTAINER",
+      "url": "/images/centerfilledchocolate/TRUFFLES CONTAINER.png"
+    },
+    {
+      "name": "TRUFFLES MILK GIFT BOX",
+      "url": "/images/centerfilledchocolate/TRUFFLES MILK GIFT BOX.png"
+    },
+    {
+      "name": "TRUFFLES PISTACHIO GIFT BOX",
+      "url": "/images/centerfilledchocolate/TRUFFLES PISTACHIO GIFT BOX.png"
+    },
+    {
+      "name": "TRUFFLES RED POUCH",
+      "url": "/images/centerfilledchocolate/TRUFFLES RED POUCH.png"
+    },
+    {
+      "name": "TRUFFLES STRAWBERRY GIFT BOX",
+      "url": "/images/centerfilledchocolate/TRUFFLES STRAWBERRY GIFT BOX.png"
+    },
+    {
+      "name": "UNITED GIFT BOX",
+      "url": "/images/centerfilledchocolate/UNITED GIFT BOX.png"
+    },
+    {
+      "name": "UNITED JAR",
+      "url": "/images/centerfilledchocolate/UNITED JAR.png"
+    }
   ],
-  "decorative chocolate": [],
+  "decorative chocolate": [
+    {
+      "name": "00146",
+      "url": "/images/decorative chocolate/00146.png"
+    },
+    {
+      "name": "00147",
+      "url": "/images/decorativechocolate/00147.png"
+    },
+    {
+      "name": "CHOCO COAN",
+      "url": "/images/decorativechocolate/CHOCO COAN.png"
+    },
+    {
+      "name": "CHOCO TOCO",
+      "url": "/images/decorativechocolate/CHOCO TOCO.png"
+    },
+    {
+      "name": "DR TEDDY",
+      "url": "/images/decorativechocolate/DR TEDDY.png"
+    },
+    {
+      "name": "DR TEDDY2",
+      "url": "/images/decorativechocolate/DR TEDDY2.png"
+    },
+    {
+      "name": "KING KONG 1",
+      "url": "/images/decorativechocolate/KING KONG 1.png"
+    },
+    {
+      "name": "KING KONG",
+      "url": "/images/decorativechocolate/KING KONG.png"
+    }
+  ],
   "peanut chocolate": [{
     name: "00126",
     url: "/images/peanut chocolate/00126.png",
@@ -129,15 +352,15 @@ const productObj: productType = {
     name: "TORNUTTE  BAR CONTAINER",
     url: "/images/nugut bar/TORNUTTE  BAR CONTAINER.png",
   },
-{
+  {
     name: "BRACKERS BOX",
     url: "/images/nugut bar/BRACKERS BOX.png",
   },
-{
+  {
     name: "TORNUTTE  BAR BOX",
     url: "/images/nugut bar/TORNUTTE  BAR BOX.png",
   },
-],
+  ],
 
   "wafer rolls": [{
     name: "3 Stix Chocofills",
@@ -375,32 +598,32 @@ const productObj: productType = {
     name: "Trasure",
     url: "/images/toffee/Trasure.png",
   }],
-  jelly: [ {
-      name: "JELLOS JELLY JAR",
-      url: "/images/jelly/JELLOS JELLY JAR.png",
-    },
-   {
-      name: "JELLOS JELLY",
-      url: "/images/jelly/JELLOS JELLY.png",
-    },
-   {
-      name: "STRAWBERRY JELLY JAR",
-      url: "/images/jelly/STRAWBERRY JELLY JAR.png",
-    },
-   {
-      name: "STRAWBERRY JELLY",
-      url: "/images/jelly/STRAWBERRY JELLY.png",
-    },
+  jelly: [{
+    name: "JELLOS JELLY JAR",
+    url: "/images/jelly/JELLOS JELLY JAR.png",
+  },
+  {
+    name: "JELLOS JELLY",
+    url: "/images/jelly/JELLOS JELLY.png",
+  },
+  {
+    name: "STRAWBERRY JELLY JAR",
+    url: "/images/jelly/STRAWBERRY JELLY JAR.png",
+  },
+  {
+    name: "STRAWBERRY JELLY",
+    url: "/images/jelly/STRAWBERRY JELLY.png",
+  },
   ],
-  candy: [ {
-      name: "Breating Heart",
-      url: "/images/candy/BEATING HEART.png",
-    },
-   {
+  candy: [{
+    name: "Breating Heart",
+    url: "/images/candy/BEATING HEART.png",
+  },
+  {
     name: "Double Berry",
     url: "/images/candy/DOUBLE BERRY.png",
   },
-{
+  {
     name: "Double Coconut",
     url: "/images/candy/DOUBLE COCONUT.png",
   },
@@ -539,14 +762,13 @@ const Products = () => {
                 </h2>
                 {ProductsList.map((i, index) => (
                   <motion.div
-                  layoutId={i.name}
+                    layoutId={i.name}
                     key={index}
                     className="bg-white w-[270px] rounded-full shadow-2xl py-2 group"
                   >
                     <p
-                      className={`uppercase text-[15px] hover:text-[#eb0029] w-full pl-6 pr-5 cursor-pointer transition-colors duration-300 flex justify-between ${
-                        i.name === open ? "text-[#eb0029]" : "text-gray-600"
-                      }`}
+                      className={`uppercase text-[15px] hover:text-[#eb0029] w-full pl-6 pr-5 cursor-pointer transition-colors duration-300 flex justify-between ${i.name === open ? "text-[#eb0029]" : "text-gray-600"
+                        }`}
                       onClick={() => {
                         if (window.innerWidth < 640) {
                           ref.current?.scrollIntoView({ behavior: "smooth" });
@@ -556,9 +778,8 @@ const Products = () => {
                     >
                       {i.name}
                       <span
-                        className={`block text-center leading-5 group-hover:bg-[#eb0029] transition-colors duration-300 aspect-square h-5 text-white rounded-full ${
-                          i.name === open ? "bg-[#eb0029]" : "bg-gray-400"
-                        }`}
+                        className={`block text-center leading-5 group-hover:bg-[#eb0029] transition-colors duration-300 aspect-square h-5 text-white rounded-full ${i.name === open ? "bg-[#eb0029]" : "bg-gray-400"
+                          }`}
                       >
                         {productObj[i.name].length}
                       </span>
