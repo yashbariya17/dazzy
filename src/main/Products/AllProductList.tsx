@@ -7,267 +7,593 @@ export const productObj: productType = {
     {
       name: "Black & White Bar",
       url: "/images/chocolatebar/Black & White Bar.png",
-      price: 1,
+      price: 5,
     },
     {
       name: "Cocoa Milk Choclate Bar",
       url: "/images/chocolatebar/Cocoa Milk Choclate Bar.png",
       price: 1,
     },
-    { name: "Coconut Bar", url: "/images/chocolatebar/Coconut Bar.png", price: 55 },
+    { name: "Coconut Bar", url: "/images/chocolatebar/Coconut Bar.png", price: 5 },
     {
       name: "Dairy Kiss Cocoa",
       url: "/images/chocolatebar/Dairy Kiss Cocoa.png",
-      price: 2,
+      price: 5,
     },
     {
       name: "Dark Milk Choclate Bar",
       url: "/images/chocolatebar/Dark Milk Choclate Bar.png",
-      price: 0.50,
+      price: 5,
     },
-    { name: "HazelNut Bar", url: "/images/chocolatebar/HazelNut Bar.png", price: 75 },
+    { name: "HazelNut Bar", url: "/images/chocolatebar/HazelNut Bar.png", price: 5 },
     {
       name: "Milk Choclate Bar",
       url: "/images/chocolatebar/Milk Choclate Bar.png",
-      price: 0.50,
+      price: 5,
     },
     {
       name: "Milkies Milk Choclate Bar",
       url: "/images/chocolatebar/Milkies Milk Choclate Bar.png",
-      price: 2,
+      price: 5,
     },
-    { name: "Safari Park", url: "/images/chocolatebar/Safari Park.png", price: 45 },
+    { name: "Safari Park", url: "/images/chocolatebar/Safari Park.png", price: 2 },
     {
       name: "StrawBerry Bar",
       url: "/images/chocolatebar/StrawBerry Bar.png",
-      price: 1,
+      price: 5,
     },
   ],
   "centerfilled chocolate": [
-    {
-      "name": "0069",
-      "url": "/images/centerfilledchocolate/0069.png"
-    },
-    {
-      "name": "BELGIAM GIFT BOX",
-      "url": "/images/centerfilledchocolate/BELGIAM GIFT BOX.png"
-    },
-    {
-      "name": "BELGIUM 125 PCS",
-      "url": "/images/centerfilledchocolate/BELGIUM 125 PCS.png"
-    },
-    {
-      "name": "BLISS DARK",
-      "url": "/images/centerfilledchocolate/BLISS DARK.png"
-    },
-    {
-      "name": "BLISS STRAWBERRY",
-      "url": "/images/centerfilledchocolate/BLISS STRAWBERRY.png"
-    },
-    {
-      "name": "BLISS WHITE",
-      "url": "/images/centerfilledchocolate/BLISS WHITE.png"
-    },
-    {
-      "name": "BOLIVIA 70 PCS BOX",
-      "url": "/images/centerfilledchocolate/BOLIVIA 70 PCS BOX.png"
-    },
-    {
-      "name": "BOLIVIA CONTAINER",
-      "url": "/images/centerfilledchocolate/BOLIVIA CONTAINER.png"
-    },
-    {
-      "name": "BOLIVIA GIFT BOXX",
-      "url": "/images/centerfilledchocolate/BOLIVIA GIFT BOXX.png"
-    },
-    {
-      "name": "BOLIVIA150 PCS BOX",
-      "url": "/images/centerfilledchocolate/BOLIVIA150 PCS BOX.png"
-    },
-    {
-      "name": "BREVO 125 PCS BOX",
-      "url": "/images/centerfilledchocolate/BREVO 125 PCS BOX.png"
-    },
-    {
-      "name": "BREVO CONTAINER",
-      "url": "/images/centerfilledchocolate/BREVO CONTAINER.png"
-    },
-    {
-      "name": "BREVO GIFT BOX",
-      "url": "/images/centerfilledchocolate/BREVO GIFT BOX.png"
-    },
-    {
-      "name": "COCOS TRUFFLES BOX",
-      "url": "/images/centerfilledchocolate/COCOS TRUFFLES BOX.png"
-    },
-    {
-      "name": "COCOS TRUFFLES POUCH",
-      "url": "/images/centerfilledchocolate/COCOS TRUFFLES POUCH.png"
-    },
-    {
-      "name": "D LOVE GOLD 150 PCS",
-      "url": "/images/centerfilledchocolate/D LOVE GOLD 150 PCS.png"
-    },
-    {
-      "name": "Dazzy Dlove Choclate",
-      "url": "/images/centerfilledchocolate/Dazzy Dlove Choclate.png"
-    },
-    {
-      "name": "DELIGHT BLUEBERRY 70PCS BOX",
-      "url": "/images/centerfilledchocolate/DELIGHT BLUEBERRY 70PCS BOX.png"
-    },
-    {
-      "name": "DELIGHT BLUEBERRY 150PCS BOX",
-      "url": "/images/centerfilledchocolate/DELIGHT BLUEBERRY 150PCS BOX.png"
-    },
-    {
-      "name": "DELIGHT CASHEWNUT 70PCS BOX",
-      "url": "/images/centerfilledchocolate/DELIGHT CASHEWNUT 70PCS BOX.png"
-    },
-    {
-      "name": "DELIGHT CASHEWNUT 150PCS BOX",
-      "url": "/images/centerfilledchocolate/DELIGHT CASHEWNUT 150PCS BOX.png"
-    },
-    {
-      "name": "DELIGHT MANGO 70PCS BOX",
-      "url": "/images/centerfilledchocolate/DELIGHT MANGO 70PCS BOX.png"
-    },
-    {
-      "name": "DELIGHT MANGO150PCS BOX",
-      "url": "/images/centerfilledchocolate/DELIGHT MANGO150PCS BOX.png"
-    },
-    {
-      "name": "DELIGHT PISTACHIO 70PCS BOX",
-      "url": "/images/centerfilledchocolate/DELIGHT PISTACHIO 70PCS BOX.png"
-    },
-    {
-      "name": "DELIGHT PISTACHIO 150PCS BOX",
-      "url": "/images/centerfilledchocolate/DELIGHT PISTACHIO 150PCS BOX.png"
-    },
-    {
-      "name": "DELIGHT RAJBHOG 70PCS BOX",
-      "url": "/images/centerfilledchocolate/DELIGHT RAJBHOG 70PCS BOX.png"
-    },
-    {
-      "name": "DELIGHT RAJBHOG 150PCS BOX",
-      "url": "/images/centerfilledchocolate/DELIGHT RAJBHOG 150PCS BOX.png"
-    },
-    {
-      "name": "DELIGHT STRAWBERRY150 PCS BOX",
-      "url": "/images/centerfilledchocolate/DELIGHT STRAWBERRY150 PCS BOX.png"
-    },
-    {
-      "name": "DELOVE PINK",
-      "url": "/images/centerfilledchocolate/DELOVE PINK.png"
-    },
-    {
-      "name": "DLOVE GOLD POUCH",
-      "url": "/images/centerfilledchocolate/DLOVE GOLD POUCH.png"
-    },
-    {
-      "name": "DLOVE GREEN POUH",
-      "url": "/images/centerfilledchocolate/DLOVE GREEN POUH.png"
-    },
-    {
-      "name": "DLOVE PINK POUCH",
-      "url": "/images/centerfilledchocolate/DLOVE PINK POUCH.png"
-    },
-    {
-      "name": "DLOVE RED",
-      "url": "/images/centerfilledchocolate/DLOVE RED.png"
-    },
-    {
-      "name": "TRUFFLE BLUE BERRY GIFT BOX",
-      "url": "/images/centerfilledchocolate/TRUFFLE BLUE BERRY GIFT BOX.png"
-    },
-    {
-      "name": "Truffle Blueberry",
-      "url": "/images/centerfilledchocolate/Truffle Blueberry.png"
-    },
-    {
-      "name": "TRUFFLE BUEBERRY 150 PCS",
-      "url": "/images/centerfilledchocolate/TRUFFLE BUEBERRY 150 PCS.png"
-    },
-    {
-      "name": "TRUFFLE MILK 70 PCS",
-      "url": "/images/centerfilledchocolate/TRUFFLE MILK 70 PCS.png"
-    },
-    {
-      "name": "TRUFFLE MILK 150 PCS",
-      "url": "/images/centerfilledchocolate/TRUFFLE MILK 150 PCS.png"
-    },
-    {
-      "name": "TRUFFLE PISTACHIO 70 PCS",
-      "url": "/images/centerfilledchocolate/TRUFFLE PISTACHIO 70 PCS.png"
-    },
-    {
-      "name": "TRUFFLE PISTACHIO 150 PCS",
-      "url": "/images/centerfilledchocolate/TRUFFLE PISTACHIO 150 PCS.png"
-    },
-    {
-      "name": "Truffle Pistachio",
-      "url": "/images/centerfilledchocolate/Truffle Pistachio.png"
-    },
-    {
-      "name": "TRUFFLE RAJBHOG 70 PCS",
-      "url": "/images/centerfilledchocolate/TRUFFLE RAJBHOG 70 PCS.png"
-    },
-    {
-      "name": "TRUFFLE RAJBHOG 150 PCS",
-      "url": "/images/centerfilledchocolate/TRUFFLE RAJBHOG 150 PCS.png"
-    },
-    {
-      "name": "TRUFFLE RAJBHOG GIFT BOX",
-      "url": "/images/centerfilledchocolate/TRUFFLE RAJBHOG GIFT BOX.png"
-    },
-    {
-      "name": "Truffle Rajbhog",
-      "url": "/images/centerfilledchocolate/Truffle Rajbhog.png"
-    },
-    {
-      "name": "TRUFFLE STRAWBERRY 70 PCS",
-      "url": "/images/centerfilledchocolate/TRUFFLE STRAWBERRY 70 PCS.png"
-    },
-    {
-      "name": "TRUFFLE STRAWBERRY 150 PCS",
-      "url": "/images/centerfilledchocolate/TRUFFLE STRAWBERRY 150 PCS.png"
-    },
-    {
-      "name": "TRUFFLES BLUE POUCH",
-      "url": "/images/centerfilledchocolate/TRUFFLES BLUE POUCH.png"
-    },
-    {
-      "name": "TRUFFLES CONTAINER 2",
-      "url": "/images/centerfilledchocolate/TRUFFLES CONTAINER 2.png"
-    },
-    {
-      "name": "TRUFFLES CONTAINER",
-      "url": "/images/centerfilledchocolate/TRUFFLES CONTAINER.png"
-    },
-    {
-      "name": "TRUFFLES MILK GIFT BOX",
-      "url": "/images/centerfilledchocolate/TRUFFLES MILK GIFT BOX.png"
-    },
-    {
-      "name": "TRUFFLES PISTACHIO GIFT BOX",
-      "url": "/images/centerfilledchocolate/TRUFFLES PISTACHIO GIFT BOX.png"
-    },
-    {
-      "name": "TRUFFLES RED POUCH",
-      "url": "/images/centerfilledchocolate/TRUFFLES RED POUCH.png"
-    },
-    {
-      "name": "TRUFFLES STRAWBERRY GIFT BOX",
-      "url": "/images/centerfilledchocolate/TRUFFLES STRAWBERRY GIFT BOX.png"
-    },
-    {
-      "name": "UNITED GIFT BOX",
-      "url": "/images/centerfilledchocolate/UNITED GIFT BOX.png"
-    },
-    {
-      "name": "UNITED JAR",
-      "url": "/images/centerfilledchocolate/UNITED JAR.png"
-    }
+{
+    name: "Truffins 30 Pcs 1",
+    url: "/images/centerfilledchocolate/TRUFFINS 30 PCS 1 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffins 30 Pcs",
+    url: "/images/centerfilledchocolate/TRUFFINS 30 PCS 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffins 70 Pcs",
+    url: "/images/centerfilledchocolate/TRUFFINS 70 PCS 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffins 70 Pcs 1",
+    url: "/images/centerfilledchocolate/TRUFFINS 70 PCS 1 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffins Container",
+    url: "/images/centerfilledchocolate/TRUFFINS CONTAINER 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffle Blueberry 70 Pcs",
+    url: "/images/centerfilledchocolate/TRUFFLE BLUEBERRY 70 PCS 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffle Blue Berry Gift Box",
+    url: "/images/centerfilledchocolate/TRUFFLE BLUE BERRY GIFT BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffle Bueberry 150 Pcs",
+    url: "/images/centerfilledchocolate/TRUFFLE BUEBERRY 150 PCS 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffle Container",
+    url: "/images/centerfilledchocolate/TRUFFLE CONTAINER 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffle Gift Contaier",
+    url: "/images/centerfilledchocolate/TRUFFLE GIFT CONTAIER 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffle Milk 70 Pcs",
+    url: "/images/centerfilledchocolate/TRUFFLE MILK 70 PCS 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffle Milk 150 Pcs",
+    url: "/images/centerfilledchocolate/TRUFFLE MILK 150 PCS 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffle Pistachio 70 Pcs",
+    url: "/images/centerfilledchocolate/TRUFFLE PISTACHIO 70 PCS 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffle Pistachio 150 Pcs",
+    url: "/images/centerfilledchocolate/TRUFFLE PISTACHIO 150 PCS 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffle Rajbhog 70 Pcs",
+    url: "/images/centerfilledchocolate/TRUFFLE RAJBHOG 70 PCS 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffle Rajbhog 150 Pcs",
+    url: "/images/centerfilledchocolate/TRUFFLE RAJBHOG 150 PCS 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffle Rajbhog Gift Box",
+    url: "/images/centerfilledchocolate/TRUFFLE RAJBHOG GIFT BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffle Strawberry 70 Pcs",
+    url: "/images/centerfilledchocolate/TRUFFLE STRAWBERRY 70 PCS 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffle Strawberry 150 Pcs",
+    url: "/images/centerfilledchocolate/TRUFFLE STRAWBERRY 150 PCS 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffles Container 2",
+    url: "/images/centerfilledchocolate/TRUFFLES CONTAINER 2 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffles Container",
+    url: "/images/centerfilledchocolate/TRUFFLES CONTAINER 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffles Blue Pouch",
+    url: "/images/centerfilledchocolate/TRUFFLES BLUE POUCH 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffles Milk Gift Box",
+    url: "/images/centerfilledchocolate/TRUFFLES MILK GIFT BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffles Red Pouch",
+    url: "/images/centerfilledchocolate/TRUFFLES RED POUCH 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffles Strawberry Gift Box",
+    url: "/images/centerfilledchocolate/TRUFFLES STRAWBERRY GIFT BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Truffles Pistachio Gift Box",
+    url: "/images/centerfilledchocolate/TRUFFLES PISTACHIO GIFT BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Delight Pistaccio 70Pcs Box",
+    url: "/images/centerfilledchocolate/DELIGHT PISTACCIO 70PCS BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Delight Pistachio 150Pcs Box",
+    url: "/images/centerfilledchocolate/DELIGHT PISTACHIO 150PCS BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Delight Rajbhog 70Pcs Box",
+    url: "/images/centerfilledchocolate/DELIGHT RAJBHOG 70PCS BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Delight Rajbhog 150Pcs Box",
+    url: "/images/centerfilledchocolate/DELIGHT RAJBHOG 150PCS BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Delight Strawberry 70Pcs Box",
+    url: "/images/centerfilledchocolate/DELIGHT STRAWBERRY 70PCS BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Delight Strawberry 150Pcs Box",
+    url: "/images/centerfilledchocolate/DELIGHT STRAWBERRY150PCS BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Dlove Gold",
+    url: "/images/centerfilledchocolate/DLOVE GOLD 5RS.png",
+    price: 5
+  },
+  {
+    name: "Dlove Gold Pouch",
+    url: "/images/centerfilledchocolate/DLOVE GOLD POUCH 5RS.png",
+    price: 5
+  },
+  {
+    name: "Dlove Green Pouh",
+    url: "/images/centerfilledchocolate/DLOVE GREEN POUH 5RS.png",
+    price: 5
+  },
+  {
+    name: "Dlove Pink Pouch",
+    url: "/images/centerfilledchocolate/DLOVE PINK POUCH 5RS.png",
+    price: 5
+  },
+  {
+    name: "Dlove Pruple",
+    url: "/images/centerfilledchocolate/DLOVE PRUPLE 5RS.png",
+    price: 5
+  },
+  {
+    name: "Dlove Red",
+    url: "/images/centerfilledchocolate/DLOVE RED 5RS.png",
+    price: 5
+  },
+  {
+    name: "Dlove Container",
+    url: "/images/centerfilledchocolate/DLOVE CONTAINER 5RS.png",
+    price: 5
+  },
+  {
+    name: "Dlove Green",
+    url: "/images/centerfilledchocolate/DLOVE GREEN5RS.png",
+    price: 5
+  },
+  {
+    name: "Emporio 70Pcs Box",
+    url: "/images/centerfilledchocolate/EMPORIO 70PCS BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Emporio Pouch",
+    url: "/images/centerfilledchocolate/EMPORIO POUCH 5RS.png",
+    price: 5
+  },
+  {
+    name: "Empirio Box",
+    url: "/images/centerfilledchocolate/EMPIRIO BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Endon Gift Box",
+    url: "/images/centerfilledchocolate/ENDON GIFT BOX 2RS.png",
+    price: 2
+  },
+  {
+    name: "Endon Gift Box1",
+    url: "/images/centerfilledchocolate/ENDON GIFT BOX1 2RS.png",
+    price: 2
+  },
+  {
+    name: "Endon Box 125 Pcs",
+    url: "/images/centerfilledchocolate/ENDON BOX 125 PCS 2RS.png",
+    price: 2
+  },
+  {
+    name: "Endon Box 125 Pcs2",
+    url: "/images/centerfilledchocolate/ENDON BOX 125 PCS2 2RS.png",
+    price: 2
+  },
+  {
+    name: "Ferola Milk",
+    url: "/images/centerfilledchocolate/FEROLA MILK 5RS.png",
+    price: 5
+  },
+  {
+    name: "Ferola Coconut",
+    url: "/images/centerfilledchocolate/FEROLA COCONUT 5RS.png",
+    price: 5
+  },
+  {
+    name: "Ferola Mango",
+    url: "/images/centerfilledchocolate/FEROLA MANGO 5RS.png",
+    price: 5
+  },
+  {
+    name: "Ferola Pistachio",
+    url: "/images/centerfilledchocolate/FEROLA PISTACHIO 5RS.png",
+    price: 5
+  },
+  {
+    name: "Ferola Strawberry",
+    url: "/images/centerfilledchocolate/FEROLA STRAWBERRY 5RS.png",
+    price: 5
+  },
+  {
+    name: "Glorious Chocolate",
+    url: "/images/centerfilledchocolate/GLORIOUS CHOCOLATE 5RS.png",
+    price: 5
+  },
+  {
+    name: "Glorious Gift Box",
+    url: "/images/centerfilledchocolate/GLORIOUS GIFT BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Glorious Ccashewnut",
+    url: "/images/centerfilledchocolate/GLORIOUS CCASHEWNUT 5RS.png",
+    price: 5
+  },
+  {
+    name: "Glorious Gift Container",
+    url: "/images/centerfilledchocolate/GLORIOUS GIFT CONTAINER 5RS.png",
+    price: 5
+  },
+  {
+    name: "Glorious Gift Container (2)",
+    url: "/images/centerfilledchocolate/GLORIOUS GIFT CONTAINER (2) 5RS.png",
+    price: 5
+  },
+  {
+    name: "Glorious Gift Container (3)",
+    url: "/images/centerfilledchocolate/GLORIOUS GIFT CONTAINER (3) 5RS.png",
+    price: 5
+  },
+  {
+    name: "Glorious Milk",
+    url: "/images/centerfilledchocolate/GLORIOUS MILK 5RS.png",
+    price: 5
+  },
+  {
+    name: "Glorious Pistachio",
+    url: "/images/centerfilledchocolate/GLORIOUS PISTACHIO5RS.png",
+    price: 5
+  },
+  {
+    name: "Glorious Raajbhog",
+    url: "/images/centerfilledchocolate/GLORIOUS RAAJBHOG 5RS.png",
+    price: 5
+  },
+  {
+    name: "Gold Box2Rs 2",
+    url: "/images/centerfilledchocolate/GOLD BOX2RS 2.png",
+    price: 2
+  },
+  {
+    name: "Gold Box2Rs",
+    url: "/images/centerfilledchocolate/GOLD BOX2RS.png",
+    price: 2
+  },
+  {
+    name: "Gold Gift Box",
+    url: "/images/centerfilledchocolate/GOLD GIFT BOX 2RS.png",
+    price: 2
+  },
+  {
+    name: "Gold Gift Box2",
+    url: "/images/centerfilledchocolate/GOLD GIFT BOX2RS 2.png",
+    price: 2
+  },
+  {
+    name: "Gold Giftbox",
+    url: "/images/centerfilledchocolate/GOLD GIFTBOX2RS.png",
+    price: 2
+  },
+  {
+    name: "Gold Round Jar",
+    url: "/images/centerfilledchocolate/GOLD ROUND JAR 2RS.png",
+    price: 2
+  },
+  {
+    name: "Maxic Box 125 Pcs",
+    url: "/images/centerfilledchocolate/MAXIC BOX 125 PCS 2RS.png",
+    price: 2
+  },
+  {
+    name: "United Gift Box",
+    url: "/images/centerfilledchocolate/UNITED GIFT BOX 2RS.png",
+    price: 2
+  },
+  {
+    name: "United Jar",
+    url: "/images/centerfilledchocolate/UNITED JAR 2RS.png",
+    price: 2
+  },
+   {
+    name: "Maxic Gift Box",
+    url: "/images/centerfilledchocolate/MAXIC GIFT BOX 2RS.png",
+    price: 2
+  },
+  {
+    name: "Stacy Box 70pcs 2",
+    url: "/images/centerfilledchocolate/STACY BOX 70PCS 2 5RS.png",
+    price: 5
+  },
+  {
+    name: "Stacy Gift Box 1",
+    url: "/images/centerfilledchocolate/STACY GIFT BOX 1 5RS.png",
+    price: 5
+  },
+  {
+    name: "Stacy Minis Container",
+    url: "/images/centerfilledchocolate/STACY MINIS CONTAINER 2RS.png",
+    price: 2
+  },
+  {
+    name: "Belgiam Gift Box",
+    url: "/images/centerfilledchocolate/BELGIAM GIFT BOX 2RS.png",
+    price: 2
+  },
+  {
+    name: "Bliss White",
+    url: "/images/centerfilledchocolate/BLISS WHITE 1RS.png",
+    price: 1
+  },
+  {
+    name: "Bolivia Gift Box",
+    url: "/images/centerfilledchocolate/BOLIVIA GIFT BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Brevo Gift Box",
+    url: "/images/centerfilledchocolate/BREVO GIFT BOX 2RS.png",
+    price: 2
+  },
+  {
+    name: "Chocobon Pistachio",
+    url: "/images/centerfilledchocolate/CHOCOBON PISTACHIO 5RS.png",
+    price: 5
+  },
+  {
+    name: "D Love Gold 150 Pcs",
+    url: "/images/centerfilledchocolate/D LOVE GOLD 150 PCS 5RS.png",
+    price: 5
+  },
+  {
+    name: "Delight Cashewnuut 150pcs Box",
+    url: "/images/centerfilledchocolate/DELIGHT CASHEWNUUT 150PCS BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Merone 125pcs",
+    url: "/images/centerfilledchocolate/MERONE 125PCS 2RS.png",
+    price: 2
+  },
+  {
+    name: "Stacy Chocolate Container",
+    url: "/images/centerfilledchocolate/STACY CHOCOLATE CONTAINER 5RS.png",
+    price: 5
+  },
+  {
+    name: "Stacy Box 2",
+    url: "/images/centerfilledchocolate/STACY BOX 2 5RS.png",
+    price: 5
+  },
+  {
+    name: "Stacy Gift Container",
+    url: "/images/centerfilledchocolate/STACY GIFT CONTAINER 5RS.png",
+    price: 5
+  },
+  {
+    name: "Stacy Minis Gift Box",
+    url: "/images/centerfilledchocolate/STACY MINIS GIFT BOX 2RS.png",
+    price: 2
+  },
+  {
+    name: "Belgium 125 Pcs",
+    url: "/images/centerfilledchocolate/BELGIUM 125 PCS 2RS.png",
+    price: 2
+  },
+  {
+    name: "Boliva Container",
+    url: "/images/centerfilledchocolate/BOLIVA CONTAINER 5RS.png",
+    price: 5
+  },
+  {
+    name: "Bolivia 150 Pcs Box",
+    url: "/images/centerfilledchocolate/BOLIVIA150 PCS BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Chocobon Coconut",
+    url: "/images/centerfilledchocolate/CHOCOBON COCONUT 5RS.png",
+    price: 5
+  },
+  {
+    name: "Chocobon Strawberry",
+    url: "/images/centerfilledchocolate/CHOCOBON STRAWBERRY 5RS.png",
+    price: 5
+  },
+  {
+    name: "Delight Blueberry 70pcs Box",
+    url: "/images/centerfilledchocolate/DELIGHT BLUEBERRY 70PCS BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Delight Mango 70pcs Box",
+    url: "/images/centerfilledchocolate/DELIGHT MANGO 70PCS BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Stacy Box 70pcs",
+    url: "/images/centerfilledchocolate/STACY BOX 70PCS 5RS.png",
+    price: 5
+  },
+  {
+    name: "Stacy Container",
+    url: "/images/centerfilledchocolate/STACY CONTAINER 5RS.png",
+    price: 5
+  },
+  {
+    name: "Stacy Gift Box",
+    url: "/images/centerfilledchocolate/STACY GIFT BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Stacy Minis 125 Pcs Box",
+    url: "/images/centerfilledchocolate/STACY MINIS 125 PCS BOX 2RS.png",
+    price: 2
+  },
+  {
+    name: "Bliss Dark",
+    url: "/images/centerfilledchocolate/BLISS DARK 1RS.png",
+    price: 1
+  },
+  {
+    name: "Bolivia 70 Pcs Box",
+    url: "/images/centerfilledchocolate/BOLIVIA 70 PCS BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Brevo 125 Pcs Box",
+    url: "/images/centerfilledchocolate/BREVO 125 PCS BOX 2RS.png",
+    price: 2
+  },
+  {
+    name: "Chocobon Mango",
+    url: "/images/centerfilledchocolate/CHOCOBON MANGO 5RS.png",
+    price: 5
+  },
+  {
+    name: "Cocos Truffles Box",
+    url: "/images/centerfilledchocolate/COCOS TRUFFLES BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Delight Blueberry 150pcs Box",
+    url: "/images/centerfilledchocolate/DELIGHT BLUEBERRY 150PCS BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Delight Mango 150pcs Box",
+    url: "/images/centerfilledchocolate/DELIGHT MANGO150PCS BOX 5RS.png",
+    price: 5
+  },
+  {
+    name: "Bliss Strawberry",
+    url: "/images/centerfilledchocolate/BLISS STRAWBERRY 1RS.png",
+    price: 1
+  },
+  {
+    name: "Bolivia Container",
+    url: "/images/centerfilledchocolate/BOLIVIA CONTAINER 5RS.png",
+    price: 5
+  },
+  {
+    name: "Brevo Container",
+    url: "/images/centerfilledchocolate/BREVO CONTAINER 2RS.png",
+    price: 2
+  },
+  {
+    name: "Chocobon Milk",
+    url: "/images/centerfilledchocolate/CHOCOBON MILK 5RS.png",
+    price: 5
+  },
+  {
+    name: "Cocos Truffles Pouch",
+    url: "/images/centerfilledchocolate/COCOS TRUFFLES POUCH 5RS.png",
+    price: 5
+  },
+  {
+    name: "Delight Cahewnut 70pcs Box",
+    url: "/images/centerfilledchocolate/DELIGHT CAHEWNUT 70PCS BOX 5RS.png",
+    price: 5
+  }
   ],
   "decorative chocolate": [
     {
