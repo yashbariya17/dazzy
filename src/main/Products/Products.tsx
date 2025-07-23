@@ -6,7 +6,7 @@ import { FiShoppingBag, FiEye } from "react-icons/fi";
 import ViewMore from "./components/ViewMore";
 
 type productType = {
-  [key: string]: { name: string; url: string }[];
+  [key: string]: { name: string; url: string; price?: number }[];
 };
 
 const productObj: productType = {
@@ -14,43 +14,41 @@ const productObj: productType = {
     {
       name: "Black & White Bar",
       url: "/images/chocolatebar/Black & White Bar.png",
+      price: 50,
     },
     {
       name: "Cocoa Milk Choclate Bar",
       url: "/images/chocolatebar/Cocoa Milk Choclate Bar.png",
+      price: 60,
     },
-    { name: "Coconut Bar", url: "/images/chocolatebar/Coconut Bar.png" },
+    { name: "Coconut Bar", url: "/images/chocolatebar/Coconut Bar.png", price: 55 },
     {
       name: "Dairy Kiss Cocoa",
       url: "/images/chocolatebar/Dairy Kiss Cocoa.png",
+      price: 70,
     },
     {
       name: "Dark Milk Choclate Bar",
       url: "/images/chocolatebar/Dark Milk Choclate Bar.png",
+      price: 65,
     },
-    { name: "HazelNut Bar", url: "/images/chocolatebar/HazelNut Bar.png" },
+    { name: "HazelNut Bar", url: "/images/chocolatebar/HazelNut Bar.png", price: 75 },
     {
       name: "Milk Choclate Bar",
       url: "/images/chocolatebar/Milk Choclate Bar.png",
+      price: 50,
     },
-
     {
       name: "Milkies Milk Choclate Bar",
       url: "/images/chocolatebar/Milkies Milk Choclate Bar.png",
+      price: 60,
     },
-    { name: "Safari Park", url: "/images/chocolatebar/Safari Park.png" },
-    { name: "StrawBerry Bar", url: "/images/chocolatebar/StrawBerry Bar.png" },
-    // { "name": "Celio Crunchy", "url": "/images/chocolatebar/DECORATIVE-CHOCOLATE.png" },
-    // { "name": "Celio Crunchy", "url": "/images/chocolatebar/DECORATIVE-CHOCOLATE.png" },
-    // { "name": "Celio Crunchy", "url": "/images/chocolatebar/largeimage.png" },
-    // { "name": "Celio Crunchy", "url": "/images/chocolatebar/largeimage.png" },
-
-    // { "name": "3 Pm Fruits Biscuits", "url": "/images/chocolatebar/DECORATIVE-CHOCOLATE.png" },
-    // { "name": "Biskins Duo", "url": "/images/chocolatebar/DECORATIVE-CHOCOLATE.png" },
-    // { "name": "Celio Crunchy", "url": "/images/chocolatebar/JELLY.png" },
-    // { "name": "Celio Crunchy", "url": "/images/chocolatebar/DECORATIVE-CHOCOLATE.png" },
-    // { "name": "Celio Crunchy", "url": "/images/chocolatebar/DECORATIVE-CHOCOLATE.png" },
-    // { "name": "Celio Crunchy", "url": "/images/chocolatebar/largeimage.png" }
+    { name: "Safari Park", url: "/images/chocolatebar/Safari Park.png", price: 45 },
+    {
+      name: "StrawBerry Bar",
+      url: "/images/chocolatebar/StrawBerry Bar.png",
+      price: 55,
+    },
   ],
   "centerfilled chocolate": [
     {
@@ -788,6 +786,7 @@ const Products = () => {
                 ))}
               </div>
 
+
               <div
                 className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6"
                 ref={ref}
@@ -813,6 +812,7 @@ const Products = () => {
                     <p className="text-center text-sm sm:text-base font-semibold mt-2">
                       {i.name}
                     </p>
+                    <p className="text-sm text-gray-700 mt-1">₹{i.price}</p>
 
                     <div className="flex justify-center gap-3 mt-2 text-xs sm:text-sm">
                       <button
