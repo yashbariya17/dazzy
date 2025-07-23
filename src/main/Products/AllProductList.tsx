@@ -597,37 +597,36 @@ export const productObj: productType = {
   ],
   "decorative chocolate": [
     {
-      "name": "00146",
-      "url": "/images/decorative chocolate/00146.png"
+      "name": "Choco COAN 5RS",
+      "url": "/images/decorativechocolate/CHOCO COAN 5RS.png",
+      price: 5
     },
     {
-      "name": "00147",
-      "url": "/images/decorativechocolate/00147.png"
+      "name": "Choco Tocon 10RS",
+      "url": "/images/decorativechocolate/CHOCO TOCON 10RS.png",
+      price: 10
     },
     {
-      "name": "CHOCO COAN",
-      "url": "/images/decorativechocolate/CHOCO COAN.png"
+      "name": "Dr Teddy",
+      "url": "/images/decorativechocolate/DR TEDDY5RS.png",
+      price: 5
+    },
+        {
+      "name": "Dr Teddy",
+      "url": "/images/decorativechocolate/DR TEDDY25RS.png",
+      price: 25
     },
     {
-      "name": "CHOCO TOCO",
-      "url": "/images/decorativechocolate/CHOCO TOCO.png"
+      "name": "King Kong",
+      "url": "/images/decorativechocolate/KING KONG 1 5RS.png",
+      price: 5
     },
     {
-      "name": "DR TEDDY",
-      "url": "/images/decorativechocolate/DR TEDDY.png"
+      "name": "King Kong",
+      "url": "/images/decorativechocolate/KING KONG 5RS.png",
+      price: 5
     },
-    {
-      "name": "DR TEDDY2",
-      "url": "/images/decorativechocolate/DR TEDDY2.png"
-    },
-    {
-      "name": "KING KONG 1",
-      "url": "/images/decorativechocolate/KING KONG 1.png"
-    },
-    {
-      "name": "KING KONG",
-      "url": "/images/decorativechocolate/KING KONG.png"
-    }
+  
   ],
   "peanut chocolate": [{
     name: "00126",
@@ -723,198 +722,67 @@ export const productObj: productType = {
     name: "Wafeer Roll",
     url: "/images/wafffer rolls/wafeer roll.png",
   }],
-  toffee: [{
-    name: "Almond Zupadi Box",
-    url: "/images/toffee/ALMOND ZUPADI  BOX.png",
-  },
-  {
-    name: "Anjeer Zupadi Box",
-    url: "/images/toffee/ANJEER ZUPADI BOX.png",
-  },
-  {
-    name: "Butter Feast Zupadi Box",
-    url: "/images/toffee/BUTTER FEAST ZUPADI BOX.png",
-  },
-  {
-    name: "Butter Scotch Zupadi Box",
-    url: "/images/toffee/BUTTER SCOTCH ZUPADI BOX.png",
-  },
-  {
-    name: "Caramal Honey",
-    url: "/images/toffee/CARAMAL HONEY.png",
-  },
-  {
-    name: "Choco Almond Grand",
-    url: "/images/toffee/CHOCO ALMOND GRAND.png",
-  },
-  {
-    name: "Cocolile Zupadi Box",
-    url: "/images/toffee/COCOILLE ZUPADI BOX.png",
-  },
-  {
-    name: "Coconut Butter Zupadi Box",
-    url: "/images/toffee/COCONUT BUTTER ZUPADI BOX.png",
-  },
-  {
-    name: "Dairy Way Zupadi Box",
-    url: "/images/toffee/DAIRY WAY ZUPADI BOX.png",
-  },
-  {
-    name: "Dry Fruit Selection Gift Box",
-    url: "/images/toffee/dry fruit selection gift box.png",
-  },
-  {
-    name: "Dry Fruit Selection Gift Pouch",
-    url: "/images/toffee/dry fruit selection gift pouch.png",
-  },
-  {
-    name: "Eclair Anjeer Cream Gift Box",
-    url: "/images/toffee/eclair anjeer cream gift box.png",
-  },
-  {
-    name: "Eclair Anjeer Cream",
-    url: "/images/toffee/eclair anjeer cream.png",
-  },
-  {
-    name: "Eclair Coconut Cream Gift Box",
-    url: "/images/toffee/eclair coconut cream gift box.png",
-  },
-  {
-    name: "Eclair Coconut Cream",
-    url: "/images/toffee/eclair coconut cream.png",
-  },
-  {
-    name: "Eclair Dark Cream Gift Box",
-    url: "/images/toffee/eclair dark cream gift box.png",
-  },
-  {
-    name: "Eclair Dark Cream",
-    url: "/images/toffee/eclair dark cream.png",
-  },
-  {
-    name: "Eclair Dark Jar",
-    url: "/images/toffee/eclair dark jar.png",
-  },
-  {
-    name: "Eclair Dark Pouch",
-    url: "/images/toffee/eclair dark pouch.png",
-  },
-  {
-    name: "Eclair Gold Jar",
-    url: "/images/toffee/ECLAIR GOLD JAR.png",
-  },
-  {
-    name: "Eclair Gold",
-    url: "/images/toffee/ECLAIR GOLD.png",
-  },
-  {
-    name: "Eclair Hazelnut Gift Box",
-    url: "/images/toffee/eclair hazelnut gif box.png",
-  },
-  {
-    name: "Eclair Hazelnut Jar",
-    url: "/images/toffee/eclair hazelnut jar.png",
-  },
-  {
-    name: "Eclair Hazelnut Pouch",
-    url: "/images/toffee/eclair hazelnut pouch.png",
-  },
-  {
-    name: "Eclair Hazelnut",
-    url: "/images/toffee/eclair hazelnut.png",
-  },
-  {
-    name: "Eclair Milk Gift Box",
-    url: "/images/toffee/eclair milk gift box.png",
-  },
-  {
-    name: "Eclair Milk Pouch",
-    url: "/images/toffee/eclair milk pouch.png",
-  },
-  {
-    name: "Eclair Milk",
-    url: "/images/toffee/eclair milk.png",
-  },
-  {
-    name: "Eclairs Carmallos",
-    url: "/images/toffee/eclairs carmallos.png",
-  },
-  {
-    name: "Eclairs Milk Jar",
-    url: "/images/toffee/eclairs milk jar.png",
-  },
-  {
-    name: "Eclairs Zupadi Box",
-    url: "/images/toffee/ECLAIRS ZUPADI BOX.png",
-  },
-  {
-    name: "Goa Almond",
-    url: "/images/toffee/GOA ALMOND.png",
-  },
-  {
-    name: "Goa Kaju",
-    url: "/images/toffee/GOA KAJU.png",
-  },
-  {
-    name: "Jewels Zupadi Box",
-    url: "/images/toffee/JEWELS ZUPADI BOX.png",
-  },
-  {
-    name: "Kaju Butter Jar",
-    url: "/images/toffee/KAJU BUTTER JAR.png",
-  },
-  {
-    name: "Kaju Butter Zupadi Box",
-    url: "/images/toffee/KAJU BUTTER ZUPADI BOX.png",
-  },
-  {
-    name: "Kasata Creme Zupadi Box",
-    url: "/images/toffee/KASATA CREME  ZUPADI BOX.png",
-  },
-  {
-    name: "Kesar Cream Zupadi Box",
-    url: "/images/toffee/KESAR CREAM ZUPADI BOX.png",
-  },
-  {
-    name: "Malai Kulfi",
-    url: "/images/toffee/malai kulfi.png",
-  },
-  {
-    name: "Natural Jar",
-    url: "/images/toffee/NATURAL JAR.png",
-  },
-  {
-    name: "Natural Zupadi Box",
-    url: "/images/toffee/NATURAL ZUPADI BOX.png",
-  },
-  {
-    name: "Pan Bites Zupadi Box",
-    url: "/images/toffee/PAN BITES ZUPADI BOX.png",
-  },
-  {
-    name: "Pista Butter Box",
-    url: "/images/toffee/PISTA BUTTER BOX.png",
-  },
-  {
-    name: "Pista Butter Jar",
-    url: "/images/toffee/PISTA BUTTER JAR.png",
-  },
-  {
-    name: "Pista Harvest",
-    url: "/images/toffee/pista harvest.png",
-  },
-  {
-    name: "Soffiti",
-    url: "/images/toffee/soffiti.png",
-  },
-  {
-    name: "Swiss Dairy Zupadi Box",
-    url: "/images/toffee/SWISS DAIRY ZUPADI BOX.png",
-  },
-  {
-    name: "Trasure",
-    url: "/images/toffee/Trasure.png",
-  }],
+  toffee: [ { name: "Goa Kaju", url: "/images/toffee/GOA KAJU 2RS.png", price: 2 },
+  { name: "Kaju Butter Pouch", url: "/images/toffee/KAJU BUTTER POUCH RS1.png", price: 1 },
+  { name: "Malai Kulfi", url: "/images/toffee/MALAI KULFI 2RS.png", price: 2 },
+  { name: "Natural Pouch", url: "/images/toffee/NATURAL POUCH RS1.png", price: 1 },
+  { name: "Pista Butter Jar", url: "/images/toffee/PISTA BUTTER JAR 1RS.png", price: 1 },
+  { name: "Swiss Dairy Zupadi Box", url: "/images/toffee/SWISS DAIRY ZUPADI BOX 1RS.png", price: 1 },
+  { name: "Almond Zupadi Box", url: "/images/toffee/ALMOND ZUPADI BOX 1RS.png", price: 1 },
+  { name: "Butterscotch Zupadi Box", url: "/images/toffee/BUTTER SCOTCH ZUPADI BOX 1RS.png", price: 1 },
+  { name: "Cocolille Zupadi Box", url: "/images/toffee/COCOLILLE ZUPADI BOX 1RS.png", price: 1 },
+  { name: "Dry Fruit Selection Gift Box", url: "/images/toffee/DRY FRUIT SELECTION GIFT BOX 2RS.png", price: 2 },
+  { name: "Eclair Coconut Cream", url: "/images/toffee/ECLAIR COCONUT CREAM 2RS.png", price: 2 },
+  { name: "Eclair Dark Jar", url: "/images/toffee/ECLAIR DARK JAR 1RS.png", price: 1 },
+  { name: "Eclair Hazelnut", url: "/images/toffee/ECLAIR HAZELNUT 2RS.png", price: 2 },
+  { name: "Eclair Milk", url: "/images/toffee/ECLAIR MILK 2RS.png", price: 2 },
+  { name: "Eclairs Gold Pouch", url: "/images/toffee/ECLAIRS GOLD POUCH RS1.png", price: 1 },
+  { name: "Goa Almond", url: "/images/toffee/GOA ALMOND 2RS.png", price: 2 },
+  { name: "Jewels Pouch", url: "/images/toffee/JEWELS POUCH RS1.png", price: 1 },
+  { name: "Kaju Butter Zupadi Box", url: "/images/toffee/KAJU BUTTER ZUPADI BOX 1RS.png", price: 1 },
+  { name: "Malai Kulfi Coconut Jar", url: "/images/toffee/MALAI KULFI COCONUT JAR RS1.png", price: 1 },
+  { name: "Natural Zupadi Box", url: "/images/toffee/NATURAL ZUPADI BOX 1RS.png", price: 1 },
+  { name: "Pista Butter Pouch", url: "/images/toffee/PISTA BUTTER POUCH RS1.png", price: 1 },
+  { name: "Swissdairy Pouch", url: "/images/toffee/SWISSDAIRY POUCH RS1.png", price: 1 },
+  { name: "Anjeer Zupadi Box", url: "/images/toffee/ANJEER ZUPADI BOX 1RS.png", price: 1 },
+  { name: "Butterscotch Pouch", url: "/images/toffee/BUTTERSCOTCH POUCH RS1.png", price: 1 },
+  { name: "Coconut Butter Pouch", url: "/images/toffee/COCONUT BUTTER POUCH R1.png", price: 1 },
+  { name: "Dry Fruit Selection Gift Pouch", url: "/images/toffee/DRY FRUIT SELECTION GIFT POUCH 2RS.png", price: 2 },
+  { name: "Eclair Coconut Cream Gift Box", url: "/images/toffee/ECLAIR COCONUT CREAM GIFT BOX 2RS.png", price: 2 },
+  { name: "Eclair Dark Pouch", url: "/images/toffee/ECLAIR DARK POUCH 1RS.png", price: 1 },
+  { name: "Eclair Hazelnut Gift Box", url: "/images/toffee/ECLAIR HAZELNUT GIFT BOX 2RS.png", price: 2 },
+  { name: "Eclair Milk Gift Box", url: "/images/toffee/ECLAIR MILK GIFT BOX 2RS.png", price: 2 },
+  { name: "Eclair Milk Jar", url: "/images/toffee/ECLAIR MILK JAR 1RS.png", price: 1 },
+  { name: "Jewels Zupadi Box", url: "/images/toffee/JEWELS ZUPADI BOX 1RS.png", price: 1 },
+  { name: "Kasata Creme Zupadi Box", url: "/images/toffee/KASATA CREME ZUPADI BOX 1RS.png", price: 1 },
+  { name: "Malai Kulfi Kesar Kaju Jar", url: "/images/toffee/MALAI KULFI KESAR KAJU JAR 1RS.png", price: 1 },
+  { name: "Pan Bites Zupadi Box", url: "/images/toffee/PAN BITES ZUPADI BOX 1RS.png", price: 1 },
+  { name: "Pista Harvest", url: "/images/toffee/PISTA HARVEST 2RS.png", price: 2 },
+  { name: "Trasure", url: "/images/toffee/TRASURE 2RS.png", price: 2 },
+  { name: "Butter Feast Pouch", url: "/images/toffee/BUTTER FEAST POUCH RS1.png", price: 1 },
+  { name: "Caramal Honey", url: "/images/toffee/CARAMAL HONEY 2RS.png", price: 2 },
+  { name: "Coconut Butter Zupadi Box", url: "/images/toffee/COCONUT BUTTER ZUPADI BOX 1RS.png", price: 1 },
+  { name: "Eclair Anjeer Cream", url: "/images/toffee/ECLAIR ANJEER CREAM 2RS.png", price: 2 },
+  { name: "Eclair Dark Cream", url: "/images/toffee/ECLAIR DARK CREAM 2RS.png", price: 2 },
+  { name: "Eclair Gold", url: "/images/toffee/ECLAIR GOLD 1RS.png", price: 1 },
+  { name: "Eclair Hazelnut Jar", url: "/images/toffee/ECLAIR HAZELNUT JAR 1RS.png", price: 1 },
+  { name: "Eclair Milk Pouch", url: "/images/toffee/ECLAIR MILK POUCH 1RS.png", price: 1 },
+  { name: "Eclairs Pouch", url: "/images/toffee/ECLAIRS POUCH RS1.png", price: 1 },
+  { name: "Kaju Butter Jar", url: "/images/toffee/KAJU BUTTER JAR 1RS.png", price: 1 },
+  { name: "Kesar Cream Zupadi Box", url: "/images/toffee/KESAR CREAM ZUPADI BOX 1RS.png", price: 1 },
+  { name: "Natural Jar", url: "/images/toffee/NATURAL JAR 1RS.png", price: 1 },
+  { name: "Pista Butter Box", url: "/images/toffee/PISTA BUTTER BOX 1RS.png", price: 1 },
+  { name: "Soffitti", url: "/images/toffee/SOFFITTI 2RS.png", price: 2 },
+  { name: "Almond Gold Pouch", url: "/images/toffee/ALMOND GOLD POUCH RS1.png", price: 1 },
+  { name: "Butter Feast Zupadi Box", url: "/images/toffee/BUTTER FEAST ZUPADI BOX 1RS.png", price: 1 },
+  { name: "Choco Almond Grand", url: "/images/toffee/CHOCO ALMOND GRAND 2RS.png", price: 2 },
+  { name: "Dairy Way Zupadi Box", url: "/images/toffee/DAIRY WAY ZUPADI BOX 1RS.png", price: 1 },
+  { name: "Eclair Anjeer Cream Gift Box", url: "/images/toffee/ECLAIR ANJEER CREAM GIFT BOX 2RS.png", price: 2 },
+  { name: "Eclair Dark Cream Gift Box", url: "/images/toffee/ECLAIR DARK CREAM GIFT BOX 2RS.png", price: 2 },
+  { name: "Eclair Gold Jar", url: "/images/toffee/ECLAIR GOLD JAR 1RS.png", price: 1 },
+  { name: "Eclair Hazelnut Pouch", url: "/images/toffee/ECLAIR HAZELNUT POUCH 1RS.png", price: 1 },
+  { name: "Eclairs Carmallos", url: "/images/toffee/ECLAIRS CARMALLOS 1RS.png", price: 1 },
+  { name: "Eclairs Zupadi Box", url: "/images/toffee/ECLAIRS ZUPADI BOX 1RS.png", price: 1 }],
   jelly: [{
     name: "JELLOS JELLY JAR",
     url: "/images/jelly/JELLOS JELLY JAR.png",
