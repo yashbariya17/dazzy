@@ -4,7 +4,6 @@ import { forwardRef, useCallback, useState } from "react"
 import AnimatedNumber from "../../components/AnimatedNumber"
 import { TextAnimation } from "../../components/TextAnimation"
 import MouseComponent from "../../components/MouseComponent"
-import { section } from "framer-motion/client"
 
 type ProductsType = {
   name: string
