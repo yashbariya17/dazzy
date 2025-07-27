@@ -1,9 +1,10 @@
-import { AnimatePresence, motion } from "motion/react"
+import { AnimatePresence, motion, usePresenceData, wrap } from "motion/react"
 import useEmblaCarousel from "embla-carousel-react"
-import { useCallback, useState } from "react"
+import { forwardRef, useCallback, useState } from "react"
 import AnimatedNumber from "../../components/AnimatedNumber"
 import { TextAnimation } from "../../components/TextAnimation"
 import MouseComponent from "../../components/MouseComponent"
+import { section } from "framer-motion/client"
 
 type ProductsType = {
   name: string
@@ -129,7 +130,11 @@ const Home = () => {
                     expierience in food industries
                   </p>
                   <p className="text-wrap w-[500px] mx-auto pb-2">
-                   Founded in 2001, Dazzy is a family-owned confectionery house producing high-quality sugar candies and moulded chocolate specialties. With decades of experience, Dazzy is now one of the largest and most trusted confectionery manufacturers in the world.
+                    Founded in 2001, Dazzy is a family-owned confectionery house
+                    producing high-quality sugar candies and moulded chocolate
+                    specialties. With decades of experience, Dazzy is now one of
+                    the largest and most trusted confectionery
+                    manufacturers in the world.
                   </p>
                 </div>
               </motion.div>
@@ -291,7 +296,11 @@ const Home = () => {
                   expierience in food industries
                 </p>
                 <p className="lg:w-[400px] text-wrap w-[300px]">
-                  Founded in 2001, Dazzy is a family-owned confectionery house producing high-quality sugar candies and moulded chocolate specialties. With decades of experience, Dazzy is now one of the largest and most trusted confectionery manufacturers in the world.
+                  Founded in 2001, Dazzy is a family-owned confectionery house
+                  producing high-quality sugar candies and moulded chocolate
+                  specialties. With decades of experience, Dazzy is now one of
+                  the largest and most trusted confectionery
+                  manufacturers in the world.
                 </p>
                 <MouseComponent className="my-4 sm:mb-10 lg:mb-0 rounded-lg ">
                   <motion.button
@@ -442,84 +451,7 @@ const Home = () => {
             <div className="text-3xl font-bold text-white mb-6 mx-auto w-fit">
               What Our Clients Say
             </div>
-            <div className="bg-white text-gray-800 rounded-xl lg:h-[315px] shadow-lg p-6 max-w-xl relative border-orange-500 border-t-4 h-[250px] flex flex-col  justify-center  ">
-              <div className="flex items-center mb-4">
-                <img
-                  src="images/user.jpg"
-                  alt="Albert Flores"
-                  className="w-12 h-12 rounded-full mr-4 object-cover"
-                />
-                <div>
-                  <h3 className="font-bold text-lg">Albert Flores</h3>
-                  <p className="text-sm text-gray-500">Web Designer</p>
-                  <div className="text-yellow-500 mt-1">★★★★☆</div>
-                </div>
-              </div>
-              <p className="text-gray-600">
-                Penatibus magnis dis point parturient montes nascetur ridiculus
-                mus Ut id lorem ac enim the vestibulum blandit nec sit amet
-                felis. Fusce quis diam odio Cras mattis mi quis tincidunt
-              </p>
-              <div className="absolute top-0 right-4 text-orange-500 text-[4.5rem] font-bold">
-                ”
-              </div>
-            </div>
-            <div className="flex mt-6 space-x-4 mx-auto w-fit *:text-2xl *:font-extrabold *:grid *:place-items-center  pb-16 sm:pb-0">
-              <button className="w-10 h-10 rounded-full border border-red-600 text-red-600 hover:bg-red-600 hover:text-white flex items-center justify-center transition duration-300">
-                <svg
-                  height="20px"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    id="SVGRepo_bgCarrier"
-                    strokeWidth="0"
-                  ></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    {" "}
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M11.7071 4.29289C12.0976 4.68342 12.0976 5.31658 11.7071 5.70711L6.41421 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H6.41421L11.7071 18.2929C12.0976 18.6834 12.0976 19.3166 11.7071 19.7071C11.3166 20.0976 10.6834 20.0976 10.2929 19.7071L3.29289 12.7071C3.10536 12.5196 3 12.2652 3 12C3 11.7348 3.10536 11.4804 3.29289 11.2929L10.2929 4.29289C10.6834 3.90237 11.3166 3.90237 11.7071 4.29289Z"
-                      fill="#ffffff"
-                    ></path>{" "}
-                  </g>
-                </svg>
-              </button>
-              <button className="w-10 h-10 rounded-full bg-red-600 text-white hover:bg-red-700 flex items-center justify-center transition duration-300">
-                <svg
-                  width="20px"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    id="SVGRepo_bgCarrier"
-                    strokeWidth="0"
-                  ></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    {" "}
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
-                      fill="#ffffff"
-                    ></path>{" "}
-                  </g>
-                </svg>
-              </button>
-            </div>
+            <Slider />
           </div>
         </section>
       </section>
@@ -528,3 +460,183 @@ const Home = () => {
 }
 
 export default Home
+
+const testimonials = [
+  {
+    name: "Albert Flores",
+    occupation: "Web Designer",
+    ratings: "★★★★☆",
+    review:
+      " Penatibus magnis dis point parturient montes nascetur ridiculus mus Ut id lorem ac enim the vestibulum blandit nec sit amet felis. Fusce quis diam odio Cras mattis mi quis tincidunt",
+    id: 1,
+  },
+  {
+    name: "Albert Flores",
+    occupation: "Web Designer",
+    ratings: "★★★★☆",
+    review:
+      " Penatibus magnis dis point parturient montes nascetur ridiculus mus Ut id lorem ac enim the vestibulum blandit nec sit amet felis. Fusce quis diam odio Cras mattis mi quis tincidunt",
+    id: 2,
+  },
+  {
+    name: "Albert Flores",
+    occupation: "Web Designer",
+    ratings: "★★★★☆",
+    review:
+      " Penatibus magnis dis point parturient montes nascetur ridiculus mus Ut id lorem ac enim the vestibulum blandit nec sit amet felis. Fusce quis diam odio Cras mattis mi quis tincidunt",
+    id: 3,
+  },
+]
+
+const Slider = () => {
+  const [selectedItem, setSelectedItem] = useState(testimonials[0])
+  const [direction, setDirection] = useState<1 | -1>(1)
+
+  function setSlide(newDirection: 1 | -1) {
+    const nextItem = wrap(
+      1,
+      testimonials.length,
+      selectedItem.id + newDirection
+    )
+    setSelectedItem(testimonials[nextItem - 1])
+    setDirection(newDirection)
+  }
+
+  return (
+    <>
+      <section>
+        <AnimatePresence
+          mode="popLayout"
+          custom={direction}
+          initial={false}
+        >
+          <Slide
+            name={selectedItem.name}
+            occupation={selectedItem.occupation}
+            ratings={selectedItem.ratings}
+            review={selectedItem.review}
+            key={selectedItem.id}
+          />
+        </AnimatePresence>
+      </section>
+      <div className="flex mt-6 space-x-4 mx-auto w-fit *:text-2xl *:font-extrabold *:grid *:place-items-center  pb-16 sm:pb-0">
+        <button
+          className="w-10 h-10 rounded-full border border-red-600 text-red-600 hover:bg-red-600 hover:text-white flex items-center justify-center transition duration-300"
+          onClick={() => setSlide(-1)}
+        >
+          <svg
+            height="20px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              id="SVGRepo_bgCarrier"
+              strokeWidth="0"
+            ></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              {" "}
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M11.7071 4.29289C12.0976 4.68342 12.0976 5.31658 11.7071 5.70711L6.41421 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H6.41421L11.7071 18.2929C12.0976 18.6834 12.0976 19.3166 11.7071 19.7071C11.3166 20.0976 10.6834 20.0976 10.2929 19.7071L3.29289 12.7071C3.10536 12.5196 3 12.2652 3 12C3 11.7348 3.10536 11.4804 3.29289 11.2929L10.2929 4.29289C10.6834 3.90237 11.3166 3.90237 11.7071 4.29289Z"
+                fill="#ffffff"
+              ></path>{" "}
+            </g>
+          </svg>
+        </button>
+        <button
+          className="w-10 h-10 rounded-full bg-red-600 text-white hover:bg-red-700 flex items-center justify-center transition duration-300"
+          onClick={() => setSlide(1)}
+        >
+          <svg
+            width="20px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              id="SVGRepo_bgCarrier"
+              strokeWidth="0"
+            ></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              {" "}
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
+                fill="#ffffff"
+              ></path>{" "}
+            </g>
+          </svg>
+        </button>
+      </div>
+    </>
+  )
+}
+
+const Slide = forwardRef(function Slide(
+  {
+    name,
+    occupation,
+    ratings,
+    review,
+  }: {
+    name: string
+    occupation: string
+    ratings: string
+    review: string
+  },
+  ref: React.Ref<HTMLDivElement>
+) {
+  const direction = usePresenceData()
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, x: direction * 50 }}
+      animate={{
+        opacity: 1,
+        x: 0,
+        transition: {
+          delay: 0.2,
+          type: "spring",
+          visualDuration: 0.5,
+          bounce: 0.4,
+        },
+      }}
+      exit={{
+        opacity: 0,
+        scale: 0,
+        transformOrigin: direction === -1 ? "right center" : "left center",
+      }}
+      className="bg-white text-gray-800 rounded-xl lg:h-[315px] shadow-lg p-6 max-w-xl relative border-orange-500 border-t-4 h-[250px] flex flex-col  justify-center  "
+    >
+      <div className="flex items-center mb-4">
+        <img
+          src="images/user.jpg"
+          alt="Albert Flores"
+          className="w-12 h-12 rounded-full mr-4 object-cover"
+        />
+        <div>
+          <h3 className="font-bold text-lg">{name}</h3>
+          <p className="text-sm text-gray-500">{occupation}</p>
+          <div className="text-yellow-500 mt-1">{ratings}</div>
+        </div>
+      </div>
+      <p className="text-gray-600">{review}</p>
+      <div className="absolute top-0 right-4 text-orange-500 text-[4.5rem] font-bold">
+        ”
+      </div>
+    </motion.div>
+  )
+})
