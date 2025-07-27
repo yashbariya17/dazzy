@@ -807,22 +807,20 @@ export const productObj: productType = {
   { name: "Eclair Hazelnut Pouch", url: "/images/toffee/ECLAIR HAZELNUT POUCH 1RS.png", price: 1 },
   { name: "Eclairs Carmallos", url: "/images/toffee/ECLAIRS CARMALLOS 1RS.png", price: 1 },
   { name: "Eclairs Zupadi Box", url: "/images/toffee/ECLAIRS ZUPADI BOX 1RS.png", price: 1 }],
-  jelly: [{
-    name: "JELLOS JELLY JAR",
-    url: "/images/jelly/JELLOS JELLY JAR.png",
-  },
-  {
-    name: "JELLOS JELLY",
-    url: "/images/jelly/JELLOS JELLY.png",
-  },
-  {
-    name: "STRAWBERRY JELLY JAR",
-    url: "/images/jelly/STRAWBERRY JELLY JAR.png",
-  },
-  {
-    name: "STRAWBERRY JELLY",
-    url: "/images/jelly/STRAWBERRY JELLY.png",
-  },
+  jelly: [ { name: "Jellos Guvava Jelly Jar", url: "/images/jelly/JELLOS GUVAVA JELLY JAR.png", price: 1 },
+  { name: "Jellos Guvava Jelly", url: "/images/jelly/JELLOS GUVAVA JELLY.png", price: 1 },
+  { name: "Jellos Jelly Jar", url: "/images/jelly/JELLOS JELLY JAR.png", price: 1 },
+  { name: "Jellos Jelly Jar1", url: "/images/jelly/JELLOS JELLY JAR1.png", price: 1 },
+  { name: "Jellos Jelly", url: "/images/jelly/JELLOS JELLY.png", price: 1 },
+  { name: "Jellos Mango Jelly Jar", url: "/images/jelly/JELLOS MANGO JELLY JAR.png", price: 1 },
+  { name: "Jellos Mango Jelly", url: "/images/jelly/JELLOS MANGO JELLY.png", price: 1 },
+  { name: "Jellos Mix Fruit Jelly Jar", url: "/images/jelly/JELLOS MIX FRUIT JELLY JAR.png", price: 1 },
+  { name: "Jellos Mixfruit Jelly", url: "/images/jelly/JELLOS MIXFRUIT JELLY.png", price: 1 },
+  { name: "Jellos Orange Jelly Jar", url: "/images/jelly/JELLOS ORANGE JELLY JAR.png", price: 1 },
+  { name: "Jellos Orange Jelly", url: "/images/jelly/JELLOS ORANGE JELLY.png", price: 1 },
+  { name: "Jellos Painapple Jelly", url: "/images/jelly/JELLOS PAINAPPLE JELLY.png", price: 1 },
+  { name: "Strawberry Jelly Jar", url: "/images/jelly/STRAWBERRY JELLY JAR.png", price: 1 },
+  { name: "Strawberry Jelly", url: "/images/jelly/STRAWBERRY JELLY.png", price: 1 },
   ],
   candy: [
   { name: "Beating Heart",
@@ -858,30 +856,37 @@ export const productObj: productType = {
   lollipop: [{
     name: "Fru Go Pop",
     url: "/images/lollipop/Fru Go Pop.png",
+    price: 5
   },
   {
     name: "Frudoza",
     url: "/images/lollipop/Frudoza.png",
+    price: 5
   },
   {
     name: "Frugo Pop Jar",
     url: "/images/lollipop/Frugo Pop Jar.png",
+    price: 5
   },
   {
     name: "Frugo Pop Pouch",
     url: "/images/lollipop/Frugo Pop Pouch.png",
+    price: 5
   },
   {
     name: "Frutos Lollipop Jar",
     url: "/images/lollipop/FRUTOS LOLLIPOP JAR.png",
+    price: 5
   },
   {
     name: "Lolly Lollipop Pouch",
     url: "/images/lollipop/LOLLY LOLLIPOP  POUCH.png",
+    price: 5
   },
   {
     name: "Lolly Lollipop",
     url: "/images/lollipop/LOLLY LOLLIPOP.png",
+    price: 5
   }],
 };
 
