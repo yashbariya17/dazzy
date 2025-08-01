@@ -220,7 +220,7 @@ const Home = () => {
             ref={emblaRef}
           >
             <div className="flex -ml-4">
-              {Array(16)
+              {Array(18)
                 .fill("")
                 .map((_, index) => (
                   <div

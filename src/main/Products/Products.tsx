@@ -128,7 +128,7 @@ const Products = () => {
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ delay: 0.4, duration: 0.4 }}
                     src={i.url}
-                    className={`h-[100px] absolute top-0 -translate-y-[80%] ${i.className}`}
+                    className={`h-[100px] absolute top-0 -translate-y-[80%] ${i.className} transition-transform duration-300 ease-in-out hover:scale-125`}
                   />
                   <p
                     className="text-center uppercase text-gray-600 w-[60%] cursor-pointer"

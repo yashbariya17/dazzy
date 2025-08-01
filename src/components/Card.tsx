@@ -43,15 +43,15 @@ export default function TeamMemberCard({ member, maxAngle = 20 }: Props) {
   return (
     <motion.div
       ref={ref}
-      onMouseMove={handleMove}
-      onMouseLeave={reset}
-      style={{
-        rotateX,
-        rotateY,
-        rotateZ,
-        perspective: 1000,
-        transformStyle: "preserve-3d",
-      }}
+      // onMouseMove={handleMove}
+      // onMouseLeave={reset}
+      // style={{
+      //   rotateX,
+      //   rotateY,
+      //   rotateZ,
+      //   perspective: 1000,
+      //   transformStyle: "preserve-3d",
+      // }}
       className="bg-white rounded-t-[140px] shadow-lg pt-10 pb-6 px-4 relative flex flex-col items-center"
     >
       <img

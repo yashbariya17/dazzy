@@ -34,11 +34,11 @@ function App() {
             element={<Products />}
           />
           <Route
-            path="/ByPrice"
+            path="/byPrice"
             element={<ByPrice />}
           />
           <Route
-            path="/ByBrands"
+            path="/byBrands"
             element={<ByBrands />}
           />
           <Route

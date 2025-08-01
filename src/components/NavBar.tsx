@@ -28,7 +28,7 @@ const Products = [
   },
   {
     name: "All Brands",
-    url: "/ByBrands",
+    url: "/byBrands",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ const Products = [
   },
   {
     name: "By Price",
-    url: "/ByPrice",
+    url: "/byPrice",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

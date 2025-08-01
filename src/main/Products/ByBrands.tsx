@@ -9,7 +9,7 @@ const ByBrands = () => {
 
       <section className="pt-16 pb-20 mx-auto max-w-[1000px] px-10 lg:px-0">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full  gap-y-16 ">
-          {Array(6)
+          {Array(18)
             .fill("")
             .map((_, index) => (
               <div
