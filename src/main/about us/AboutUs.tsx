@@ -4,13 +4,13 @@ import { useEffect, useRef, useState } from "react"
 import TeamMemberCard from "../../components/Card"
 
 const aboutData = [
-  {
-    title: "Since 2001",
-    description:
-      "Since the inception of Dazzy, Mr. Dipak Kanani, Chairman and CEO, along with Managing Directors and his brothers, Mr. Tushar Kanani and Mr. Ashok Kanani, have been driven by a single objective: to provide the highest quality at the most competitive prices.",
-    image: "/images/founder1.jpg",
-    side: "right",
-  },
+{
+  title: "Since 2001",
+  description:
+    "Since its inception in 2001, **Dazzy** has been dedicated to crafting premium sugar confectionery and moulded chocolate specialties that bring sweetness to life’s most cherished moments. What began as a modest production unit in the Sayajipura area of Vadodara has evolved into one of the world’s leading family-owned confectionery enterprises—giving rise to **Dazzy Food Industries**,The journey began with the success of its flagship product, **Éclair Gold**, which quickly gained popularity and laid the foundation for the brand’s rapid growth and innovation. Over the years, Dazzy has consistently expanded its product portfolio, keeping quality and consumer delight at its core.",
+  image: "/images/founder1.jpg",
+  side: "right",
+},
   {
     title: "Since 2010",
     description:

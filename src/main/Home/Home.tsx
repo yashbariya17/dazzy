@@ -232,7 +232,6 @@ const Home = () => {
   alt={`Slide ${index + 1}`}
   className="w-32 object-contain aspect-auto filter grayscale hover:grayscale-0 transition duration-300 transform hover:scale-110"
 />
-
                   </div>
                 ))}
             </div>
@@ -411,19 +410,19 @@ const Home = () => {
               </h2>
               <div className="flex flex-col md:flex-row gap-5 justify-center text-center mt-5 items-center">
                 <div className="text-white font-bold lg:text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-                  <AnimatedNumber value={150} /> +{" "}
+                  <AnimatedNumber value={50} /> +{" "}
                   <p className="text-white text-xs font-light">
-                    Product Rating
+                    Brands
                   </p>
                 </div>
                 <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-                  <AnimatedNumber value={36} />{" "}
-                  <p className="text-white text-xs font-light">Brands</p>
+                  <AnimatedNumber value={200} />+ {" "}
+                  <p className="text-white text-xs font-light">SKU</p>
                 </div>
                 <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-                  <AnimatedNumber value={15} />+{" "}
+                  <AnimatedNumber value={1000} />+{" "}
                   <p className="text-white text-xs font-light">
-                    Export Destination
+                    Team
                   </p>
                 </div>
               </div>
@@ -431,7 +430,7 @@ const Home = () => {
                 className="text-center mt-2 text-white"
                 style={{ wordSpacing: "2px" }}
               >
-                A Wide Range Of Confectionery Items
+                Pan India Presence
               </p>
             </div>
           </div>
