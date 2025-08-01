@@ -45,8 +45,8 @@ export const productObj: productType = {
   ],
   "centerfilled chocolate": [
 {
-    name: "TRUFFINS 30 PCS 1  5RS",
-    url: "/images/centerfilledchocolate/TRUFFINS 30 PCS 1 5RS.png",
+    name: "TRUFFINS 30 PCS",
+    url: "/images/centerfilledchocolate/TRUFFINS 30 PCS 1  5RS.png",
     price: 5
   },
   {
@@ -56,22 +56,22 @@ export const productObj: productType = {
   },
   {
     name: "Truffins 70 Pcs",
-    url: "/images/centerfilledchocolate/TRUFFINS 70 PCS 5RS.png",
+    url: "/images/centerfilledchocolate/TRUFFINS 70 PCS  5RS.png",
     price: 5
   },
   {
-    name: "Truffins 70 Pcs 1",
-    url: "/images/centerfilledchocolate/TRUFFINS 70 PCS 1 5RS.png",
+    name: "Truffins 70 Pcs",
+    url: "/images/centerfilledchocolate/TRUFFINS 70 PCS 1  5RS.png",
     price: 5
   },
   {
     name: "Truffins Container",
-    url: "/images/centerfilledchocolate/TRUFFINS CONTAINER 5RS.png",
+    url: "/images/centerfilledchocolate/TRUFFINS CONTAINER  5RS.png",
     price: 5
   },
   {
     name: "Truffle Blueberry 70 Pcs",
-    url: "/images/centerfilledchocolate/TRUFFLE BLUEBERRY 70 PCS 5RS.png",
+    url: "/images/centerfilledchocolate/TRUFFLE BLUBERRY 70 PCS 5RS.png",
     price: 5
   },
   {
@@ -176,7 +176,7 @@ export const productObj: productType = {
   },
   {
     name: "Delight Pistaccio 70Pcs Box",
-    url: "/images/centerfilledchocolate/DELIGHT PISTACCIO 70PCS BOX 5RS.png",
+    url: "/images/centerfilledchocolate/DELIGHT PISTACGIO 70PCS BOX 5RS.png",
     price: 5
   },
   {
@@ -226,7 +226,7 @@ export const productObj: productType = {
   },
   {
     name: "Dlove Pruple",
-    url: "/images/centerfilledchocolate/DLOVE PRUPLE 5RS.png",
+    url: "/images/centerfilledchocolate/DLOVE PURPULE 5RS.png",
     price: 5
   },
   {
@@ -251,7 +251,7 @@ export const productObj: productType = {
   },
   {
     name: "Emporio Pouch",
-    url: "/images/centerfilledchocolate/EMPORIO POUCH 5RS.png",
+    url: "/images/centerfilledchocolate/EMPORIO POUCH  5RS.png",
     price: 5
   },
   {
@@ -265,8 +265,8 @@ export const productObj: productType = {
     price: 2
   },
   {
-    name: "Endon Gift Box1",
-    url: "/images/centerfilledchocolate/ENDON GIFT BOX1 2RS.png",
+    name: "Endon Gift Box",
+    url: "/images/centerfilledchocolate/ENDON GOFT BOX1 2RS.png",
     price: 2
   },
   {
@@ -275,33 +275,33 @@ export const productObj: productType = {
     price: 2
   },
   {
-    name: "Endon Box 125 Pcs2",
+    name: "Endon Box 125",
     url: "/images/centerfilledchocolate/ENDON BOX 125 PCS2 2RS.png",
     price: 2
   },
   {
     name: "Ferola Milk",
-    url: "/images/centerfilledchocolate/FEROLA MILK 5RS.png",
+    url: "/images/centerfilledchocolate/FEROLA MILK  5RS.png",
     price: 5
   },
   {
     name: "Ferola Coconut",
-    url: "/images/centerfilledchocolate/FEROLA COCONUT 5RS.png",
+    url: "/images/centerfilledchocolate/FEROLA COCONUT  5RS.png",
     price: 5
   },
   {
     name: "Ferola Mango",
-    url: "/images/centerfilledchocolate/FEROLA MANGO 5RS.png",
+    url: "/images/centerfilledchocolate/FEROLA MANGO  5RS.png",
     price: 5
   },
   {
     name: "Ferola Pistachio",
-    url: "/images/centerfilledchocolate/FEROLA PISTACHIO 5RS.png",
+    url: "/images/centerfilledchocolate/FEROLA PISTACHIO  5RS.png",
     price: 5
   },
   {
     name: "Ferola Strawberry",
-    url: "/images/centerfilledchocolate/FEROLA STRAWBERRY 5RS.png",
+    url: "/images/centerfilledchocolate/FEROLA STRAWBERRY  5RS.png",
     price: 5
   },
   {
@@ -325,12 +325,12 @@ export const productObj: productType = {
     price: 5
   },
   {
-    name: "Glorious Gift Container (2)",
+    name: "Glorious Gift Container",
     url: "/images/centerfilledchocolate/GLORIOUS GIFT CONTAINER (2) 5RS.png",
     price: 5
   },
   {
-    name: "Glorious Gift Container (3)",
+    name: "Glorious Gift Container ",
     url: "/images/centerfilledchocolate/GLORIOUS GIFT CONTAINER (3) 5RS.png",
     price: 5
   },
@@ -350,7 +350,7 @@ export const productObj: productType = {
     price: 5
   },
   {
-    name: "Gold Box2Rs 2",
+    name: "Gold Box2Rs",
     url: "/images/centerfilledchocolate/GOLD BOX2RS 2.png",
     price: 2
   },
@@ -365,7 +365,7 @@ export const productObj: productType = {
     price: 2
   },
   {
-    name: "Gold Gift Box2",
+    name: "Gold Gift Box",
     url: "/images/centerfilledchocolate/GOLD GIFT BOX2RS 2.png",
     price: 2
   },
@@ -381,7 +381,7 @@ export const productObj: productType = {
   },
   {
     name: "Maxic Box 125 Pcs",
-    url: "/images/centerfilledchocolate/MAXIC BOX 125 PCS 2RS.png",
+    url: "/images/centerfilledchocolate/MAXIC  BOX 125 PCS 2RS.png",
     price: 2
   },
   {
@@ -400,13 +400,13 @@ export const productObj: productType = {
     price: 2
   },
   {
-    name: "Stacy Box 70pcs 2",
-    url: "/images/centerfilledchocolate/STACY BOX 70PCS 2 5RS.png",
+    name: "Stacy Box 70pcs ",
+    url: "/images/centerfilledchocolate/STACY BOX 70PCS 2  5RS.png",
     price: 5
   },
   {
-    name: "Stacy Gift Box 1",
-    url: "/images/centerfilledchocolate/STACY GIFT BOX 1 5RS.png",
+    name: "Stacy Gift Box ",
+    url: "/images/centerfilledchocolate/STACY BOX 70PCS 1.png",
     price: 5
   },
   {
@@ -436,7 +436,7 @@ export const productObj: productType = {
   },
   {
     name: "Chocobon Pistachio",
-    url: "/images/centerfilledchocolate/CHOCOBON PISTACHIO 5RS.png",
+    url: "/images/centerfilledchocolate/CHOCOBON PISTACHIO  5RS.png",
     price: 5
   },
   {
@@ -451,22 +451,22 @@ export const productObj: productType = {
   },
   {
     name: "Merone 125pcs",
-    url: "/images/centerfilledchocolate/MERONE 125PCS 2RS.png",
+    url: "/images/centerfilledchocolate/MERONE 125PCS  2RS.png",
     price: 2
   },
   {
     name: "Stacy Chocolate Container",
-    url: "/images/centerfilledchocolate/STACY CHOCOLATE CONTAINER 5RS.png",
+    url: "/images/centerfilledchocolate/STACY CHOCOLATE CANTAINER  5RS.png",
     price: 5
   },
   {
-    name: "Stacy Box 2",
-    url: "/images/centerfilledchocolate/STACY BOX 2 5RS.png",
+    name: "Stacy Box",
+    url: "/images/centerfilledchocolate/STACY BOX 70PCS 2  5RS.png",
     price: 5
   },
   {
     name: "Stacy Gift Container",
-    url: "/images/centerfilledchocolate/STACY GIFT CONTAINER 5RS.png",
+    url: "/images/centerfilledchocolate/STACY GIFT CONTAINER  5RS.png",
     price: 5
   },
   {
@@ -491,12 +491,12 @@ export const productObj: productType = {
   },
   {
     name: "Chocobon Coconut",
-    url: "/images/centerfilledchocolate/CHOCOBON COCONUT 5RS.png",
+    url: "/images/centerfilledchocolate/CHOCOBON COCONUT  5RS.png",
     price: 5
   },
   {
     name: "Chocobon Strawberry",
-    url: "/images/centerfilledchocolate/CHOCOBON STRAWBERRY 5RS.png",
+    url: "/images/centerfilledchocolate/CHOCOBON STRAWBERRY  5RS.png",
     price: 5
   },
   {
@@ -511,17 +511,17 @@ export const productObj: productType = {
   },
   {
     name: "Stacy Box 70pcs",
-    url: "/images/centerfilledchocolate/STACY BOX 70PCS 5RS.png",
+    url: "/images/centerfilledchocolate/STACY BOX 70PCS  5RS.png",
     price: 5
   },
   {
     name: "Stacy Container",
-    url: "/images/centerfilledchocolate/STACY CONTAINER 5RS.png",
+    url: "/images/centerfilledchocolate/STACY CONTAINER  5RS.png",
     price: 5
   },
   {
     name: "Stacy Gift Box",
-    url: "/images/centerfilledchocolate/STACY GIFT BOX 5RS.png",
+    url: "/images/centerfilledchocolate/STACY GIFT BOX  5RS.png",
     price: 5
   },
   {
@@ -546,12 +546,12 @@ export const productObj: productType = {
   },
   {
     name: "Chocobon Mango",
-    url: "/images/centerfilledchocolate/CHOCOBON MANGO 5RS.png",
+    url: "/images/centerfilledchocolate/CHOCOBON MANGO  5RS.png",
     price: 5
   },
   {
     name: "Cocos Truffles Box",
-    url: "/images/centerfilledchocolate/COCOS TRUFFLES BOX 5RS.png",
+    url: "/images/centerfilledchocolate/COCOS  TRUFFLES BOX 5RS.png",
     price: 5
   },
   {
@@ -581,12 +581,12 @@ export const productObj: productType = {
   },
   {
     name: "Chocobon Milk",
-    url: "/images/centerfilledchocolate/CHOCOBON MILK 5RS.png",
+    url: "/images/centerfilledchocolate/CHOCOBON MILK  5RS.png",
     price: 5
   },
   {
     name: "Cocos Truffles Pouch",
-    url: "/images/centerfilledchocolate/COCOS TRUFFLES POUCH 5RS.png",
+    url: "/images/centerfilledchocolate/COCOS  TRUFFLES POUCH 5RS.png",
     price: 5
   },
   {
@@ -671,7 +671,7 @@ export const productObj: productType = {
   },
   {
     name: "BIG STAR BOX",
-    url: "/images/nugut bar/BIG STAR BOX 5RS.png",
+    url: "/images/nugut bar/BIG STAR BOX.png",
     price: 5
   },
   {
@@ -786,26 +786,26 @@ export const productObj: productType = {
   { name: "Butter Feast Pouch", url: "/images/toffee/BUTTER FEAST POUCH RS1.png", price: 1 },
   { name: "Caramal Honey", url: "/images/toffee/CARAMAL HONEY2RS.png", price: 2 },
   { name: "Coconut Butter Zupadi Box", url: "/images/toffee/COCONUT BUTTER ZUPADI BOX 1RS.png", price: 1 },
-  { name: "Eclair Anjeer Cream", url: "/images/toffee/ECLAIR ANJEER CREAM 2RS.png", price: 2 },
-  { name: "Eclair Dark Cream", url: "/images/toffee/ECLAIR DARK CREAM 2RS.png", price: 2 },
+  { name: "Eclair Anjeer Cream", url: "/images/toffee/eclair anjeer cream 2RS.png", price: 2 },
+  { name: "Eclair Dark Cream", url: "/images/toffee/eclair dark cream 2RS.png", price: 2 },
   { name: "Eclair Gold", url: "/images/toffee/ECLAIR GOLD 1RS.png", price: 1 },
-  { name: "Eclair Hazelnut Jar", url: "/images/toffee/ECLAIR HAZELNUT JAR 1RS.png", price: 1 },
-  { name: "Eclair Milk Pouch", url: "/images/toffee/ECLAIR MILK POUCH 1RS.png", price: 1 },
+  { name: "Eclair Hazelnut Jar", url: "/images/toffee/eclair hazelnut jar 1RS.png", price: 1 },
+  { name: "Eclair Milk Pouch", url: "/images/toffee/eclair milk pouch 1RS.png", price: 1 },
   { name: "Eclairs Pouch", url: "/images/toffee/ECLAIRS POUCH RS1.png", price: 1 },
   { name: "Kaju Butter Jar", url: "/images/toffee/KAJU BUTTER JAR 1RS.png", price: 1 },
   { name: "Kesar Cream Zupadi Box", url: "/images/toffee/KESAR CREAM ZUPADI BOX 1RS.png", price: 1 },
   { name: "Natural Jar", url: "/images/toffee/NATURAL JAR 1RS.png", price: 1 },
   { name: "Pista Butter Box", url: "/images/toffee/PISTA BUTTER BOX 1RS.png", price: 1 },
-  { name: "Soffitti", url: "/images/toffee/SOFFITTI 2RS.png", price: 2 },
+  { name: "Soffitti", url: "/images/toffee/soffiti 2RS.png", price: 2 },
   { name: "Almond Gold Pouch", url: "/images/toffee/ALMOND GOLD POUCH RS1.png", price: 1 },
   { name: "Butter Feast Zupadi Box", url: "/images/toffee/BUTTER FEAST ZUPADI BOX 1RS.png", price: 1 },
   { name: "Choco Almond Grand", url: "/images/toffee/CHOCO ALMOND GRAND 2RS.png", price: 2 },
   { name: "Dairy Way Zupadi Box", url: "/images/toffee/DAIRY WAY ZUPADI BOX 1RS.png", price: 1 },
-  { name: "Eclair Anjeer Cream Gift Box", url: "/images/toffee/ECLAIR ANJEER CREAM GIFT BOX 2RS.png", price: 2 },
-  { name: "Eclair Dark Cream Gift Box", url: "/images/toffee/ECLAIR DARK CREAM GIFT BOX 2RS.png", price: 2 },
+  { name: "Eclair Anjeer Cream Gift Box", url: "/images/toffee/eclair anjeer cream gift box 2RS.png", price: 2 },
+  { name: "Eclair Dark Cream Gift Box", url: "/images/toffee/eclair dark cream gift box 2RS.png", price: 2 },
   { name: "Eclair Gold Jar", url: "/images/toffee/ECLAIR GOLD JAR 1RS.png", price: 1 },
-  { name: "Eclair Hazelnut Pouch", url: "/images/toffee/ECLAIR HAZELNUT POUCH 1RS.png", price: 1 },
-  { name: "Eclairs Carmallos", url: "/images/toffee/ECLAIRS CARMALLOS 1RS.png", price: 1 },
+  { name: "Eclair Hazelnut Pouch", url: "/images/toffee/eclair hazelnut pouch 1RS.png", price: 1 },
+  { name: "Eclairs Carmallos", url: "/images/toffee/eclairs carmallos 1RS.png", price: 1 },
   { name: "Eclairs Zupadi Box", url: "/images/toffee/ECLAIRS ZUPADI BOX 1RS.png", price: 1 }],
   jelly: [ { name: "Jellos Guvava Jelly Jar", url: "/images/jelly/JELLOS GUVAVA JELLY JAR.png", price: 1 },
   { name: "Jellos Guvava Jelly", url: "/images/jelly/JELLOS GUVAVA JELLY.png", price: 1 },
