@@ -143,7 +143,7 @@ const Home = () => {
       </AnimatePresence>
       <section
         className="h-[500px] bg-cover bg-center  bg-gray-700"
-        // style={{ backgroundImage: "url('/images/choclatebigslider.png')" }}
+      // style={{ backgroundImage: "url('/images/choclatebigslider.png')" }}
       ></section>
 
       <section className="bg-[#eb0029]">
@@ -220,18 +220,18 @@ const Home = () => {
             ref={emblaRef}
           >
             <div className="flex -ml-4">
-              {Array(6)
+              {Array(16)
                 .fill("")
                 .map((_, index) => (
                   <div
                     className="relative flex-[0_0_100%]  lg:flex-[0_0_20%] md:pl-4 flex justify-center"
                     key={index}
                   >
-<img
-  src={`/images/logos/logo_${index + 1}.png`}
-  alt={`Slide ${index + 1}`}
-  className="w-32 object-contain aspect-auto filter grayscale hover:grayscale-0 transition duration-300 transform hover:scale-110"
-/>
+                    <img
+                      src={`/images/logos/logo_${index + 1}.png`}
+                      alt={`Slide ${index + 1}`}
+                      className="w-32 object-contain aspect-auto filter grayscale hover:grayscale-0 transition duration-300 transform hover:scale-110"
+                    />
                   </div>
                 ))}
             </div>
