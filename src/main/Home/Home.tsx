@@ -227,11 +227,12 @@ const Home = () => {
                     className="relative flex-[0_0_100%]  lg:flex-[0_0_20%] md:pl-4 flex justify-center"
                     key={index}
                   >
-                    <img
-                      src={`/images/logos/logo_${index + 1}.png`}
-                      alt={`Slide ${index + 1}`}
-                      className="w-32 object-contain aspect-auto mix-blend-color-burn"
-                    />
+<img
+  src={`/images/logos/logo_${index + 1}.png`}
+  alt={`Slide ${index + 1}`}
+  className="w-32 object-contain aspect-auto filter grayscale hover:grayscale-0 transition duration-300 transform hover:scale-110"
+/>
+
                   </div>
                 ))}
             </div>
