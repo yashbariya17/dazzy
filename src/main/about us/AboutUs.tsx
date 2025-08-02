@@ -7,42 +7,42 @@ const aboutData = [
   {
     title: "Since 2001",
     description:
-      "Since its inception in 2001, **Dazzy** has been dedicated to crafting premium sugar confectionery and moulded chocolate specialties that bring sweetness to life’s most cherished moments. What began as a modest production unit in the Sayajipura area of Vadodara has evolved into one of the world’s leading family-owned confectionery enterprises—giving rise to **Dazzy Food Industries**,The journey began with the success of its flagship product, **Éclair Gold**, which quickly gained popularity and laid the foundation for the brand’s rapid growth and innovation. Over the years, Dazzy has consistently expanded its product portfolio, keeping quality and consumer delight at its core.",
+      "Since its inception in 2001, **Dazzy** has been dedicated to crafting premium sugar confectionery and moulded chocolate specialties that bring sweetness to life’s most cherished moments. What began as a modest production unit in the Sayajipura area of Vadodara has evolved into one of the world’s leading family-owned confectionery enterprises—giving rise to **Dazzy Food Industries**.",
     image: "/images/founder1.jpg",
     side: "right",
   },
   {
     title: "Since 2010",
     description:
-      "With expansion and modernization, Dazzy grew into a full-scale production powerhouse, delivering across India.",
+      "The journey began with the success of its flagship product, **Éclair Gold**, which quickly gained popularity and laid the foundation for the brand’s rapid growth and innovation. Over the years, Dazzy has consistently expanded its product portfolio, keeping quality and consumer delight at its core.",
     image: "/images/founder2.jpg",
     side: "left",
   },
   {
-    title: "Today",
+    title: "Journey",
     description:
-      "Today, Dazzy continues to deliver trust and delight, with certified quality and a commitment to excellence.",
+      "The company’s remarkable growth is attributed to the visionary leadership of **Mr. Dipak Kanani**, Chairman and CEO, ably supported by Managing Directors and his brothers - **Mr. Tushar Kanani** and **Mr. Ashok Kanani**. With deep-rooted expertise in the confectionery domain, the leadership team has steered the company with a singular focus—offering exceptional quality at optimal value while continually pushing the boundaries of innovation in the confectionery sector.",
     image: "/images/factory.jpg",
     side: "right",
   },
   {
-    title: "p-4",
+    title: "2007",
     description:
-      "Today, Dazzy continues to deliver trust and delight, with certified quality and a commitment to excellence.",
+      " Dazzy marked a significant milestone with the establishment of its second large-scale manufacturing facility—**Dazzy Products Pvt. Ltd.**—spanning over 100,000 sq. ft. in Manjusar GIDC, Vadodara. This facility houses state-of-the-art infrastructure dedicated to the production of moulded chocolates, lollipops, and candies. It is home to several iconic Dazzy brands such as **Dairy Kiss, Endon, Big Star, Jellos, and 3 Stixs**",
     image: "/images/factory.jpg",
     side: "left",
   },
   {
-    title: "p-5",
+    title: "Journey",
     description:
-      "Today, Dazzy continues to deliver trust and delight, with certified quality and a commitment to excellence.",
+      "Further expanding its capabilities, Dazzy launched its most advanced manufacturing unit in **2024** under **Dazzy Food Pvt. Ltd.**, covering an area of **200,000 sq. ft.** Equipped with cutting-edge technology and modern production lines, this facility manufactures premium chocolate brands such as **D’Love, Truffles, Oh! Wow, and KingKong**, among many others.",
     image: "/images/factory.jpg",
     side: "right",
   },
   {
-    title: "p-6",
+    title: "Today",
     description:
-      "Today, Dazzy continues to deliver trust and delight, with certified quality and a commitment to excellence.",
+      "Today, Dazzy’s delectable creations are enjoyed across India and in multiple international markets. Known for their consistent taste, quality, and thoughtful packaging, Dazzy products have become an integral part of daily indulgence and gifting traditions—reflecting the brand’s commitment to excellence and joy in every bite. Driven by a dedicated team of over 1,000 professionals, Dazzy continues to innovate, grow, and deliver delight with every product it creates.",
     image: "/images/factory.jpg",
     side: "left",
   },
