@@ -4,13 +4,13 @@ import { useEffect, useRef, useState } from "react"
 import TeamMemberCard from "../../components/Card"
 
 const aboutData = [
-{
-  title: "Since 2001",
-  description:
-    "Since its inception in 2001, **Dazzy** has been dedicated to crafting premium sugar confectionery and moulded chocolate specialties that bring sweetness to life’s most cherished moments. What began as a modest production unit in the Sayajipura area of Vadodara has evolved into one of the world’s leading family-owned confectionery enterprises—giving rise to **Dazzy Food Industries**,The journey began with the success of its flagship product, **Éclair Gold**, which quickly gained popularity and laid the foundation for the brand’s rapid growth and innovation. Over the years, Dazzy has consistently expanded its product portfolio, keeping quality and consumer delight at its core.",
-  image: "/images/founder1.jpg",
-  side: "right",
-},
+  {
+    title: "Since 2001",
+    description:
+      "Since its inception in 2001, **Dazzy** has been dedicated to crafting premium sugar confectionery and moulded chocolate specialties that bring sweetness to life’s most cherished moments. What began as a modest production unit in the Sayajipura area of Vadodara has evolved into one of the world’s leading family-owned confectionery enterprises—giving rise to **Dazzy Food Industries**,The journey began with the success of its flagship product, **Éclair Gold**, which quickly gained popularity and laid the foundation for the brand’s rapid growth and innovation. Over the years, Dazzy has consistently expanded its product portfolio, keeping quality and consumer delight at its core.",
+    image: "/images/founder1.jpg",
+    side: "right",
+  },
   {
     title: "Since 2010",
     description:
@@ -24,6 +24,27 @@ const aboutData = [
       "Today, Dazzy continues to deliver trust and delight, with certified quality and a commitment to excellence.",
     image: "/images/factory.jpg",
     side: "right",
+  },
+  {
+    title: "p-4",
+    description:
+      "Today, Dazzy continues to deliver trust and delight, with certified quality and a commitment to excellence.",
+    image: "/images/factory.jpg",
+    side: "left",
+  },
+  {
+    title: "p-5",
+    description:
+      "Today, Dazzy continues to deliver trust and delight, with certified quality and a commitment to excellence.",
+    image: "/images/factory.jpg",
+    side: "right",
+  },
+  {
+    title: "p-6",
+    description:
+      "Today, Dazzy continues to deliver trust and delight, with certified quality and a commitment to excellence.",
+    image: "/images/factory.jpg",
+    side: "left",
   },
 ] as const
 
@@ -45,7 +66,7 @@ const TimelineBlock = ({
       <motion.div
         initial={{
           opacity: 0,
-          x: blockNo === 2 ? 100 : -100,
+          x: blockNo % 2 === 0 ? 100 : -100,
         }}
         whileInView={{
           opacity: 1,
@@ -57,12 +78,18 @@ const TimelineBlock = ({
           amount: 0.5,
           margin: "0px 0px -40% 0px",
         }}
-        className={`${blockNo === 2 ? "col-start-3" : "col-start-1"} ${
+        className={`${blockNo % 2 === 0 ? "col-start-3" : "col-start-1"} ${
           blockNo === 1
             ? "row-start-1"
             : blockNo === 2
             ? "row-start-2"
-            : "row-start-3"
+            : blockNo === 3
+            ? "row-start-3"
+            : blockNo === 4
+            ? "row-start-4"
+            : blockNo === 5
+            ? "row-start-5"
+            : "row-start-6"
         } hidden md:block  w-full px-10 my-auto  col-span-1 row-span-1 `}
       >
         <div
@@ -80,7 +107,7 @@ const TimelineBlock = ({
       <motion.div
         initial={{
           opacity: 0,
-          x: blockNo === 2 ? -100 : 100,
+          x: blockNo % 2 === 0 ? -100 : 100,
         }}
         whileInView={{
           opacity: 1,
@@ -92,12 +119,18 @@ const TimelineBlock = ({
           amount: 0.5,
           margin: "0px 0px -40% 0px",
         }}
-        className={`${blockNo === 2 ? "col-start-1" : "col-start-3"} ${
+        className={`${blockNo % 2 === 0 ? "col-start-1" : "col-start-3"} ${
           blockNo === 1
             ? "row-start-1"
             : blockNo === 2
             ? "row-start-2"
-            : "row-start-3"
+            : blockNo === 3
+            ? "row-start-3"
+            : blockNo === 4
+            ? "row-start-4"
+            : blockNo === 5
+            ? "row-start-5"
+            : "row-start-6"
         } hidden md:flex w-full h-full  col-span-1 row-span-1  justify-center items-center relative`}
       >
         <img
@@ -107,12 +140,12 @@ const TimelineBlock = ({
         />
         <div
           className={`${
-            blockNo === 2 ? "-right-8" : "-left-8"
+            blockNo % 2 === 0 ? "-right-8" : "-left-8"
           } absolute bg-red-500 h-2 w-[50%]  z-0`}
         >
           <span
             className={`${
-              blockNo === 2 ? "left-full" : ""
+              blockNo % 2 === 0 ? "left-full" : ""
             } block rounded-full bg-red-500 aspect-square h-6 absolute top-1/2  -translate-y-1/2`}
           >
             {" "}
@@ -178,7 +211,7 @@ const TimelineBlock = ({
 
 const AboutUs = () => {
   const ref = useRef<HTMLDivElement>(null)
-  const { scrollY } = useScroll()
+  const { scrollY } = useScroll({ target: ref })
   const [sectionTop, setSectionTop] = useState(0)
   const [sectionHeight, setSectionHeight] = useState(0)
 
@@ -202,7 +235,6 @@ const AboutUs = () => {
     damping: 30,
     restDelta: 0.001,
   })
-
 
   const y = useTransform(
     top,
@@ -232,16 +264,21 @@ const AboutUs = () => {
 
   return (
     <main className="relative bg-[#fff8f0] min-h-[2100px] overflow-hidden">
-      <section className="h-[500px] bg-cover bg-center" style={{ backgroundImage: "url('/images/premium-chocolates.jpg')" }} />
+      <section
+        className="h-[500px] bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/premium-chocolates.jpg')" }}
+      />
       <section className="text-center py-12 md:py-16 bg-[#2D0B05] text-[#E5C387]">
-        <p className="text-5xl md:text-7xl tracking-widest font-[Cinzel]">25 YEARS OF SWEET MEMORIES</p>
+        <p className="text-5xl md:text-7xl tracking-widest font-[Cinzel]">
+          25 YEARS OF SWEET MEMORIES
+        </p>
       </section>
 
       <div
         ref={ref}
-        className="relative h-auto md:h-[1500px] grid grid-cols-[1fr_auto] md:grid-cols-[1fr_auto_1fr] grid-rows-3 overflow-hidden"
+        className="relative h-auto md:h-[3000px] grid grid-cols-[1fr_auto] md:grid-cols-[1fr_auto_1fr] grid-rows-6 overflow-hidden"
       >
-        <div className=" h-full w-[100px] bg-black col-span-1 col-start-2 row-span-3 relative ">
+        <div className=" h-full w-[100px] bg-black col-span-1 col-start-2 row-span-6 relative ">
           <div
             className="w-[4px] h-full mx-auto"
             style={{
@@ -277,17 +314,33 @@ const AboutUs = () => {
 
       {/* Vision and Our Team */}
       <div className="w-full flex flex-col items-center mt-10 px-4">
-        <h2 className="text-8xl text-red-600 mb-4 text-center cream-cake-font">Vision of Company</h2>
+        <h2 className="text-8xl text-red-600 mb-4 text-center cream-cake-font">
+          Vision of Company
+        </h2>
         <p className="max-w-3xl text-center text-gray-700 mb-12 text-sm md:text-base">
-          At Dazzy, our mission is to craft exceptional confectionery that brings joy to everyday moments—through consistent quality, affordability, and a consumer-first approach. Guided by a vision to be a trusted global brand, we create our products using the finest ingredients, advanced technology, and transparent quality practices. This commitment ensures every bite delivers delight, trust, and a memorable experience.
+          At Dazzy, our mission is to craft exceptional confectionery that
+          brings joy to everyday moments—through consistent quality,
+          affordability, and a consumer-first approach. Guided by a vision to be
+          a trusted global brand, we create our products using the finest
+          ingredients, advanced technology, and transparent quality practices.
+          This commitment ensures every bite delivers delight, trust, and a
+          memorable experience.
         </p>
 
-        <h3 className="text-8xl text-red-600 mb-2 text-center cream-cake-font">Our Team</h3>
-        <p className="text-center text-gray-600 mb-10 text-xs md:text-xl">A Wide Range Of Confectionery Items</p>
+        <h3 className="text-8xl text-red-600 mb-2 text-center cream-cake-font">
+          Our Team
+        </h3>
+        <p className="text-center text-gray-600 mb-10 text-xs md:text-xl">
+          A Wide Range Of Confectionery Items
+        </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mt-10 px-4 max-w-6xl w-full">
           {teamMembers.map((member, idx) => (
-           <TeamMemberCard member={member} key={idx} maxAngle={60}/>
+            <TeamMemberCard
+              member={member}
+              key={idx}
+              maxAngle={60}
+            />
           ))}
         </div>
       </div>

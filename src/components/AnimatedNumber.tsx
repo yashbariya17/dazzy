@@ -1,28 +1,30 @@
-import { motion, useSpring, useTransform } from "framer-motion";
+import { motion, useSpring, useTransform } from "framer-motion"
 
 type Props = {
-  value: number;
-};
+  value: number
+  className?: string
+}
 
-const AnimatedNumber = ({ value }: Props) => {
-  let spring = useSpring(0, { mass: 1.2, stiffness: 15, damping: 10 });
+const AnimatedNumber = ({ value, className = "" }: Props) => {
+  let spring = useSpring(0, { mass: 1.2, stiffness: 15, damping: 10 })
   let display = useTransform(spring, (current) =>
     Math.round(current).toLocaleString()
-  );
+  )
   return (
     <motion.span
+      className={className}
       onViewportEnter={() => {
-        spring.set(value);
+        spring.set(value)
       }}
       viewport={{
         once: true,
         amount: "all",
-        margin:'0px 0px -25% 0px'
+        margin: "0px 0px -25% 0px",
       }}
     >
       {display}
     </motion.span>
-  );
-};
+  )
+}
 
-export default AnimatedNumber;
+export default AnimatedNumber

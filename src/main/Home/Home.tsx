@@ -143,7 +143,7 @@ const Home = () => {
       </AnimatePresence>
       <section
         className="h-[500px] bg-cover bg-center  bg-gray-700"
-      // style={{ backgroundImage: "url('/images/choclatebigslider.png')" }}
+        // style={{ backgroundImage: "url('/images/choclatebigslider.png')" }}
       ></section>
 
       <section className="bg-[#eb0029]">
@@ -403,27 +403,26 @@ const Home = () => {
           className="h-[700px] overflow-hidden mr-10 ml-10 mt-20 relative bg-cover bg-center"
           style={{ backgroundImage: "url('/images/uperportion.png')" }}
         >
-          <div className="flex lg:justify-end h-full max-w-[1000px] mx-auto">
-            <div className="bg-red-600 rounded-[50px] h-[450px] lg:h-[250px] w-auto md:w-[500px] flex flex-col gap-3 justify-center ml-5 mr-5 lg:ml-0  lg:mr-20 mt-auto mb-auto">
+          <div className="flex  justify-center lg:justify-end h-full max-w-[1000px] mx-auto">
+            <div className="bg-red-600 rounded-[50px] h-[450px] lg:h-[250px] w-[80%] md:w-[500px] flex flex-col gap-3 justify-center ml-5 mr-5 lg:ml-0  lg:mr-20 mt-auto mb-auto">
               <h2 className="text-white lg:text-3xl font-semibold text-center">
                 ABOUT DAZZY
               </h2>
               <div className="flex flex-col md:flex-row gap-5 justify-center text-center mt-5 items-center">
                 <div className="text-white font-bold lg:text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-                  <AnimatedNumber value={50} /> +{" "}
-                  <p className="text-white text-xs font-light">
-                    Brands
-                  </p>
+                  <AnimatedNumber
+                    value={50}
+                    className="text-[24px]"
+                  />{" "}
+                  + <p className="text-white text-xs font-light">Brands</p>
                 </div>
                 <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-                  <AnimatedNumber value={200} />+ {" "}
+                  <AnimatedNumber value={200} />+{" "}
                   <p className="text-white text-xs font-light">SKU</p>
                 </div>
                 <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
                   <AnimatedNumber value={1000} />+{" "}
-                  <p className="text-white text-xs font-light">
-                    Team
-                  </p>
+                  <p className="text-white text-xs font-light">Team</p>
                 </div>
               </div>
               <p
