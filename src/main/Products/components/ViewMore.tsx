@@ -24,7 +24,7 @@ const ViewMore = ({
 
         <div className="flex items-center justify-center">
           <motion.img
-            layoutId={selectedProduct.name}
+            layoutId={selectedProduct.url + selectedProduct.name}
             src={selectedProduct.url}
             alt={selectedProduct.name}
             transition={{
