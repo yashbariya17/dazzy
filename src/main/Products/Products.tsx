@@ -1,15 +1,27 @@
 import { ProductsList } from "../Home/Home";
 import { TextAnimation } from "../../components/TextAnimation";
 import { AnimatePresence, motion } from "framer-motion";
-import { useRef, useState } from "react";
+import {  useLayoutEffect, useRef, useState } from "react";
 import { FiShoppingBag, FiEye } from "react-icons/fi";
 import ViewMore from "./components/ViewMore";
 import { productObj } from "./AllProductList";
+import { useLocation } from "react-router";
 
 const Products = () => {
+  const { state } = useLocation();
+
   const ref = useRef<HTMLDivElement>(null);
-  const [open, setOpen] = useState<string>("");
+  const [open, setOpen] = useState<string>(state || "chocolate bar");
   const [selectedProduct, setSelectedProduct] = useState<any | null>(null);
+
+  useLayoutEffect(() => {
+    if (state) {
+      setOpen(state);
+    } else {
+      setOpen("chocolate bar");
+    }
+  }, [state]);
+
 
   return (
     <div className="w-full">
@@ -24,128 +36,94 @@ const Products = () => {
           A Wide Range Of Confectionery Items
         </p>
 
-        {open ? (
-          <>
-            <section className="max-w-[1240px] grid md:grid-cols-[auto_1fr] gap-16 px-6 mx-auto pt-20 pb-10">
-              <div className="space-y-3 mx-auto">
-                <h2 className="font-semibold text-xl pb-4">
-                  Product Categories
-                  <span className="block w-[20%] h-1 bg-[#eb0029] rounded-full mt-1"></span>
-                </h2>
-                {ProductsList.map((i, index) => (
-                  <motion.div
-                    layoutId={i.name}
-                    key={index}
-                    className="bg-white w-[270px] rounded-full shadow-2xl py-2 group"
-                  >
-                    <p
-                      className={`uppercase text-[15px] hover:text-[#eb0029] w-full pl-6 pr-5 cursor-pointer transition-colors duration-300 flex justify-between ${
-                        i.name === open ? "text-[#eb0029]" : "text-gray-600"
-                      }`}
-                      onClick={() => {
-                        if (window.innerWidth < 640) {
-                          ref.current?.scrollIntoView({ behavior: "smooth" });
-                        }
-                        setOpen(i.name);
-                      }}
-                    >
-                      {i.name}
-                      <span
-                        className={`block text-center leading-5 group-hover:bg-[#eb0029] transition-colors duration-300 aspect-square h-5 text-white rounded-full ${
-                          i.name === open ? "bg-[#eb0029]" : "bg-gray-400"
-                        }`}
-                      >
-                        {productObj[i.name].length}
-                      </span>
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-
-              <div
-                className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6"
-                ref={ref}
+        <section className="max-w-[1240px] grid md:grid-cols-[auto_1fr] gap-16 px-6 mx-auto pt-20 pb-10">
+          <div className="space-y-3 mx-auto">
+            <h2 className="font-semibold text-xl pb-4">
+              Product Categories
+              <span className="block w-[20%] h-1 bg-[#eb0029] rounded-full mt-1"></span>
+            </h2>
+            {ProductsList.map((i, index) => (
+              <motion.div
+                key={index}
+                className="bg-white w-[270px] rounded-full shadow-2xl py-2 group"
               >
-                {productObj[open].map((i) => (
-                  <motion.div
-                    initial={{ y: "50%", opacity: 0 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{
-                      once: true,
-                      amount: "all",
-                      margin: "0px 0px 150px 0px",
-                    }}
-                    transition={{
-                      duration: 0.3,
-                    }}
-                    key={i.url + i.name}
-                    className="w-[160px] h-[280px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[340px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
-                  >
-                    <motion.img
-                      layoutId={i.url + i.name}
-                      src={i.url}
-                      className="w-[80%] h-[120px] object-contain mt-4"
-                    />
-
-                    <p className="text-center text-sm sm:text-base font-semibold mt-2">
-                      {i.name}
-                    </p>
-                    {/* <p className="text-sm text-gray-700 mt-1">₹{i.price}</p> */}
-
-                    <div className="flex justify-center gap-3 mt-2 text-xs sm:text-sm">
-                      <button
-                        onClick={() => setSelectedProduct(i)}
-                        className="flex items-center gap-1 text-green-700 hover:underline hover:cursor-pointer transition"
-                      >
-                        <FiShoppingBag size={14} /> Read More
-                      </button>
-                      <button className="flex items-center gap-1 text-gray-600 hover:underline transition">
-                        <FiEye size={14} /> Quick View
-                      </button>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </section>
-            <AnimatePresence>
-              {selectedProduct && (
-                <ViewMore
-                  selectedProduct={selectedProduct}
-                  setSelectedProduct={setSelectedProduct}
-                />
-              )}
-            </AnimatePresence>
-          </>
-        ) : (
-          <div className="bg-[#f4f1ea] mt-[8rem] h-auto lg:h-[550px] w-full bg-cover bg-bottom bg-no-repeat">
-            <div className="max-w-[1000px] mx-auto grid grid-cols-2 justify-items-center md:grid-cols-4 lg:grid-cols-5 grid-rows-2 justify-center px-5 gap-y-[8rem] gap-x-[4rem] relative -top-10 ">
-              {ProductsList.map((i) => (
-                <motion.div
-                  key={i.name}
-                  className="bg-white relative w-[150px] flex justify-center gap-2 rounded-lg shadow-2xl items-center pt-6 pb-2"
-                  layoutId={i.name}
+                <p
+                  className={`uppercase text-[15px] hover:text-[#eb0029] w-full pl-6 pr-5 cursor-pointer transition-colors duration-300 flex justify-between ${
+                    i.name === open ? "text-[#eb0029]" : "text-gray-600"
+                  }`}
+                  onClick={() => {
+                    if (window.innerWidth < 640) {
+                      ref.current?.scrollIntoView({ behavior: "smooth" });
+                    }
+                    setOpen(i.name);
+                  }}
                 >
-                  <motion.img
-                    initial={{ opacity: 0, y: "-75%" }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ delay: 0.4, duration: 0.4 }}
-                    src={i.url}
-                    className={`h-[100px] absolute top-0 -translate-y-[80%] ${i.className} `}
-                  />
-                  <p
-                    className="text-center uppercase text-gray-600 w-[60%] cursor-pointer"
-                    onClick={() => {
-                      setOpen(i.name);
-                    }}
+                  {i.name}
+                  <span
+                    className={`block text-center leading-5 group-hover:bg-[#eb0029] transition-colors duration-300 aspect-square h-5 text-white rounded-full ${
+                      i.name === open ? "bg-[#eb0029]" : "bg-gray-400"
+                    }`}
                   >
-                    {i.name}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
+                    {productObj[i.name].length}
+                  </span>
+                </p>
+              </motion.div>
+            ))}
           </div>
-        )}
+
+          <div
+            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6"
+            ref={ref}
+          >
+            {productObj[open].map((i) => (
+              <motion.div
+                initial={{ y: "50%", opacity: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{
+                  once: true,
+                  amount: "all",
+                  margin: "0px 0px 150px 0px",
+                }}
+                transition={{
+                  duration: 0.3,
+                }}
+                key={i.url + i.name + open}
+                className="w-[160px] h-[280px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[340px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
+              >
+                <motion.img
+                  layoutId={i.url + i.name}
+                  src={i.url}
+                  className="w-[80%] h-[120px] object-contain mt-4"
+                />
+
+                <p className="text-center text-sm sm:text-base font-semibold mt-2">
+                  {i.name}
+                </p>
+                {/* <p className="text-sm text-gray-700 mt-1">₹{i.price}</p> */}
+
+                <div className="flex justify-center gap-3 mt-2 text-xs sm:text-sm">
+                  <button
+                    onClick={() => setSelectedProduct(i)}
+                    className="flex items-center gap-1 text-green-700 hover:underline hover:cursor-pointer transition"
+                  >
+                    <FiShoppingBag size={14} /> Read More
+                  </button>
+                  <button className="flex items-center gap-1 text-gray-600 hover:underline transition">
+                    <FiEye size={14} /> Quick View
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+        <AnimatePresence>
+          {selectedProduct && (
+            <ViewMore
+              selectedProduct={selectedProduct}
+              setSelectedProduct={setSelectedProduct}
+            />
+          )}
+        </AnimatePresence>
       </section>
     </div>
   );

@@ -70,6 +70,14 @@ const Products = [
   },
 ];
 
+const byType = [
+  { state: "chocolate bar", name: "chocolate" },
+  { state: "candy", name: "candy" },
+  { state: "toffee", name: "toffee" },
+];
+const byPrice = ["1", "2", "5"];
+const byBrands = ["dairy kiss", "bolivia", "truffle"];
+
 const ContactUs = [
   {
     name: "Contact Us",
@@ -273,7 +281,104 @@ const NavBar = () => {
             }}
           >
             <button className="relative">Product</button>
-            <DropdownMenu items={Products} isOpen={hoverMenu === "product"} />
+            <AnimatePresence>
+              {hoverMenu === "product" && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                  className="
+          absolute top-full left-1/2 -translate-x-1/2 mt-10
+          rounded-xl bg-[#391e1e]
+          shadow-2xl text-white w-auto z-50 py-2 
+        "
+                >
+                  <section className="flex gap-x-8 px-5 py-3">
+                    <div>
+                      <h2 className="px-4 py-2 whitespace-nowrap ">By Type</h2>
+                      {byType.map((i) => (
+                        <NavLink
+                          key={i.name}
+                          to={`/products`}
+                          state={i.state}
+                          className="relative block px-4 py-2 "
+                        >
+                          <span className="relative inline-block capitalize font-normal">
+                            {i.name}
+                            <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span>
+                          </span>
+                        </NavLink>
+                      ))}
+                      <NavLink
+                        to={`/products`}
+                        state={""}
+                        className="relative block px-4 py-2 "
+                      >
+                        <span className="relative inline-block capitalize font-normal">
+                          see more
+                          <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span>
+                        </span>
+                      </NavLink>
+                    </div>
+                    <span className="block h-[150px] bg-white w-[1px] mt-auto"></span>
+                    <div>
+                      <h2 className="px-4 py-2 whitespace-nowrap">By Price</h2>
+                      {byPrice.map((i) => (
+                        <NavLink
+                          key={i}
+                          to={`/byPrice`}
+                          state={i}
+                          className="relative block px-4 py-2 "
+                        >
+                          <span className="relative inline-block capitalize font-normal">
+                            {i} Rs.
+                            <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span>
+                          </span>
+                        </NavLink>
+                      ))}
+                      <NavLink
+                        to={`/byPrice`}
+                        state={""}
+                        className="relative block px-4 py-2 whitespace-nowrap"
+                      >
+                        <span className="relative inline-block capitalize font-normal">
+                          see more
+                          <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span>
+                        </span>
+                      </NavLink>
+                    </div>
+                    <span className="block h-[150px] bg-white w-[1px] mt-auto"></span>
+                    <div>
+                      <h2 className="px-4 py-2 whitespace-nowrap">By Brands</h2>
+                      {byBrands.map((i) => (
+                        <NavLink
+                          key={i}
+                          to={`/byBrands`}
+                          state={i}
+                          className="relative block px-4 py-2 "
+                        >
+                          <span className="relative inline-block capitalize font-normal">
+                            {i}
+                            <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span>
+                          </span>
+                        </NavLink>
+                      ))}
+                      <NavLink
+                        to={`/byBrands`}
+                        state={""}
+                        className="relative block px-4 py-2 "
+                      >
+                        <span className="relative inline-block capitalize font-normal">
+                          see more
+                          <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span>
+                        </span>
+                      </NavLink>
+                    </div>
+                  </section>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
           <div>
