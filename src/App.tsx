@@ -10,6 +10,7 @@ import ByPrice from "./main/Products/ByPrice"
 import ByBrands from "./main/Products/ByBrands"
 import DealerShip from "./main/ContactUs/DealerShip"
 import JoinDazzyFamily from "./main/ContactUs/JoinDazzyFam"
+import WhatsAppButton from "./components/WhatsAppButton"
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
           />
         </Routes>
         <Footer />
+        <WhatsAppButton />
       </BrowserRouter>
     </main>
   )

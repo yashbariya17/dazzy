@@ -326,7 +326,7 @@ const Home = () => {
         </div>
 
         <section
-          className="h-[700px] overflow-hidden mr-10 ml-10 mt-20 relative bg-cover bg-center"
+          className="h-[700px] overflow-hidden mt-10 relative bg-cover bg-center"
           style={{ backgroundImage: "url('/images/uperportion.png')" }}
         >
           <div className="flex  justify-center lg:justify-end h-full max-w-[1000px] mx-auto">
@@ -357,7 +357,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="bg-[#111] text-white flex flex-col md:flex-row items-center  relative mt-20  ">
+        <section className="bg-[#111] text-white flex flex-col md:flex-row items-center  relative">
           <div className="w-auto h-[600px] flex justify-center relative ">
             <img
               src="/images/footeraboveboard.png"
@@ -366,8 +366,12 @@ const Home = () => {
             />
           </div>
           <div className="w-fit top-12 md:mt-0 px-6 relative md:right-10 ">
-            <div className="text-orange-500 text-sm font-semibold mb-2 flex items-center gap-2 mx-auto w-fit">
-              <span>🍽</span> TESTIMONIALS <span>🍽</span>
+            <div className="text-orange-500 text-sm font-semibold mb-2 justify-center flex items-center gap-2 mx-auto w-fit">
+              <img src="/images/testimonial.png"
+              className="w-6 h-6 invert"
+              /> <h2 className="mt-3">TESTIMONIALS</h2> <img src="/images/testimonial.png"
+              className="w-6 h-6 invert"
+              />
             </div>
             <div className="text-3xl font-bold text-white mb-6 mx-auto w-fit">
               What Our Clients Say
