@@ -311,14 +311,32 @@ const AboutUs = () => {
         <h2 className="text-8xl text-red-600 mb-4 text-center cream-cake-font">
           Vision of Company
         </h2>
-        <p className="max-w-3xl text-center text-gray-700 mb-12 text-sm md:text-base">
-          At Dazzy, our mission is to craft exceptional confectionery that
-          brings joy to everyday moments—through consistent quality,
-          affordability, and a consumer-first approach. Guided by a vision to be
-          a trusted global brand, we create our products using the finest
-          ingredients, advanced technology, and transparent quality practices.
-          This commitment ensures every bite delivers delight, trust, and a
-          memorable experience.
+        <p className="max-w-3xl text-center text-gray-700 mb-12 text-sm md:text-base leading-relaxed">
+          At <span className="font-bold text-red-600">Dazzy</span>, our mission
+          is to craft
+          <span className="font-semibold text-gray-900">
+            {" "}
+            exceptional confectionery
+          </span>
+          that brings <span className="font-bold text-red-600">joy</span> to
+          everyday moments — through{" "}
+          <span className="font-semibold">consistent quality</span>,
+          <span className="font-semibold"> affordability</span>, and a
+          <span className="font-semibold"> consumer-first approach</span>.
+          <br />
+          <br />
+          Guided by a vision to be a
+          <span className="font-bold text-gray-900"> trusted global brand</span>
+          , we create our products using the{" "}
+          <span className="font-semibold">finest ingredients</span>,
+          <span className="font-semibold"> advanced technology</span>, and
+          <span className="font-semibold"> transparent quality practices</span>.
+          <br />
+          <br />
+          This commitment ensures every bite delivers
+          <span className="font-bold text-red-600"> delight</span>,
+          <span className="font-bold text-red-600"> trust</span>, and a
+          <span className="font-bold text-red-600"> memorable experience</span>.
         </p>
 
         {/* Decorative Divider */}
