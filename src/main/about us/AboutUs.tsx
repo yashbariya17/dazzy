@@ -1,7 +1,7 @@
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import "./aboutus.css";
 import { useEffect, useRef, useState } from "react";
-import TeamMemberCard from "../../components/Card";
+// import TeamMemberCard from "../../components/Card";
 
 const aboutData = [
   {
@@ -238,26 +238,26 @@ const AboutUs = () => {
     [sectionTop - 80 - window.innerHeight / 2, sectionTop + sectionHeight],
     [0, sectionHeight]
   );
-  const teamMembers = [
-    {
-      name: "Ralph Edwards",
-      role: "Chef Lead",
-      image: "chef1.jpg",
-      borderColor: "border-red-500",
-    },
-    {
-      name: "Leslie Alexander",
-      role: "Chef Assistant",
-      image: "chef2.jpg",
-      borderColor: "border-orange-400",
-    },
-    {
-      name: "Ronald Richards",
-      role: "Chef Assistant",
-      image: "chef3.jpg",
-      borderColor: "border-red-500",
-    },
-  ];
+  // const teamMembers = [
+  //   {
+  //     name: "Ralph Edwards",
+  //     role: "Chef Lead",
+  //     image: "chef1.jpg",
+  //     borderColor: "border-red-500",
+  //   },
+  //   {
+  //     name: "Leslie Alexander",
+  //     role: "Chef Assistant",
+  //     image: "chef2.jpg",
+  //     borderColor: "border-orange-400",
+  //   },
+  //   {
+  //     name: "Ronald Richards",
+  //     role: "Chef Assistant",
+  //     image: "chef3.jpg",
+  //     borderColor: "border-red-500",
+  //   },
+  // ];
 
   return (
     <main className="relative bg-[#fff8f0] min-h-[2100px] overflow-hidden">
