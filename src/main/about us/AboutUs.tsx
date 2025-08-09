@@ -1,7 +1,7 @@
-import { motion, useScroll, useSpring, useTransform } from "framer-motion"
-import "./aboutus.css"
-import { useEffect, useRef, useState } from "react"
-import TeamMemberCard from "../../components/Card"
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import "./aboutus.css";
+import { useEffect, useRef, useState } from "react";
+import TeamMemberCard from "../../components/Card";
 
 const aboutData = [
   {
@@ -46,14 +46,14 @@ const aboutData = [
     image: "/images/factory.jpg",
     side: "left",
   },
-] as const
+] as const;
 
 type TimelineBlockProps = {
-  title: string
-  description: string
-  image: string
-  blockNo: number
-}
+  title: string;
+  description: string;
+  image: string;
+  blockNo: number;
+};
 
 const TimelineBlock = ({
   title,
@@ -92,10 +92,7 @@ const TimelineBlock = ({
             : "row-start-6"
         } hidden md:block  w-full px-10 my-auto  col-span-1 row-span-1 `}
       >
-        <div
-          className="px-[8rem] "
-          style={{ wordSpacing: "2px" }}
-        >
+        <div className="px-[8rem] " style={{ wordSpacing: "2px" }}>
           <h3 className="mb-2 cream-cake-font text-red-500 font-cursive text-[4rem]">
             {title}
           </h3>
@@ -206,41 +203,41 @@ const TimelineBlock = ({
         </motion.div>
       </div>
     </>
-  )
-}
+  );
+};
 
 const AboutUs = () => {
-  const ref = useRef<HTMLDivElement>(null)
-  const { scrollY } = useScroll({ target: ref })
-  const [sectionTop, setSectionTop] = useState(0)
-  const [sectionHeight, setSectionHeight] = useState(0)
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollY } = useScroll({ target: ref });
+  const [sectionTop, setSectionTop] = useState(0);
+  const [sectionHeight, setSectionHeight] = useState(0);
 
   useEffect(() => {
-    const el = ref.current
+    const el = ref.current;
     if (el) {
       const onResize = () => {
-        const rect = el.getBoundingClientRect()
-        const scrollTop = window.scrollY || window.pageYOffset
-        setSectionTop(rect.top + scrollTop)
-        setSectionHeight(el.offsetHeight)
-      }
-      onResize()
-      window.addEventListener("resize", onResize)
-      return () => window.removeEventListener("resize", onResize)
+        const rect = el.getBoundingClientRect();
+        const scrollTop = window.scrollY || window.pageYOffset;
+        setSectionTop(rect.top + scrollTop);
+        setSectionHeight(el.offsetHeight);
+      };
+      onResize();
+      window.addEventListener("resize", onResize);
+      return () => window.removeEventListener("resize", onResize);
     }
-  }, [])
+  }, []);
 
   const top = useSpring(scrollY, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001,
-  })
+  });
 
   const y = useTransform(
     top,
     [sectionTop - 80 - window.innerHeight / 2, sectionTop + sectionHeight],
     [0, sectionHeight]
-  )
+  );
   const teamMembers = [
     {
       name: "Ralph Edwards",
@@ -260,7 +257,7 @@ const AboutUs = () => {
       image: "chef3.jpg",
       borderColor: "border-red-500",
     },
-  ]
+  ];
 
   return (
     <main className="relative bg-[#fff8f0] min-h-[2100px] overflow-hidden">
@@ -297,10 +294,7 @@ const AboutUs = () => {
         </div>
 
         {aboutData.map((i, no) => (
-          <TimelineBlock
-            {...i}
-            blockNo={no + 1}
-          />
+          <TimelineBlock {...i} blockNo={no + 1} />
         ))}
       </div>
 
@@ -324,10 +318,15 @@ const AboutUs = () => {
           a trusted global brand, we create our products using the finest
           ingredients, advanced technology, and transparent quality practices.
           This commitment ensures every bite delivers delight, trust, and a
-          memorable experience.
+          memorable experience.
         </p>
 
-        <h3 className="text-8xl text-red-600 mb-2 text-center cream-cake-font">
+        {/* Decorative Divider */}
+        <div className="w-full flex justify-center mb-12">
+          <div className="border-t-4 border-red-600 w-1/4"></div>
+          <div className="mx-2 text-red-600 font-bold">🍫</div>
+          <div className="border-t-4 border-red-600 w-1/4"></div>
+          {/* <h3 className="text-8xl text-red-600 mb-2 text-center cream-cake-font">
           Our Team
         </h3>
         <p className="text-center text-gray-600 mb-10 text-xs md:text-xl">
@@ -341,11 +340,11 @@ const AboutUs = () => {
               key={idx}
               maxAngle={60}
             />
-          ))}
+          ))} */}
         </div>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default AboutUs
+export default AboutUs;

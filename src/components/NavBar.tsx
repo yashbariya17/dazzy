@@ -399,7 +399,7 @@ const NavBar = () => {
             <DropdownMenu items={ContactUs} isOpen={hoverMenu === "contact"} />
           </div>
 
-          <button className="bg-red-500 px-4 py-2">Download Catlog</button>
+          <button className="bg-red-500 px-4 py-2">Download Catalog</button>
         </section>
       ) : (
         <section

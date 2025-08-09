@@ -6,7 +6,7 @@ const WhatsAppButton: React.FC = () => {
   return (
     <div className="group fixed bottom-5 right-5 flex items-center z-50  bg-[#25d366] rounded-full">
       <span className="absolute right-16 bg-gray-800 text-white text-sm px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-        🍫 Got chocolate questions? Chat with us!
+        🍫Supplying sweetness, building partnerships - let’s talk business!
       </span>
 
       <motion.a

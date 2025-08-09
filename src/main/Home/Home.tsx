@@ -224,7 +224,7 @@ const Home = () => {
                   25 Years
                 </h2>
                 <p className="font-bold uppercase">
-                  expierience in food industries
+                  of expierience in food industries
                 </p>
                 <p className="lg:w-[400px] text-wrap w-[300px]">
                   Founded in 2001, Dazzy is a family-owned confectionery house
@@ -261,25 +261,27 @@ const Home = () => {
         <div className="w-[60%] max-w-[1000px] mx-auto relative mt-10">
           <div className="overflow-hidden" ref={emblaSlideRef}>
             <div className="flex px-10">
-              {Array(3)
+              {Array(5) // we want 5 slides
                 .fill("")
-                .map((_, index) => (
-                  <div
-                    key={index}
-                    className="relative  flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33%] h-[300px] mr-6 flex flex-col items-center "
-                  >
-                    <img
-                      src={`/images/product${index + 1}.png`}
-                      alt={`Slide ${index + 1}`}
-                      className="absolute z-99 top-[15%] sm:top-[0%] mt-4 w-[125px] sm:w-[175px] h-auto object-contain float"
-                    />
-                    <button className="bg-red-600 text-white w-20 md:w-[100px] py-1 md:py-2 mt-auto mb-6 z-10 text-[12px]">
-                      READ MORE
-                    </button>
-
-                    <div className="bg-white absolute bottom-0 w-full h-[50%] rounded-t-[70px] shadow-xl"></div>
-                  </div>
-                ))}
+                .map((_, index) => {
+                  const imgIndex = (index % 3) + 1; // cycle through 1,2,3
+                  return (
+                    <div
+                      key={index}
+                      className="relative flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33%] h-[300px] mr-6 flex flex-col items-center"
+                    >
+                      <img
+                        src={`/images/product${imgIndex}.png`}
+                        alt={`Slide ${imgIndex}`}
+                        className="absolute z-99 top-[15%] sm:top-[0%] mt-4 w-[125px] sm:w-[175px] h-auto object-contain float"
+                      />
+                      <button className="bg-red-600 text-white w-20 md:w-[100px] py-1 md:py-2 mt-auto mb-6 z-10 text-[12px]">
+                        READ MORE
+                      </button>
+                      <div className="bg-white absolute bottom-0 w-full h-[50%] rounded-t-[70px] shadow-xl"></div>
+                    </div>
+                  );
+                })}
             </div>
           </div>
 
@@ -303,9 +305,10 @@ const Home = () => {
               />
             </svg>
           </button>
+
           <button
             onClick={scrollSlideNext}
-            className="absolute top-1/2 left-full -translate-y-1/2  bg-[#eb0029] text-white aspect-square h-12 font-bold rounded-full flex items-center justify-center"
+            className="absolute top-1/2 left-full -translate-y-1/2 bg-[#eb0029] text-white aspect-square h-12 font-bold rounded-full flex items-center justify-center"
             aria-label="Next Slide"
           >
             <svg
@@ -340,7 +343,7 @@ const Home = () => {
                   <p className="text-white text-xs font-light">Brands</p>
                 </div>
                 <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-                  <AnimatedNumber value={200} />+{" "}
+                  <AnimatedNumber value={300} />+{" "}
                   <p className="text-white text-xs font-light">SKU</p>
                 </div>
                 <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
@@ -349,8 +352,11 @@ const Home = () => {
                 </div>
               </div>
               <p
-                className="text-center mt-2 text-white"
-                style={{ wordSpacing: "2px" }}
+                className="text-center mt-2 text-white font-bold text-lg"
+                style={{
+                  wordSpacing: "2px",
+                  textShadow: "0px 2px 4px rgba(0,0,0,0.4)",
+                }}
               >
                 Pan India Presence
               </p>
@@ -367,11 +373,9 @@ const Home = () => {
           </div>
           <div className="w-fit top-12 md:mt-0 px-6 relative md:right-10 ">
             <div className="text-orange-500 text-sm font-semibold mb-2 justify-center flex items-center gap-2 mx-auto w-fit">
-              <img src="/images/testimonial.png"
-              className="w-6 h-6 invert"
-              /> <h2 className="mt-3">TESTIMONIALS</h2> <img src="/images/testimonial.png"
-              className="w-6 h-6 invert"
-              />
+              <img src="/images/feedback.png" className="w-6 h-6 invert" />{" "}
+              <h2 className="mt-1">TESTIMONIALS</h2>{" "}
+              <img src="/images/feedback.png" className="w-6 h-6 invert" />
             </div>
             <div className="text-3xl font-bold text-white mb-6 mx-auto w-fit">
               What Our Clients Say
