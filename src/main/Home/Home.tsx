@@ -37,7 +37,7 @@ export const ProductsList: ProductsType = [
     name: "wafer rolls",
     url: "/images/6thimg.png",
   },
-    {
+  {
     name: "candy",
     url: "/images/CANDY.png",
   },
@@ -46,7 +46,7 @@ export const ProductsList: ProductsType = [
     url: "/images/TOFFEE.png",
     className: "left-[25px] top-[10px]",
   },
-    {
+  {
     name: "lollipop",
     url: "/images/10thimg.png",
   },
@@ -54,7 +54,6 @@ export const ProductsList: ProductsType = [
     name: "jelly",
     url: "/images/JELLY.png",
   },
-
 ]
 
 const Home = () => {
@@ -293,7 +292,7 @@ const Home = () => {
                   25 Years
                 </h2>
                 <p className="font-bold uppercase">
-                  expierience in food industries
+                  of expierience in food industries
                 </p>
                 <p className="lg:w-[400px] text-wrap w-[300px]">
                   Founded in 2001, Dazzy is a family-owned confectionery house
@@ -374,7 +373,7 @@ const Home = () => {
                   + <p className="text-white text-xs font-light">Brands</p>
                 </div>
                 <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-                  <AnimatedNumber value={200} />+{" "}
+                  <AnimatedNumber value={300} />+{" "}
                   <p className="text-white text-xs font-light">SKU</p>
                 </div>
                 <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
@@ -383,8 +382,11 @@ const Home = () => {
                 </div>
               </div>
               <p
-                className="text-center mt-2 text-white"
-                style={{ wordSpacing: "2px" }}
+                className="text-center mt-2 text-white font-bold text-lg"
+                style={{
+                  wordSpacing: "2px",
+                  textShadow: "0px 2px 4px rgba(0,0,0,0.4)",
+                }}
               >
                 Pan India Presence
               </p>
@@ -400,8 +402,16 @@ const Home = () => {
             />
           </div>
           <div className="w-fit top-12 md:mt-0 px-6 relative md:right-10 ">
-            <div className="text-orange-500 text-sm font-semibold mb-2 flex items-center gap-2 mx-auto w-fit">
-              <span>🍽</span> TESTIMONIALS <span>🍽</span>
+            <div className="text-orange-500 text-sm font-semibold mb-2 justify-center flex items-center gap-2 mx-auto w-fit">
+              <img
+                src="/images/feedback.png"
+                className="w-6 h-6 invert"
+              />{" "}
+              <h2 className="mt-1">TESTIMONIALS</h2>{" "}
+              <img
+                src="/images/feedback.png"
+                className="w-6 h-6 invert"
+              />
             </div>
             <div className="text-3xl font-bold text-white mb-6 mx-auto w-fit">
               What Our Clients Say

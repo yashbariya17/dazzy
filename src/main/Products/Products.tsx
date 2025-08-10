@@ -7,7 +7,18 @@ import ViewMore from "./components/ViewMore"
 import { productObj } from "./AllProductList"
 import { useLocation } from "react-router"
 
-const category = ["box", "packet"] as const
+const category = {
+  "chocolate bar": ["c-1", "c-2"],
+  "centerfilled chocolate": ["Single Twist", "Double Twist", "Pillow Pack", "Bunch Rape"],
+  "decorative chocolate": ["Single Twist", "Double Twist", "Pillow Pack"],
+  "Crunchy chocolate": [],
+  "nought bar": [],
+  "wafer rolls": [],
+  candy: [],
+  toffee: [],
+  lollipop: [],
+  jelly: [],
+}
 
 const Products = () => {
   const { state } = useLocation()
@@ -16,7 +27,7 @@ const Products = () => {
   const [open, setOpen] = useState<string>(state || "chocolate bar")
   const [selectedProduct, setSelectedProduct] = useState<any | null>(null)
   const [selectedCategory, setSelectedCategory] = useState<
-    (typeof category)[number] | ""
+    (typeof category)[keyof typeof category][number] | ""
   >("")
 
   useLayoutEffect(() => {
@@ -76,7 +87,7 @@ const Products = () => {
           </div>
           <section>
             <div className=" flex gap-10 mb-5 px-4 flex-wrap">
-              {category.map((i) => (
+              {category?.[open as keyof typeof category].map((i) => (
                 <button
                   key={i}
                   className={`${
