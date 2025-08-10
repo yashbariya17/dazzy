@@ -12,55 +12,81 @@ type Product = {
 
 const products: Product[] = [
   {
-    name: "Cocoa Milk Choclate Bar",
-    url: "/images/chocolatebar/Cocoa Milk Choclate Bar.png",
+    name: "Truffles Heart",
+    url: "/images/giftcart/Cocoa Milk Choclate Bar.png",
     description: "Rich cocoa blended with creamy milk chocolate.",
   },
   {
-    name: "Coconut Bar",
-    url: "/images/chocolatebar/Coconut Bar.png",
+    name: "Glorias Purple",
+    url: "/images/giftcart/Coconut Bar.png",
     description: "Delicious coconut filling wrapped in smooth chocolate.",
   },
   {
-    name: "Dairy Kiss Cocoa",
-    url: "/images/chocolatebar/Dairy Kiss Cocoa.png",
+    name: "Glorias Red",
+    url: "/images/giftcart/Coconut Bar.png",
     description: "Smooth cocoa flavor with a creamy dairy twist.",
   },
   {
-    name: "Dark Milk Choclate Bar",
-    url: "/images/chocolatebar/Dark Milk Choclate Bar.png",
+    name: "Glorias Brown",
+    url: "/images/giftcart/Coconut Bar.png",
     description: "A perfect balance of rich dark and creamy milk chocolate.",
   },
   {
-    name: "HazelNut Bar",
-    url: "/images/chocolatebar/HazelNut Bar.png",
+    name: "Truffles Octagon",
+    url: "/images/giftcart/Coconut Bar.png",
     description: "Crunchy hazelnuts wrapped in silky smooth chocolate.",
   },
   {
-    name: "Milk Choclate Bar",
-    url: "/images/chocolatebar/Milk Choclate Bar.png",
+    name: "Stacy Octagon",
+    url: "/images/giftcart/Coconut Bar.png",
     description: "Classic creamy milk chocolate for all ages.",
   },
   {
-    name: "Milkies Milk Choclate Bar",
-    url: "/images/chocolatebar/Milkies Milk Choclate Bar.png",
+    name: "Bolivia Container",
+    url: "/images/giftcart/Coconut Bar.png",
     description: "Smooth milk chocolate with a playful sweet touch.",
   },
   {
-    name: "Safari Park",
-    url: "/images/chocolatebar/Safari Park.png",
+    name: "D Gold Container",
+    url: "/images/giftcart/Coconut Bar.png",
     description: "A chocolate adventure with fun flavors.",
   },
   {
-    name: "StrawBerry Bar",
-    url: "/images/chocolatebar/StrawBerry Bar.png",
+    name: "CocoTana ",
+    url: "/images/giftcart/Coconut Bar.png",
     description: "Sweet strawberry flavor inside smooth chocolate.",
   },
   {
-    name: "TRUFFINS 30 PCS",
-    url: "/images/centerfilledchocolate/TRUFFINS 30 PCS 1  5RS.png",
+    name: "Selection",
+    url: "/images/giftcart/Coconut Bar.png",
     description: "A luxurious collection of 30 rich and creamy truffles.",
   },
+    {
+    name: "DLove Jar",
+    url: "/images/giftcart/Coconut Bar.png",
+    description: "A luxurious collection of 30 rich and creamy truffles.",
+  },
+    {
+    name: "Endon Container",
+      url: "/images/giftcart/Coconut Bar.png",
+    description: "A luxurious collection of 30 rich and creamy truffles.",
+  },
+    {
+    name: "DGold ",
+    url: "/images/giftcart/Coconut Bar.png",
+    description: "A luxurious collection of 30 rich and creamy truffles.",
+  },
+    {
+    name: "Belgium",
+    url: "/images/giftcart/Coconut Bar.png",
+    description: "A luxurious collection of 30 rich and creamy truffles.",
+  },
+    {
+    name: "Brevo",
+    url: "/images/giftcart/Coconut Bar.png",
+    description: "A luxurious collection of 30 rich and creamy truffles.",
+  },
+  
 ];
 
 const Gifting = () => {
