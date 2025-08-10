@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { FiX } from "react-icons/fi";
 import type { productType } from "../AllProductList";
+import { useNavigate } from "react-router";
 type SingleProduct = productType[string][number];
 
 interface ViewMoreProps {
@@ -9,6 +10,7 @@ interface ViewMoreProps {
 }
 
 export default function ViewMore({ products, onClose }: ViewMoreProps) {
+  const navigate=useNavigate()
   return (
     <AnimatePresence>
       {products?.length > 0 && (
@@ -36,12 +38,12 @@ export default function ViewMore({ products, onClose }: ViewMoreProps) {
               {products.map((i, index) => (
                 <motion.div
                   key={i.url + i.name + index}
-                  className="w-[160px] h-[280px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[340px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4"
+                  className="w-[160px]  sm:w-[200px]  h-[300px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center  p-4"
                 >
                   <motion.img
                     layoutId={i.url + i.name}
                     src={i.url}
-                    className="w-[80%] h-[120px] object-contain mt-4"
+                    className=" h-[200px] object-contain mt-4"
                   />
                   <p className="text-center text-sm sm:text-base font-semibold mt-2">
                     {i.name}
@@ -66,7 +68,9 @@ export default function ViewMore({ products, onClose }: ViewMoreProps) {
               </div>
               <button
                 className="bg-[#eb0029] text-white font-semibold py-2 px-3 rounded-full hover:bg-red-700 transition-transform duration-200 active:scale-95 mt-4"
-                onClick={onClose}
+                onClick={()=>{
+                  navigate("/dealership")
+                }}
               >
                 Dealership
               </button>

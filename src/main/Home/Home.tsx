@@ -1,15 +1,16 @@
-import { AnimatePresence, motion, usePresenceData, wrap } from "motion/react"
-import useEmblaCarousel from "embla-carousel-react"
-import { forwardRef, useCallback, useState } from "react"
-import AnimatedNumber from "../../components/AnimatedNumber"
-import { TextAnimation } from "../../components/TextAnimation"
-import MouseComponent from "../../components/MouseComponent"
+import { AnimatePresence, motion, usePresenceData, wrap } from "motion/react";
+import useEmblaCarousel from "embla-carousel-react";
+import { forwardRef, useCallback, useState } from "react";
+import AnimatedNumber from "../../components/AnimatedNumber";
+import { TextAnimation } from "../../components/TextAnimation";
+import MouseComponent from "../../components/MouseComponent";
+import { useNavigate } from "react-router";
 
 type ProductsType = {
-  name: string
-  url: string
-  className?: string
-}[]
+  name: string;
+  url: string;
+  className?: string;
+}[];
 
 export const ProductsList: ProductsType = [
   {
@@ -54,18 +55,17 @@ export const ProductsList: ProductsType = [
     name: "jelly",
     url: "/images/JELLY.png",
   },
-]
+];
 
 const Home = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const navigate = useNavigate();
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
-  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi])
-  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi])
+  const [] = useEmblaCarousel({ loop: true });
 
-  const [] = useEmblaCarousel({ loop: true })
-
-
-  const [aboutModal, setAboutModal] = useState(false)
+  const [aboutModal, setAboutModal] = useState(false);
 
   return (
     <div className="w-full overflow-x-hidden">
@@ -84,8 +84,8 @@ const Home = () => {
             }}
             className="bg-[rgba(0,0,0,0.3)] fixed h-screen w-full z-10 top-0 flex justify-center items-center"
             onClick={() => {
-              setAboutModal(false)
-              document.body.style.overflow = "auto"
+              setAboutModal(false);
+              document.body.style.overflow = "auto";
             }}
           >
             <motion.section
@@ -207,10 +207,7 @@ const Home = () => {
         </p>
 
         <div className=" w-[54%] lg:w-[80%] max-w-[1000px] mx-auto relative mt-10 ">
-          <div
-            className="overflow-hidden relative "
-            ref={emblaRef}
-          >
+          <div className="overflow-hidden relative " ref={emblaRef}>
             <div className="flex -ml-4">
               {Array(18)
                 .fill("")
@@ -222,7 +219,7 @@ const Home = () => {
                     <img
                       src={`/images/logos/logo_${index + 1}.png`}
                       alt={`Slide ${index + 1}`}
-                      className="w-32 object-contain aspect-auto filter grayscale hover:grayscale-0 transition duration-300 transform hover:scale-110"
+                      className="w-28 object-contain aspect-auto transition duration-300 transform hover:scale-110"
                     />
                   </div>
                 ))}
@@ -297,8 +294,9 @@ const Home = () => {
                   <motion.button
                     className="bg-black text-white px-4 py-2 "
                     onClick={() => {
-                      setAboutModal(true)
-                      document.body.style.overflow = "hidden"
+                      // setAboutModal(true)
+                      // document.body.style.overflow = "hidden"
+                      navigate("/about-us");
                     }}
                   >
                     Read More
@@ -348,7 +346,7 @@ const Home = () => {
         </div>
 
         <section
-          className="h-[700px] overflow-hidden mr-10 ml-10 mt-20 relative bg-cover bg-center"
+          className="h-[700px] overflow-hidden  mt-10 relative bg-cover bg-center"
           style={{ backgroundImage: "url('/images/uperportion.png')" }}
         >
           <div className="flex  justify-center lg:justify-end h-full max-w-[1000px] mx-auto">
@@ -358,11 +356,8 @@ const Home = () => {
               </h2>
               <div className="flex flex-col md:flex-row gap-5 justify-center text-center mt-5 items-center">
                 <div className="text-white font-bold lg:text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-                  <AnimatedNumber
-                    value={50}
-                    className="text-[24px]"
-                  />{" "}
-                  + <p className="text-white text-xs font-light">Brands</p>
+                  <AnimatedNumber value={50} className="text-[24px]" /> +{" "}
+                  <p className="text-white text-xs font-light">Brands</p>
                 </div>
                 <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
                   <AnimatedNumber value={300} />+{" "}
@@ -385,7 +380,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="bg-[#111] text-white flex flex-col md:flex-row items-center  relative mt-20  ">
+        <section className="bg-[#111] text-white flex flex-col md:flex-row items-center  relative   ">
           <div className="w-auto h-[600px] flex justify-center relative ">
             <img
               src="/images/footeraboveboard.png"
@@ -395,15 +390,9 @@ const Home = () => {
           </div>
           <div className="w-fit top-12 md:mt-0 px-6 relative md:right-10 ">
             <div className="text-orange-500 text-sm font-semibold mb-2 justify-center flex items-center gap-2 mx-auto w-fit">
-              <img
-                src="/images/feedback.png"
-                className="w-6 h-6 invert"
-              />{" "}
+              <img src="/images/feedback.png" className="w-6 h-6 invert" />{" "}
               <h2 className="mt-1">TESTIMONIALS</h2>{" "}
-              <img
-                src="/images/feedback.png"
-                className="w-6 h-6 invert"
-              />
+              <img src="/images/feedback.png" className="w-6 h-6 invert" />
             </div>
             <div className="text-3xl font-bold text-white mb-6 mx-auto w-fit">
               What Our Clients Say
@@ -413,10 +402,10 @@ const Home = () => {
         </section>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
 
 const testimonials = [
   {
@@ -443,30 +432,26 @@ const testimonials = [
       " Penatibus magnis dis point parturient montes nascetur ridiculus mus Ut id lorem ac enim the vestibulum blandit nec sit amet felis. Fusce quis diam odio Cras mattis mi quis tincidunt",
     id: 3,
   },
-]
+];
 
 const Slider = () => {
-  const [selectedItem, setSelectedItem] = useState(testimonials[0])
-  const [direction, setDirection] = useState<1 | -1>(1)
+  const [selectedItem, setSelectedItem] = useState(testimonials[0]);
+  const [direction, setDirection] = useState<1 | -1>(1);
 
   function setSlide(newDirection: 1 | -1) {
     const nextItem = wrap(
       1,
       testimonials.length,
       selectedItem.id + newDirection
-    )
-    setSelectedItem(testimonials[nextItem - 1])
-    setDirection(newDirection)
+    );
+    setSelectedItem(testimonials[nextItem - 1]);
+    setDirection(newDirection);
   }
 
   return (
     <>
       <section>
-        <AnimatePresence
-          mode="popLayout"
-          custom={direction}
-          initial={false}
-        >
+        <AnimatePresence mode="popLayout" custom={direction} initial={false}>
           <Slide
             name={selectedItem.name}
             occupation={selectedItem.occupation}
@@ -487,10 +472,7 @@ const Slider = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g
-              id="SVGRepo_bgCarrier"
-              strokeWidth="0"
-            ></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
               id="SVGRepo_tracerCarrier"
               strokeLinecap="round"
@@ -517,10 +499,7 @@ const Slider = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g
-              id="SVGRepo_bgCarrier"
-              strokeWidth="0"
-            ></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
               id="SVGRepo_tracerCarrier"
               strokeLinecap="round"
@@ -539,8 +518,8 @@ const Slider = () => {
         </button>
       </div>
     </>
-  )
-}
+  );
+};
 
 const Slide = forwardRef(function Slide(
   {
@@ -549,14 +528,14 @@ const Slide = forwardRef(function Slide(
     ratings,
     review,
   }: {
-    name: string
-    occupation: string
-    ratings: string
-    review: string
+    name: string;
+    occupation: string;
+    ratings: string;
+    review: string;
   },
   ref: React.Ref<HTMLDivElement>
 ) {
-  const direction = usePresenceData()
+  const direction = usePresenceData();
   return (
     <motion.div
       ref={ref}
@@ -595,5 +574,5 @@ const Slide = forwardRef(function Slide(
         ”
       </div>
     </motion.div>
-  )
-})
+  );
+});
