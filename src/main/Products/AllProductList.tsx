@@ -644,7 +644,7 @@ export const productObj: productType = {
       price: 5,
     },
   ],
-  "peanut chocolate": [
+  "Crunchy chocolate": [
     {
       name: "Caranut Box",
       url: "/images/peanut chocolate/CARANUT BOX.png",
