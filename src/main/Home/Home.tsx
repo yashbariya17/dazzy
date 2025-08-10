@@ -25,7 +25,7 @@ export const ProductsList: ProductsType = [
     url: "/images/DECORATIVE-CHOCOLATE.png",
   },
   {
-    name: "peanut chocolate",
+    name: "Crunchy chocolate",
     url: "/images/4thimg.png",
     className: "left-[0px]",
   },
@@ -37,23 +37,24 @@ export const ProductsList: ProductsType = [
     name: "wafer rolls",
     url: "/images/6thimg.png",
   },
+    {
+    name: "candy",
+    url: "/images/CANDY.png",
+  },
   {
     name: "toffee",
     url: "/images/TOFFEE.png",
     className: "left-[25px] top-[10px]",
   },
+    {
+    name: "lollipop",
+    url: "/images/10thimg.png",
+  },
   {
     name: "jelly",
     url: "/images/JELLY.png",
   },
-  {
-    name: "candy",
-    url: "/images/CANDY.png",
-  },
-  {
-    name: "lollipop",
-    url: "/images/10thimg.png",
-  },
+
 ]
 
 const Home = () => {
