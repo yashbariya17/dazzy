@@ -381,10 +381,8 @@ const NavBar = () => {
             </AnimatePresence>
           </div>
 
-          <div>
-            Gifting
-            <span className="absolute underline-bar w-full h-0.5 top-full block"></span>
-          </div>
+            
+            <NavItemLink to="/gift">Gifting</NavItemLink>
           <div
             className="relative"
             onMouseEnter={() => {

@@ -11,6 +11,7 @@ import ByBrands from "./main/Products/ByBrands"
 import DealerShip from "./main/ContactUs/DealerShip"
 import JoinDazzyFamily from "./main/ContactUs/JoinDazzyFam"
 import WhatsAppButton from "./components/WhatsAppButton"
+import Gifting from "./main/Gifting/Gifting"
 
 function App() {
   return (
@@ -49,6 +50,10 @@ function App() {
           <Route
             path="/dealerShip"
             element={<DealerShip />}
+          />
+            <Route
+            path="/gift"
+            element={<Gifting />}
           />
         </Routes>
         <Footer />

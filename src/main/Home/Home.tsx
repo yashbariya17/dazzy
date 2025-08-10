@@ -330,23 +330,20 @@ const Home = () => {
           A Wide Range Of Confectionery Items
         </p>
 
-        <div className="w-[60%] max-w-[1000px] mx-auto relative mt-10">
-          <div
-            className="overflow-hidden"
-            ref={emblaSlideRef}
-          >
-            <div className="flex px-10">
-              {Array(3)
+        <div className=" max-w-[1000px] mx-auto relative mt-10">
+          <div className="">
+            <div className="flex flex-wrap lg:flex-nowrap px-10 md:px-0 ">
+              {Array(5)
                 .fill("")
                 .map((_, index) => (
                   <div
                     key={index}
-                    className="relative  flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33%] h-[300px] mr-6 flex flex-col items-center "
+                    className="relative flex-[0_0_20%] h-[300px] mr-4 flex flex-col items-center"
                   >
                     <img
                       src={`/images/product${index + 1}.png`}
                       alt={`Slide ${index + 1}`}
-                      className="absolute z-99 top-[15%] sm:top-[0%] mt-4 w-[125px] sm:w-[175px] h-auto object-contain float"
+                      className="absolute z-[99] top-[15%] sm:top-[0%] mt-4 w-[125px] sm:w-[175px] h-auto object-contain float"
                     />
                     <button className="bg-red-600 text-white w-20 md:w-[100px] py-1 md:py-2 mt-auto mb-6 z-10 text-[12px]">
                       READ MORE
@@ -357,47 +354,6 @@ const Home = () => {
                 ))}
             </div>
           </div>
-
-          <button
-            onClick={scrollSlidePrev}
-            className="absolute top-1/2 -translate-x-full -translate-y-1/2 bg-[#eb0029] aspect-square h-12 font-bold text-white rounded-full flex items-center justify-center"
-            aria-label="Previous Slide"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-          <button
-            onClick={scrollSlideNext}
-            className="absolute top-1/2 left-full -translate-y-1/2  bg-[#eb0029] text-white aspect-square h-12 font-bold rounded-full flex items-center justify-center"
-            aria-label="Next Slide"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
         </div>
 
         <section

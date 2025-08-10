@@ -68,7 +68,7 @@ const Products = () => {
                       i.name === open ? "bg-[#eb0029]" : "bg-gray-400"
                     }`}
                   >
-                    {productObj[i.name].length}
+                    {productObj[i.name]?.length}
                   </span>
                 </p>
               </motion.div>
