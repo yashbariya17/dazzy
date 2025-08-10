@@ -1,136 +1,191 @@
-import React from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import { forwardRef, useCallback, useState, useRef } from "react";
-import { ProductsList } from "../Home/Home";
-import { AnimatePresence, motion } from "framer-motion";
-import { FiShoppingBag, FiEye } from "react-icons/fi";
-import { CiDeliveryTruck } from "react-icons/ci";
-import { CiVirus, CiGift } from "react-icons/ci";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FiShoppingBag, FiEye, FiX } from "react-icons/fi";
+import { CiDeliveryTruck, CiVirus, CiGift } from "react-icons/ci";
 import { SiCodefresh } from "react-icons/si";
+
+type Product = {
+  name: string;
+  url: string;
+  description: string;
+};
+
+const products: Product[] = [
+  {
+    name: "Cocoa Milk Choclate Bar",
+    url: "/images/chocolatebar/Cocoa Milk Choclate Bar.png",
+    description: "Rich cocoa blended with creamy milk chocolate.",
+  },
+  {
+    name: "Coconut Bar",
+    url: "/images/chocolatebar/Coconut Bar.png",
+    description: "Delicious coconut filling wrapped in smooth chocolate.",
+  },
+  {
+    name: "Dairy Kiss Cocoa",
+    url: "/images/chocolatebar/Dairy Kiss Cocoa.png",
+    description: "Smooth cocoa flavor with a creamy dairy twist.",
+  },
+  {
+    name: "Dark Milk Choclate Bar",
+    url: "/images/chocolatebar/Dark Milk Choclate Bar.png",
+    description: "A perfect balance of rich dark and creamy milk chocolate.",
+  },
+  {
+    name: "HazelNut Bar",
+    url: "/images/chocolatebar/HazelNut Bar.png",
+    description: "Crunchy hazelnuts wrapped in silky smooth chocolate.",
+  },
+  {
+    name: "Milk Choclate Bar",
+    url: "/images/chocolatebar/Milk Choclate Bar.png",
+    description: "Classic creamy milk chocolate for all ages.",
+  },
+  {
+    name: "Milkies Milk Choclate Bar",
+    url: "/images/chocolatebar/Milkies Milk Choclate Bar.png",
+    description: "Smooth milk chocolate with a playful sweet touch.",
+  },
+  {
+    name: "Safari Park",
+    url: "/images/chocolatebar/Safari Park.png",
+    description: "A chocolate adventure with fun flavors.",
+  },
+  {
+    name: "StrawBerry Bar",
+    url: "/images/chocolatebar/StrawBerry Bar.png",
+    description: "Sweet strawberry flavor inside smooth chocolate.",
+  },
+  {
+    name: "TRUFFINS 30 PCS",
+    url: "/images/centerfilledchocolate/TRUFFINS 30 PCS 1  5RS.png",
+    description: "A luxurious collection of 30 rich and creamy truffles.",
+  },
+];
+
 const Gifting = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   return (
     <main>
-      <section
-        className="h-[500px] bg-cover bg-center  bg-gray-700"
-        // style={{ backgroundImage: "url('/images/choclatebigslider.png')" }}
-      ></section>
-      <section className="bg-[#f4f1ea] py-10">
-        <div className="max-w-[1000px] mx-auto relative px-6">
-          <div className="!overflow-x-hidden relative" ref={emblaRef}>
-            <div className="flex gap-6 px-4">
-              {ProductsList.slice(0, 5).map((i, index) => (
-                <motion.div
-                  key={i.url + i.name + open}
-                  transition={{
-                    duration: 0.5,
-                    delay: index * 0.1,
-                    ease: "easeOut",
-                  }}
-                  whileHover={{
-                    scale: 1.05,
-                    boxShadow: "0px 8px 20px rgba(0,0,0,0.15)",
-                  }}
-                  className="flex-shrink-0 w-[160px] h-[280px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[340px] bg-white rounded-3xl shadow-lg flex flex-col items-center justify-between p-4 my-10"
-                >
-                  <motion.img
-                    layoutId={i.url + i.name}
-                    src={i.url}
-                    className="w-[80%] h-[120px] object-contain mt-4"
-                    alt={i.name}
-                  />
+      {/* Hero Section */}
+      <section className="h-[500px] bg-gradient-to-r from-pink-200 via-purple-200 to-pink-300 flex items-center justify-center">
+        <h1 className="text-4xl sm:text-5xl font-bold text-[#4b2e2e] drop-shadow-lg">
+          🎁 Share the Love with Perfect Gifts
+        </h1>
+      </section>
 
-                  <p className="text-center text-sm sm:text-base font-semibold mt-2">
-                    {i.name}
-                  </p>
+      {/* Products Section */}
+      <section className="bg-gradient-to-b from-[#fff8ff] via-[#fce8f8] to-[#f9e6ff] py-14">
+        <div className="max-w-[1100px] mx-auto px-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
+            {products.map((product, index) => (
+              <motion.div
+                key={product.url + product.name}
+                transition={{
+                  duration: 0.4,
+                  delay: index * 0.05,
+                  ease: "easeOut",
+                }}
+                whileHover={{
+                  scale: 1.07,
+                  rotate: 1,
+                  boxShadow: "0px 15px 30px rgba(186,85,211,0.4)",
+                }}
+                className="w-full h-[280px] sm:h-[300px] md:h-[340px] 
+                  bg-white rounded-3xl shadow-lg flex flex-col items-center justify-between p-4 
+                  border border-pink-200 hover:border-purple-400 transition-all duration-300
+                  hover:shadow-purple-300 hover:shadow-xl relative overflow-hidden"
+              >
+                {/* Glow effect */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-pink-100 via-transparent to-purple-100 opacity-60 pointer-events-none"></div>
 
-                  <div className="flex justify-center gap-3 mt-3 text-xs sm:text-sm">
-                    <button className="flex items-center gap-1 text-green-700 hover:underline transition">
-                      <FiShoppingBag size={14} /> Read More
-                    </button>
-                    <button className="flex items-center gap-1 text-gray-600 hover:underline transition">
-                      <FiEye size={14} /> Quick View
-                    </button>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+                <motion.img
+                  layoutId={product.url + product.name}
+                  src={product.url}
+                  className="w-[80%] h-[120px] object-contain mt-4 drop-shadow-md"
+                  alt={product.name}
+                />
+                <p className="text-center text-sm sm:text-base font-semibold mt-2 text-purple-900">
+                  {product.name}
+                </p>
+                <div className="flex justify-center gap-3 mt-3 text-xs sm:text-sm z-10">
+                  <button
+                    onClick={() => setSelectedProduct(product)}
+                    className="flex items-center gap-1 text-pink-600 hover:text-purple-600 hover:underline transition"
+                  >
+                    <FiShoppingBag size={14} /> Read More
+                  </button>
+                  <button className="flex items-center gap-1 text-gray-700 hover:text-purple-600 hover:underline transition">
+                    <FiEye size={14} /> Quick View
+                  </button>
+                </div>
+              </motion.div>
+            ))}
           </div>
-
-          <button
-            onClick={scrollPrev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-[#eb0029] h-12 w-12 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-red-700 transition"
-            aria-label="Previous"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-
-          <button
-            onClick={scrollNext}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#eb0029] h-12 w-12 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-red-700 transition"
-            aria-label="Next"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
         </div>
       </section>
 
-      <section className="bg-[#f4f1ea] pb-10">
-        <div className="bg-pink-50 py-6 px-4 rounded-lg  mx-auto max-w-[1000px] ">
-          <div className="grid grid-cols-2  sm:grid-cols-4 gap-6 text-center ">
+      {/* Features Section */}
+      <section className="bg-gradient-to-r from-pink-100 via-purple-100 to-pink-200 pb-14 pt-8">
+        <div className="bg-white/80 backdrop-blur-sm py-6 px-4 rounded-2xl mx-auto max-w-[1000px] shadow-lg">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
             <div className="flex flex-col items-center gap-2">
-              <CiDeliveryTruck className="h-12 w-12" />
-              <p className="text-indigo-900 font-medium">Same-day Delivery</p>
+              <CiDeliveryTruck className="h-12 w-12 text-purple-600" />
+              <p className="text-purple-900 font-medium">Same-day Delivery</p>
             </div>
-
             <div className="flex flex-col items-center gap-2">
-              <CiVirus className="h-12 w-12" />
-              <p className="text-indigo-900 font-medium">Melt-free Delivery</p>
+              <CiVirus className="h-12 w-12 text-pink-600" />
+              <p className="text-purple-900 font-medium">Melt-free Delivery</p>
             </div>
-
             <div className="flex flex-col items-center gap-2">
-              <SiCodefresh className="h-12 w-12" />
-              <p className="text-indigo-900 font-medium">
-                Fresh &amp; Original
+              <SiCodefresh className="h-12 w-12 text-purple-600" />
+              <p className="text-purple-900 font-medium">Fresh &amp; Original</p>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <CiGift className="h-12 w-12 text-pink-600" />
+              <p className="text-purple-900 font-medium">Gift Order</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Modal */}
+      <AnimatePresence>
+        {selectedProduct && (
+          <motion.div
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              className="bg-white rounded-xl p-6 max-w-md w-full relative"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+            >
+              <button
+                onClick={() => setSelectedProduct(null)}
+                className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+              >
+                <FiX size={20} />
+              </button>
+              <img
+                src={selectedProduct.url}
+                alt={selectedProduct.name}
+                className="w-full h-48 object-contain mb-4"
+              />
+              <h2 className="text-lg font-bold text-purple-900 mb-2">
+                {selectedProduct.name}
+              </h2>
+              <p className="text-gray-700 text-sm">
+                {selectedProduct.description || "No description available."}
               </p>
-            </div>
-
-            <div className="flex flex-col items-center gap-2">
-              <CiGift className="h-12 w-12" />
-              <p className="text-indigo-900 font-medium">Gift Order</p>
-            </div>
-          </div>
-        </div>
-      </section>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </main>
   );
 };
