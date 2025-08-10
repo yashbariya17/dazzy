@@ -64,7 +64,7 @@ const Products = () => {
                 >
                   {i.name}
                   <span
-                    className={`block text-center leading-5 group-hover:bg-[#eb0029] transition-colors duration-300 aspect-square h-5 text-white rounded-full ${
+                    className={`block text-center leading-5 text-[10px] group-hover:bg-[#eb0029] transition-colors duration-300 aspect-square h-5 text-white rounded-full ${
                       i.name === open ? "bg-[#eb0029]" : "bg-gray-400"
                     }`}
                   >
