@@ -13,6 +13,8 @@ export const productObj: productType = {
       name: "Black & White Bar",
       url: "/images/chocolatebar/Black & White Bar.png",
       price: 5,
+      category:"c-1"
+      
     },
     {
       name: "Cocoa Milk Choclate Bar",
@@ -65,26 +67,31 @@ export const productObj: productType = {
       name: "TRUFFINS 30 PCS",
       url: "/images/centerfilledchocolate/TRUFFINS 30 PCS 1  5RS.png",
       price: 5,
+      category:"Single Twist"
     },
     {
       name: "Truffins 30 Pcs",
       url: "/images/centerfilledchocolate/TRUFFINS 30 PCS 5RS.png",
       price: 5,
+      category:"Single Twist"
     },
     {
       name: "Truffins 70 Pcs",
       url: "/images/centerfilledchocolate/TRUFFINS 70 PCS  5RS.png",
       price: 5,
+      category:"Single Twist"
     },
     {
       name: "Truffins 70 Pcs",
       url: "/images/centerfilledchocolate/TRUFFINS 70 PCS 1  5RS.png",
       price: 5,
+       category:"Single Twist"
     },
     {
       name: "Truffins Container",
       url: "/images/centerfilledchocolate/TRUFFINS CONTAINER  5RS.png",
       price: 5,
+      category:"Single Twist"
     },
     {
       name: "Truffle Blueberry 70 Pcs",

@@ -9,8 +9,8 @@ import { useLocation } from "react-router"
 
 const category = {
   "chocolate bar": ["c-1", "c-2"],
-  "centerfilled chocolate": ["ce-1", "ce-2"],
-  "decorative chocolate": [],
+  "centerfilled chocolate": ["Single Twist", "Double Twist", "Pillow Pack", "Bunch Rape"],
+  "decorative chocolate": ["Single Twist", "Double Twist", "Pillow Pack"],
   "Crunchy chocolate": [],
   "nought bar": [],
   "wafer rolls": [],
