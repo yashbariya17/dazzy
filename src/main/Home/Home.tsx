@@ -1,16 +1,15 @@
-import { AnimatePresence, motion, usePresenceData, wrap } from "motion/react";
-import useEmblaCarousel from "embla-carousel-react";
-import { forwardRef, useCallback, useState } from "react";
-import AnimatedNumber from "../../components/AnimatedNumber";
-import { TextAnimation } from "../../components/TextAnimation";
-import MouseComponent from "../../components/MouseComponent";
-import { Link } from "react-router";
+import { AnimatePresence, motion, usePresenceData, wrap } from "motion/react"
+import useEmblaCarousel from "embla-carousel-react"
+import { forwardRef, useCallback, useState } from "react"
+import AnimatedNumber from "../../components/AnimatedNumber"
+import { TextAnimation } from "../../components/TextAnimation"
+import MouseComponent from "../../components/MouseComponent"
 
 type ProductsType = {
-  name: string;
-  url: string;
-  className?: string;
-}[];
+  name: string
+  url: string
+  className?: string
+}[]
 
 export const ProductsList: ProductsType = [
   {
@@ -55,27 +54,93 @@ export const ProductsList: ProductsType = [
     name: "lollipop",
     url: "/images/10thimg.png",
   },
-];
+]
 
 const Home = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
 
-  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi])
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi])
 
-  const [emblaSlideRef, emblaSlideApi] = useEmblaCarousel({ loop: true });
+  const [emblaSlideRef, emblaSlideApi] = useEmblaCarousel({ loop: true })
 
   const scrollSlidePrev = useCallback(
     () => emblaSlideApi?.scrollPrev(),
     [emblaSlideApi]
-  );
+  )
   const scrollSlideNext = useCallback(
     () => emblaSlideApi?.scrollNext(),
     [emblaSlideApi]
-  );
+  )
+
+  const [aboutModal, setAboutModal] = useState(false)
 
   return (
     <div className="w-full overflow-x-hidden">
+      <AnimatePresence mode="wait">
+        {aboutModal && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+            }}
+            exit={{
+              opacity: 0,
+            }}
+            transition={{
+              duration: 0.3,
+            }}
+            className="bg-[rgba(0,0,0,0.3)] fixed h-screen w-full z-10 top-0 flex justify-center items-center"
+            onClick={() => {
+              setAboutModal(false)
+              document.body.style.overflow = "auto"
+            }}
+          >
+            <motion.section
+              className="rounded-xl max-w-[90%]"
+              animate={{
+                backgroundColor: "#f4f1ea",
+              }}
+              transition={{
+                delay: 0.3,
+              }}
+            >
+              <motion.img
+                layoutId="aboutImage"
+                className="w-[600px] max-w-full h-auto rounded-lg"
+                src="/images/25ywarsdashboard.png"
+                transition={{
+                  duration: 0.3,
+                }}
+              />
+              <motion.div
+                className="*:text-center space-y-3 grid"
+                initial={{ gridTemplateRows: "0fr" }}
+                animate={{
+                  gridTemplateRows: "1fr",
+                }}
+                transition={{
+                  delay: 0.4,
+                }}
+              >
+                <div className="overflow-hidden">
+                  <TextAnimation text="25 Years" />
+                  <p className="font-bold uppercase">
+                    expierience in food industries
+                  </p>
+                  <p className="text-wrap w-[500px] mx-auto pb-2">
+                    Founded in 2001, Dazzy is a family-owned confectionery house
+                    producing high-quality sugar candies and moulded chocolate
+                    specialties. With decades of experience, Dazzy is now one of
+                    the largest and most trusted confectionery
+                    manufacturers in the world.
+                  </p>
+                </div>
+              </motion.div>
+            </motion.section>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <section
         className="h-[500px] bg-cover bg-center  bg-gray-700"
         // style={{ backgroundImage: "url('/images/choclatebigslider.png')" }}
@@ -150,7 +215,10 @@ const Home = () => {
         </p>
 
         <div className=" w-[54%] lg:w-[80%] max-w-[1000px] mx-auto relative mt-10 ">
-          <div className="overflow-hidden relative " ref={emblaRef}>
+          <div
+            className="overflow-hidden relative "
+            ref={emblaRef}
+          >
             <div className="flex -ml-4">
               {Array(18)
                 .fill("")
@@ -162,7 +230,7 @@ const Home = () => {
                     <img
                       src={`/images/logos/logo_${index + 1}.png`}
                       alt={`Slide ${index + 1}`}
-                      className="w-32 object-contain aspect-auto  transition duration-300 transform hover:scale-110"
+                      className="w-32 object-contain aspect-auto filter grayscale hover:grayscale-0 transition duration-300 transform hover:scale-110"
                     />
                   </div>
                 ))}
@@ -224,7 +292,7 @@ const Home = () => {
                   25 Years
                 </h2>
                 <p className="font-bold uppercase">
-                  of expierience in food industries
+                  expierience in food industries
                 </p>
                 <p className="lg:w-[400px] text-wrap w-[300px]">
                   Founded in 2001, Dazzy is a family-owned confectionery house
@@ -234,12 +302,15 @@ const Home = () => {
                   manufacturers in the world.
                 </p>
                 <MouseComponent className="my-4 sm:mb-10 lg:mb-0 rounded-lg ">
-                  <Link
-                    to={"/about-us"}
+                  <motion.button
                     className="bg-black text-white px-4 py-2 "
+                    onClick={() => {
+                      setAboutModal(true)
+                      document.body.style.overflow = "hidden"
+                    }}
                   >
                     Read More
-                  </Link>
+                  </motion.button>
                 </MouseComponent>
               </div>
             </div>
@@ -259,29 +330,30 @@ const Home = () => {
         </p>
 
         <div className="w-[60%] max-w-[1000px] mx-auto relative mt-10">
-          <div className="overflow-hidden" ref={emblaSlideRef}>
+          <div
+            className="overflow-hidden"
+            ref={emblaSlideRef}
+          >
             <div className="flex px-10">
-              {Array(5) // we want 5 slides
+              {Array(3)
                 .fill("")
-                .map((_, index) => {
-                  const imgIndex = (index % 3) + 1; // cycle through 1,2,3
-                  return (
-                    <div
-                      key={index}
-                      className="relative flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33%] h-[300px] mr-6 flex flex-col items-center"
-                    >
-                      <img
-                        src={`/images/product${imgIndex}.png`}
-                        alt={`Slide ${imgIndex}`}
-                        className="absolute z-99 top-[15%] sm:top-[0%] mt-4 w-[125px] sm:w-[175px] h-auto object-contain float"
-                      />
-                      <button className="bg-red-600 text-white w-20 md:w-[100px] py-1 md:py-2 mt-auto mb-6 z-10 text-[12px]">
-                        READ MORE
-                      </button>
-                      <div className="bg-white absolute bottom-0 w-full h-[50%] rounded-t-[70px] shadow-xl"></div>
-                    </div>
-                  );
-                })}
+                .map((_, index) => (
+                  <div
+                    key={index}
+                    className="relative  flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33%] h-[300px] mr-6 flex flex-col items-center "
+                  >
+                    <img
+                      src={`/images/product${index + 1}.png`}
+                      alt={`Slide ${index + 1}`}
+                      className="absolute z-99 top-[15%] sm:top-[0%] mt-4 w-[125px] sm:w-[175px] h-auto object-contain float"
+                    />
+                    <button className="bg-red-600 text-white w-20 md:w-[100px] py-1 md:py-2 mt-auto mb-6 z-10 text-[12px]">
+                      READ MORE
+                    </button>
+
+                    <div className="bg-white absolute bottom-0 w-full h-[50%] rounded-t-[70px] shadow-xl"></div>
+                  </div>
+                ))}
             </div>
           </div>
 
@@ -305,10 +377,9 @@ const Home = () => {
               />
             </svg>
           </button>
-
           <button
             onClick={scrollSlideNext}
-            className="absolute top-1/2 left-full -translate-y-1/2 bg-[#eb0029] text-white aspect-square h-12 font-bold rounded-full flex items-center justify-center"
+            className="absolute top-1/2 left-full -translate-y-1/2  bg-[#eb0029] text-white aspect-square h-12 font-bold rounded-full flex items-center justify-center"
             aria-label="Next Slide"
           >
             <svg
@@ -329,7 +400,7 @@ const Home = () => {
         </div>
 
         <section
-          className="h-[700px] overflow-hidden mt-10 relative bg-cover bg-center"
+          className="h-[700px] overflow-hidden mr-10 ml-10 mt-20 relative bg-cover bg-center"
           style={{ backgroundImage: "url('/images/uperportion.png')" }}
         >
           <div className="flex  justify-center lg:justify-end h-full max-w-[1000px] mx-auto">
@@ -339,11 +410,14 @@ const Home = () => {
               </h2>
               <div className="flex flex-col md:flex-row gap-5 justify-center text-center mt-5 items-center">
                 <div className="text-white font-bold lg:text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-                  <AnimatedNumber value={50} className="text-[24px]" /> +{" "}
-                  <p className="text-white text-xs font-light">Brands</p>
+                  <AnimatedNumber
+                    value={50}
+                    className="text-[24px]"
+                  />{" "}
+                  + <p className="text-white text-xs font-light">Brands</p>
                 </div>
                 <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-                  <AnimatedNumber value={300} />+{" "}
+                  <AnimatedNumber value={200} />+{" "}
                   <p className="text-white text-xs font-light">SKU</p>
                 </div>
                 <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
@@ -352,18 +426,15 @@ const Home = () => {
                 </div>
               </div>
               <p
-                className="text-center mt-2 text-white font-bold text-lg"
-                style={{
-                  wordSpacing: "2px",
-                  textShadow: "0px 2px 4px rgba(0,0,0,0.4)",
-                }}
+                className="text-center mt-2 text-white"
+                style={{ wordSpacing: "2px" }}
               >
                 Pan India Presence
               </p>
             </div>
           </div>
         </section>
-        <section className="bg-[#111] text-white flex flex-col md:flex-row items-center  relative">
+        <section className="bg-[#111] text-white flex flex-col md:flex-row items-center  relative mt-20  ">
           <div className="w-auto h-[600px] flex justify-center relative ">
             <img
               src="/images/footeraboveboard.png"
@@ -372,10 +443,8 @@ const Home = () => {
             />
           </div>
           <div className="w-fit top-12 md:mt-0 px-6 relative md:right-10 ">
-            <div className="text-orange-500 text-sm font-semibold mb-2 justify-center flex items-center gap-2 mx-auto w-fit">
-              <img src="/images/feedback.png" className="w-6 h-6 invert" />{" "}
-              <h2 className="mt-1">TESTIMONIALS</h2>{" "}
-              <img src="/images/feedback.png" className="w-6 h-6 invert" />
+            <div className="text-orange-500 text-sm font-semibold mb-2 flex items-center gap-2 mx-auto w-fit">
+              <span>🍽</span> TESTIMONIALS <span>🍽</span>
             </div>
             <div className="text-3xl font-bold text-white mb-6 mx-auto w-fit">
               What Our Clients Say
@@ -385,10 +454,10 @@ const Home = () => {
         </section>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
 
 const testimonials = [
   {
@@ -415,26 +484,30 @@ const testimonials = [
       " Penatibus magnis dis point parturient montes nascetur ridiculus mus Ut id lorem ac enim the vestibulum blandit nec sit amet felis. Fusce quis diam odio Cras mattis mi quis tincidunt",
     id: 3,
   },
-];
+]
 
 const Slider = () => {
-  const [selectedItem, setSelectedItem] = useState(testimonials[0]);
-  const [direction, setDirection] = useState<1 | -1>(1);
+  const [selectedItem, setSelectedItem] = useState(testimonials[0])
+  const [direction, setDirection] = useState<1 | -1>(1)
 
   function setSlide(newDirection: 1 | -1) {
     const nextItem = wrap(
       1,
       testimonials.length,
       selectedItem.id + newDirection
-    );
-    setSelectedItem(testimonials[nextItem - 1]);
-    setDirection(newDirection);
+    )
+    setSelectedItem(testimonials[nextItem - 1])
+    setDirection(newDirection)
   }
 
   return (
     <>
       <section>
-        <AnimatePresence mode="popLayout" custom={direction} initial={false}>
+        <AnimatePresence
+          mode="popLayout"
+          custom={direction}
+          initial={false}
+        >
           <Slide
             name={selectedItem.name}
             occupation={selectedItem.occupation}
@@ -455,7 +528,10 @@ const Slider = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+              id="SVGRepo_bgCarrier"
+              strokeWidth="0"
+            ></g>
             <g
               id="SVGRepo_tracerCarrier"
               strokeLinecap="round"
@@ -482,7 +558,10 @@ const Slider = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+              id="SVGRepo_bgCarrier"
+              strokeWidth="0"
+            ></g>
             <g
               id="SVGRepo_tracerCarrier"
               strokeLinecap="round"
@@ -501,8 +580,8 @@ const Slider = () => {
         </button>
       </div>
     </>
-  );
-};
+  )
+}
 
 const Slide = forwardRef(function Slide(
   {
@@ -511,14 +590,14 @@ const Slide = forwardRef(function Slide(
     ratings,
     review,
   }: {
-    name: string;
-    occupation: string;
-    ratings: string;
-    review: string;
+    name: string
+    occupation: string
+    ratings: string
+    review: string
   },
   ref: React.Ref<HTMLDivElement>
 ) {
-  const direction = usePresenceData();
+  const direction = usePresenceData()
   return (
     <motion.div
       ref={ref}
@@ -557,5 +636,5 @@ const Slide = forwardRef(function Slide(
         ”
       </div>
     </motion.div>
-  );
-});
+  )
+})

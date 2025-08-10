@@ -1,27 +1,31 @@
-import { ProductsList } from "../Home/Home";
-import { TextAnimation } from "../../components/TextAnimation";
-import { AnimatePresence, motion } from "framer-motion";
-import {  useLayoutEffect, useRef, useState } from "react";
-import { FiShoppingBag, FiEye } from "react-icons/fi";
-import ViewMore from "./components/ViewMore";
-import { productObj } from "./AllProductList";
-import { useLocation } from "react-router";
+import { ProductsList } from "../Home/Home"
+import { TextAnimation } from "../../components/TextAnimation"
+import { AnimatePresence, motion } from "framer-motion"
+import { useLayoutEffect, useRef, useState } from "react"
+import { FiShoppingBag, FiEye } from "react-icons/fi"
+import ViewMore from "./components/ViewMore"
+import { productObj } from "./AllProductList"
+import { useLocation } from "react-router"
+
+const category = ["box", "packet"] as const
 
 const Products = () => {
-  const { state } = useLocation();
+  const { state } = useLocation()
 
-  const ref = useRef<HTMLDivElement>(null);
-  const [open, setOpen] = useState<string>(state || "chocolate bar");
-  const [selectedProduct, setSelectedProduct] = useState<any | null>(null);
+  const ref = useRef<HTMLDivElement>(null)
+  const [open, setOpen] = useState<string>(state || "chocolate bar")
+  const [selectedProduct, setSelectedProduct] = useState<any | null>(null)
+  const [selectedCategory, setSelectedCategory] = useState<
+    (typeof category)[number] | ""
+  >("")
 
   useLayoutEffect(() => {
     if (state) {
-      setOpen(state);
+      setOpen(state)
     } else {
-      setOpen("chocolate bar");
+      setOpen("chocolate bar")
     }
-  }, [state]);
-
+  }, [state])
 
   return (
     <div className="w-full">
@@ -53,9 +57,9 @@ const Products = () => {
                   }`}
                   onClick={() => {
                     if (window.innerWidth < 640) {
-                      ref.current?.scrollIntoView({ behavior: "smooth" });
+                      ref.current?.scrollIntoView({ behavior: "smooth" })
                     }
-                    setOpen(i.name);
+                    setOpen(i.name)
                   }}
                 >
                   {i.name}
@@ -70,51 +74,71 @@ const Products = () => {
               </motion.div>
             ))}
           </div>
-
-          <div
-            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6"
-            ref={ref}
-          >
-            {productObj[open].map((i) => (
-              <motion.div
-                initial={{ y: "50%", opacity: 0 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{
-                  once: true,
-                  amount: "all",
-                  margin: "0px 0px 150px 0px",
-                }}
-                transition={{
-                  duration: 0.3,
-                }}
-                key={i.url + i.name + open}
-                className="w-[160px] h-[280px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[340px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
-              >
-                <motion.img
-                  layoutId={i.url + i.name}
-                  src={i.url}
-                  className="w-[80%] h-[120px] object-contain mt-4"
-                />
-
-                <p className="text-center text-sm sm:text-base font-semibold mt-2">
-                  {i.name}
-                </p>
-                {/* <p className="text-sm text-gray-700 mt-1">₹{i.price}</p> */}
-
-                <div className="flex justify-center gap-3 mt-2 text-xs sm:text-sm">
-                  <button
-                    onClick={() => setSelectedProduct(i)}
-                    className="flex items-center gap-1 text-green-700 hover:underline hover:cursor-pointer transition"
+          <section>
+            <div className=" flex gap-10 mb-5 px-4 flex-wrap">
+              {category.map((i) => (
+                <button
+                  key={i}
+                  className={`${
+                    selectedCategory !== i
+                      ? "border-2 border-solid border-[#eb0029] text-[#eb0029]"
+                      : "bg-[#eb0029] text-white font-semibold"
+                  } py-1 min-w-16 px-3 rounded-full capitalize cursor-pointer transition-transform duration-200 active:scale-90`}
+                  onClick={() => setSelectedCategory(i)}
+                >
+                  {i}
+                </button>
+              ))}
+            </div>
+            <div
+              className="grid grid-rows-[auto_1fr] grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6"
+              ref={ref}
+            >
+              {productObj[open]
+                .filter(
+                  (i) => !selectedCategory || i?.category === selectedCategory
+                )
+                .map((i) => (
+                  <motion.div
+                    initial={{ y: "50%", opacity: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{
+                      once: true,
+                      amount: "all",
+                      margin: "0px 0px 150px 0px",
+                    }}
+                    transition={{
+                      duration: 0.3,
+                    }}
+                    key={i.url + i.name + open}
+                    className="w-[160px] h-[280px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[340px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
                   >
-                    <FiShoppingBag size={14} /> Read More
-                  </button>
-                  <button className="flex items-center gap-1 text-gray-600 hover:underline transition">
-                    <FiEye size={14} /> Quick View
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                    <motion.img
+                      layoutId={i.url + i.name}
+                      src={i.url}
+                      className="w-[80%] h-[120px] object-contain mt-4"
+                    />
+
+                    <p className="text-center text-sm sm:text-base font-semibold mt-2">
+                      {i.name}
+                    </p>
+                    {/* <p className="text-sm text-gray-700 mt-1">₹{i.price}</p> */}
+
+                    <div className="flex justify-center gap-3 mt-2 text-xs sm:text-sm">
+                      <button
+                        onClick={() => setSelectedProduct(i)}
+                        className="flex items-center gap-1 text-green-700 hover:underline hover:cursor-pointer transition"
+                      >
+                        <FiShoppingBag size={14} /> Read More
+                      </button>
+                      <button className="flex items-center gap-1 text-gray-600 hover:underline transition">
+                        <FiEye size={14} /> Quick View
+                      </button>
+                    </div>
+                  </motion.div>
+                ))}
+            </div>
+          </section>
         </section>
         <AnimatePresence>
           {selectedProduct && (
@@ -126,7 +150,7 @@ const Products = () => {
         </AnimatePresence>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default Products;
+export default Products
