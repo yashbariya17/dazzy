@@ -1,13 +1,13 @@
 export type productType = {
   [key: string]: {
-    name: string
-    url: string
-    price?: number
-    category?: string
-    subCategory?:string 
-    description?:string
-  }[]
-}
+    name: string;
+    url: string;
+    price?: number;
+    category?: string;
+    subCategory?: string;
+    description?: string;
+  }[];
+};
 
 export const productObj: productType = {
   "chocolate bar": [
@@ -15,8 +15,7 @@ export const productObj: productType = {
       name: "Black & White Bar",
       url: "/images/chocolatebar/Black & White Bar.png",
       price: 5,
-      category:"c-1"
-      
+      category: "c-1",
     },
     {
       name: "Cocoa Milk Choclate Bar",
@@ -66,66 +65,95 @@ export const productObj: productType = {
   ],
   "centerfilled chocolate": [
     {
-      name: "TRUFFINS ab",
-      url: "/images/centerfilledchocolate/TRUFFINS 30 PCS 1  5RS.png",
+      name: "Truffles Milk 70 pcs",
+      url: "/images/centerfilledchocolate/TRUFFLE MILK 70 PCS 5RS.png",
       price: 5,
-      category:"Single Twist",
-      subCategory: "Truffins"
+      category: "Single Twist",
+      subCategory: "Truffles 70 pcs",
     },
     {
-      name: "Truffins 30 Pcs bc",
+      name: "Truffles 30 Pcs",
       url: "/images/centerfilledchocolate/TRUFFINS 30 PCS 5RS.png",
       price: 5,
-      category:"Single Twist",
-      subCategory: "Truffins"
+      // category: "Single Twist",
+      // subCategory: "Truffins",
     },
     {
       name: "Truffins 70 Pcs cd",
       url: "/images/centerfilledchocolate/TRUFFINS 70 PCS  5RS.png",
       price: 5,
-      category:"Single Twist",
-      subCategory: "Truffins"
+      // category: "Single Twist",
+      // subCategory: "Truffins",
     },
     {
       name: "Truffins 701 Pcs",
       url: "/images/centerfilledchocolate/TRUFFINS 70 PCS 1  5RS.png",
       price: 5,
-       category:"Single Twist",
-      subCategory: "muffins"
-
+      // category: "Single Twist",
+      // subCategory: "muffins",
     },
     {
       name: "Truffins Container",
       url: "/images/centerfilledchocolate/TRUFFINS CONTAINER  5RS.png",
       price: 5,
-      category:"Single Twist",
-      subCategory: "muffins"
-
+      // category: "Single Twist",
+      // subCategory: "muffins",
     },
     {
       name: "Truffle Blueberry 70 Pcs",
       url: "/images/centerfilledchocolate/TRUFFLE BLUBERRY 70 PCS 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles 70 pcs",
     },
     {
-      name: "Truffle Blue Berry Gift Box",
+      name: "Truffles Milk",
+      url: "/images/centerfilledchocolate/TRUFFLES MILK GIFT BOX 5RS.png",
+      price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles 20 pcs",
+    },
+    {
+      name: "Truffle Blue Berry",
       url: "/images/centerfilledchocolate/TRUFFLE BLUE BERRY GIFT BOX 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles 20 pcs",
     },
     {
-      name: "Truffle Bueberry 150 Pcs",
+      name: "Truffle Milk",
+      url: "/images/centerfilledchocolate/TRUFFLE MILK 150 PCS 5RS.png",
+      price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles 2kg",
+    },
+    {
+      name: "Truffle Bueberry",
       url: "/images/centerfilledchocolate/TRUFFLE BUEBERRY 150 PCS 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles 2kg",
     },
     {
-      name: "Truffle Container",
+      name: "Truffles Pouch",
+      url: "/images/centerfilledchocolate/TRUFFLES BLUE POUCH 5RS.png",
+      price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles Pouch",
+    },
+    {
+      name: "Truffle 30 Pcs Container",
       url: "/images/centerfilledchocolate/TRUFFLE CONTAINER 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles 30 Pcs Container",
     },
     {
-      name: "Truffle Gift Contaier",
+      name: "Truffle Contaier",
       url: "/images/centerfilledchocolate/TRUFFLE GIFT CONTAIER 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles 30 Pcs Container",
     },
     {
       name: "Truffle Milk 70 Pcs",
@@ -133,79 +161,88 @@ export const productObj: productType = {
       price: 5,
     },
     {
-      name: "Truffle Milk 150 Pcs",
-      url: "/images/centerfilledchocolate/TRUFFLE MILK 150 PCS 5RS.png",
-      price: 5,
-    },
-    {
       name: "Truffle Pistachio 70 Pcs",
       url: "/images/centerfilledchocolate/TRUFFLE PISTACHIO 70 PCS 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles 70 pcs",
     },
     {
       name: "Truffle Pistachio 150 Pcs",
       url: "/images/centerfilledchocolate/TRUFFLE PISTACHIO 150 PCS 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles 2kg",
     },
     {
       name: "Truffle Rajbhog 70 Pcs",
       url: "/images/centerfilledchocolate/TRUFFLE RAJBHOG 70 PCS 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles 70 pcs",
     },
     {
-      name: "Truffle Rajbhog 150 Pcs",
+      name: "Truffle Rajbhog",
       url: "/images/centerfilledchocolate/TRUFFLE RAJBHOG 150 PCS 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles 2kg",
     },
     {
-      name: "Truffle Rajbhog Gift Box",
+      name: "Truffle Rajbhog",
       url: "/images/centerfilledchocolate/TRUFFLE RAJBHOG GIFT BOX 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles 20 pcs",
     },
     {
       name: "Truffle Strawberry 70 Pcs",
       url: "/images/centerfilledchocolate/TRUFFLE STRAWBERRY 70 PCS 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles 70 pcs",
     },
     {
-      name: "Truffle Strawberry 150 Pcs",
+      name: "Truffle Strawberry",
       url: "/images/centerfilledchocolate/TRUFFLE STRAWBERRY 150 PCS 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles 2kg",
     },
     {
-      name: "Truffles Container 2",
-      url: "/images/centerfilledchocolate/TRUFFLES CONTAINER 2 5RS.png",
-      price: 5,
-    },
-    {
-      name: "Truffles Container",
+      name: "Truffles 70 Pcs Container",
       url: "/images/centerfilledchocolate/TRUFFLES CONTAINER 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles 70 Pcs Container",
     },
     {
-      name: "Truffles Blue Pouch",
-      url: "/images/centerfilledchocolate/TRUFFLES BLUE POUCH 5RS.png",
+      name: "Truffles 70 Pcs Container",
+      url: "/images/centerfilledchocolate/TRUFFLES CONTAINER 2 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles 70 Pcs Container",
     },
     {
-      name: "Truffles Milk Gift Box",
-      url: "/images/centerfilledchocolate/TRUFFLES MILK GIFT BOX 5RS.png",
-      price: 5,
-    },
-    {
-      name: "Truffles Red Pouch",
+      name: "Truffles Pouch",
       url: "/images/centerfilledchocolate/TRUFFLES RED POUCH 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles Pouch",
     },
     {
-      name: "Truffles Strawberry Gift Box",
+      name: "Truffles Strawberry",
       url: "/images/centerfilledchocolate/TRUFFLES STRAWBERRY GIFT BOX 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles 20 pcs",
     },
     {
-      name: "Truffles Pistachio Gift Box",
+      name: "Truffles Pistachio",
       url: "/images/centerfilledchocolate/TRUFFLES PISTACHIO GIFT BOX 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Truffles 20 pcs",
     },
     {
       name: "Delight Pistaccio 70Pcs Box",
@@ -338,49 +375,74 @@ export const productObj: productType = {
       price: 5,
     },
     {
+      name: "Glorious Pistachio",
+      url: "/images/centerfilledchocolate/GLORIOUS PISTACHIO5RS.png",
+      price: 5,
+      category: "Single Twist",
+      subCategory: "Glorious 70 pcs",
+    },
+    {
       name: "Glorious Chocolate",
       url: "/images/centerfilledchocolate/GLORIOUS CHOCOLATE 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Glorious 70 pcs",
     },
     {
       name: "Glorious Gift Box",
       url: "/images/centerfilledchocolate/GLORIOUS GIFT BOX 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Glorious Gift Box",
     },
     {
-      name: "Glorious Ccashewnut",
+      name: "Glorious 2Kg Box",
+      url: "/images/centerfilledchocolate/GLORIOUS GIFT BOX 25RS.png",
+      price: 5,
+      category: "Single Twist",
+      subCategory: "Glorious 2Kg Box",
+    },
+    {
+      name: "Glorious Cashewnut",
       url: "/images/centerfilledchocolate/GLORIOUS CCASHEWNUT 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Glorious 70 pcs",
     },
     {
-      name: "Glorious Gift Container",
+      name: "Glorious 30Pcs Container",
       url: "/images/centerfilledchocolate/GLORIOUS GIFT CONTAINER 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Glorious 30Pcs Container",
     },
     {
-      name: "Glorious Gift Container",
+      name: "Glorious 30Pcs Container",
       url: "/images/centerfilledchocolate/GLORIOUS GIFT CONTAINER (2) 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Glorious 30Pcs Container",
     },
     {
-      name: "Glorious Gift Container ",
+      name: "Glorious 30Pcs Container",
       url: "/images/centerfilledchocolate/GLORIOUS GIFT CONTAINER (3) 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Glorious 30Pcs Container",
     },
     {
       name: "Glorious Milk",
       url: "/images/centerfilledchocolate/GLORIOUS MILK 5RS.png",
       price: 5,
-    },
-    {
-      name: "Glorious Pistachio",
-      url: "/images/centerfilledchocolate/GLORIOUS PISTACHIO5RS.png",
-      price: 5,
+      category: "Single Twist",
+      subCategory: "Glorious 70 pcs",
     },
     {
       name: "Glorious Raajbhog",
       url: "/images/centerfilledchocolate/GLORIOUS RAAJBHOG 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Glorious 70 pcs",
     },
     {
       name: "Gold Box2Rs",
@@ -413,11 +475,6 @@ export const productObj: productType = {
       price: 2,
     },
     {
-      name: "Maxic Box 125 Pcs",
-      url: "/images/centerfilledchocolate/MAXIC  BOX 125 PCS 2RS.png",
-      price: 2,
-    },
-    {
       name: "United Gift Box",
       url: "/images/centerfilledchocolate/UNITED GIFT BOX 2RS.png",
       price: 2,
@@ -427,11 +484,7 @@ export const productObj: productType = {
       url: "/images/centerfilledchocolate/UNITED JAR 2RS.png",
       price: 2,
     },
-    {
-      name: "Maxic Gift Box",
-      url: "/images/centerfilledchocolate/MAXIC GIFT BOX 2RS.png",
-      price: 2,
-    },
+
     {
       name: "Stacy Box 70pcs ",
       url: "/images/centerfilledchocolate/STACY BOX 70PCS 2  5RS.png",
@@ -448,19 +501,9 @@ export const productObj: productType = {
       price: 2,
     },
     {
-      name: "Belgiam Gift Box",
-      url: "/images/centerfilledchocolate/BELGIAM GIFT BOX 2RS.png",
-      price: 2,
-    },
-    {
       name: "Bliss White",
       url: "/images/centerfilledchocolate/BLISS WHITE 1RS.png",
       price: 1,
-    },
-    {
-      name: "Bolivia Gift Box",
-      url: "/images/centerfilledchocolate/BOLIVIA GIFT BOX 5RS.png",
-      price: 5,
     },
     {
       name: "Brevo Gift Box",
@@ -507,11 +550,7 @@ export const productObj: productType = {
       url: "/images/centerfilledchocolate/STACY MINIS GIFT BOX 2RS.png",
       price: 2,
     },
-    {
-      name: "Belgium 125 Pcs",
-      url: "/images/centerfilledchocolate/BELGIUM 125 PCS 2RS.png",
-      price: 2,
-    },
+
     {
       name: "Boliva Container",
       url: "/images/centerfilledchocolate/BOLIVA CONTAINER 5RS.png",
@@ -521,6 +560,8 @@ export const productObj: productType = {
       name: "Bolivia 150 Pcs Box",
       url: "/images/centerfilledchocolate/BOLIVIA150 PCS BOX 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Bolivia 150 Pcs Box",
     },
     {
       name: "Chocobon Coconut",
@@ -571,6 +612,15 @@ export const productObj: productType = {
       name: "Bolivia 70 Pcs Box",
       url: "/images/centerfilledchocolate/BOLIVIA 70 PCS BOX 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Bolivia 70 Pcs Box",
+    },
+    {
+      name: "Bolivia 25Pcs Box",
+      url: "/images/centerfilledchocolate/BOLIVIA GIFT BOX 5RS.png",
+      price: 5,
+      category: "Single Twist",
+      subCategory: "Bolivia 25Pcs Box",
     },
     {
       name: "Brevo 125 Pcs Box",
@@ -603,9 +653,18 @@ export const productObj: productType = {
       price: 1,
     },
     {
-      name: "Bolivia Container",
+      name: "Bolivia 70Pcs Container",
       url: "/images/centerfilledchocolate/BOLIVIA CONTAINER 5RS.png",
       price: 5,
+      category: "Single Twist",
+      subCategory: "Bolivia 70Pcs Container",
+    },
+    {
+      name: "Bolivia 30Pcs Container",
+      url: "/images/centerfilledchocolate/GLORIOUS GIFT BOX 25RS.png",
+      price: 5,
+      category: "Single Twist",
+      subCategory: "Bolivia 30Pcs Container",
     },
     {
       name: "Brevo Container",
@@ -626,6 +685,55 @@ export const productObj: productType = {
       name: "Delight Cahewnut 70pcs Box",
       url: "/images/centerfilledchocolate/DELIGHT CAHEWNUT 70PCS BOX 5RS.png",
       price: 5,
+    },
+    {
+      name: "Oriento 70Pcs Box",
+      url: "/images/centerfilledchocolate/GLORIOUS GIFT BOX 253RS.png",
+      price: 5,
+      category: "Single Twist",
+      subCategory: "Oriento 70Pcs Box",
+    },
+    {
+      name: "Oriento 2Kg Box",
+      url: "/images/centerfilledchocolate/GLORIOUS GIFT BOX 253RS.png",
+      price: 5,
+      category: "Single Twist",
+      subCategory: "Oriento 2Kg Box",
+    },
+    {
+      name: "Oriento 30pcs Container",
+      url: "/images/centerfilledchocolate/GLORIOUS GIFT BOX 253RS.png",
+      price: 5,
+      category: "Single Twist",
+      subCategory: "Oriento 30pcs Container",
+    },
+    {
+      name: "Maxic Box 125 Pcs",
+      url: "/images/centerfilledchocolate/MAXIC  BOX 125 PCS 2RS.png",
+      price: 2,
+      category: "Single Twist",
+      subCategory: "Maxic Box 125 Pcs",
+    },
+    {
+      name: "Maxic 50Pcs Box",
+      url: "/images/centerfilledchocolate/MAXIC GIFT BOX 2RS.png",
+      price: 2,
+      category: "Single Twist",
+      subCategory: "Maxic 50Pcs Box",
+    },
+    {
+      name: "Belgium 125 Pcs Box",
+      url: "/images/centerfilledchocolate/BELGIUM 125 PCS 2RS.png",
+      price: 2,
+      category: "Single Twist",
+      subCategory: "Belgium 125 Pcs Box",
+    },
+    {
+      name: "Belgiam 50Pcs Box",
+      url: "/images/centerfilledchocolate/BELGIAM GIFT BOX 2RS.png",
+      price: 2,
+      category: "Single Twist",
+      subCategory: "Belgiam 50Pcs Box",
     },
   ],
   "decorative chocolate": [
@@ -1279,6 +1387,6 @@ export const productObj: productType = {
       price: 5,
     },
   ],
-}
+};
 
-export default productObj
+export default productObj;
