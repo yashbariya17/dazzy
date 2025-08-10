@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiShoppingBag, FiEye, FiX } from "react-icons/fi";
 import { CiDeliveryTruck, CiVirus, CiGift } from "react-icons/ci";

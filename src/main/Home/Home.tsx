@@ -62,16 +62,8 @@ const Home = () => {
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi])
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi])
 
-  const [emblaSlideRef, emblaSlideApi] = useEmblaCarousel({ loop: true })
+  const [] = useEmblaCarousel({ loop: true })
 
-  const scrollSlidePrev = useCallback(
-    () => emblaSlideApi?.scrollPrev(),
-    [emblaSlideApi]
-  )
-  const scrollSlideNext = useCallback(
-    () => emblaSlideApi?.scrollNext(),
-    [emblaSlideApi]
-  )
 
   const [aboutModal, setAboutModal] = useState(false)
 
