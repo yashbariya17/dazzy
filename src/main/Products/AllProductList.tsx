@@ -12,20 +12,9 @@ export type productType = {
 export const productObj: productType = {
   "chocolate bar": [
     {
-      name: "Black & White Bar",
-      url: "/images/chocolatebar/Black & White Bar.png",
-      price: 5,
-      category: "c-1",
-    },
-    {
       name: "Cocoa Milk Choclate Bar",
       url: "/images/chocolatebar/Cocoa Milk Choclate Bar.png",
       price: 1,
-    },
-    {
-      name: "Coconut Bar",
-      url: "/images/chocolatebar/Coconut Bar.png",
-      price: 5,
     },
     {
       name: "Dairy Kiss Cocoa",
@@ -33,13 +22,35 @@ export const productObj: productType = {
       price: 5,
     },
     {
-      name: "Dark Milk Choclate Bar",
-      url: "/images/chocolatebar/Dark Milk Choclate Bar.png",
+      name: "Dairy Kiss Container",
+      url: "/images/chocolatebar/Dairy Kiss Cocssoa.png",
       price: 5,
     },
     {
-      name: "HazelNut Bar",
-      url: "/images/chocolatebar/HazelNut Bar.png",
+      name: "StrawBerry Bar",
+      url: "/images/chocolatebar/StrawBerry Bar.png",
+      price: 5,
+    },
+    {
+      name: "Black & White Bar",
+      url: "/images/chocolatebar/Black & White Bar.png",
+      price: 5,
+      category: "c-1",
+    },
+    {
+      name: "Milkies Milk Choclate Bar",
+      url: "/images/chocolatebar/Milkies Milk Choclate Bar.png",
+      price: 5,
+    },
+    {
+      name: "Coconut Bar",
+      url: "/images/chocolatebar/Coconut Bar.png",
+      price: 5,
+    },
+
+    {
+      name: "Dark Milk Choclate Bar",
+      url: "/images/chocolatebar/Dark Milk Choclate Bar.png",
       price: 5,
     },
     {
@@ -48,19 +59,24 @@ export const productObj: productType = {
       price: 5,
     },
     {
-      name: "Milkies Milk Choclate Bar",
-      url: "/images/chocolatebar/Milkies Milk Choclate Bar.png",
+      name: "HazelNut Bar",
+      url: "/images/chocolatebar/HazelNut Bar.png",
+      price: 5,
+    },
+    {
+      name: "Dairy KIss Cocoa",
+      url: "/images/chocolatebar/HazeslNut Bar.png",
+      price: 5,
+    },
+    {
+      name: "Dairy KIss Milkies",
+      url: "/images/chocolatebar/HazeslNsut Bar.png",
       price: 5,
     },
     {
       name: "Safari Park",
       url: "/images/chocolatebar/Safari Park.png",
       price: 2,
-    },
-    {
-      name: "StrawBerry Bar",
-      url: "/images/chocolatebar/StrawBerry Bar.png",
-      price: 5,
     },
   ],
   "centerfilled chocolate": [
@@ -598,14 +614,14 @@ export const productObj: productType = {
       category: "Bunch Rape",
       subCategory: "United Jar",
     },
-        {
+    {
       name: "DLove Jar",
       url: "/images/centerfilledchocolate/UNIT2ED JAR 2RS.png",
       price: 2,
       category: "Bunch Rape",
       subCategory: "DLove Jar1",
     },
-        {
+    {
       name: "DLove Jar",
       url: "/images/centerfilledchocolate/UNITE3D JAR 2RS.png",
       price: 2,
@@ -982,14 +998,15 @@ export const productObj: productType = {
   ],
   "decorative chocolate": [
     {
-      name: "Choco COAN 5RS",
-      url: "/images/decorativechocolate/CHOCO COAN 5RS.png",
+      name: "King Kong",
+      url: "/images/decorativechocolate/KING KONG 1 5RS.png",
       price: 5,
     },
+
     {
-      name: "Choco Tocon 10RS",
-      url: "/images/decorativechocolate/CHOCO TOCON 10RS.png",
-      price: 10,
+      name: "King Kong",
+      url: "/images/decorativechocolate/KING KONG 5RS.png",
+      price: 5,
     },
     {
       name: "Dr Teddy",
@@ -1001,33 +1018,19 @@ export const productObj: productType = {
       url: "/images/decorativechocolate/DR TEDDY25RS.png",
       price: 25,
     },
+
     {
-      name: "King Kong",
-      url: "/images/decorativechocolate/KING KONG 1 5RS.png",
-      price: 5,
+      name: "Choco Tocon 10RS",
+      url: "/images/decorativechocolate/CHOCO TOCON 10RS.png",
+      price: 10,
     },
     {
-      name: "King Kong",
-      url: "/images/decorativechocolate/KING KONG 5RS.png",
+      name: "Choco COAN 5RS",
+      url: "/images/decorativechocolate/CHOCO COAN 5RS.png",
       price: 5,
     },
   ],
   "Crunchy chocolate": [
-    {
-      name: "Caranut Box",
-      url: "/images/peanut chocolate/CARANUT BOX.png",
-      price: 5,
-    },
-    {
-      name: "Chokers Box",
-      url: "/images/peanut chocolate/CHOKERS BOX.png",
-      price: 5,
-    },
-    {
-      name: "Chokers Container",
-      url: "/images/peanut chocolate/CHOKERS CONTAINER.png",
-      price: 5,
-    },
     {
       name: "Oh Wow Big Box",
       url: "/images/peanut chocolate/OH WOW BIG BOX.png",
@@ -1048,6 +1051,21 @@ export const productObj: productType = {
       url: "/images/peanut chocolate/OH WOW STANDY POUCH.png",
       price: 2,
     },
+    {
+      name: "Caranut Box",
+      url: "/images/peanut chocolate/CARANUT BOX.png",
+      price: 5,
+    },
+    {
+      name: "Chokers Box",
+      url: "/images/peanut chocolate/CHOKERS BOX.png",
+      price: 5,
+    },
+    {
+      name: "Chokers Container",
+      url: "/images/peanut chocolate/CHOKERS CONTAINER.png",
+      price: 5,
+    },
   ],
   "nought bar": [
     {
@@ -1061,18 +1079,39 @@ export const productObj: productType = {
       price: 5,
     },
     {
+      name: "Chockers Container",
+      url: "/images/nugut bar/BIG SssTAR BOX.png",
+      price: 5,
+    },
+    {
+      name: "Chockers Box",
+      url: "/images/nugut bar/BIG SssTAR BOX.png",
+      price: 5,
+    },
+    {
       name: "TORNUTTE  BAR CONTAINER",
       url: "/images/nugut bar/TORNUTTE  BAR CONTAINER.png",
       price: 5,
     },
     {
-      name: "BRACKERS BOX",
-      url: "/images/nugut bar/BRACKERS BOX.png",
+      name: "TORNUTTE  BAR BOX",
+      url: "/images/nugut bar/TORNUTTE  BAR BOX.png",
+      price: 5,
+    },
+
+    {
+      name: "Caramet Cont",
+      url: "/images/nugut bar/BIG SssTAR BOX.png",
       price: 5,
     },
     {
-      name: "TORNUTTE  BAR BOX",
-      url: "/images/nugut bar/TORNUTTE  BAR BOX.png",
+      name: "Carafians Cont ",
+      url: "/images/nugut bar/BIG SssTAR BOX.png",
+      price: 5,
+    },
+    {
+      name: "BRACKERS BOX",
+      url: "/images/nugut bar/BRACKERS BOX.png",
       price: 5,
     },
   ],
@@ -1084,15 +1123,16 @@ export const productObj: productType = {
       price: 5,
     },
     {
-      name: "3 Stix Kraks",
-      url: "/images/wafffer rolls/3 stix kraks.png",
-      price: 5,
-    },
-    {
       name: "3stix Milk Fills",
       url: "/images/wafffer rolls/3stix milk fills.png",
       price: 5,
     },
+    {
+      name: "3 Stix Kraks",
+      url: "/images/wafffer rolls/3 stix kraks.png",
+      price: 5,
+    },
+
     {
       name: "Big Roll Chocolate",
       url: "/images/wafffer rolls/big roll chocolate.png",
@@ -1113,6 +1153,12 @@ export const productObj: productType = {
       url: "/images/wafffer rolls/choco stix.png",
       price: 5,
     },
+
+    {
+      name: "Rolle Stix",
+      url: "/images/wafffer rolls/rolle stix.png",
+      price: 5,
+    },
     {
       name: "Dark Stix",
       url: "/images/wafffer rolls/dark stix.png",
@@ -1123,11 +1169,7 @@ export const productObj: productType = {
       url: "/images/wafffer rolls/krack stix.png",
       price: 5,
     },
-    {
-      name: "Rolle Stix",
-      url: "/images/wafffer rolls/rolle stix.png",
-      price: 5,
-    },
+
     {
       name: "Wafeer Roll",
       url: "/images/wafffer rolls/wafeer roll.png",
@@ -1495,103 +1537,174 @@ export const productObj: productType = {
   ],
   candy: [
     {
-      name: "Beating Heart",
-      url: "/images/candy/BEATING HEART RS1.png",
-      price: 1,
-    },
-    {
       name: "Double Berry",
       url: "/images/candy/DOUBLE BERRY RS1.png",
       price: 1,
+      category: "Pouch",
+      subCategory: "Double Berry",
     },
     {
       name: "Double Coconut",
       url: "/images/candy/DOUBLE COCONUT RS1.png",
       price: 1,
+      category: "Pouch",
+      subCategory: "Double Coconut",
     },
     {
       name: "Double Kaccha Aam",
       url: "/images/candy/DOUBLE KACCHA AAM RS1.png",
       price: 1,
+      category: "Pouch",
+      subCategory: "Double Kaccha Aam",
     },
     {
       name: "Double Mango",
       url: "/images/candy/DOUBLE MANGO RS1.png",
       price: 1,
+      category: "Pouch",
+      subCategory: "Double Mango",
     },
     {
       name: "Double Orange",
       url: "/images/candy/DOUBLE ORANGE RS1.png",
       price: 1,
+      category: "Pouch",
+      subCategory: "Double Orange",
     },
     {
       name: "Double Guvava",
       url: "/images/candy/DOUBLE GUVAVA RS1.png",
       price: 1,
-    },
-    { name: "Double Paan", url: "/images/candy/DOUBLE PAAN RS1.png", price: 1 },
-    {
-      name: "Fruit Bon Bon",
-      url: "/images/candy/FRUIT BON BON 50 PAISA.png",
-      price: 0.5,
+      category: "Pouch",
+      subCategory: "Double Guvava",
     },
     {
-      name: "Fruits Candy",
-      url: "/images/candy/FRUITS CANDY 50 PAISA.png",
-      price: 0.5,
+      name: "Double Paan",
+      url: "/images/candy/DOUBLE PAAN RS1.png",
+      price: 1,
+      category: "Pouch",
+      subCategory: "Double Paan",
     },
-    {
-      name: "Imli Candy",
-      url: "/images/candy/IMLI CANDY 50 PAISA.png",
-      price: 0.5,
-    },
-    {
-      name: "Juzy Candy",
-      url: "/images/candy/JUZY CANDY 50 PAISA.png",
-      price: 0.5,
-    },
+
     {
       name: "Kacha Aam",
       url: "/images/candy/KACHA AAM 50 PAISA.png",
       price: 0.5,
     },
     {
-      name: "Kacha Aam Candy",
-      url: "/images/candy/KACHA AAM CANDY 50 PAISA.png",
-      price: 0.5,
+      name: "Kisszone 165Pcs",
+      url: "/images/candy/KISSZONE RS1.png",
+      price: 1,
+      category: "Pouch",
+      subCategory: "Kisszone 165Pcs",
+    },
+    { name: "Kisszone01", url: "/images/candy/KISSZONE01 1RS.png", price: 1 },
+    {
+      name: "Kisszone 50pcs",
+      url: "/images/candy/KISSZONE02 1RS.png",
+      price: 1,
+      category: "Pouch",
+      subCategory: "Kisszone 50pcs",
+    },
+    {
+      name: "Beating Heart",
+      url: "/images/candy/BEATING HEART RS1.png",
+      price: 1,
+      category: "Pouch",
+      subCategory: "Beating Heart",
     },
     {
       name: "Kisszone Dark",
       url: "/images/candy/KISSZONE DARK RS1.png",
       price: 1,
+      category: "Pouch",
+      subCategory: "Kisszone Dark",
     },
-    { name: "Kisszone", url: "/images/candy/KISSZONE RS1.png", price: 1 },
-    { name: "Kisszone01", url: "/images/candy/KISSZONE01 1RS.png", price: 1 },
-    { name: "Kisszone02", url: "/images/candy/KISSZONE02 1RS.png", price: 1 },
-    { name: "Londoncow", url: "/images/candy/LONDONCOW RS1.png", price: 1 },
+    {
+      name: "Pan Meetha",
+      url: "/images/candy/PAN MEETHA 1RS.png",
+      price: 1,
+      category: "Pouch",
+      subCategory: "Pan Meetha",
+    },
+    {
+      name: "Tambley",
+      url: "/images/candy/TAMBLEY 1RS.png",
+      price: 1,
+      category: "Pouch",
+      subCategory: "Tambley",
+    },
+    {
+      name: "Kacha Aam Candy",
+      url: "/images/candy/KACHA AAM CANDY 50 PAISA.png",
+      price: 0.5,
+      category: "Pouch",
+      subCategory: "Kacha Aam Candy",
+    },
+    {
+      name: "Londoncow",
+      url: "/images/candy/LONDONCOW RS1.png",
+      price: 1,
+      category: "Pouch",
+      subCategory: "Londoncow",
+    },
+    {
+      name: "Orage",
+      url: "/images/candy/ORAGE RS1.png",
+      price: 1,
+      category: "Pouch",
+      subCategory: "Orage",
+    },
+    {
+      name: "Fruit Bon Bon",
+      url: "/images/candy/FRUIT BON BON 50 PAISA.png",
+      price: 0.5,
+      category: "Pouch",
+      subCategory: "Fruit Bon Bon",
+    },
+    {
+      name: "Fruits Candy",
+      url: "/images/candy/FRUITS CANDY 50 PAISA.png",
+      price: 0.5,
+      category: "Pouch",
+      subCategory: "China Candy",
+    },
+    {
+      name: "Imli Candy",
+      url: "/images/candy/IMLI CANDY 50 PAISA.png",
+      price: 0.5,
+      category: "Pouch",
+      subCategory: "China Candy",
+    },
     {
       name: "Mango Candy",
       url: "/images/candy/MANGO CANDY 50 PAISA.png",
       price: 0.5,
+            category: "Pouch",
+      subCategory: "China Candy",
     },
     {
       name: "Orange Candy",
       url: "/images/candy/ORNGE CANDY 50 PAISA.png",
       price: 0.5,
+            category: "Pouch",
+      subCategory: "China Candy",
     },
-    { name: "Pan Meetha", url: "/images/candy/PAN MEETHA 1RS.png", price: 1 },
-    { name: "Orage", url: "/images/candy/ORAGE RS1.png", price: 1 },
+
     {
       name: "Pineapple Candy",
       url: "/images/candy/PINEAPPLE CANDY 50 PAISA.png",
       price: 0.5,
+            category: "Pouch",
+      subCategory: "China Candy",
     },
     {
       name: "Strawberry Candy",
       url: "/images/candy/STRAWBERRY CANDY 50 PAISA.png",
       price: 0.5,
+            category: "Pouch",
+      subCategory: "China Candy",
     },
-    { name: "Tambley", url: "/images/candy/TAMBLEY 1RS.png", price: 1 },
   ],
 
   lollipop: [

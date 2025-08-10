@@ -16,13 +16,13 @@ type Product = {
   description?: string
 }
 const category = {
-  "chocolate bar": ["c-1", "c-2"],
+  "chocolate bar": [],
   "centerfilled chocolate": ["Single Twist", "Double Twist", "Pillow Pack", "Bunch Rape"],
-  "decorative chocolate": ["Single Twist", "Double Twist", "Pillow Pack"],
+  "decorative chocolate":[],
   "Crunchy chocolate": [],
   "nought bar": [],
   "wafer rolls": [],
-  candy: [],
+  "candy": ["Pouch","Jar"],
   toffee: [],
   lollipop: [],
   jelly: [],
