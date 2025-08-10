@@ -48,7 +48,8 @@ const Products = () => {
   }, [state])
   const products = productObj[open] || [];
 
-  let productsToRender = [];
+  let productsToRender = products;
+  console.log(productObj[open])
   
   if (selectedCategory) {
     const filteredByCategory = products.filter(
