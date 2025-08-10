@@ -19,7 +19,7 @@ export default function ViewMore({ products, onClose }: ViewMoreProps) {
           exit={{ opacity: 0 }}
         >
           <motion.div
-            className="bg-white rounded-2xl shadow-xl w-[90%] max-w-6xl  overflow-y-auto p-6 relative"
+            className="bg-white rounded-2xl shadow-xl w-[90%] max-w-6xl max-h-[95vh]   overflow-y-auto p-6 relative"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}

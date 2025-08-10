@@ -1,7 +1,7 @@
 import { ProductsList } from "../Home/Home"
 import { TextAnimation } from "../../components/TextAnimation"
 import { AnimatePresence, motion } from "framer-motion"
-import { useLayoutEffect, useRef, useState } from "react"
+import { useLayoutEffect, useMemo, useRef, useState } from "react"
 import { FiShoppingBag, FiEye } from "react-icons/fi"
 import ViewMore from "./components/ViewMore"
 import { productObj } from "./AllProductList"
@@ -47,11 +47,10 @@ const Products = () => {
     }
   }, [state])
   const products = productObj[open] || [];
-
-  let productsToRender = products;
-  console.log(productObj[open])
-  
-  if (selectedCategory) {
+  const productsToRender = useMemo(() => {
+    if (!selectedCategory) {
+      return products; 
+    }
     const filteredByCategory = products.filter(
       (p) => p.category === selectedCategory
     );
@@ -63,8 +62,8 @@ const Products = () => {
         map.set(key, p);
       }
     }
-    productsToRender = Array.from(map.values());
-  }
+    return Array.from(map.values());
+  }, [products, selectedCategory]);
   return (
     <div className="w-full">
       <section className="h-[200px] bg-cover bg-center bg-gray-500"></section>
@@ -97,6 +96,7 @@ const Products = () => {
                     if (window.innerWidth < 640) {
                       ref.current?.scrollIntoView({ behavior: "smooth" })
                     }
+                    setSelectedCategory("")
                     setOpen(i.name)
                   }}
                 >
