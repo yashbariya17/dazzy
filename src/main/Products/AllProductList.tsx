@@ -1,9 +1,11 @@
-type productType = {
+export type productType = {
   [key: string]: {
     name: string
     url: string
     price?: number
     category?: string
+    subCategory?:string 
+    description?:string
   }[]
 }
 
@@ -64,34 +66,41 @@ export const productObj: productType = {
   ],
   "centerfilled chocolate": [
     {
-      name: "TRUFFINS 30 PCS",
+      name: "TRUFFINS ab",
       url: "/images/centerfilledchocolate/TRUFFINS 30 PCS 1  5RS.png",
       price: 5,
-      category:"Single Twist"
+      category:"Single Twist",
+      subCategory: "Truffins"
     },
     {
-      name: "Truffins 30 Pcs",
+      name: "Truffins 30 Pcs bc",
       url: "/images/centerfilledchocolate/TRUFFINS 30 PCS 5RS.png",
       price: 5,
-      category:"Single Twist"
+      category:"Single Twist",
+      subCategory: "Truffins"
     },
     {
-      name: "Truffins 70 Pcs",
+      name: "Truffins 70 Pcs cd",
       url: "/images/centerfilledchocolate/TRUFFINS 70 PCS  5RS.png",
       price: 5,
-      category:"Single Twist"
+      category:"Single Twist",
+      subCategory: "Truffins"
     },
     {
-      name: "Truffins 70 Pcs",
+      name: "Truffins 701 Pcs",
       url: "/images/centerfilledchocolate/TRUFFINS 70 PCS 1  5RS.png",
       price: 5,
-       category:"Single Twist"
+       category:"Single Twist",
+      subCategory: "muffins"
+
     },
     {
       name: "Truffins Container",
       url: "/images/centerfilledchocolate/TRUFFINS CONTAINER  5RS.png",
       price: 5,
-      category:"Single Twist"
+      category:"Single Twist",
+      subCategory: "muffins"
+
     },
     {
       name: "Truffle Blueberry 70 Pcs",

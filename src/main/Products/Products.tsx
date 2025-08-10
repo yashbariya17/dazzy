@@ -7,6 +7,14 @@ import ViewMore from "./components/ViewMore"
 import { productObj } from "./AllProductList"
 import { useLocation } from "react-router"
 
+type Product = {
+  name: string
+  url: string
+  price?: number
+  category?: string
+  subCategory?: string 
+  description?: string
+}
 const category = {
   "chocolate bar": ["c-1", "c-2"],
   "centerfilled chocolate": ["Single Twist", "Double Twist", "Pillow Pack", "Bunch Rape"],
@@ -25,10 +33,11 @@ const Products = () => {
 
   const ref = useRef<HTMLDivElement>(null)
   const [open, setOpen] = useState<string>(state || "chocolate bar")
-  const [selectedProduct, setSelectedProduct] = useState<any | null>(null)
   const [selectedCategory, setSelectedCategory] = useState<
     (typeof category)[keyof typeof category][number] | ""
   >("")
+  const [viewMoreProducts, setViewMoreProducts] = useState<Product[]>([]);
+
 
   useLayoutEffect(() => {
     if (state) {
@@ -37,7 +46,24 @@ const Products = () => {
       setOpen("chocolate bar")
     }
   }, [state])
+  const products = productObj[open] || [];
 
+  let productsToRender = [];
+  
+  if (selectedCategory) {
+    const filteredByCategory = products.filter(
+      (p) => p.category === selectedCategory
+    );
+  
+    const map = new Map();
+    for (const p of filteredByCategory) {
+      const key = p.subCategory ?? p.name;
+      if (!map.has(key)) {
+        map.set(key, p);
+      }
+    }
+    productsToRender = Array.from(map.values());
+  }
   return (
     <div className="w-full">
       <section className="h-[200px] bg-cover bg-center bg-gray-500"></section>
@@ -105,10 +131,7 @@ const Products = () => {
               className="grid grid-rows-[auto_1fr] grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6"
               ref={ref}
             >
-              {productObj[open]
-                .filter(
-                  (i) => !selectedCategory || i?.category === selectedCategory
-                )
+              {productsToRender
                 .map((i) => (
                   <motion.div
                     initial={{ y: "50%", opacity: 0 }}
@@ -131,13 +154,18 @@ const Products = () => {
                     />
 
                     <p className="text-center text-sm sm:text-base font-semibold mt-2">
-                      {i.name}
+                      {i.subCategory}
                     </p>
                     {/* <p className="text-sm text-gray-700 mt-1">₹{i.price}</p> */}
 
                     <div className="flex justify-center gap-3 mt-2 text-xs sm:text-sm">
                       <button
-                        onClick={() => setSelectedProduct(i)}
+                        onClick={() => {
+                          const sameSubCatProducts = productObj[open].filter(
+                            (p) => p.subCategory === i.subCategory
+                          );
+                          setViewMoreProducts(sameSubCatProducts);
+                        }}
                         className="flex items-center gap-1 text-green-700 hover:underline hover:cursor-pointer transition"
                       >
                         <FiShoppingBag size={14} /> Read More
@@ -152,12 +180,12 @@ const Products = () => {
           </section>
         </section>
         <AnimatePresence>
-          {selectedProduct && (
-            <ViewMore
-              selectedProduct={selectedProduct}
-              setSelectedProduct={setSelectedProduct}
-            />
-          )}
+        {viewMoreProducts.length > 0 && (
+  <ViewMore
+    products={viewMoreProducts}
+    onClose={() => setViewMoreProducts([])}
+  />
+)}
         </AnimatePresence>
       </section>
     </div>
