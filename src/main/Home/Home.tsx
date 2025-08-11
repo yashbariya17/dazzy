@@ -3,7 +3,6 @@ import useEmblaCarousel from "embla-carousel-react";
 import { forwardRef, useCallback, useState } from "react";
 import AnimatedNumber from "../../components/AnimatedNumber";
 import { TextAnimation } from "../../components/TextAnimation";
-import MouseComponent from "../../components/MouseComponent";
 import { Link } from "react-router";
 import Autoplay from "embla-carousel-autoplay";
 import "./home.css";
@@ -68,9 +67,10 @@ const Home = () => {
   const [] = useEmblaCarousel({ loop: true });
 
   const [aboutModal, setAboutModal] = useState(false);
-  const [emblaSlideRef, emblaSlideApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay(autoplayOptions),
-  ]);
+  const [emblaSlideRef, emblaSlideApi] = useEmblaCarousel({
+    loop: true,
+    align: "start",
+  });
 
   const scrollSlidePrev = useCallback(
     () => emblaSlideApi?.scrollPrev(),
@@ -288,8 +288,8 @@ const Home = () => {
               src="/images/25ywarsdashboard.png"
               className="w-[90%] sm:w-[70%] md:w-[90%] xl:w-[600px] xl:-translate-x-[30%] !max-w-max md:my-auto  mx-auto lg:mr-auto lg:ml-0 my-8 "
             />
-            <div className="bg-[#f4f1ea] pt-8 md:ml-auto">
-              <div className="justify-self-center items-center !h-fit md:h-auto">
+            <div className="bg-[#f4f1ea] pt-8 md:ml-auto flex ">
+              <div className="justify-self-center items-center self-center !h-fit md:h-auto lg:mb-10">
                 <h2 className="font-bold capitalize text-5xl text-[#eb0029] tracking-wider">
                   25 Years
                 </h2>
@@ -303,14 +303,18 @@ const Home = () => {
                   the largest and most trusted confectionery
                   manufacturers in the world.
                 </p>
-                <MouseComponent className="my-4 sm:mb-10 lg:mb-0 rounded-lg ">
-                  <Link
-                    to={"/about-us"}
-                    className="bg-black text-white px-4 py-2 "
-                  >
+                {/* <MouseComponent className="my-4 sm:mb-10 lg:mb-0 rounded-lg "> */}
+                <motion.button
+                  whileHover={{ scale: 1.05, backgroundColor: "#c70022" }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-[#eb0029] text-white px-4 py-2 my-2 rounded"
+                >
+                  <Link to="/about-us" className="block">
                     Read More
                   </Link>
-                </MouseComponent>
+                </motion.button>
+
+                {/* </MouseComponent> */}
               </div>
             </div>
           </section>
@@ -331,12 +335,12 @@ const Home = () => {
         <div className="w-[85%] max-w-[1000px] mx-auto relative mt-10">
           <div className="overflow-hidden" ref={emblaSlideRef}>
             <div className="flex px-10">
-              {Array(15)
+              {Array(11)
                 .fill("")
                 .map((_, index) => (
                   <div
                     key={index}
-                    className="relative flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_20%] h-[300px] mr-6 flex flex-col items-center"
+                    className="relative  flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_20%] h-[300px] mr-6 flex flex-col items-center justify-center"
                   >
                     <div className="bg-white absolute bottom-0 w-full h-[50%] rounded-t-[70px] shadow-xl z-0"></div>
                     <img
@@ -346,9 +350,9 @@ const Home = () => {
                     />
 
                     <img
-                      src={`/images/product${index + 1}.png`}
+                      src={`/images/BestSeller/${index + 1}.png`}
                       alt={`Slide ${index + 1}`}
-                      className="absolute z-20 top-[15%] sm:top-[0%] mt-4 w-[125px] sm:w-[155px] h-auto object-contain animate-upDown"
+                      className="absolute z-20 top-[15%] sm:top-[0%] mt-5 w-[125px] h-[200px]  sm:w-[155px]  object-contain animate-upDown"
                     />
 
                     <button className="bg-red-600 text-white w-20 md:w-[100px] py-1 md:py-2 mt-auto mb-6 z-20 text-[12px]">
@@ -361,7 +365,7 @@ const Home = () => {
 
           <button
             onClick={scrollSlidePrev}
-            className="absolute top-1/2 -translate-x-full -translate-y-1/2 bg-[#eb0029] aspect-square h-12 font-bold text-white rounded-full flex items-center justify-center"
+            className="absolute top-1/2 -translate-x-full -translate-y-1/2 bg-[#eb0029] aspect-square h-12 font-bold text-white rounded-full flex items-center justify-center ml-[-10px]"
             aria-label="Previous Slide"
           >
             <svg
@@ -381,7 +385,7 @@ const Home = () => {
           </button>
           <button
             onClick={scrollSlideNext}
-            className="absolute top-1/2 left-full -translate-y-1/2  bg-[#eb0029] text-white aspect-square h-12 font-bold rounded-full flex items-center justify-center"
+            className="absolute top-1/2 left-full -translate-y-1/2  bg-[#eb0029] text-white aspect-square h-12 font-bold rounded-full flex items-center justify-center ml-[10px]"
             aria-label="Next Slide"
           >
             <svg
