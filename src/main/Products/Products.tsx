@@ -28,7 +28,7 @@ const category = {
   "nought bar": [],
   "wafer rolls": [],
   candy: ["Pouch", "Jar"],
-  toffee: [],
+  "toffee": ["Box","Jar","Pouch","Container"],
   lollipop: [],
   jelly: [],
 };
