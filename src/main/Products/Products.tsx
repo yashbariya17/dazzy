@@ -54,7 +54,13 @@ const Products = () => {
   const products = productObj[open] || [];
   const productsToRender = useMemo(() => {
     if (!selectedCategory) {
-      return products;
+      const map = new Map();
+      products.forEach((i) =>
+        !map.has(i?.subCategory || i.name)
+          ? map.set(i?.subCategory || i.name, i)
+          : ""
+      );
+      return Array.from(map.values());
     }
     const filteredByCategory = products.filter(
       (p) => p.category === selectedCategory
