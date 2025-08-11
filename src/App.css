@@ -5,6 +5,12 @@
   transform: scaleX(0);
   transform-origin: left;
 }
+.static-bar {
+  background: linear-gradient(to right, gold, lightyellow, gold);
+  display: block;
+  height: 2px;
+  width: 100%; 
+}
 
 .navbar-main a:hover .underline-bar {
   transform: scaleX(1);

@@ -72,11 +72,27 @@ const Products = [
 
 const byType = [
   { state: "chocolate bar", name: "chocolate" },
-  { state: "candy", name: "candy" },
-  { state: "toffee", name: "toffee" },
+  { state: "centerfilled chocolate", name: "Centerfilled Chocolate" },
+  { state: "decorative chocolate", name: "Decorative Chocolate" },
+  { state: "Crunchy Chocolate", name: "Crunchy chocolate" },
+  { state: "nought bar", name: "Nought Bar" },
+  { state: "wafer rolls", name: "wafer rolls" },
+  { state: "toffee", name: "Toffee" },
+  { state: "jelly", name: "Jelly" },
+  { state: "candy", name: "Candy" },
+  { state: "lollipop", name: "Lollipop" },
 ];
-const byPrice = ["1", "2", "5"];
-const byBrands = ["dairy kiss", "bolivia", "truffle"];
+const byPrice = ["0.50", "1", "2", "5", "10"];
+const byBrands = [
+  "dairy kiss",
+  "bolivia",
+  "truffle",
+  "Choco Ban",
+  "Delite",
+  "Emporio",
+  "Cocos",
+  "Double Paan",
+];
 
 const ContactUs = [
   {
@@ -294,73 +310,68 @@ const NavBar = () => {
           shadow-2xl text-white w-auto z-50 py-2 
         "
                 >
-                  <section className="flex gap-x-8 px-5 py-3">
+                  <section className="flex gap-x-4 px-5 py-3 w-[600px]">
                     <div>
-                      <h2 className="px-4 py-2 whitespace-nowrap ">By Type</h2>
+                      <h2 className="px-4 py-2 whitespace-nowrap text-2xl relative">
+                        <span className="relative inline-block">
+                          By Type
+                          <span className="static-bar absolute left-0 -bottom-1 block"></span>
+                        </span>
+                      </h2>
                       {byType.map((i) => (
                         <NavLink
                           key={i.name}
                           to={`/products`}
                           state={i.state}
-                          className="relative block px-4 py-2 "
+                          className="relative block px-4  py-[2px]"
                         >
                           <span className="relative inline-block capitalize font-normal">
                             {i.name}
-                            <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span>
+                            {/* <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span> */}
                           </span>
                         </NavLink>
                       ))}
-                      <NavLink
-                        to={`/products`}
-                        state={""}
-                        className="relative block px-4 py-2 "
-                      >
-                        <span className="relative inline-block capitalize font-normal">
-                          see more
-                          <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span>
-                        </span>
-                      </NavLink>
                     </div>
-                    <span className="block h-[150px] bg-white w-[1px] mt-auto"></span>
+                    <span className="block h-[280px] bg-white w-[1px] mt-auto"></span>
                     <div>
-                      <h2 className="px-4 py-2 whitespace-nowrap">By Price</h2>
+                      <h2 className="px-4 py-2 whitespace-nowrap text-2xl relative">
+                        <span className="relative inline-block">
+                          By Price
+                          <span className="static-bar absolute left-0 -bottom-1 block"></span>
+                        </span>
+                      </h2>
                       {byPrice.map((i) => (
                         <NavLink
                           key={i}
                           to={`/byPrice`}
                           state={i}
-                          className="relative block px-4 py-2 "
+                          className="relative block px-4  py-[2px]"
                         >
-                          <span className="relative inline-block capitalize font-normal">
+                          <span className="relative inline-block capitalize font-normal ">
                             {i} Rs.
-                            <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span>
+                            {/* <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span> */}
                           </span>
                         </NavLink>
                       ))}
-                      <NavLink
-                        to={`/byPrice`}
-                        state={""}
-                        className="relative block px-4 py-2 whitespace-nowrap"
-                      >
-                        <span className="relative inline-block capitalize font-normal">
-                          see more
-                          <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span>
-                        </span>
-                      </NavLink>
                     </div>
-                    <span className="block h-[150px] bg-white w-[1px] mt-auto"></span>
+                    <span className="block h-[280px] bg-white w-[1px] mt-auto"></span>
                     <div>
-                      <h2 className="px-4 py-2 whitespace-nowrap">By Brands</h2>
+                      <h2 className="px-4 py-2 whitespace-nowrap text-2xl relative">
+                        <span className="relative inline-block">
+                          By Brands
+                          <span className="static-bar absolute left-0 -bottom-1 block"></span>
+                        </span>
+                      </h2>
                       {byBrands.map((i) => (
                         <NavLink
                           key={i}
                           to={`/byBrands`}
                           state={i}
-                          className="relative block px-4 py-2 "
+                          className="relative block px-4 py-[2px] "
                         >
                           <span className="relative inline-block capitalize font-normal">
                             {i}
-                            <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span>
+                            {/* <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span> */}
                           </span>
                         </NavLink>
                       ))}
@@ -369,9 +380,8 @@ const NavBar = () => {
                         state={""}
                         className="relative block px-4 py-2 "
                       >
-                        <span className="relative inline-block capitalize font-normal">
+                        <span className="relative inline-block capitalize font-normal bg-[#eb0029] p-2 hover:bg-[#c30021]">
                           see more
-                          <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span>
                         </span>
                       </NavLink>
                     </div>
@@ -381,8 +391,7 @@ const NavBar = () => {
             </AnimatePresence>
           </div>
 
-            
-            <NavItemLink to="/gift">Gifting</NavItemLink>
+          <NavItemLink to="/gift">Gifting</NavItemLink>
           <div
             className="relative"
             onMouseEnter={() => {

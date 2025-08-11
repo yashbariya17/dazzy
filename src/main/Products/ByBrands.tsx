@@ -29,7 +29,7 @@ const ByBrands = () => {
                     delay: index * 0.2,
                     duration: 0.4,
                   }}
-                  src={`/images/logos/logo_${index + 1}.png`}
+                  src={`/images/logos/${index + 1}.png`}
                   alt={`Slide ${index + 1}`}
                   className="w-32 object-contain aspect-auto mix-blend-color-burn"
                 />
