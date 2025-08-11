@@ -332,7 +332,7 @@ const NavBar = () => {
                         </NavLink>
                       ))}
                     </div>
-                    <span className="block h-[280px] bg-white w-[1px] mt-auto"></span>
+                    <span className="block h-[280px] bg-[#442424] w-[1px] mt-auto"></span>
                     <div>
                       <h2 className="px-4 py-2 whitespace-nowrap text-2xl relative">
                         <span className="relative inline-block">
@@ -354,7 +354,7 @@ const NavBar = () => {
                         </NavLink>
                       ))}
                     </div>
-                    <span className="block h-[280px] bg-white w-[1px] mt-auto"></span>
+                    <span className="block h-[280px] bg-[#442424] w-[1px] mt-auto"></span>
                     <div>
                       <h2 className="px-4 py-2 whitespace-nowrap text-2xl relative">
                         <span className="relative inline-block">
@@ -380,7 +380,11 @@ const NavBar = () => {
                         state={""}
                         className="relative block px-4 py-2 "
                       >
-                        <span className="relative inline-block capitalize font-normal bg-[#eb0029] p-2 hover:bg-[#c30021]">
+                        {/* // border white 
+                        rounded corner 
+                        hover: color font brown
+                        */}
+                        <span className="relative inline-block capitalize font-normal border-[1px] border-solid border-white rounded-xl   text-white bg-[#391e1e] py-1 px-2 hover:bg-white hover:text-[#391e1e]">
                           see more
                         </span>
                       </NavLink>
