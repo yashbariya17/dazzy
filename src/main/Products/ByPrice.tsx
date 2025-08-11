@@ -1,7 +1,8 @@
-import { motion } from "framer-motion"
-import { productObj } from "./AllProductList"
-import { useLayoutEffect, useRef, useState } from "react"
-import { useLocation } from "react-router"
+import { AnimatePresence, motion } from "framer-motion";
+import { productObj } from "./AllProductList";
+import { useLayoutEffect, useRef, useState } from "react";
+import { useLocation } from "react-router";
+import { FiX } from "react-icons/fi";
 
 const priceOptions = [
   { value: 0.5, img: "/images/001.png" },
@@ -9,27 +10,28 @@ const priceOptions = [
   { value: 2, img: "/images/003.png" },
   { value: 5, img: "/images/004.png" },
   { value: 10, img: "/images/005.png" },
-]
+];
 
 const ByPrice = () => {
-  const { state } = useLocation()
+  const { state } = useLocation();
 
-  const ref = useRef<HTMLDivElement>(null)
-  const [selectedPrice, setSelectedPrice] = useState<number | null>(state || 1)
+  const ref = useRef<HTMLDivElement>(null);
+  const [imageView, setImageView] = useState<Record<string, any> | null>(null);
+  const [selectedPrice, setSelectedPrice] = useState<number | null>(state || 1);
 
-  const allProducts = Object.values(productObj).flat()
+  const allProducts = Object.values(productObj).flat();
   const filteredProducts =
     selectedPrice !== null
       ? allProducts.filter((product) => product.price == selectedPrice)
-      : []
+      : [];
 
   useLayoutEffect(() => {
     if (state) {
-      setSelectedPrice(state)
+      setSelectedPrice(state);
     } else {
-      setSelectedPrice(1)
+      setSelectedPrice(1);
     }
-  }, [state])
+  }, [state]);
 
   return (
     <div className="w-full ">
@@ -46,10 +48,9 @@ const ByPrice = () => {
               <span className="block w-[20%] h-1 bg-[#eb0029] rounded-full mt-1"></span>
             </h2>
             {priceOptions.map((coin, index) => (
-              <motion.div
+              <div
                 key={index}
                 className="bg-white w-[200px] rounded-full shadow-xl py-2 group"
-                layoutId={`price-${coin.value}`}
               >
                 <p
                   className={`text-[15px] hover:text-[#eb0029] w-full pl-6 pr-5 cursor-pointer flex justify-between items-center ${
@@ -58,9 +59,9 @@ const ByPrice = () => {
                       : "text-gray-600"
                   }`}
                   onClick={() => {
-                    setSelectedPrice(coin.value)
+                    setSelectedPrice(coin.value);
                     if (window.innerWidth < 640) {
-                      ref.current?.scrollIntoView({ behavior: "smooth" })
+                      ref.current?.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
                 >
@@ -75,7 +76,7 @@ const ByPrice = () => {
                     {allProducts.filter((p) => p.price === coin.value).length}
                   </span>
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -85,32 +86,64 @@ const ByPrice = () => {
             ref={ref}
           >
             {filteredProducts.map((product) => (
-              <motion.div
+              <div
                 key={product.url + product.name}
                 className="bg-white rounded-2xl shadow-md p-4 text-center w-[160px] h-[280px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[340px] flex flex-col justify-between mx-auto"
-                initial={{ y: "50%", opacity: 0 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{
-                  once: true,
-                  amount: "all",
-                  margin: "0px 0px 150px 0px",
-                }}
-                transition={{ duration: 0.3 }}
               >
-                <img
+                <motion.img
                   src={product.url}
                   alt={product.name}
+                  layoutId={product.url + product.name}
                   className="w-[80%] h-[120px] object-contain mx-auto"
+                  onClick={() => {
+                    setImageView(product);
+                  }}
                 />
                 <h3 className="font-semibold mt-2">{product.name}</h3>
                 <p className="text-sm text-gray-600 mt-1">₹{product.price}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
       </section>
-    </div>
-  )
-}
+      <AnimatePresence>
+        {imageView && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              className="bg-white rounded-2xl shadow-xl w-auto max-h-[95vh]   overflow-y-auto p-6 px-12 relative"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <button
+                onClick={() => {
+                  setImageView(null);
+                }}
+                className="absolute top-4 right-4 text-gray-500 hover:text-gray-800"
+              >
+                <FiX size={24} />
+              </button>
 
-export default ByPrice
+              <div className="flex flex-wrap justify-center gap-4">
+                <motion.img
+                  key={imageView.url + imageView.name}
+                  layoutId={imageView.url + imageView.name}
+                  src={imageView.url}
+                  className=" h-[400px] max-h-[90%] object-contain mt-4"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
+export default ByPrice;

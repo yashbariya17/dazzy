@@ -1,60 +1,65 @@
-import { ProductsList } from "../Home/Home"
-import { TextAnimation } from "../../components/TextAnimation"
-import { AnimatePresence, motion } from "framer-motion"
-import { useLayoutEffect, useMemo, useRef, useState } from "react"
-import { FiShoppingBag, FiEye } from "react-icons/fi"
-import ViewMore from "./components/ViewMore"
-import { productObj } from "./AllProductList"
-import { useLocation } from "react-router"
+import { ProductsList } from "../Home/Home";
+import { TextAnimation } from "../../components/TextAnimation";
+import { AnimatePresence, motion } from "framer-motion";
+import { useLayoutEffect, useMemo, useRef, useState } from "react";
+import { FiShoppingBag, FiX } from "react-icons/fi";
+import ViewMore from "./components/ViewMore";
+import { productObj } from "./AllProductList";
+import { useLocation } from "react-router";
 
 type Product = {
-  name: string
-  url: string
-  price?: number
-  category?: string
-  subCategory?: string 
-  description?: string
-}
+  name: string;
+  url: string;
+  price?: number;
+  category?: string;
+  subCategory?: string;
+  description?: string;
+};
 const category = {
   "chocolate bar": [],
-  "centerfilled chocolate": ["Single Twist", "Double Twist", "Pillow Pack", "Bunch Rape"],
-  "decorative chocolate":[],
+  "centerfilled chocolate": [
+    "Single Twist",
+    "Double Twist",
+    "Pillow Pack",
+    "Bunch Rape",
+  ],
+  "decorative chocolate": [],
   "Crunchy chocolate": [],
   "nought bar": [],
   "wafer rolls": [],
-  "candy": ["Pouch","Jar"],
+  candy: ["Pouch", "Jar"],
   toffee: [],
   lollipop: [],
   jelly: [],
-}
+};
 
 const Products = () => {
-  const { state } = useLocation()
+  const { state } = useLocation();
 
-  const ref = useRef<HTMLDivElement>(null)
-  const [open, setOpen] = useState<string>(state || "chocolate bar")
+  const ref = useRef<HTMLDivElement>(null);
+  const [open, setOpen] = useState<string>(state || "chocolate bar");
   const [selectedCategory, setSelectedCategory] = useState<
     (typeof category)[keyof typeof category][number] | ""
-  >("")
+  >("");
   const [viewMoreProducts, setViewMoreProducts] = useState<Product[]>([]);
-
+  const [imageView, setImageView] = useState<Record<string, any> | null>(null);
 
   useLayoutEffect(() => {
     if (state) {
-      setOpen(state)
+      setOpen(state);
     } else {
-      setOpen("chocolate bar")
+      setOpen("chocolate bar");
     }
-  }, [state])
+  }, [state]);
   const products = productObj[open] || [];
   const productsToRender = useMemo(() => {
     if (!selectedCategory) {
-      return products; 
+      return products;
     }
     const filteredByCategory = products.filter(
       (p) => p.category === selectedCategory
     );
-  
+
     const map = new Map();
     for (const p of filteredByCategory) {
       const key = p.subCategory ?? p.name;
@@ -94,10 +99,10 @@ const Products = () => {
                   }`}
                   onClick={() => {
                     if (window.innerWidth < 640) {
-                      ref.current?.scrollIntoView({ behavior: "smooth" })
+                      ref.current?.scrollIntoView({ behavior: "smooth" });
                     }
-                    setSelectedCategory("")
-                    setOpen(i.name)
+                    setSelectedCategory("");
+                    setOpen(i.name);
                   }}
                 >
                   {i.name}
@@ -132,65 +137,91 @@ const Products = () => {
               className="grid grid-rows-[auto_1fr] grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6"
               ref={ref}
             >
-              {productsToRender
-                .map((i) => (
-                  <motion.div
-                    initial={{ y: "50%", opacity: 0 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{
-                      once: true,
-                      amount: "all",
-                      margin: "0px 0px 150px 0px",
-                    }}
-                    transition={{
-                      duration: 0.3,
-                    }}
-                    key={i.url + i.name + open}
-                    className="w-[160px] h-[280px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[340px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
-                  >
-                    <motion.img
-                      layoutId={i.url + i.name}
-                      src={i.url}
-                      className="w-[80%] h-[120px] object-contain mt-4"
-                    />
+              {productsToRender.map((i) => (
+                <div
+                  key={i.url + i.name + open}
+                  className="w-[160px] h-[280px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[340px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
+                >
+                  <motion.img
+                    layoutId={i.url + i.name}
+                    src={i.url}
+                    className="w-[80%] h-[120px] object-contain mt-4"
+                    onClick={() => setImageView(i)}
+                  />
 
-                    <p className="text-center text-sm sm:text-base font-semibold mt-2">
-                      {i.subCategory}
-                    </p>
-                    {/* <p className="text-sm text-gray-700 mt-1">₹{i.price}</p> */}
+                  <p className="text-center text-sm sm:text-base font-semibold mt-2">
+                    {i.name}
+                  </p>
 
-                    <div className="flex justify-center gap-3 mt-2 text-xs sm:text-sm">
-                      <button
-                        onClick={() => {
+                  <div className="flex justify-center gap-3 mt-2 text-xs sm:text-sm">
+                    <button
+                      onClick={() => {
+                        if (i?.subCategory && selectedCategory) {
                           const sameSubCatProducts = productObj[open].filter(
                             (p) => p.subCategory === i.subCategory
                           );
                           setViewMoreProducts(sameSubCatProducts);
-                        }}
-                        className="flex items-center gap-1 text-green-700 hover:underline hover:cursor-pointer transition"
-                      >
-                        <FiShoppingBag size={14} /> Read More
-                      </button>
-                      <button className="flex items-center gap-1 text-gray-600 hover:underline transition">
-                        <FiEye size={14} /> Quick View
-                      </button>
-                    </div>
-                  </motion.div>
-                ))}
+                        } else {
+                          setViewMoreProducts([i]);
+                        }
+                      }}
+                      className="flex items-center gap-1 text-green-700 hover:underline hover:cursor-pointer transition"
+                    >
+                      <FiShoppingBag size={14} /> Read More
+                    </button>
+                  </div>
+                </div>
+              ))}
             </div>
           </section>
         </section>
         <AnimatePresence>
-        {viewMoreProducts.length > 0 && (
-  <ViewMore
-    products={viewMoreProducts}
-    onClose={() => setViewMoreProducts([])}
-  />
-)}
+          {viewMoreProducts.length > 0 && (
+            <ViewMore
+              products={viewMoreProducts}
+              onClose={() => setViewMoreProducts([])}
+            />
+          )}
+        </AnimatePresence>
+        <AnimatePresence>
+          {imageView && (
+            <motion.div
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <motion.div
+                className="bg-white rounded-2xl shadow-xl w-auto max-h-[95vh]   overflow-y-auto p-6 px-12 relative"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <button
+                  onClick={() => {
+                    setImageView(null);
+                  }}
+                  className="absolute top-4 right-4 text-gray-500 hover:text-gray-800"
+                >
+                  <FiX size={24} />
+                </button>
+
+                <div className="flex flex-wrap justify-center gap-4">
+                  <motion.img
+                    key={imageView.url + imageView.name}
+                    layoutId={imageView.url + imageView.name}
+                    src={imageView.url}
+                    className=" h-[400px] max-h-[90%] object-contain mt-4"
+                  />
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
         </AnimatePresence>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Products
+export default Products;
