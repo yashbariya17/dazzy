@@ -4,8 +4,9 @@ import { forwardRef, useCallback, useState } from "react";
 import AnimatedNumber from "../../components/AnimatedNumber";
 import { TextAnimation } from "../../components/TextAnimation";
 import MouseComponent from "../../components/MouseComponent";
-import { useNavigate } from "react-router";
-
+import { Link } from "react-router";
+import Autoplay from "embla-carousel-autoplay";
+import "./home.css";
 type ProductsType = {
   name: string;
   url: string;
@@ -58,15 +59,27 @@ export const ProductsList: ProductsType = [
 ];
 
 const Home = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-  const navigate = useNavigate();
+  const autoplayOptions = { delay: 2000, stopOnInteraction: false };
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay(autoplayOptions),
+  ]);
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
-
   const [] = useEmblaCarousel({ loop: true });
 
   const [aboutModal, setAboutModal] = useState(false);
+  const [emblaSlideRef, emblaSlideApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay(autoplayOptions),
+  ]);
 
+  const scrollSlidePrev = useCallback(
+    () => emblaSlideApi?.scrollPrev(),
+    [emblaSlideApi]
+  );
+  const scrollSlideNext = useCallback(
+    () => emblaSlideApi?.scrollNext(),
+    [emblaSlideApi]
+  );
   return (
     <div className="w-full overflow-x-hidden">
       <AnimatePresence mode="wait">
@@ -291,16 +304,12 @@ const Home = () => {
                   manufacturers in the world.
                 </p>
                 <MouseComponent className="my-4 sm:mb-10 lg:mb-0 rounded-lg ">
-                  <motion.button
+                  <Link
+                    to={"/about-us"}
                     className="bg-black text-white px-4 py-2 "
-                    onClick={() => {
-                      // setAboutModal(true)
-                      // document.body.style.overflow = "hidden"
-                      navigate("/about-us");
-                    }}
                   >
                     Read More
-                  </motion.button>
+                  </Link>
                 </MouseComponent>
               </div>
             </div>
@@ -319,30 +328,77 @@ const Home = () => {
           A Wide Range Of Confectionery Items
         </p>
 
-        <div className=" max-w-[1000px] mx-auto relative mt-10">
-          <div className="">
-            <div className="flex flex-wrap lg:flex-nowrap px-10 md:px-0 ">
-              {Array(5)
+        <div className="w-[85%] max-w-[1000px] mx-auto relative mt-10">
+          <div className="overflow-hidden" ref={emblaSlideRef}>
+            <div className="flex px-10">
+              {Array(15)
                 .fill("")
                 .map((_, index) => (
                   <div
                     key={index}
-                    className="relative flex-[0_0_20%] h-[300px] mr-4 flex flex-col items-center"
+                    className="relative flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_20%] h-[300px] mr-6 flex flex-col items-center"
                   >
+                    <div className="bg-white absolute bottom-0 w-full h-[50%] rounded-t-[70px] shadow-xl z-0"></div>
+                    <img
+                      src="/images/brown.png"
+                      alt="brown background"
+                      className="absolute bottom-20 left-3 w-[90%] h-auto z-10 pointer-events-none select-none"
+                    />
+
                     <img
                       src={`/images/product${index + 1}.png`}
                       alt={`Slide ${index + 1}`}
-                      className="absolute z-[99] top-[15%] sm:top-[0%] mt-4 w-[125px] sm:w-[175px] h-auto object-contain float"
+                      className="absolute z-20 top-[15%] sm:top-[0%] mt-4 w-[125px] sm:w-[155px] h-auto object-contain animate-upDown"
                     />
-                    <button className="bg-red-600 text-white w-20 md:w-[100px] py-1 md:py-2 mt-auto mb-6 z-10 text-[12px]">
+
+                    <button className="bg-red-600 text-white w-20 md:w-[100px] py-1 md:py-2 mt-auto mb-6 z-20 text-[12px]">
                       READ MORE
                     </button>
-
-                    <div className="bg-white absolute bottom-0 w-full h-[50%] rounded-t-[70px] shadow-xl"></div>
                   </div>
                 ))}
             </div>
           </div>
+
+          <button
+            onClick={scrollSlidePrev}
+            className="absolute top-1/2 -translate-x-full -translate-y-1/2 bg-[#eb0029] aspect-square h-12 font-bold text-white rounded-full flex items-center justify-center"
+            aria-label="Previous Slide"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            onClick={scrollSlideNext}
+            className="absolute top-1/2 left-full -translate-y-1/2  bg-[#eb0029] text-white aspect-square h-12 font-bold rounded-full flex items-center justify-center"
+            aria-label="Next Slide"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
         </div>
 
         <section
@@ -357,15 +413,15 @@ const Home = () => {
               <div className="flex flex-col md:flex-row gap-5 justify-center text-center mt-5 items-center">
                 <div className="text-white font-bold lg:text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
                   <AnimatedNumber value={50} className="text-[24px]" /> +{" "}
-                  <p className="text-white text-xs font-light">Brands</p>
+                  <p className="text-white text-xs font-bold">Brands</p>
                 </div>
                 <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
                   <AnimatedNumber value={300} />+{" "}
-                  <p className="text-white text-xs font-light">SKU</p>
+                  <p className="text-white text-xs font-bold">SKU</p>
                 </div>
                 <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
                   <AnimatedNumber value={1000} />+{" "}
-                  <p className="text-white text-xs font-light">Team</p>
+                  <p className="text-white text-xs font-bold">Team</p>
                 </div>
               </div>
               <p
@@ -380,23 +436,24 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="bg-[#111] text-white flex flex-col md:flex-row items-center  relative   ">
-          <div className="w-auto h-[600px] flex justify-center relative ">
-            <img
-              src="/images/footeraboveboard.png"
-              alt="Chef"
-              className="rounded-lg w-full h-full object-cover "
-            />
-          </div>
-          <div className="w-fit top-12 md:mt-0 px-6 relative md:right-10 ">
-            <div className="text-orange-500 text-sm font-semibold mb-2 justify-center flex items-center gap-2 mx-auto w-fit">
-              <img src="/images/feedback.png" className="w-6 h-6 invert" />{" "}
-              <h2 className="mt-1">TESTIMONIALS</h2>{" "}
+        <section
+          className="relative bg-[#111] text-white flex items-center justify-center min-h-[600px] px-6"
+          style={{
+            backgroundImage: `
+      url('/images/left-image.png'),
+      url('/images/right-image.png')`,
+            backgroundRepeat: "no-repeat, no-repeat",
+            backgroundPosition: "left center, right center",
+            backgroundSize: "50% 100%, 50% 100%",
+          }}
+        >
+          <div className="text-center max-w-xl px-4">
+            <div className="flex justify-center items-center gap-2 mb-4 text-orange-500 text-sm font-semibold">
+              <img src="/images/feedback.png" className="w-6 h-6 invert" />
+              <h2>TESTIMONIALS</h2>
               <img src="/images/feedback.png" className="w-6 h-6 invert" />
             </div>
-            <div className="text-3xl font-bold text-white mb-6 mx-auto w-fit">
-              What Our Clients Say
-            </div>
+            <h3 className="text-3xl font-bold mb-6">What Our Clients Say</h3>
             <Slider />
           </div>
         </section>
