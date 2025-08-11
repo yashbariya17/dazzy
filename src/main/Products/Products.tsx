@@ -106,13 +106,12 @@ const Products = () => {
                   }}
                 >
                   {i.name}
-                  
                 </p>
               </motion.div>
             ))}
           </div>
           <section>
-            <div className=" flex gap-10 mb-5 px-4 flex-wrap">
+            <div className=" flex gap-x-6 md:gap-x-10  gap-y-5 mb-5 px-4 flex-wrap justify-center md:justify-start">
               {category?.[open as keyof typeof category].map((i) => (
                 <button
                   key={i}
@@ -141,7 +140,7 @@ const Products = () => {
                     src={i.url}
                     className="w-[80%] h-[200px] object-contain mt-4"
                     onClick={() => {
-                      if (i?.subCategory && selectedCategory) {
+                      if (i?.subCategory) {
                         const sameSubCatProducts = productObj[open].filter(
                           (p) => p.subCategory === i.subCategory
                         );
@@ -159,7 +158,7 @@ const Products = () => {
                   <div className="flex justify-center gap-3 mt-2 text-xs sm:text-sm">
                     <button
                       onClick={() => {
-                        if (i?.subCategory && selectedCategory) {
+                        if (i?.subCategory) {
                           const sameSubCatProducts = productObj[open].filter(
                             (p) => p.subCategory === i.subCategory
                           );

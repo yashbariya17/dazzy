@@ -74,7 +74,7 @@ const byType = [
   { state: "chocolate bar", name: "chocolate" },
   { state: "centerfilled chocolate", name: "Centerfilled Chocolate" },
   { state: "decorative chocolate", name: "Decorative Chocolate" },
-  { state: "Crunchy Chocolate", name: "Crunchy chocolate" },
+  { state: "Crunchy chocolate", name: "Crunchy chocolate" },
   { state: "nought bar", name: "Nought Bar" },
   { state: "wafer rolls", name: "wafer rolls" },
   { state: "toffee", name: "Toffee" },
@@ -323,12 +323,18 @@ const NavBar = () => {
                           key={i.name}
                           to={`/products`}
                           state={i.state}
-                          className="relative block px-4  py-[2px]"
+                          className="relative block px-4  py-[2px] group"
                         >
                           <span className="relative inline-block capitalize font-normal">
                             {i.name}
                             {/* <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span> */}
                           </span>
+                          <motion.div
+                            // layoutId="indicator"
+                            // initial={{ opacity: 0 }}
+                            // whileHover={{ opacity: 1 }}
+                            className="bg-amber-300 h-full absolute w-2 top-0 left-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                          ></motion.div>
                         </NavLink>
                       ))}
                     </div>
@@ -345,12 +351,18 @@ const NavBar = () => {
                           key={i}
                           to={`/byPrice`}
                           state={i}
-                          className="relative block px-4  py-[2px]"
+                          className="relative block px-4  py-[2px] group"
                         >
                           <span className="relative inline-block capitalize font-normal ">
                             {i} Rs.
                             {/* <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span> */}
                           </span>
+                          <motion.div
+                            // layoutId="indicator"
+                            // initial={{ opacity: 0 }}
+                            // whileHover={{ opacity: 1 }}
+                            className="bg-amber-300 h-full absolute w-2 top-0 left-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                          ></motion.div>
                         </NavLink>
                       ))}
                     </div>
@@ -367,12 +379,18 @@ const NavBar = () => {
                           key={i}
                           to={`/byBrands`}
                           state={i}
-                          className="relative block px-4 py-[2px] "
+                          className="relative block px-4 py-[2px] group "
                         >
                           <span className="relative inline-block capitalize font-normal">
                             {i}
                             {/* <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span> */}
                           </span>
+                          <motion.div
+                            // layoutId="indicator"
+                            // initial={{ opacity: 0 }}
+                            // whileHover={{ opacity: 1 }}
+                            className="bg-amber-300 h-full absolute w-2 top-0 left-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                          ></motion.div>
                         </NavLink>
                       ))}
                       <NavLink

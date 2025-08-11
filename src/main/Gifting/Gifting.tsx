@@ -1,6 +1,6 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiShoppingBag, FiEye, FiX } from "react-icons/fi";
+import { FiShoppingBag, FiX } from "react-icons/fi";
 import { CiDeliveryTruck, CiVirus, CiGift } from "react-icons/ci";
 import { SiCodefresh } from "react-icons/si";
 
@@ -61,32 +61,31 @@ const products: Product[] = [
     url: "/images/giftcart/Coconut Bar.png",
     description: "A luxurious collection of 30 rich and creamy truffles.",
   },
-    {
+  {
     name: "DLove Jar",
     url: "/images/giftcart/Coconut Bar.png",
     description: "A luxurious collection of 30 rich and creamy truffles.",
   },
-    {
+  {
     name: "Endon Container",
-      url: "/images/giftcart/Coconut Bar.png",
+    url: "/images/giftcart/Coconut Bar.png",
     description: "A luxurious collection of 30 rich and creamy truffles.",
   },
-    {
+  {
     name: "DGold ",
     url: "/images/giftcart/Coconut Bar.png",
     description: "A luxurious collection of 30 rich and creamy truffles.",
   },
-    {
+  {
     name: "Belgium",
     url: "/images/giftcart/Coconut Bar.png",
     description: "A luxurious collection of 30 rich and creamy truffles.",
   },
-    {
+  {
     name: "Brevo",
     url: "/images/giftcart/Coconut Bar.png",
     description: "A luxurious collection of 30 rich and creamy truffles.",
   },
-  
 ];
 
 const Gifting = () => {
@@ -105,17 +104,14 @@ const Gifting = () => {
       <section className="bg-gradient-to-b from-[#fff8ff] via-[#fce8f8] to-[#f9e6ff] py-14">
         <div className="max-w-[1100px] mx-auto px-6">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
-            {products.map((product, index) => (
+            {products.map((product) => (
               <motion.div
                 key={product.url + product.name}
                 transition={{
                   duration: 0.4,
-                  delay: index * 0.05,
                   ease: "easeOut",
                 }}
                 whileHover={{
-                  scale: 1.07,
-                  rotate: 1,
                   boxShadow: "0px 15px 30px rgba(186,85,211,0.4)",
                 }}
                 className="w-full h-[280px] sm:h-[300px] md:h-[340px] 
@@ -142,9 +138,6 @@ const Gifting = () => {
                   >
                     <FiShoppingBag size={14} /> Read More
                   </button>
-                  <button className="flex items-center gap-1 text-gray-700 hover:text-purple-600 hover:underline transition">
-                    <FiEye size={14} /> Quick View
-                  </button>
                 </div>
               </motion.div>
             ))}
@@ -166,7 +159,9 @@ const Gifting = () => {
             </div>
             <div className="flex flex-col items-center gap-2">
               <SiCodefresh className="h-12 w-12 text-purple-600" />
-              <p className="text-purple-900 font-medium">Fresh &amp; Original</p>
+              <p className="text-purple-900 font-medium">
+                Fresh &amp; Original
+              </p>
             </div>
             <div className="flex flex-col items-center gap-2">
               <CiGift className="h-12 w-12 text-pink-600" />
