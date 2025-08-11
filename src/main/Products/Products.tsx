@@ -106,13 +106,7 @@ const Products = () => {
                   }}
                 >
                   {i.name}
-                  <span
-                    className={`block text-center leading-5 text-[10px] group-hover:bg-[#eb0029] transition-colors duration-300 aspect-square h-5 text-white rounded-full ${
-                      i.name === open ? "bg-[#eb0029]" : "bg-gray-400"
-                    }`}
-                  >
-                    {productObj[i.name]?.length}
-                  </span>
+                  
                 </p>
               </motion.div>
             ))}
@@ -140,12 +134,12 @@ const Products = () => {
               {productsToRender.map((i) => (
                 <div
                   key={i.url + i.name + open}
-                  className="w-[160px] h-[280px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[340px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
+                  className="w-[160px] h-[240px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[320px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
                 >
                   <motion.img
                     layoutId={i.url + i.name}
                     src={i.url}
-                    className="w-[80%] h-[120px] object-contain mt-4"
+                    className="w-[80%] h-[200px] object-contain mt-4"
                     onClick={() => setImageView(i)}
                   />
 
