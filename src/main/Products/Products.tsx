@@ -140,7 +140,16 @@ const Products = () => {
                     layoutId={i.url + i.name}
                     src={i.url}
                     className="w-[80%] h-[200px] object-contain mt-4"
-                    onClick={() => setImageView(i)}
+                    onClick={() => {
+                      if (i?.subCategory && selectedCategory) {
+                        const sameSubCatProducts = productObj[open].filter(
+                          (p) => p.subCategory === i.subCategory
+                        );
+                        setViewMoreProducts(sameSubCatProducts);
+                      } else {
+                        setViewMoreProducts([i]);
+                      }
+                    }}
                   />
 
                   <p className="text-center text-sm sm:text-base font-semibold mt-2">
