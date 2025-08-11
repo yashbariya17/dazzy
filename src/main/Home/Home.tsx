@@ -340,7 +340,7 @@ const Home = () => {
                 .map((_, index) => (
                   <div
                     key={index}
-                    className="relative  flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_20%] h-[300px] mr-6 flex flex-col items-center justify-center"
+                    className="relative  flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_20%] h-[300px] mr-5 flex flex-col items-center justify-center"
                   >
                     <div className="bg-white absolute bottom-0 w-full h-[50%] rounded-t-[70px] shadow-xl z-0"></div>
                     <img
