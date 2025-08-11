@@ -230,7 +230,7 @@ const Home = () => {
                     key={index}
                   >
                     <img
-                      src={`/images/logos/logo_${index + 1}.png`}
+                      src={`/images/logos/${index + 1}.png`}
                       alt={`Slide ${index + 1}`}
                       className="w-28 object-contain aspect-auto transition duration-300 transform hover:scale-110"
                     />
