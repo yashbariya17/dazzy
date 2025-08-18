@@ -12,78 +12,73 @@ type Product = {
 
 const products: Product[] = [
   {
-    name: "Truffles Heart",
-    url: "/images/giftcart/Cocoa Milk Choclate Bar.png",
+    name: "Truffle Heart",
+    url: "/images/giftcart/Truffle Hart.png",
     description: "Rich cocoa blended with creamy milk chocolate.",
   },
   {
     name: "Glorias Purple",
-    url: "/images/giftcart/Coconut Bar.png",
+    url: "/images/giftcart/Glorious Puruple.png",
     description: "Delicious coconut filling wrapped in smooth chocolate.",
   },
   {
     name: "Glorias Red",
-    url: "/images/giftcart/Coconut Bar.png",
+    url: "/images/giftcart/Glorious Red.png",
     description: "Smooth cocoa flavor with a creamy dairy twist.",
   },
   {
     name: "Glorias Brown",
-    url: "/images/giftcart/Coconut Bar.png",
+    url: "/images/giftcart/Glorious Brown.png",
     description: "A perfect balance of rich dark and creamy milk chocolate.",
   },
   {
     name: "Truffles Octagon",
-    url: "/images/giftcart/Coconut Bar.png",
+    url: "/images/giftcart/Truffle Ogtagon_.png",
     description: "Crunchy hazelnuts wrapped in silky smooth chocolate.",
   },
   {
     name: "Stacy Octagon",
-    url: "/images/giftcart/Coconut Bar.png",
+    url: "/images/giftcart/Stacy Octagon.png",
     description: "Classic creamy milk chocolate for all ages.",
   },
   {
     name: "Bolivia Container",
-    url: "/images/giftcart/Coconut Bar.png",
+    url: "/images/giftcart/Bolivia Container.png",
     description: "Smooth milk chocolate with a playful sweet touch.",
   },
   {
-    name: "D Gold Container",
-    url: "/images/giftcart/Coconut Bar.png",
+    name: "Stacy Mini",
+    url: "/images/giftcart/Stacy Gifrt.png",
+    description: "Smooth milk chocolate with a playful sweet touch.",
+  },
+  {
+    name: "Endon Container",
+    url: "/images/DAZZY LOGO.png",
     description: "A chocolate adventure with fun flavors.",
   },
   {
-    name: "CocoTana ",
-    url: "/images/giftcart/Coconut Bar.png",
+    name: "DGold Container ",
+    url: "/images/giftcart/DLOVE CONTAINER 5RS.png",
     description: "Sweet strawberry flavor inside smooth chocolate.",
   },
   {
-    name: "Selection",
-    url: "/images/giftcart/Coconut Bar.png",
+    name: "CocoTana",
+    url: "/images/DAZZY LOGO.png",
+    description: "A luxurious collection of 30 rich and creamy truffles.",
+  },
+  {
+    name: "DLove Gold Jar",
+    url: "/images/giftcart/Dlove Gold Jar.png",
+    description: "A luxurious collection of 30 rich and creamy truffles.",
+  },
+  {
+    name: "DLove Red Jar ",
+    url: "/images/giftcart/DLove Red Jar.png",
     description: "A luxurious collection of 30 rich and creamy truffles.",
   },
   {
     name: "DLove Jar",
-    url: "/images/giftcart/Coconut Bar.png",
-    description: "A luxurious collection of 30 rich and creamy truffles.",
-  },
-  {
-    name: "Endon Container",
-    url: "/images/giftcart/Coconut Bar.png",
-    description: "A luxurious collection of 30 rich and creamy truffles.",
-  },
-  {
-    name: "DGold ",
-    url: "/images/giftcart/Coconut Bar.png",
-    description: "A luxurious collection of 30 rich and creamy truffles.",
-  },
-  {
-    name: "Belgium",
-    url: "/images/giftcart/Coconut Bar.png",
-    description: "A luxurious collection of 30 rich and creamy truffles.",
-  },
-  {
-    name: "Brevo",
-    url: "/images/giftcart/Coconut Bar.png",
+    url: "/images/giftcart/D LOVE Jar.png",
     description: "A luxurious collection of 30 rich and creamy truffles.",
   },
 ];
@@ -94,10 +89,10 @@ const Gifting = () => {
   return (
     <main>
       {/* Hero Section */}
-      <section className="h-[500px] bg-gradient-to-r from-pink-200 via-purple-200 to-pink-300 flex items-center justify-center">
-        <h1 className="text-4xl sm:text-5xl font-bold text-[#4b2e2e] drop-shadow-lg">
-          🎁 Share the Love with Perfect Gifts
-        </h1>
+      <section
+        className="h-[500px] flex items-center justify-center bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/giftcart/DAZZY GIFTING SLIED.gif')" }}
+      >
       </section>
 
       {/* Products Section */}

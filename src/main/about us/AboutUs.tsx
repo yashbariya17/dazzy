@@ -263,7 +263,7 @@ const AboutUs = () => {
     <main className="relative bg-[#fff8f0] min-h-[2100px] overflow-hidden">
       <section
         className="h-[500px] bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/premium-chocolates.jpg')" }}
+        style={{ backgroundImage: "url('/images/Quality You Can Trust,.png')" }}
       />
       <section className="text-center py-12 md:py-16 bg-[#2D0B05] text-[#E5C387]">
         <p className="text-5xl md:text-7xl tracking-widest font-[Cinzel]">

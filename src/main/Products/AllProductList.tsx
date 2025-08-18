@@ -1143,12 +1143,12 @@ export const productObj: productType = {
     },
     {
       name: "Chockers Container",
-      url: "/images/nugut bar/BIG SssTAR BOX.png",
+      url: "/images/nugut bar/CHOKERS CONTAINER 5RS.png",
       price: 5,
     },
     {
       name: "Chockers Box",
-      url: "/images/nugut bar/BIG SssTAR BOX.png",
+      url: "/images/nugut bar/CHOKERS BOX5RS.png",
       price: 5,
     },
     {
