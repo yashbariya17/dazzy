@@ -146,7 +146,7 @@ const Gifting = () => {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
             <div className="flex flex-col items-center gap-2">
               <CiDeliveryTruck className="h-12 w-12 text-purple-600" />
-              <p className="text-purple-900 font-medium">Same-day Delivery</p>
+              <p className="text-purple-900 font-medium">Get Your Delivery</p>
             </div>
             <div className="flex flex-col items-center gap-2">
               <CiVirus className="h-12 w-12 text-pink-600" />

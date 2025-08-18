@@ -249,14 +249,14 @@ export const productObj: productType = {
     },
     {
       name: "Dlove Gold 30Pcs Container",
-      url: "/images/centerfilledchocolate/DLOVE ssGOLD POUCH 5RS.png",
+      url: "/images/DAZZY LOGO.png",
       price: 5,
       category: "Pillow Pack",
       subCategory: "Dlove Gold 30Pcs Container",
     },
     {
       name: "Dlove Gold 40Pcs Container",
-      url: "/images/centerfilledchocolate/DLOVE ssGOLD POUCH 5RS.png",
+      url: "/images/DAZZY LOGO.png",
       price: 5,
       category: "Pillow Pack",
       subCategory: "Dlove Gold 40Pcs Container",
@@ -318,21 +318,21 @@ export const productObj: productType = {
     },
     {
       name: "Dlove Red Jar",
-      url: "/images/centerfilledchocolate/sDLOVE RED 5RS.png",
+      url: "/images/DAZZY LOGO.png",
       price: 5,
       category: "Pillow Pack",
       subCategory: "Dlove Red Jar",
     },
     {
       name: "Amore 70Pcs Box",
-      url: "/images/centerfilledchocolate/DLOVssE RED 5RS.png",
+      url:"/images/DAZZY LOGO.png",
       price: 5,
       category: "Pillow Pack",
       subCategory: "Amore 70Pcs Box",
     },
     {
       name: "Amore 30Pcs Container",
-      url: "/images/centerfilledchocolate/sDLOddVE RED 5RS.png",
+      url: "/images/DAZZY LOGO.png",
       price: 5,
       category: "Pillow Pack",
       subCategory: "Amore 30Pcs Container",
@@ -651,14 +651,14 @@ export const productObj: productType = {
     },
     {
       name: "DLove Jar",
-      url: "/images/centerfilledchocolate/UNIT2ED JAR 2RS.png",
+      url: "/images/DAZZY LOGO.png",
       price: 2,
       category: "Bunch Rape",
       subCategory: "DLove Jar1",
     },
     {
       name: "DLove Jar",
-      url: "/images/centerfilledchocolate/UNITE3D JAR 2RS.png",
+      url: "/images/DAZZY LOGO.png",
       price: 2,
       category: "Bunch Rape",
       subCategory: "DLove Jar",
@@ -797,7 +797,7 @@ export const productObj: productType = {
 
     {
       name: "Chocobon Container",
-      url: "/images/centerfilledchocolate/CHOCOBON MANGOww  5RS.png",
+      url: "/images/DAZZY LOGO.png",
       price: 5,
       category: "Double Twist",
       subCategory: "Chocobon 70Pcs Container",
@@ -868,7 +868,7 @@ export const productObj: productType = {
     },
     {
       name: "Ferola 70pcs Container",
-      url: "/images/centerfilledchocolate/CHOCOBON MANGOww  5RS.png",
+      url: "/images/DAZZY LOGO.png",
       price: 5,
       category: "Double Twist",
       subCategory: "Ferola 70Pcs Container",
@@ -1025,7 +1025,7 @@ export const productObj: productType = {
     // },
     {
       name: "Oriento 30pcs Container",
-      url: "/images/centerfilledchocolate/GLORIOUS GIFT BOX 253RS.png",
+      url: "/images/DAZZY LOGO.png",
       price: 5,
       category: "Single Twist",
       subCategory: "Oriento 30pcs Container",
@@ -1164,12 +1164,12 @@ export const productObj: productType = {
 
     {
       name: "Caramet Cont",
-      url: "/images/nugut bar/BIG SssTAR BOX.png",
+      url: "/images/DAZZY LOGO.png",
       price: 5,
     },
     {
       name: "Carafians Cont ",
-      url: "/images/nugut bar/BIG SssTAR BOX.png",
+      url: "/images/DAZZY LOGO.png",
       price: 5,
     },
     {
