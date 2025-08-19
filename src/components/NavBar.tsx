@@ -235,6 +235,24 @@ const NavBar = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+  const downloadMultiplePdfs = () => {
+    const files = [
+      {
+        url: "/Files/Dazzy Chocolate Catalogue.pdf",
+        name: "Dazzy Chocolate Catalogue.pdf",
+      },
+      { url: "/Files/Dazzy CT Catalogue.pdf", name: "Dazzy CT Catalogue.pdf" },
+    ];
+
+    files.forEach((file) => {
+      const link = document.createElement("a");
+      link.href = file.url;
+      link.download = file.name;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  };
 
   return (
     <motion.nav className="navbar-main bg-[#391e1e]  text-white py-5">
@@ -428,7 +446,12 @@ const NavBar = () => {
             <DropdownMenu items={ContactUs} isOpen={hoverMenu === "contact"} />
           </div>
 
-          <button className="bg-red-500 px-4 py-2">Download Catalog</button>
+          <button
+            className="bg-red-500 px-4 py-2 cursor-pointer"
+            onClick={downloadMultiplePdfs}
+          >
+            Download Catalogue
+          </button>
         </section>
       ) : (
         <section
@@ -462,7 +485,12 @@ const NavBar = () => {
               />
             </motion.li>
             <motion.li variants={itemVariants} className=" no-underline">
-              Gifting
+              <MobileNavItem
+                to="/gift"
+                label="Gifting"
+                onClick={() => setIsOpen(false)}
+                itemVariants={itemVariants}
+              />
             </motion.li>
             <motion.li variants={itemVariants} className=" no-underline">
               <AccordionDropDown
@@ -471,8 +499,12 @@ const NavBar = () => {
                 closeMobileMenu={() => setIsOpen(false)}
               />
             </motion.li>
-            <motion.li variants={itemVariants} className="bg-red-500 px-4 py-2">
-              Download Catlog
+            <motion.li
+              variants={itemVariants}
+              onClick={downloadMultiplePdfs}
+              className="bg-red-500 px-4 py-2"
+            >
+              Download Catalogue{" "}
             </motion.li>
           </motion.ul>
         </section>

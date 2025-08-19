@@ -7,35 +7,45 @@ const aboutData = [
   {
     title: "Since 2001",
     description:
-      "Since its inception in 2001, **Dazzy** has been dedicated to crafting premium sugar confectionery and moulded chocolate specialties that bring sweetness to life’s most cherished moments. What began as a modest production unit in the Sayajipura area of Vadodara has evolved into one of the world’s leading family-owned confectionery enterprises—giving rise to **Dazzy Food Industries**.",
+    <p className="mb-2 text-sm md:text-base ">
+      "Since its inception in 2001, <span className="font-bold">Dazzy</span> has been dedicated to crafting premium sugar confectionery and moulded chocolate specialties that bring sweetness to life’s most cherished moments. What began as a modest production unit in the Sayajipura area of Vadodara has evolved into one of the world’s leading family-owned confectionery enterprises—giving rise to <span className="font-bold">Dazzy Food Industries</span>.
+    </p>,
     image: "/images/founder1.jpg",
     side: "right",
   },
   {
     title: "Since 2010",
     description:
-      "The journey began with the success of its flagship product, **Éclair Gold**, which quickly gained popularity and laid the foundation for the brand’s rapid growth and innovation. Over the years, Dazzy has consistently expanded its product portfolio, keeping quality and consumer delight at its core.",
+     <p className="mb-2 text-sm md:text-base ">
+      The journey began with the success of its flagship product, <span className="font-bold">Éclair Gold</span>, which quickly gained popularity and laid the foundation for the brand’s rapid growth and innovation. Over the years, Dazzy has consistently expanded its product portfolio, keeping quality and consumer delight at its core.
+     </p>,
     image: "/images/founder2.jpg",
     side: "left",
   },
   {
     title: "Journey",
     description:
-      "The company’s remarkable growth is attributed to the visionary leadership of **Mr. Dipak Kanani**, Chairman and CEO, ably supported by Managing Directors and his brothers - **Mr. Tushar Kanani** and **Mr. Ashok Kanani**. With deep-rooted expertise in the confectionery domain, the leadership team has steered the company with a singular focus—offering exceptional quality at optimal value while continually pushing the boundaries of innovation in the confectionery sector.",
+     <p className="mb-2 text-sm md:text-base ">
+      "The company’s remarkable growth is attributed to the visionary leadership of <span className="font-bold">Mr. Dipak Kanani</span>, Chairman and CEO, ably supported by Managing Directors and his brothers - <span className="font-bold">Mr. Tushar Kanani</span> and <span className="font-bold">Mr. Ashok Kanani</span>. With deep-rooted expertise in the confectionery domain, the leadership team has steered the company with a singular focus—offering exceptional quality at optimal value while continually pushing the boundaries of innovation in the confectionery sector.
+</p>,
     image: "/images/factory.jpg",
     side: "right",
   },
   {
     title: "2007",
     description:
-      " Dazzy marked a significant milestone with the establishment of its second large-scale manufacturing facility—**Dazzy Products Pvt. Ltd.**—spanning over 100,000 sq. ft. in Manjusar GIDC, Vadodara. This facility houses state-of-the-art infrastructure dedicated to the production of moulded chocolates, lollipops, and candies. It is home to several iconic Dazzy brands such as **Dairy Kiss, Endon, Big Star, Jellos, and 3 Stixs**",
+     <p className="mb-2 text-sm md:text-base ">
+      Dazzy marked a significant milestone with the establishment of its second large-scale manufacturing facility— <span className="font-bold">Dazzy Products Pvt. Ltd.</span> — spanning over 100,000 sq. ft. in Manjusar GIDC, Vadodara. This facility houses state-of-the-art infrastructure dedicated to the production of moulded chocolates, lollipops, and candies. It is home to several iconic Dazzy brands such as <span className="font-bold">Dairy Kiss, Endon, Big Star, Jellos, and 3 Stixs</span>.
+</p>,
     image: "/images/factory.jpg",
     side: "left",
   },
   {
     title: "Journey",
     description:
-      "Further expanding its capabilities, Dazzy launched its most advanced manufacturing unit in **2024** under **Dazzy Food Pvt. Ltd.**, covering an area of **200,000 sq. ft.** Equipped with cutting-edge technology and modern production lines, this facility manufactures premium chocolate brands such as **D’Love, Truffles, Oh! Wow, and KingKong**, among many others.",
+     <p className="mb-2 text-sm md:text-base ">
+      Further expanding its capabilities, Dazzy launched its most advanced manufacturing unit in <span className="font-bold">2024</span> under <span className="font-bold">Dazzy Food Pvt. Ltd.</span>, covering an area of <span className="font-bold">200,000 sq. ft.</span> Equipped with cutting-edge technology and modern production lines, this facility manufactures premium chocolate brands such as <span className="font-bold">D’Love, Truffles, Oh! Wow, and KingKong</span>, among many others.
+</p>,
     image: "/images/factory.jpg",
     side: "right",
   },
@@ -50,7 +60,7 @@ const aboutData = [
 
 type TimelineBlockProps = {
   title: string;
-  description: string;
+  description:any ;
   image: string;
   blockNo: number;
 };
@@ -96,9 +106,10 @@ const TimelineBlock = ({
           <h3 className="mb-2 cream-cake-font text-red-500 font-cursive text-[4rem]">
             {title}
           </h3>
-          <p className="mb-2 text-sm md:text-base font-semibold">
+          
             {description}
-          </p>
+          {/* <p className="mb-2 text-sm md:text-base font-semibold">
+          </p> */}
         </div>
       </motion.div>
       <motion.div
@@ -261,12 +272,14 @@ const AboutUs = () => {
 
   return (
     <main className="relative bg-[#fff8f0] min-h-[2100px] overflow-hidden">
-      <section
-        className="h-[500px] bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/Quality You Can Trust,.png')" }}
+    
+            <img
+        src="/images/Quality You Can Trust,.png"
+        alt="logo"
+        className="w-full h-auto lg:max-h-[600px]  "
       />
       <section className="text-center py-12 md:py-16 bg-[#2D0B05] text-[#E5C387]">
-        <p className="text-5xl md:text-7xl tracking-widest font-[Cinzel]">
+        <p className="text-xl md:text-7xl tracking-widest font-[Cinzel] ">
           25 YEARS OF SWEET MEMORIES
         </p>
       </section>
