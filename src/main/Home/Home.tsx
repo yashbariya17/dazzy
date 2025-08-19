@@ -407,7 +407,7 @@ const Home = () => {
 
         <section
           className="h-[700px] overflow-hidden  mt-10 relative bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/uperportion.png')" }}
+          style={{ backgroundImage: "url('/images/SLIEDER.png')" }}
         >
           <div className="flex  justify-center lg:justify-end h-full max-w-[1000px] mx-auto">
             <div className="bg-red-600 rounded-[50px] h-[450px] lg:h-[250px] w-[80%] md:w-[500px] flex flex-col gap-3 justify-center ml-5 mr-5 lg:ml-0  lg:mr-20 mt-auto mb-auto">
@@ -441,16 +441,10 @@ const Home = () => {
           </div>
         </section>
         <section
-          className="relative bg-[#111] text-white flex items-center justify-center min-h-[600px] px-6"
-          style={{
-            backgroundImage: `
-      url('/images/left-image.png'),
-      url('/images/right-image.png')`,
-            backgroundRepeat: "no-repeat, no-repeat",
-            backgroundPosition: "left center, right center",
-            backgroundSize: "50% 100%, 50% 100%",
-          }}
+          className="relative bg-[#111] text-white flex items-center justify-center min-h-[600px] px-6 isolate"
+
         >
+          <video src="/What Our Clients Say Background .mp4 " loop muted autoPlay playsInline className="absolute h-full w-full z-[-1] object-cover" ></video>
           <div className="text-center max-w-xl px-4">
             <div className="flex justify-center items-center gap-2 mb-4 text-orange-500 text-sm font-semibold">
               <img src="/images/feedback.png" className="w-6 h-6 invert" />
