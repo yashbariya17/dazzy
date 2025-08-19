@@ -89,11 +89,17 @@ const Gifting = () => {
   return (
     <main>
       {/* Hero Section */}
-      <section
+      {/* <section
         className="h-[500px] flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/giftcart/DAZZY GIFTING SLIED.gif')" }}
-      >
-      </section>
+        style={{
+          backgroundImage: "url('/images/giftcart/DAZZY GIFTING SLIED.gif')",
+        }}
+      ></section> */}
+      <img
+        src="/images/giftcart/DAZZY GIFTING SLIED.gif"
+        alt="logo"
+        className="w-full h-auto lg:max-h-[600px] lg:object-[0px_-100px] lg:object-cover"
+      />
 
       {/* Products Section */}
       <section className="bg-gradient-to-b from-[#fff8ff] via-[#fce8f8] to-[#f9e6ff] py-14">
@@ -120,8 +126,9 @@ const Gifting = () => {
                 <motion.img
                   layoutId={product.url + product.name}
                   src={product.url}
-                  className="w-[80%] h-[120px] object-contain mt-4 drop-shadow-md"
+                  className="w-full h-[180px] object-contain mt-4 drop-shadow-md"
                   alt={product.name}
+                  onClick={() => setSelectedProduct(product)}
                 />
                 <p className="text-center text-sm sm:text-base font-semibold mt-2 text-purple-900">
                   {product.name}
