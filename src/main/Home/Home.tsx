@@ -289,7 +289,7 @@ const Home = () => {
               className="w-[90%] sm:w-[70%] md:w-[90%] xl:w-[600px] xl:-translate-x-[30%] !max-w-max md:my-auto  mx-auto lg:mr-auto lg:ml-0 my-8 "
             />
             <div className="bg-[#f4f1ea] pt-8 md:ml-auto flex ">
-              <div className="justify-self-center items-center self-center !h-fit md:h-auto lg:mb-10">
+              <div className="justify-self-center items-center self-center !h-fit mx-auto md:h-auto lg:mb-10">
                 <h2 className="font-bold capitalize text-5xl text-[#eb0029] tracking-wider">
                   25 Years
                 </h2>
@@ -332,27 +332,27 @@ const Home = () => {
           A Wide Range Of Confectionery Items
         </p>
 
-        <div className="w-[85%] max-w-[1000px] mx-auto relative mt-10">
+        <div className="w-[54%] md:w-[85%] max-w-[1000px] mx-auto relative md:mt-10">
           <div className="overflow-hidden" ref={emblaSlideRef}>
-            <div className="flex px-10">
+            <div className="flex md:px-10">
               {Array(11)
                 .fill("")
                 .map((_, index) => (
                   <div
                     key={index}
-                    className="relative  flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_20%] h-[300px] mr-5 flex flex-col items-center justify-center"
+                    className="relative  flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_20%] h-[300px] mr-14 md:mr-5 flex flex-col items-center justify-center"
                   >
                     <div className="bg-white absolute bottom-0 w-full h-[50%] rounded-t-[70px] shadow-xl z-0"></div>
                     <img
                       src="/images/brown.png"
                       alt="brown background"
-                      className="absolute bottom-20 left-3 w-[90%] h-auto z-10 pointer-events-none select-none"
+                      className="absolute bottom-20  left-5 md:left-3 w-[80%] md:w-[90%] md:h-auto z-10 pointer-events-none select-none"
                     />
 
                     <img
                       src={`/images/BestSeller/${index + 1}.png`}
                       alt={`Slide ${index + 1}`}
-                      className="absolute z-20 top-[15%] sm:top-[0%] mt-5 w-[125px] h-[200px]  sm:w-[155px]  object-contain animate-upDown"
+                      className="absolute z-20 top-[15%] sm:top-[0%] mt-5 w-28 h-[150px] md:h-[200px]  sm:w-[155px]  object-contain animate-upDown"
                     />
 
                     <button className="bg-red-600 text-white w-20 md:w-[100px] py-1 md:py-2 mt-auto mb-6 z-20 text-[12px]">
@@ -625,12 +625,12 @@ const Slide = forwardRef(function Slide(
           className="w-12 h-12 rounded-full mr-4 object-cover"
         />
         <div>
-          <h3 className="font-bold text-lg">{name}</h3>
+          <h3 className="font-bold text-sm md:text-lg">{name}</h3>
           <p className="text-sm text-gray-500">{occupation}</p>
           <div className="text-yellow-500 mt-1">{ratings}</div>
         </div>
       </div>
-      <p className="text-gray-600">{review}</p>
+      <p className="text-gray-600 text-sm md:text-[16px]">{review}</p>
       <div className="absolute top-0 right-4 text-orange-500 text-[4.5rem] font-bold">
         ”
       </div>
