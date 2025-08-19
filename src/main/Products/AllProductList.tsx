@@ -654,13 +654,6 @@ export const productObj: productType = {
       url: "/images/DAZZY LOGO.png",
       price: 2,
       category: "Bunch Rape",
-      subCategory: "DLove Jar1",
-    },
-    {
-      name: "DLove Jar",
-      url: "/images/DAZZY LOGO.png",
-      price: 2,
-      category: "Bunch Rape",
       subCategory: "DLove Jar",
     },
     {
