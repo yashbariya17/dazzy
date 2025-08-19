@@ -320,7 +320,7 @@ const Home = () => {
           </section>
         </section>
       </section>
-      <video src="/WITH TEXT.mp4" autoPlay muted loop playsInline/>
+      <video src="/WITH TEXT.mp4" autoPlay muted loop playsInline className="w-full"/>
       <section className="pt-8 bg-[#f4f1ea] ">
         <TextAnimation text="Best Sellers" />
         <p
