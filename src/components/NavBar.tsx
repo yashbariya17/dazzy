@@ -447,7 +447,7 @@ const NavBar = () => {
           </div>
 
           <button
-            className="bg-red-500 px-4 py-2 cursor-pointer"
+            className="bg-red-500 px-4 py-2 cursor-pointer transition-all duration-200 hover:bg-red-700 active:scale-90"
             onClick={downloadMultiplePdfs}
           >
             Download Catalogue
