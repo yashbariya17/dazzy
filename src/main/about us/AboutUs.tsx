@@ -276,7 +276,11 @@ const AboutUs = () => {
             <img
         src="/images/Quality You Can Trust,.png"
         alt="logo"
-        className="w-full h-auto lg:max-h-[600px]  "
+        loading="eager"
+        fetchPriority="high"
+        width={5335}
+        height={1376}
+        className="w-full h-auto lg:min-h-[310px] lg:max-h-[600px]  "
       />
       <section className="text-center py-12 md:py-16 bg-[#2D0B05] text-[#E5C387]">
         <p className="text-xl md:text-7xl tracking-widest font-[Cinzel] ">

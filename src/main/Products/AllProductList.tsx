@@ -6,6 +6,7 @@ export type productType = {
     category?: string;
     subCategory?: string;
     description?: string;
+    brand?:string
   }[];
 };
 

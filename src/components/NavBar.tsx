@@ -87,7 +87,7 @@ const byBrands = [
   "dairy kiss",
   "bolivia",
   "truffle",
-  "Choco Ban",
+  "Choco Bon",
   "Delite",
   "Emporio",
   "Cocos",
