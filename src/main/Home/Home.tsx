@@ -146,10 +146,21 @@ const Home = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      <section
-        className="h-[500px] bg-cover bg-center  bg-gray-700"
-        // style={{ backgroundImage: "url('/images/choclatebigslider.png')" }}
-      ></section>
+      <section className="h-[500px] bg-gray-700 flex items-center justify-center">
+        <video
+          className="h-full w-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source
+            src="/images/Videos/DAZZY ECLAIRS TOFFEE.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </section>
 
       <section className="bg-[#eb0029]">
         <div className="max-w-[1000px] uppercase text-white  mx-auto font-semibold flex justify-center md:gap-16 text-lg py-2 flex-col md:flex-row gap-2 items-center">
@@ -320,7 +331,14 @@ const Home = () => {
           </section>
         </section>
       </section>
-      <video src="/WITH TEXT.mp4" autoPlay muted loop playsInline className="w-full"/>
+      <video
+        src="/WITH TEXT.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="w-full"
+      />
       <section className="pt-8 bg-[#f4f1ea] ">
         <TextAnimation text="Best Sellers" />
         <p
@@ -440,11 +458,15 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section
-          className="relative bg-[#111] text-white flex items-center justify-center min-h-[600px] px-6 isolate"
-
-        >
-          <video src="/What Our Clients Say Background .mp4 " loop muted autoPlay playsInline className="absolute h-full w-full z-[-1] object-cover" ></video>
+        <section className="relative bg-[#111] text-white flex items-center justify-center min-h-[600px] px-6 isolate">
+          <video
+            src="/What Our Clients Say Background .mp4 "
+            loop
+            muted
+            autoPlay
+            playsInline
+            className="absolute h-full w-full z-[-1] object-cover"
+          ></video>
           <div className="text-center max-w-xl px-4">
             <div className="flex justify-center items-center gap-2 mb-4 text-orange-500 text-sm font-semibold">
               <img src="/images/feedback.png" className="w-6 h-6 invert" />
