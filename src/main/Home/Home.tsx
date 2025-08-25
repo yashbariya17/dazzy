@@ -146,9 +146,9 @@ const Home = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      <section className="h-[500px] bg-gray-700 flex items-center justify-center">
+      <section className=" bg-gray-700 flex items-center justify-center">
         <video
-          className="h-full w-full object-cover"
+          className="h-auto w-full object-cover"
           autoPlay
           loop
           muted
@@ -332,7 +332,7 @@ const Home = () => {
         </section>
       </section>
       <video
-        src="/WITH TEXT.mp4"
+        src="/SUPER DELICIOUS.mp4"
         autoPlay
         muted
         loop
