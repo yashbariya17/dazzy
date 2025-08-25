@@ -155,7 +155,7 @@ const Home = () => {
           playsInline
         >
           <source
-            src="/images/Videos/DAZZY ECLAIRS TOFFEE.mp4"
+            src="/images/Videos/DAZZY ECLAIRS TOFFEE (1).mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
@@ -163,7 +163,7 @@ const Home = () => {
       </section>
 
       <section className="bg-[#eb0029]">
-        <div className="max-w-[1000px] uppercase text-white  mx-auto font-semibold flex justify-center md:gap-16 text-lg py-2 flex-col md:flex-row gap-2 items-center">
+        <div className="max-w-[1000px] uppercase text-white  mx-auto font-semibold grid grid-cols-2 *:text-center md:flex justify-center md:gap-16 text-[12px] md:text-lg py-2 flex-col md:flex-row gap-2 items-center">
           <p>fssai & iso certiefied</p>
           <p>25+ year experience</p>
           <p>100%veg</p>
