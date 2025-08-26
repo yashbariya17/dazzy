@@ -148,10 +148,9 @@ const Home = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      <section
-        className="h-[500px] bg-cover bg-center  bg-gray-700"
-      // style={{ backgroundImage: "url('/images/choclatebigslider.png')" }}
-      ></section>
+      <section className="h-[500px]">
+        <VideoSlider />
+      </section>
 
       <section className="bg-[#eb0029]">
         <div className="max-w-[1000px] uppercase text-white  mx-auto font-semibold grid grid-cols-2 *:text-center md:flex justify-center md:gap-16 text-[12px] md:text-lg py-2 flex-col md:flex-row gap-2 items-center">
