@@ -55,16 +55,6 @@ const VideoSlider: React.FC = () => {
             className="h-full w-auto object-cover"
           ></video>
         </SwiperSlide>
-        <SwiperSlide>
-          <video
-            src="/videos/SUPER_DELICIOUS_TASTES_CHOCOLATEY.mp4"
-            autoPlay
-            muted
-            loop
-            className="h-full w-auto object-cover"
-          ></video>
-        </SwiperSlide>
-        {/* You can add more <SwiperSlide> components for additional videos */}
       </Swiper>
   );
 };

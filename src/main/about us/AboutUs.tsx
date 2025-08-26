@@ -6,46 +6,88 @@ import { useEffect, useRef, useState } from "react";
 const aboutData = [
   {
     title: "Since 2001",
-    description:
-    <p className="mb-2 text-sm md:text-base ">
-      "Since its inception in 2001, <span className="font-bold">Dazzy</span> has been dedicated to crafting premium sugar confectionery and moulded chocolate specialties that bring sweetness to life’s most cherished moments. What began as a modest production unit in the Sayajipura area of Vadodara has evolved into one of the world’s leading family-owned confectionery enterprises—giving rise to <span className="font-bold">Dazzy Food Industries</span>.
-    </p>,
+    description: (
+      <p className="mb-2 text-sm md:text-base ">
+        "Since its inception in 2001, <span className="font-bold">Dazzy</span>{" "}
+        has been dedicated to crafting premium sugar confectionery and moulded
+        chocolate specialties that bring sweetness to life’s most cherished
+        moments. What began as a modest production unit in the Sayajipura area
+        of Vadodara has evolved into one of the world’s leading family-owned
+        confectionery enterprises—giving rise to{" "}
+        <span className="font-bold">Dazzy Food Industries</span>.
+      </p>
+    ),
     image: "/images/founder1.jpg",
     side: "right",
   },
   {
     title: "Since 2010",
-    description:
-     <p className="mb-2 text-sm md:text-base ">
-      The journey began with the success of its flagship product, <span className="font-bold">Éclair Gold</span>, which quickly gained popularity and laid the foundation for the brand’s rapid growth and innovation. Over the years, Dazzy has consistently expanded its product portfolio, keeping quality and consumer delight at its core.
-     </p>,
+    description: (
+      <p className="mb-2 text-sm md:text-base ">
+        The journey began with the success of its flagship product,{" "}
+        <span className="font-bold">Éclair Gold</span>, which quickly gained
+        popularity and laid the foundation for the brand’s rapid growth and
+        innovation. Over the years, Dazzy has consistently expanded its product
+        portfolio, keeping quality and consumer delight at its core.
+      </p>
+    ),
     image: "/images/founder2.jpg",
     side: "left",
   },
   {
     title: "Journey",
-    description:
-     <p className="mb-2 text-sm md:text-base ">
-      "The company’s remarkable growth is attributed to the visionary leadership of <span className="font-bold">Mr. Dipak Kanani</span>, Chairman and CEO, ably supported by Managing Directors and his brothers - <span className="font-bold">Mr. Tushar Kanani</span> and <span className="font-bold">Mr. Ashok Kanani</span>. With deep-rooted expertise in the confectionery domain, the leadership team has steered the company with a singular focus—offering exceptional quality at optimal value while continually pushing the boundaries of innovation in the confectionery sector.
-</p>,
+    description: (
+      <p className="mb-2 text-sm md:text-base ">
+        "The company’s remarkable growth is attributed to the visionary
+        leadership of <span className="font-bold">Mr. Dipak Kanani</span>,
+        Chairman and CEO, ably supported by Managing Directors and his brothers
+        - <span className="font-bold">Mr. Tushar Kanani</span> and{" "}
+        <span className="font-bold">Mr. Ashok Kanani</span>. With deep-rooted
+        expertise in the confectionery domain, the leadership team has steered
+        the company with a singular focus—offering exceptional quality at
+        optimal value while continually pushing the boundaries of innovation in
+        the confectionery sector.
+      </p>
+    ),
     image: "/images/factory.jpg",
     side: "right",
   },
   {
     title: "2007",
-    description:
-     <p className="mb-2 text-sm md:text-base ">
-      Dazzy marked a significant milestone with the establishment of its second large-scale manufacturing facility— <span className="font-bold">Dazzy Products Pvt. Ltd.</span> — spanning over 100,000 sq. ft. in Manjusar GIDC, Vadodara. This facility houses state-of-the-art infrastructure dedicated to the production of moulded chocolates, lollipops, and candies. It is home to several iconic Dazzy brands such as <span className="font-bold">Dairy Kiss, Endon, Big Star, Jellos, and 3 Stixs</span>.
-</p>,
+    description: (
+      <p className="mb-2 text-sm md:text-base ">
+        Dazzy marked a significant milestone with the establishment of its
+        second large-scale manufacturing facility—{" "}
+        <span className="font-bold">Dazzy Products Pvt. Ltd.</span> — spanning
+        over 100,000 sq. ft. in Manjusar GIDC, Vadodara. This facility houses
+        state-of-the-art infrastructure dedicated to the production of moulded
+        chocolates, lollipops, and candies. It is home to several iconic Dazzy
+        brands such as{" "}
+        <span className="font-bold">
+          Dairy Kiss, Endon, Big Star, Jellos, and 3 Stixs
+        </span>
+        .
+      </p>
+    ),
     image: "/images/factory.jpg",
     side: "left",
   },
   {
     title: "Journey",
-    description:
-     <p className="mb-2 text-sm md:text-base ">
-      Further expanding its capabilities, Dazzy launched its most advanced manufacturing unit in <span className="font-bold">2024</span> under <span className="font-bold">Dazzy Food Pvt. Ltd.</span>, covering an area of <span className="font-bold">200,000 sq. ft.</span> Equipped with cutting-edge technology and modern production lines, this facility manufactures premium chocolate brands such as <span className="font-bold">D’Love, Truffles, Oh! Wow, and KingKong</span>, among many others.
-</p>,
+    description: (
+      <p className="mb-2 text-sm md:text-base ">
+        Further expanding its capabilities, Dazzy launched its most advanced
+        manufacturing unit in <span className="font-bold">2024</span> under{" "}
+        <span className="font-bold">Dazzy Food Pvt. Ltd.</span>, covering an
+        area of <span className="font-bold">200,000 sq. ft.</span> Equipped with
+        cutting-edge technology and modern production lines, this facility
+        manufactures premium chocolate brands such as{" "}
+        <span className="font-bold">
+          D’Love, Truffles, Oh! Wow, and KingKong
+        </span>
+        , among many others.
+      </p>
+    ),
     image: "/images/factory.jpg",
     side: "right",
   },
@@ -60,7 +102,7 @@ const aboutData = [
 
 type TimelineBlockProps = {
   title: string;
-  description:any ;
+  description: any;
   image: string;
   blockNo: number;
 };
@@ -106,8 +148,8 @@ const TimelineBlock = ({
           <h3 className="mb-2 cream-cake-font text-red-500 font-cursive text-[4rem]">
             {title}
           </h3>
-          
-            {description}
+
+          {description}
           {/* <p className="mb-2 text-sm md:text-base font-semibold">
           </p> */}
         </div>
@@ -272,8 +314,7 @@ const AboutUs = () => {
 
   return (
     <main className="relative bg-[#fff8f0] min-h-[2100px] overflow-hidden">
-    
-            <img
+      <img
         src="/images/Quality You Can Trust,.png"
         alt="logo"
         loading="eager"
@@ -323,29 +364,40 @@ const AboutUs = () => {
         <span>PAN INDIA DELIVERY</span>
       </div>
 
-      {/* Vision and Our Team */}
-      <div className="w-full flex flex-col items-center mt-10 px-4">
+      <div className="relative w-full flex flex-col items-center mt-10 px-4">
+        <div
+          className="absolute hidden lg:flex left-0 xl:left-16 top-0 bottom-0 w-40 bg-no-repeat bg-contain bg-left pointer-events-none"
+          style={{ backgroundImage: "url('/videos/CARTOON CHOCOLATE.gif')" }}
+        ></div>
+
+        <div
+          className="absolute hidden lg:flex right-0 xl:right-16 top-0 bottom-0 w-40 bg-no-repeat bg-contain bg-right pointer-events-none"
+          style={{ backgroundImage: "url('/videos/CARTOON STICK.gif')" }}
+        ></div>
+
         <h2 className="text-8xl text-red-600 mb-4 text-center cream-cake-font">
           Vision of Company
         </h2>
-        <p className="max-w-3xl text-center text-gray-700 mb-12 text-sm md:text-base leading-relaxed">
+
+        <p className="max-w-3xl text-center text-gray-700 mb-12 text-sm md:text-base leading-relaxed relative z-10">
           At <span className="font-bold text-red-600">Dazzy</span>, our mission
           is to craft
           <span className="font-semibold text-gray-900">
             {" "}
             exceptional confectionery
           </span>
-          that brings <span className="font-bold text-red-600">joy</span> to
-          everyday moments — through{" "}
-          <span className="font-semibold">consistent quality</span>,
+          that brings
+          <span className="font-bold text-red-600"> joy</span> to everyday
+          moments — through
+          <span className="font-semibold"> consistent quality</span>,
           <span className="font-semibold"> affordability</span>, and a
           <span className="font-semibold"> consumer-first approach</span>.
           <br />
           <br />
           Guided by a vision to be a
           <span className="font-bold text-gray-900"> trusted global brand</span>
-          , we create our products using the{" "}
-          <span className="font-semibold">finest ingredients</span>,
+          , we create our products using the
+          <span className="font-semibold"> finest ingredients</span>,
           <span className="font-semibold"> advanced technology</span>, and
           <span className="font-semibold"> transparent quality practices</span>.
           <br />
@@ -357,25 +409,10 @@ const AboutUs = () => {
         </p>
 
         {/* Decorative Divider */}
-        <div className="w-full flex justify-center mb-12">
+        <div className="w-full flex justify-center mb-12 relative z-10">
           <div className="border-t-4 border-red-600 w-1/4"></div>
           <div className="mx-2 text-red-600 font-bold">🍫</div>
           <div className="border-t-4 border-red-600 w-1/4"></div>
-          {/* <h3 className="text-8xl text-red-600 mb-2 text-center cream-cake-font">
-          Our Team
-        </h3>
-        <p className="text-center text-gray-600 mb-10 text-xs md:text-xl">
-          A Wide Range Of Confectionery Items
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mt-10 px-4 max-w-6xl w-full">
-          {teamMembers.map((member, idx) => (
-            <TeamMemberCard
-              member={member}
-              key={idx}
-              maxAngle={60}
-            />
-          ))} */}
         </div>
       </div>
     </main>

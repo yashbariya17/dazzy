@@ -39,7 +39,7 @@ const ByBrands = () => {
         <h2 className="text-white text-xl font-semibold">By Brands</h2>
       </section>
       {selectedBrand ? (
-        <section className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6 my-10">
+        <section className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-x-6 my-10">
           {Object.values(productObj)
             .flat()
             .filter((i) => i.brand == selectedBrand.toLowerCase())

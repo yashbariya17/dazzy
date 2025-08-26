@@ -148,7 +148,7 @@ const Home = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      <section className="h-[200px] sm:h-[280px] md:h-[320px] lg:h-[550px]">
+      <section className="">
         <VideoSlider />
       </section>
 
@@ -281,8 +281,8 @@ const Home = () => {
             </svg>
           </button>
         </div>
-        <section className="relative isolate">
-          <div className="absolute h-full w-full bg-[#eb0029]  -left-[20%] md:-left-[60%] rounded-tr-[250px] z-[-1] "></div>
+        <section className="relative isolate ">
+          <div className="absolute h-full w-full bg-[#E90028]  -left-[20%] md:-left-[60%] rounded-tr-[250px] z-[-1] "></div>
           <section className="md:h-[650px] lg:h-[550px] max-w-[1000px] mx-auto  lg:mr-auto  mt-16 md:mt-8 lg:mt-16 grid md:grid-cols-2">
             <motion.img
               layoutId="aboutImage"
@@ -321,12 +321,8 @@ const Home = () => {
           </section>
         </section>
       </section>
-      <video
-        src="/SUPER DELICIOUS.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
+      <img
+        src="/videos/SUPER DELICIOUS TASTES CHOCOLATEY.gif"
         className="w-full"
       />
       <section className="pt-8 bg-[#f4f1ea] ">
