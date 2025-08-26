@@ -1,4 +1,4 @@
-import { motion, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
 
 type Props = {
@@ -11,34 +11,8 @@ type Props = {
   maxAngle?: number;
 };
 
-export default function TeamMemberCard({ member, maxAngle = 20 }: Props) {
+export default function TeamMemberCard({ member }: Props) {
   const ref = useRef<HTMLDivElement>(null);
-
-  const rotateX = useSpring(0, { stiffness: 160, damping: 18 });
-  const rotateY = useSpring(0, { stiffness: 160, damping: 18 });
-  const rotateZ = useSpring(0, { stiffness: 160, damping: 18 });
-
-  const handleMove = (e: React.MouseEvent) => {
-    const el = ref.current;
-    if (!el) return;
-
-    const { left, top, width, height } = el.getBoundingClientRect();
-    const x = e.clientX - left;
-    const y = e.clientY - top;
-
-    const nx = x / width - 0.5;
-    const ny = 0.5 - y / height;
-
-    rotateY.set(nx * maxAngle);
-    rotateX.set(ny * maxAngle);
-    rotateZ.set(nx * -maxAngle * 0.4);
-  };
-
-  const reset = () => {
-    rotateX.set(0);
-    rotateY.set(0);
-    rotateZ.set(0);
-  };
 
   return (
     <motion.div

@@ -1,38 +1,69 @@
-import { motion, useScroll, useSpring, useTransform } from "framer-motion"
-import "./aboutus.css"
-import { useEffect, useRef, useState } from "react"
-import TeamMemberCard from "../../components/Card"
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import "./aboutus.css";
+import { useEffect, useRef, useState } from "react";
+// import TeamMemberCard from "../../components/Card";
 
 const aboutData = [
-{
-  title: "Since 2001",
-  description:
-    "Since its inception in 2001, **Dazzy** has been dedicated to crafting premium sugar confectionery and moulded chocolate specialties that bring sweetness to life’s most cherished moments. What began as a modest production unit in the Sayajipura area of Vadodara has evolved into one of the world’s leading family-owned confectionery enterprises—giving rise to **Dazzy Food Industries**,The journey began with the success of its flagship product, **Éclair Gold**, which quickly gained popularity and laid the foundation for the brand’s rapid growth and innovation. Over the years, Dazzy has consistently expanded its product portfolio, keeping quality and consumer delight at its core.",
-  image: "/images/founder1.jpg",
-  side: "right",
-},
+  {
+    title: "Since 2001",
+    description:
+    <p className="mb-2 text-sm md:text-base ">
+      "Since its inception in 2001, <span className="font-bold">Dazzy</span> has been dedicated to crafting premium sugar confectionery and moulded chocolate specialties that bring sweetness to life’s most cherished moments. What began as a modest production unit in the Sayajipura area of Vadodara has evolved into one of the world’s leading family-owned confectionery enterprises—giving rise to <span className="font-bold">Dazzy Food Industries</span>.
+    </p>,
+    image: "/images/founder1.jpg",
+    side: "right",
+  },
   {
     title: "Since 2010",
     description:
-      "With expansion and modernization, Dazzy grew into a full-scale production powerhouse, delivering across India.",
+     <p className="mb-2 text-sm md:text-base ">
+      The journey began with the success of its flagship product, <span className="font-bold">Éclair Gold</span>, which quickly gained popularity and laid the foundation for the brand’s rapid growth and innovation. Over the years, Dazzy has consistently expanded its product portfolio, keeping quality and consumer delight at its core.
+     </p>,
     image: "/images/founder2.jpg",
     side: "left",
   },
   {
-    title: "Today",
+    title: "Journey",
     description:
-      "Today, Dazzy continues to deliver trust and delight, with certified quality and a commitment to excellence.",
+     <p className="mb-2 text-sm md:text-base ">
+      "The company’s remarkable growth is attributed to the visionary leadership of <span className="font-bold">Mr. Dipak Kanani</span>, Chairman and CEO, ably supported by Managing Directors and his brothers - <span className="font-bold">Mr. Tushar Kanani</span> and <span className="font-bold">Mr. Ashok Kanani</span>. With deep-rooted expertise in the confectionery domain, the leadership team has steered the company with a singular focus—offering exceptional quality at optimal value while continually pushing the boundaries of innovation in the confectionery sector.
+</p>,
     image: "/images/factory.jpg",
     side: "right",
   },
-] as const
+  {
+    title: "2007",
+    description:
+     <p className="mb-2 text-sm md:text-base ">
+      Dazzy marked a significant milestone with the establishment of its second large-scale manufacturing facility— <span className="font-bold">Dazzy Products Pvt. Ltd.</span> — spanning over 100,000 sq. ft. in Manjusar GIDC, Vadodara. This facility houses state-of-the-art infrastructure dedicated to the production of moulded chocolates, lollipops, and candies. It is home to several iconic Dazzy brands such as <span className="font-bold">Dairy Kiss, Endon, Big Star, Jellos, and 3 Stixs</span>.
+</p>,
+    image: "/images/factory.jpg",
+    side: "left",
+  },
+  {
+    title: "Journey",
+    description:
+     <p className="mb-2 text-sm md:text-base ">
+      Further expanding its capabilities, Dazzy launched its most advanced manufacturing unit in <span className="font-bold">2024</span> under <span className="font-bold">Dazzy Food Pvt. Ltd.</span>, covering an area of <span className="font-bold">200,000 sq. ft.</span> Equipped with cutting-edge technology and modern production lines, this facility manufactures premium chocolate brands such as <span className="font-bold">D’Love, Truffles, Oh! Wow, and KingKong</span>, among many others.
+</p>,
+    image: "/images/factory.jpg",
+    side: "right",
+  },
+  {
+    title: "Today",
+    description:
+      "Today, Dazzy’s delectable creations are enjoyed across India and in multiple international markets. Known for their consistent taste, quality, and thoughtful packaging, Dazzy products have become an integral part of daily indulgence and gifting traditions—reflecting the brand’s commitment to excellence and joy in every bite. Driven by a dedicated team of over 1,000 professionals, Dazzy continues to innovate, grow, and deliver delight with every product it creates.",
+    image: "/images/factory.jpg",
+    side: "left",
+  },
+] as const;
 
 type TimelineBlockProps = {
-  title: string
-  description: string
-  image: string
-  blockNo: number
-}
+  title: string;
+  description:any ;
+  image: string;
+  blockNo: number;
+};
 
 const TimelineBlock = ({
   title,
@@ -45,7 +76,7 @@ const TimelineBlock = ({
       <motion.div
         initial={{
           opacity: 0,
-          x: blockNo === 2 ? 100 : -100,
+          x: blockNo % 2 === 0 ? 100 : -100,
         }}
         whileInView={{
           opacity: 1,
@@ -57,30 +88,34 @@ const TimelineBlock = ({
           amount: 0.5,
           margin: "0px 0px -40% 0px",
         }}
-        className={`${blockNo === 2 ? "col-start-3" : "col-start-1"} ${
+        className={`${blockNo % 2 === 0 ? "col-start-3" : "col-start-1"} ${
           blockNo === 1
             ? "row-start-1"
             : blockNo === 2
             ? "row-start-2"
-            : "row-start-3"
+            : blockNo === 3
+            ? "row-start-3"
+            : blockNo === 4
+            ? "row-start-4"
+            : blockNo === 5
+            ? "row-start-5"
+            : "row-start-6"
         } hidden md:block  w-full px-10 my-auto  col-span-1 row-span-1 `}
       >
-        <div
-          className="px-[8rem] "
-          style={{ wordSpacing: "2px" }}
-        >
+        <div className="px-[8rem] " style={{ wordSpacing: "2px" }}>
           <h3 className="mb-2 cream-cake-font text-red-500 font-cursive text-[4rem]">
             {title}
           </h3>
-          <p className="mb-2 text-sm md:text-base font-semibold">
+          
             {description}
-          </p>
+          {/* <p className="mb-2 text-sm md:text-base font-semibold">
+          </p> */}
         </div>
       </motion.div>
       <motion.div
         initial={{
           opacity: 0,
-          x: blockNo === 2 ? -100 : 100,
+          x: blockNo % 2 === 0 ? -100 : 100,
         }}
         whileInView={{
           opacity: 1,
@@ -92,12 +127,18 @@ const TimelineBlock = ({
           amount: 0.5,
           margin: "0px 0px -40% 0px",
         }}
-        className={`${blockNo === 2 ? "col-start-1" : "col-start-3"} ${
+        className={`${blockNo % 2 === 0 ? "col-start-1" : "col-start-3"} ${
           blockNo === 1
             ? "row-start-1"
             : blockNo === 2
             ? "row-start-2"
-            : "row-start-3"
+            : blockNo === 3
+            ? "row-start-3"
+            : blockNo === 4
+            ? "row-start-4"
+            : blockNo === 5
+            ? "row-start-5"
+            : "row-start-6"
         } hidden md:flex w-full h-full  col-span-1 row-span-1  justify-center items-center relative`}
       >
         <img
@@ -107,12 +148,12 @@ const TimelineBlock = ({
         />
         <div
           className={`${
-            blockNo === 2 ? "-right-8" : "-left-8"
+            blockNo % 2 === 0 ? "-right-8" : "-left-8"
           } absolute bg-red-500 h-2 w-[50%]  z-0`}
         >
           <span
             className={`${
-              blockNo === 2 ? "left-full" : ""
+              blockNo % 2 === 0 ? "left-full" : ""
             } block rounded-full bg-red-500 aspect-square h-6 absolute top-1/2  -translate-y-1/2`}
           >
             {" "}
@@ -173,75 +214,85 @@ const TimelineBlock = ({
         </motion.div>
       </div>
     </>
-  )
-}
+  );
+};
 
 const AboutUs = () => {
-  const ref = useRef<HTMLDivElement>(null)
-  const { scrollY } = useScroll()
-  const [sectionTop, setSectionTop] = useState(0)
-  const [sectionHeight, setSectionHeight] = useState(0)
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollY } = useScroll({ target: ref });
+  const [sectionTop, setSectionTop] = useState(0);
+  const [sectionHeight, setSectionHeight] = useState(0);
 
   useEffect(() => {
-    const el = ref.current
+    const el = ref.current;
     if (el) {
       const onResize = () => {
-        const rect = el.getBoundingClientRect()
-        const scrollTop = window.scrollY || window.pageYOffset
-        setSectionTop(rect.top + scrollTop)
-        setSectionHeight(el.offsetHeight)
-      }
-      onResize()
-      window.addEventListener("resize", onResize)
-      return () => window.removeEventListener("resize", onResize)
+        const rect = el.getBoundingClientRect();
+        const scrollTop = window.scrollY || window.pageYOffset;
+        setSectionTop(rect.top + scrollTop);
+        setSectionHeight(el.offsetHeight);
+      };
+      onResize();
+      window.addEventListener("resize", onResize);
+      return () => window.removeEventListener("resize", onResize);
     }
-  }, [])
+  }, []);
 
   const top = useSpring(scrollY, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001,
-  })
-
+  });
 
   const y = useTransform(
     top,
     [sectionTop - 80 - window.innerHeight / 2, sectionTop + sectionHeight],
     [0, sectionHeight]
-  )
-  const teamMembers = [
-    {
-      name: "Ralph Edwards",
-      role: "Chef Lead",
-      image: "chef1.jpg",
-      borderColor: "border-red-500",
-    },
-    {
-      name: "Leslie Alexander",
-      role: "Chef Assistant",
-      image: "chef2.jpg",
-      borderColor: "border-orange-400",
-    },
-    {
-      name: "Ronald Richards",
-      role: "Chef Assistant",
-      image: "chef3.jpg",
-      borderColor: "border-red-500",
-    },
-  ]
+  );
+  // const teamMembers = [
+  //   {
+  //     name: "Ralph Edwards",
+  //     role: "Chef Lead",
+  //     image: "chef1.jpg",
+  //     borderColor: "border-red-500",
+  //   },
+  //   {
+  //     name: "Leslie Alexander",
+  //     role: "Chef Assistant",
+  //     image: "chef2.jpg",
+  //     borderColor: "border-orange-400",
+  //   },
+  //   {
+  //     name: "Ronald Richards",
+  //     role: "Chef Assistant",
+  //     image: "chef3.jpg",
+  //     borderColor: "border-red-500",
+  //   },
+  // ];
 
   return (
     <main className="relative bg-[#fff8f0] min-h-[2100px] overflow-hidden">
-      <section className="h-[500px] bg-cover bg-center" style={{ backgroundImage: "url('/images/premium-chocolates.jpg')" }} />
+    
+            <img
+        src="/images/Quality You Can Trust,.png"
+        alt="logo"
+        loading="eager"
+        fetchPriority="high"
+        width={5335}
+        height={1376}
+        className="w-full h-auto lg:min-h-[310px] lg:max-h-[600px]  "
+      />
       <section className="text-center py-12 md:py-16 bg-[#2D0B05] text-[#E5C387]">
-        <p className="text-5xl md:text-7xl tracking-widest font-[Cinzel]">25 YEARS OF SWEET MEMORIES</p>
+        <p className="text-xl md:text-7xl tracking-widest font-[Cinzel] ">
+          25 YEARS OF SWEET MEMORIES
+        </p>
       </section>
 
       <div
         ref={ref}
-        className="relative h-auto md:h-[1500px] grid grid-cols-[1fr_auto] md:grid-cols-[1fr_auto_1fr] grid-rows-3 overflow-hidden"
+        className="relative h-auto md:h-[3000px] grid grid-cols-[1fr_auto] md:grid-cols-[1fr_auto_1fr] grid-rows-6 overflow-hidden"
       >
-        <div className=" h-full w-[100px] bg-black col-span-1 col-start-2 row-span-3 relative ">
+        <div className=" h-full w-[100px] bg-black col-span-1 col-start-2 row-span-6 relative ">
           <div
             className="w-[4px] h-full mx-auto"
             style={{
@@ -260,10 +311,7 @@ const AboutUs = () => {
         </div>
 
         {aboutData.map((i, no) => (
-          <TimelineBlock
-            {...i}
-            blockNo={no + 1}
-          />
+          <TimelineBlock {...i} blockNo={no + 1} />
         ))}
       </div>
 
@@ -277,22 +325,61 @@ const AboutUs = () => {
 
       {/* Vision and Our Team */}
       <div className="w-full flex flex-col items-center mt-10 px-4">
-        <h2 className="text-8xl text-red-600 mb-4 text-center cream-cake-font">Vision of Company</h2>
-        <p className="max-w-3xl text-center text-gray-700 mb-12 text-sm md:text-base">
-          At Dazzy, our mission is to craft exceptional confectionery that brings joy to everyday moments—through consistent quality, affordability, and a consumer-first approach. Guided by a vision to be a trusted global brand, we create our products using the finest ingredients, advanced technology, and transparent quality practices. This commitment ensures every bite delivers delight, trust, and a memorable experience.
+        <h2 className="text-8xl text-red-600 mb-4 text-center cream-cake-font">
+          Vision of Company
+        </h2>
+        <p className="max-w-3xl text-center text-gray-700 mb-12 text-sm md:text-base leading-relaxed">
+          At <span className="font-bold text-red-600">Dazzy</span>, our mission
+          is to craft
+          <span className="font-semibold text-gray-900">
+            {" "}
+            exceptional confectionery
+          </span>
+          that brings <span className="font-bold text-red-600">joy</span> to
+          everyday moments — through{" "}
+          <span className="font-semibold">consistent quality</span>,
+          <span className="font-semibold"> affordability</span>, and a
+          <span className="font-semibold"> consumer-first approach</span>.
+          <br />
+          <br />
+          Guided by a vision to be a
+          <span className="font-bold text-gray-900"> trusted global brand</span>
+          , we create our products using the{" "}
+          <span className="font-semibold">finest ingredients</span>,
+          <span className="font-semibold"> advanced technology</span>, and
+          <span className="font-semibold"> transparent quality practices</span>.
+          <br />
+          <br />
+          This commitment ensures every bite delivers
+          <span className="font-bold text-red-600"> delight</span>,
+          <span className="font-bold text-red-600"> trust</span>, and a
+          <span className="font-bold text-red-600"> memorable experience</span>.
         </p>
 
-        <h3 className="text-8xl text-red-600 mb-2 text-center cream-cake-font">Our Team</h3>
-        <p className="text-center text-gray-600 mb-10 text-xs md:text-xl">A Wide Range Of Confectionery Items</p>
+        {/* Decorative Divider */}
+        <div className="w-full flex justify-center mb-12">
+          <div className="border-t-4 border-red-600 w-1/4"></div>
+          <div className="mx-2 text-red-600 font-bold">🍫</div>
+          <div className="border-t-4 border-red-600 w-1/4"></div>
+          {/* <h3 className="text-8xl text-red-600 mb-2 text-center cream-cake-font">
+          Our Team
+        </h3>
+        <p className="text-center text-gray-600 mb-10 text-xs md:text-xl">
+          A Wide Range Of Confectionery Items
+        </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mt-10 px-4 max-w-6xl w-full">
           {teamMembers.map((member, idx) => (
-           <TeamMemberCard member={member} key={idx} maxAngle={60}/>
-          ))}
+            <TeamMemberCard
+              member={member}
+              key={idx}
+              maxAngle={60}
+            />
+          ))} */}
         </div>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default AboutUs
+export default AboutUs;

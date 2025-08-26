@@ -70,6 +70,30 @@ const Products = [
   },
 ];
 
+const byType = [
+  { state: "chocolate bar", name: "chocolate" },
+  { state: "centerfilled chocolate", name: "Centerfilled Chocolate" },
+  { state: "decorative chocolate", name: "Decorative Chocolate" },
+  { state: "Crunchy chocolate", name: "Crunchy chocolate" },
+  { state: "nought bar", name: "Nought Bar" },
+  { state: "wafer rolls", name: "wafer rolls" },
+  { state: "toffee", name: "Toffee" },
+  { state: "jelly", name: "Jelly" },
+  { state: "candy", name: "Candy" },
+  { state: "lollipop", name: "Lollipop" },
+];
+const byPrice = ["0.50", "1", "2", "5", "10"];
+const byBrands = [
+  "dairy kiss",
+  "bolivia",
+  "truffle",
+  "Choco Bon",
+  "Delite",
+  "Emporio",
+  "Cocos",
+  "Double Paan",
+];
+
 const ContactUs = [
   {
     name: "Contact Us",
@@ -211,6 +235,24 @@ const NavBar = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+  const downloadMultiplePdfs = () => {
+    const files = [
+      {
+        url: "/Files/Dazzy Chocolate Catalogue.pdf",
+        name: "Dazzy Chocolate Catalogue.pdf",
+      },
+      { url: "/Files/Dazzy CT Catalogue.pdf", name: "Dazzy CT Catalogue.pdf" },
+    ];
+
+    files.forEach((file) => {
+      const link = document.createElement("a");
+      link.href = file.url;
+      link.download = file.name;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  };
 
   return (
     <motion.nav className="navbar-main bg-[#391e1e]  text-white py-5">
@@ -273,13 +315,123 @@ const NavBar = () => {
             }}
           >
             <button className="relative">Product</button>
-            <DropdownMenu items={Products} isOpen={hoverMenu === "product"} />
+            <AnimatePresence>
+              {hoverMenu === "product" && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                  className="
+          absolute top-full left-1/2 -translate-x-1/2 mt-10
+          rounded-xl bg-[#391e1e]
+          shadow-2xl text-white w-auto z-50 py-2 
+        "
+                >
+                  <section className="flex gap-x-4 px-5 py-3 w-[600px]">
+                    <div>
+                      <h2 className="px-4 py-2 whitespace-nowrap text-2xl relative">
+                        <span className="relative inline-block">
+                          By Type
+                          <span className="static-bar absolute left-0 -bottom-1 block"></span>
+                        </span>
+                      </h2>
+                      {byType.map((i) => (
+                        <NavLink
+                          key={i.name}
+                          to={`/products`}
+                          state={i.state}
+                          className="relative block px-4  py-[2px] group"
+                        >
+                          <span className="relative inline-block capitalize font-normal">
+                            {i.name}
+                            {/* <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span> */}
+                          </span>
+                          <motion.div
+                            // layoutId="indicator"
+                            // initial={{ opacity: 0 }}
+                            // whileHover={{ opacity: 1 }}
+                            className="bg-amber-300 h-full absolute w-2 top-0 left-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                          ></motion.div>
+                        </NavLink>
+                      ))}
+                    </div>
+                    <span className="block h-[280px] bg-[#442424] w-[1px] mt-auto"></span>
+                    <div>
+                      <h2 className="px-4 py-2 whitespace-nowrap text-2xl relative">
+                        <span className="relative inline-block">
+                          By Price
+                          <span className="static-bar absolute left-0 -bottom-1 block"></span>
+                        </span>
+                      </h2>
+                      {byPrice.map((i) => (
+                        <NavLink
+                          key={i}
+                          to={`/byPrice`}
+                          state={i}
+                          className="relative block px-4  py-[2px] group"
+                        >
+                          <span className="relative inline-block capitalize font-normal ">
+                            {i} Rs.
+                            {/* <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span> */}
+                          </span>
+                          <motion.div
+                            // layoutId="indicator"
+                            // initial={{ opacity: 0 }}
+                            // whileHover={{ opacity: 1 }}
+                            className="bg-amber-300 h-full absolute w-2 top-0 left-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                          ></motion.div>
+                        </NavLink>
+                      ))}
+                    </div>
+                    <span className="block h-[280px] bg-[#442424] w-[1px] mt-auto"></span>
+                    <div>
+                      <h2 className="px-4 py-2 whitespace-nowrap text-2xl relative">
+                        <span className="relative inline-block">
+                          By Brands
+                          <span className="static-bar absolute left-0 -bottom-1 block"></span>
+                        </span>
+                      </h2>
+                      {byBrands.map((i) => (
+                        <NavLink
+                          key={i}
+                          to={`/byBrands`}
+                          state={i}
+                          className="relative block px-4 py-[2px] group "
+                        >
+                          <span className="relative inline-block capitalize font-normal">
+                            {i}
+                            {/* <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span> */}
+                          </span>
+                          <motion.div
+                            // layoutId="indicator"
+                            // initial={{ opacity: 0 }}
+                            // whileHover={{ opacity: 1 }}
+                            className="bg-amber-300 h-full absolute w-2 top-0 left-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                          ></motion.div>
+                        </NavLink>
+                      ))}
+                      <NavLink
+                        to={`/byBrands`}
+                        state={""}
+                        className="relative block px-4 py-2 "
+                      >
+                        {/* // border white 
+                        rounded corner 
+                        hover: color font brown
+                        */}
+                        <span className="relative inline-block capitalize font-normal border-[1px] border-solid border-white rounded-xl   text-white bg-[#391e1e] py-1 px-2 hover:bg-white hover:text-[#391e1e]">
+                          see more
+                        </span>
+                      </NavLink>
+                    </div>
+                  </section>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
-          <div>
-            Gifting
-            <span className="absolute underline-bar w-full h-0.5 top-full block"></span>
-          </div>
+          <NavItemLink to="/gift">Gifting</NavItemLink>
           <div
             className="relative"
             onMouseEnter={() => {
@@ -294,7 +446,12 @@ const NavBar = () => {
             <DropdownMenu items={ContactUs} isOpen={hoverMenu === "contact"} />
           </div>
 
-          <button className="bg-red-500 px-4 py-2">Download Catlog</button>
+          <button
+            className="bg-red-500 px-4 py-2 cursor-pointer transition-all duration-200 hover:bg-red-700 active:scale-90"
+            onClick={downloadMultiplePdfs}
+          >
+            Download Catalogue
+          </button>
         </section>
       ) : (
         <section
@@ -328,7 +485,12 @@ const NavBar = () => {
               />
             </motion.li>
             <motion.li variants={itemVariants} className=" no-underline">
-              Gifting
+              <MobileNavItem
+                to="/gift"
+                label="Gifting"
+                onClick={() => setIsOpen(false)}
+                itemVariants={itemVariants}
+              />
             </motion.li>
             <motion.li variants={itemVariants} className=" no-underline">
               <AccordionDropDown
@@ -337,8 +499,12 @@ const NavBar = () => {
                 closeMobileMenu={() => setIsOpen(false)}
               />
             </motion.li>
-            <motion.li variants={itemVariants} className="bg-red-500 px-4 py-2">
-              Download Catlog
+            <motion.li
+              variants={itemVariants}
+              onClick={downloadMultiplePdfs}
+              className="bg-red-500 px-4 py-2"
+            >
+              Download Catalogue{" "}
             </motion.li>
           </motion.ul>
         </section>

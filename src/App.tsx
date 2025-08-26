@@ -4,17 +4,32 @@ import NavBar from "./components/NavBar"
 import Home from "./main/Home/Home"
 import AboutUs from "./main/about us/AboutUs"
 import ContactUs from "./main/ContactUs/ContactUs"
-import { BrowserRouter, Routes, Route } from "react-router"
+import { BrowserRouter, Routes, Route,  } from "react-router"
 import Products from "./main/Products/Products"
 import ByPrice from "./main/Products/ByPrice"
 import ByBrands from "./main/Products/ByBrands"
 import DealerShip from "./main/ContactUs/DealerShip"
 import JoinDazzyFamily from "./main/ContactUs/JoinDazzyFam"
+import WhatsAppButton from "./components/WhatsAppButton"
+import Gifting from "./main/Gifting/Gifting"
+import { useEffect } from "react"
+import { useLocation } from "react-router"
 
 function App() {
+  const ScrollToTop=() =>{
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  
+    return null;
+  }
+    
   return (
     <main>
       <BrowserRouter>
+      <ScrollToTop/>
         <NavBar />
         <Routes>
           <Route
@@ -49,8 +64,13 @@ function App() {
             path="/dealerShip"
             element={<DealerShip />}
           />
+            <Route
+            path="/gift"
+            element={<Gifting />}
+          />
         </Routes>
         <Footer />
+        <WhatsAppButton />
       </BrowserRouter>
     </main>
   )

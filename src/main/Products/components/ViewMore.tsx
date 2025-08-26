@@ -1,51 +1,83 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { FiX } from "react-icons/fi";
+import type { productType } from "../AllProductList";
+import { useNavigate } from "react-router";
+type SingleProduct = productType[string][number];
 
-const ViewMore = ({
-  selectedProduct,
-  setSelectedProduct,
-}: {
-  selectedProduct: any;
-  setSelectedProduct: (val: any) => void;
-}) => {
+interface ViewMoreProps {
+  products: SingleProduct[];
+  onClose: () => void;
+}
+
+export default function ViewMore({ products, onClose }: ViewMoreProps) {
+  const navigate=useNavigate()
   return (
-    <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-stone-400/50 backdrop-blur-sm"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <div className="bg-white rounded-xl shadow-lg max-w-4xl w-full p-6 relative grid grid-cols-1 md:grid-cols-2 gap-6">
-        <button
-          className="absolute top-4 right-4 text-gray-500 hover:text-red-600"
-          onClick={() => setSelectedProduct(null)}
+    <AnimatePresence>
+      {products?.length > 0 && (
+        <motion.div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
         >
-          ✕
-        </button>
+          <motion.div
+            className="bg-white rounded-2xl shadow-xl w-[90%] max-w-6xl max-h-[95vh]   overflow-y-auto p-6 relative"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <button
+              onClick={onClose}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-800"
+            >
+              <FiX size={24} />
+            </button>
 
-        <div className="flex items-center justify-center">
-          <motion.img
-            layoutId={selectedProduct.name}
-            src={selectedProduct.url}
-            alt={selectedProduct.name}
-            transition={{
-              layout: { duration: 0.4 },
-            }}
-            className="w-full h-auto max-h-[400px] object-contain"
-          />
-        </div>
-
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold">{selectedProduct.name}</h2>
-          <p className="text-gray-600">
-            Description goes here. Add more details if needed.
-          </p>
-          <button className="px-4 py-2 bg-[#eb0029] text-white rounded-lg hover:bg-red-700 transition">
-            Add to Cart
-          </button>
-        </div>
-      </div>
-    </motion.div>
+            <div className="flex flex-wrap justify-center gap-4">
+              {products.map((i, index) => (
+                <motion.div
+                  key={i.url + i.name + index}
+                  className="w-[160px]  sm:w-[200px]  h-[300px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center  p-4"
+                >
+                  <motion.img
+                    layoutId={i.url + i.name}
+                    src={i.url}
+                    className=" h-[200px] object-contain mt-4"
+                  />
+                  <p className="text-center text-sm sm:text-base font-semibold mt-2">
+                    {i.name}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+            <div className="flex flex-col justify-center items-center my-5">
+              <div className=" bg-white rounded-3xl shadow-md flex gap-5  justify-between p-4 mx-auto">
+                <p>
+                  <strong>Pkg:</strong> Box
+                </p>
+                <p>
+                  <strong>Weight:</strong> 240gm
+                </p>
+                <p>
+                  <strong>PCS MRP:</strong> 500
+                </p>
+                <p>
+                  <strong>Masterpack:</strong> 20
+                </p>
+              </div>
+              <button
+                className="bg-[#eb0029] text-white font-semibold py-2 px-3 rounded-full hover:bg-red-700 transition-transform duration-200 active:scale-95 mt-4"
+                onClick={()=>{
+                  navigate("/dealership")
+                }}
+              >
+                Dealership
+              </button>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
-};
-
-export default ViewMore;
+}

@@ -1,64 +1,77 @@
-
-
 const Footer = () => {
   return (
     <footer className="bg-[#4a1e0f] text-white px-6 py-12">
-      <img
-          src="/images/dazzyfooterlogo.png"
-          alt="Dazzy Logo"
-          className="w-32 mb-6 md:mb-0"
-        />
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
-
         <div className="flex-1">
-<img src="/images/EDLOGO.png" alt="Dazzy Logo" className="h-12 mb-4" />
+          <img
+            src="/images/EDLOGO.png"
+            alt="Dazzy Logo"
+            className="h-12 mb-4"
+          />
           <h3 className="text-lg font-semibold">DAZZY FOOD PRIVATE LIMITED</h3>
           <p className="text-sm mt-2 leading-relaxed">
             <i className="fa fa-location-dot mr-2"></i>
-            16, Shah Industrial Park 3, Kotambi,<br />
-            Vadodara - Halol Road, Vadodara,<br />
+            16, Shah Industrial Park 3, Kotambi,
+            <br />
+            Vadodara - Halol Road, Vadodara,
+            <br />
             Gujarat - 391510 INDIA
           </p>
-          
         </div>
 
-        <div className="hidden md:block h-[200px] border-1 border-amber-800 mx-4"/>
+        <div className="hidden md:block h-[200px] border-1 border-amber-800 mx-4" />
 
         <div className="flex-1">
-          <img src="/images/DPPLLOGO.png" alt="Dazzy Products Logo" className="h-12 mb-4" />
+          <img
+            src="/images/DPPLLOGO.png"
+            alt="Dazzy Products Logo"
+            className="h-12 mb-4"
+          />
           <h3 className="text-lg font-semibold">DAZZY PRODUCTS PVT. LTD.</h3>
           <p className="text-sm mt-2 leading-relaxed">
             <i className="fa fa-location-dot mr-2"></i>
-            E-74, Manjusar GIDC, Savli, Vadodara<br />
-            - 391775, Gujarat - INDIA
+            E-74, Manjusar GIDC, Savli, Vadodara
+            <br />- 391775, Gujarat - INDIA
           </p>
-          
         </div>
 
-        <div className="hidden md:block h-[200px] border-1 border-amber-800 mx-4"/>
+        <div className="hidden md:block h-[200px] border-1 border-amber-800 mx-4" />
 
         <div className="flex-1">
-          <img src="/images/DFILOGO.png" alt="Dazzy Food Industries Logo" className="h-12 mb-4" />
+          <img
+            src="/images/DFILOGO.png"
+            alt="Dazzy Food Industries Logo"
+            className="h-12 mb-4"
+          />
           <h3 className="text-lg font-semibold">DAZZY FOOD INDUSTRIES</h3>
           <p className="text-sm mt-2 leading-relaxed">
             <i className="fa fa-location-dot mr-2"></i>
-            Plot No. 515, Sayaji Market, Sayajipura,<br />
+            Plot No. 515, Sayaji Market, Sayajipura,
+            <br />
             Vadodara - 390019, Gujarat - INDIA
           </p>
-          
         </div>
-
       </div>
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
         <div className="flex-1">
           <div className="mt-8">
             <p className="text-sm">
               <i className="fa fa-envelope mr-2"></i>
-              <a href="mailto:info@dazzyconfectionery.com" className="hover:underline">info@dazzyconfectionery.com</a>
+              <a
+                href="mailto:info@dazzyconfectionery.com"
+                className="hover:underline"
+              >
+                info@dazzyconfectionery.com
+              </a>
             </p>
             <p className="text-sm">
               <i className="fa fa-globe mr-2"></i>
-              <a href="http://www.dazzyconfectionery.com" className="hover:underline" target="_blank" rel="noopener noreferrer">
+              <a
+                href="http://www.dazzyconfectionery.com"
+                className="hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 www.dazzyconfectionery.com
               </a>
             </p>
@@ -70,11 +83,21 @@ const Footer = () => {
             +91 98751 58053
           </p>
           <div className="flex space-x-4 text-xl">
-            <a href="#"><i className="fab fa-youtube"></i></a>
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-google-plus-g"></i></a>
-            <a href="#"><i className="fab fa-linkedin-in"></i></a>
+            <a href="#">
+              <i className="fab fa-youtube"></i>
+            </a>
+            <a href="#">
+              <i className="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i className="fab fa-google-plus-g"></i>
+            </a>
+            <a href="#">
+              <i className="fab fa-linkedin-in"></i>
+            </a>
           </div>
         </div>
         <div className="flex-1">
@@ -84,7 +107,7 @@ const Footer = () => {
             <img src="/chocolate3.png" alt="Chocolate 3" className="h-16" />
           </div> */}
         </div>
-        </div>
+      </div>
     </footer>
   );
 };
