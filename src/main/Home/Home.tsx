@@ -148,7 +148,7 @@ const Home = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      <section className="h-[500px]">
+      <section className="h-[200px] sm:h-[280px] md:h-[320px] lg:h-[550px]">
         <VideoSlider />
       </section>
 

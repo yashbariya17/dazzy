@@ -14,7 +14,6 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 // Define the component using React.FC (Functional Component) for TypeScript
 const VideoSlider: React.FC = () => {
   return (
-    <section className="h-[500px] bg-gray-700">
       <Swiper
         // Swiper modules
         modules={[Navigation, Pagination, Autoplay]}
@@ -67,7 +66,6 @@ const VideoSlider: React.FC = () => {
         </SwiperSlide>
         {/* You can add more <SwiperSlide> components for additional videos */}
       </Swiper>
-    </section>
   );
 };
 
