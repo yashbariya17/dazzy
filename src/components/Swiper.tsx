@@ -20,7 +20,7 @@ const VideoSlider: React.FC = () => {
         spaceBetween={0} // No space between slides
         slidesPerView={1} // Show one slide at a time
         loop={true} // Enable continuous loop
-        navigation={true} // Show navigation arrows
+       
         pagination={{ clickable: true }} // Show pagination dots
         autoplay={{
           delay: 5000, // Time in ms before switching to the next video
@@ -34,7 +34,7 @@ const VideoSlider: React.FC = () => {
             autoPlay
             muted
             loop
-            className="h-full w-full object-cover"
+            className="h-full w-auto object-cover"
           ></video>
         </SwiperSlide>
         <SwiperSlide>
@@ -43,7 +43,7 @@ const VideoSlider: React.FC = () => {
             autoPlay
             muted
             loop
-            className="h-full w-full object-cover"
+            className="h-full w-auto object-cover"
           ></video>
         </SwiperSlide>
         <SwiperSlide>
@@ -52,7 +52,7 @@ const VideoSlider: React.FC = () => {
             autoPlay
             muted
             loop
-            className="h-full w-full object-cover"
+            className="h-full w-auto object-cover"
           ></video>
         </SwiperSlide>
         <SwiperSlide>
@@ -61,7 +61,7 @@ const VideoSlider: React.FC = () => {
             autoPlay
             muted
             loop
-            className="h-full w-full object-cover"
+            className="h-full w-auto object-cover"
           ></video>
         </SwiperSlide>
         {/* You can add more <SwiperSlide> components for additional videos */}
