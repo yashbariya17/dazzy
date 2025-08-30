@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiShoppingBag, FiX } from "react-icons/fi";
-import { CiDeliveryTruck, CiVirus, CiGift } from "react-icons/ci";
-import { SiCodefresh } from "react-icons/si";
+
 
 type Product = {
   name: string;
