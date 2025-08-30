@@ -98,7 +98,7 @@ const Gifting = () => {
       <img
         src="/images/giftcart/DAZZY GIFTING SLIED.gif"
         alt="logo"
-        className="w-full h-auto lg:max-h-[600px] lg:object-[0px_-100px] lg:object-cover"
+        className="w-full h-auto lg:max-h-[750px] lg:object-[0px_-100px] lg:object-cover"
       />
 
       {/* Products Section */}
@@ -152,22 +152,39 @@ const Gifting = () => {
         <div className="bg-white/80 backdrop-blur-sm py-6 px-4 rounded-2xl mx-auto max-w-[1000px] shadow-lg">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
             <div className="flex flex-col items-center gap-2">
-              <CiDeliveryTruck className="h-12 w-12 text-purple-600" />
-              <p className="text-purple-900 font-medium">Get Your Delivery</p>
+              <img
+                src="/images/Gifting Icon/Elegant Packaging.png"
+                alt="icon"
+                className="w-16 h-16 object-contain"
+              />
+              <p className="text-purple-900 font-medium">Premium Ingredients</p>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <CiVirus className="h-12 w-12 text-pink-600" />
-              <p className="text-purple-900 font-medium">Melt-free Delivery</p>
+              <img
+                src="/images/Gifting Icon/Made with Care.png"
+                alt="icon"
+                className="w-16 h-16 object-contain"
+              />
+              <p className="text-purple-900 font-medium">Made with Care</p>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <SiCodefresh className="h-12 w-12 text-purple-600" />
+              <img
+                src="/images/Gifting Icon/Perfect for Gifting.png"
+                alt="icon"
+                className="w-16 h-16 object-contain"
+              />
               <p className="text-purple-900 font-medium">
-                Fresh &amp; Original
+                Perfect for Gifting
+
               </p>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <CiGift className="h-12 w-12 text-pink-600" />
-              <p className="text-purple-900 font-medium">Gift Order</p>
+              <img
+                src="/images/Gifting Icon/Premium Ingredients.png"
+                alt="icon"
+                className="w-16 h-16 object-contain"
+              />
+              <p className="text-purple-900 font-medium">Elegant Packaging</p>
             </div>
           </div>
         </div>

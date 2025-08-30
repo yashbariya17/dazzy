@@ -366,12 +366,12 @@ const AboutUs = () => {
 
       <div className="relative w-full flex flex-col items-center mt-10 px-4">
         <div
-          className="absolute hidden lg:flex left-0 xl:left-16 top-0 bottom-0 w-40 bg-no-repeat bg-contain bg-left pointer-events-none"
+          className="absolute hidden lg:flex left-0 xl:left-16 bottom-[-7%] w-50 h-50 bg-no-repeat bg-contain bg-left pointer-events-none"
           style={{ backgroundImage: "url('/videos/CARTOON CHOCOLATE.gif')" }}
         ></div>
 
         <div
-          className="absolute hidden lg:flex right-0 xl:right-16 top-0 bottom-0 w-40 bg-no-repeat bg-contain bg-right pointer-events-none"
+          className="absolute hidden lg:flex right-0 xl:right-16 bottom-[-5%] w-50 h-50 bg-no-repeat bg-contain bg-right pointer-events-none"
           style={{ backgroundImage: "url('/videos/CARTOON STICK.gif')" }}
         ></div>
 

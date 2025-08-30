@@ -411,7 +411,7 @@ const Home = () => {
 
         <section
           className="h-[700px] overflow-hidden  mt-10 relative bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/SLIEDER.png')" }}
+          style={{ backgroundImage: "url('/images/sliderlarge.png')" }}
         >
           <div className="flex  justify-center lg:justify-end h-full max-w-[1000px] mx-auto">
             <div className="bg-red-600 rounded-[50px] h-[450px] lg:h-[250px] w-[80%] md:w-[500px] flex flex-col gap-3 justify-center ml-5 mr-5 lg:ml-0  lg:mr-20 mt-auto mb-auto">
@@ -446,7 +446,7 @@ const Home = () => {
         </section>
         <section className="relative bg-[#111] text-white flex items-center justify-center min-h-[600px] px-6 isolate">
           <video
-            src="/What Our Clients Say Background .mp4 "
+            src="/SUPER DELICIOUS TASTES CHOCOLATEY (1080 x 610 px) (1).mp4 "
             loop
             muted
             autoPlay
