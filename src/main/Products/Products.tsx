@@ -28,7 +28,7 @@ const category = {
   "nought bar": [],
   "wafer rolls": [],
   candy: ["Pouch", "Jar"],
-  "toffee": ["Box","Jar","Pouch","Container"],
+  toffee: ["Box", "Jar", "Pouch", "Container"],
   lollipop: [],
   jelly: [],
 };
@@ -77,7 +77,23 @@ const Products = () => {
   }, [products, selectedCategory]);
   return (
     <div className="w-full">
-      <section className="h-[200px] bg-cover bg-center bg-gray-500"></section>
+      <section className="relative h-[200px] flex items-center justify-center mb-10 overflow-hidden">
+        <video
+          src="/CONTECT AS.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        ></video>
+        {/* Overlay */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+
+        {/* Title */}
+        <h2 className="relative text-white text-2xl font-semibold z-10">
+          Product Categories
+        </h2>
+      </section>
 
       <section className="pt-8 bg-[#f4f1ea]">
         <TextAnimation text="Our Products" />

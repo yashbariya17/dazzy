@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "motion/react";
 import productObj from "./AllProductList";
 import { useLocation, useNavigate } from "react-router";
 import { useEffect, useState } from "react";
-import {  FiX } from "react-icons/fi";
+import { FiX } from "react-icons/fi";
 
 const brandArr = [
   "endon",
@@ -35,9 +35,26 @@ const ByBrands = () => {
 
   return (
     <div className="w-full overflow-x-hidden ">
-      <section className="h-[200px] bg-gray-500 flex items-center justify-center">
-        <h2 className="text-white text-xl font-semibold">By Brands</h2>
+      <section className="relative h-[200px] flex items-center justify-center mb-10 overflow-hidden">
+        <video
+          src="/CONTECT AS.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        ></video>
+        {/* Overlay */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+
+        {/* Title */}
+        <h2 className="relative text-white text-2xl font-semibold z-10">
+         By Brands
+        </h2>
       </section>
+
+      <h2 className="text-white text-xl font-semibold">By Brands</h2>
+
       {selectedBrand ? (
         <section className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-x-6 my-10">
           {Object.values(productObj)

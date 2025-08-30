@@ -2,9 +2,24 @@ import AnimatedNumber from "../../components/AnimatedNumber"
 
 const DealerShip = () => {
   return (
-    <main className="bg-[#fff8f0] overflow-hidden ">
-      <section className="h-[200px] bg-gray-500 flex items-center justify-center mb-10">
-        <h2 className="text-white text-xl font-semibold">Dealership</h2>
+    <main className="relative bg-[#fff8f0] overflow-hidden">
+      {/* Video Background Section */}
+      <section className="relative h-[250px] flex items-center justify-center mb-10 overflow-hidden">
+        <video
+          src="/CONTECT AS.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        ></video>
+        {/* Overlay */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+
+        {/* Title */}
+        <h2 className="relative text-white text-2xl font-semibold z-10">
+          DealerShip
+        </h2>
       </section>
       <div className="max-w-4xl mx-auto text-center p-4 text-sm text-gray-700 mb-8">
         All DAZZY brands are created by individuals who prioritize the consumer,
