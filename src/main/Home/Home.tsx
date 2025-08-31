@@ -6,7 +6,7 @@ import { TextAnimation } from "../../components/TextAnimation";
 import { Link } from "react-router";
 import Autoplay from "embla-carousel-autoplay";
 import "./home.css";
-import VideoSlider from "../../components/Swiper"
+import VideoSlider from "../../components/Swiper";
 
 type ProductsType = {
   name: string;
@@ -321,10 +321,13 @@ const Home = () => {
           </section>
         </section>
       </section>
-      <img
-        src="/videos/SUPER DELICIOUS TASTES CHOCOLATEY.gif"
-        className="w-full"
-      />
+      <div className="w-full bg-[#f4f1ea] flex justify-center items-center">
+        <img
+          src="/videos/SUPER DELICIOUS TASTES CHOCOLATEY.gif"
+          className="w-full"
+          alt="Chocolatey Animation"
+        />
+      </div>
       <section className="pt-8 bg-[#f4f1ea] ">
         <TextAnimation text="Best Sellers" />
         <p

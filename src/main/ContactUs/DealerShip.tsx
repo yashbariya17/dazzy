@@ -1,8 +1,9 @@
-import AnimatedNumber from "../../components/AnimatedNumber"
+import AnimatedNumber from "../../components/AnimatedNumber";
+import { motion } from "framer-motion";
 
 const DealerShip = () => {
   return (
-    <main className="relative bg-[#fff8f0] overflow-hidden">
+    <main className="relative bg-[#white] overflow-hidden">
       {/* Video Background Section */}
       <section className="relative h-[250px] flex items-center justify-center mb-10 overflow-hidden">
         <video
@@ -34,7 +35,7 @@ const DealerShip = () => {
         {/* India Map */}
         <div className="flex justify-center">
           <img
-            src="/images/DAZZYYMAPS.png"
+            src="/images/Dazzy logo V2.gif  "
             alt="India Map"
             className="max-w-full h-auto"
           />
@@ -47,25 +48,33 @@ const DealerShip = () => {
           </h2>
           <div className="flex flex-col md:flex-row gap-5 justify-center text-center mt-5 items-center">
             <div className="text-white font-bold lg:text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-              <AnimatedNumber value={150} /> +{" "}
-              <p className="text-white text-xs font-light">Product Rating</p>
+              <AnimatedNumber value={50} /> +{" "}
+              <p className="text-white text-xs font-dark">Brands</p>
             </div>
             <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-              <AnimatedNumber value={36} />{" "}
-              <p className="text-white text-xs font-light">Brands</p>
+              <AnimatedNumber value={300} />+{" "}
+              <p className="text-white text-xs font-dark">SKU</p>
             </div>
             <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-              <AnimatedNumber value={15} />+{" "}
-              <p className="text-white text-xs font-light">
-                Export Destination
-              </p>
+              <AnimatedNumber value={100} />+{" "}
+              <p className="text-white text-xs font-dark">Team</p>
             </div>
           </div>
           <p
-            className="text-center mt-2 text-white"
+            className="text-center mt-2 font-bold text-white text-2xl px-4 py-2 rounded-lg bg-gradient-to-r from-red-500 via-red-600 to-red-700 shadow-lg"
             style={{ wordSpacing: "2px" }}
           >
-            A Wide Range Of Confectionery Items
+            <motion.span
+              animate={{ scale: [1, 1.2, 1] }} // zoom in and out
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="inline-block"
+            >
+              Pan India Presence
+            </motion.span>
           </p>
         </div>
       </div>
@@ -112,18 +121,18 @@ const DealerShip = () => {
             <div>
               <label className="text-white block mb-1">City</label>
               <input
-  type="text"
-  placeholder="Your City Here"
-  className="w-full p-2 rounded-md bg-[#f4f2e9] text-black"
-/>
+                type="text"
+                placeholder="Your City Here"
+                className="w-full p-2 rounded-md bg-[#f4f2e9] text-black"
+              />
             </div>
             <div>
               <label className="text-white block mb-1">State</label>
               <input
-  type="text"
-  placeholder="Your State Here"
-  className="w-full p-2 rounded-md bg-[#f4f2e9] text-black"
-/>
+                type="text"
+                placeholder="Your State Here"
+                className="w-full p-2 rounded-md bg-[#f4f2e9] text-black"
+              />
             </div>
           </div>
 
@@ -150,7 +159,7 @@ const DealerShip = () => {
         </div>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default DealerShip
+export default DealerShip;

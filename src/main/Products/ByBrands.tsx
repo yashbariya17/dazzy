@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
 import productObj from "./AllProductList";
 import { useLocation, useNavigate } from "react-router";
 import { useEffect, useState } from "react";
@@ -49,73 +49,100 @@ const ByBrands = () => {
 
         {/* Title */}
         <h2 className="relative text-white text-2xl font-semibold z-10">
-         By Brands
+          By Brands
         </h2>
       </section>
 
       <h2 className="text-white text-xl font-semibold">By Brands</h2>
-
-      {selectedBrand ? (
-        <section className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-x-6 my-10">
-          {Object.values(productObj)
-            .flat()
-            .filter((i) => i.brand == selectedBrand.toLowerCase())
-            .map((product) => (
+      <div className="max-w-[1240px] grid md:grid-cols-[auto_1fr] gap-12 px-6 mx-auto pt-10 pb-10">
+        {selectedBrand && (
+          <div className="space-y-3 mx-auto">
+            <h2 className="font-semibold text-xl pb-4">
+              Filter by Brands
+              <span className="block w-[20%] h-1 bg-[#eb0029] rounded-full mt-1"></span>
+            </h2>
+            {brandArr.map((i, index) => (
               <div
-                key={product.url + product.name}
-                className="w-[160px] h-[240px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[320px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
+                key={index}
+                className="bg-white w-[200px] rounded-full shadow-xl py-2 group"
               >
-                <motion.img
-                  src={product.url}
-                  alt={product.name}
-                  layoutId={product.url + product.name}
-                  className="w-[80%] h-[200px] object-contain mt-4"
+                <p
+                  className={`text-[15px] hover:text-[#eb0029] w-full pl-6 pr-5 cursor-pointer flex justify-between items-center ${
+                    selectedBrand == i ? "text-[#eb0029]" : "text-gray-600"
+                  }`}
                   onClick={() => {
-                    setSelectedProduct(product);
+                    setSelectedBrand(i);
                   }}
-                />
-                <h3 className="font-semibold mt-2">{product.name}</h3>
-                <p className="text-sm text-gray-600 mt-1 capitalize">
-                  {product.brand}
+                >
+                  {i}
                 </p>
               </div>
             ))}
-        </section>
-      ) : (
-        <section className="pt-16 pb-20 mx-auto max-w-[1000px] px-10 lg:px-0">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full  gap-y-16 ">
-            {brandArr.map((i, index) => (
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  scale: 0,
-                }}
-                animate={{
-                  opacity: 1,
-                  scale: 1,
-                  transition: {
-                    delay: index * 0.2,
-                    duration: 0.4,
-                  },
-                }}
-                className="relative  flex justify-center px-10 mx-auto"
-                key={i}
-              >
-                <motion.img
-                  whileHover={{ scale: 0.8 }}
-                  src={`/images/logos/${index + 1}.png`}
-                  alt={`Slide ${index + 1}`}
-                  className="w-32 object-contain aspect-auto mix-blend-color-burn cursor-pointer"
-                  onClick={() => {
-                    setSelectedBrand(i);
-                    navigate("/byBrands", { state: i });
-                  }}
-                />
-              </motion.div>
-            ))}
           </div>
-        </section>
-      )}
+        )}
+        {selectedBrand ? (
+          <section className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3  gap-y-10 gap-x-6 my-10">
+            {Object.values(productObj)
+              .flat()
+              .filter((i) => i.brand == selectedBrand.toLowerCase())
+              .map((product) => (
+                <div
+                  key={product.url + product.name}
+                  className="w-[160px] h-[240px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[320px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
+                >
+                  <motion.img
+                    src={product.url}
+                    alt={product.name}
+                    layoutId={product.url + product.name}
+                    className="w-[80%] h-[200px] object-contain mt-4"
+                    onClick={() => {
+                      setSelectedProduct(product);
+                    }}
+                  />
+                  <h3 className="font-semibold mt-2">{product.name}</h3>
+                  <p className="text-sm text-gray-600 mt-1 capitalize">
+                    {product.brand}
+                  </p>
+                </div>
+              ))}
+          </section>
+        ) : (
+          <section className="pt-16 pb-20 mx-auto max-w-[1000px] px-10 lg:px-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full  gap-y-16 ">
+              {brandArr.map((i, index) => (
+                <motion.div
+                  initial={{
+                    opacity: 0,
+                    scale: 0,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    scale: 1,
+                    transition: {
+                      delay: index * 0.2,
+                      duration: 0.4,
+                    },
+                  }}
+                  className="relative  flex justify-center px-10 mx-auto"
+                  key={i}
+                >
+                  <motion.img
+                    whileHover={{ scale: 0.8 }}
+                    src={`/images/logos/${index + 1}.png`}
+                    alt={`Slide ${index + 1}`}
+                    className="w-32 object-contain aspect-auto mix-blend-color-burn cursor-pointer"
+                    onClick={() => {
+                      setSelectedBrand(i);
+                      navigate("/byBrands", { state: i });
+                    }}
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </section>
+        )}
+      </div>
+
       <AnimatePresence>
         {selectedProduct && (
           <motion.div
