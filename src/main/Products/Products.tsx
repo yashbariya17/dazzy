@@ -15,6 +15,7 @@ type Product = {
   subCategory?: string;
   description?: string;
 };
+
 const category = {
   "chocolate bar": [],
   "centerfilled chocolate": [
@@ -34,10 +35,14 @@ const category = {
 };
 
 const Products = () => {
-  const { state } = useLocation();
-
+  const location = useLocation();
   const ref = useRef<HTMLDivElement>(null);
-  const [open, setOpen] = useState<string>(state || "chocolate bar");
+
+  // extract ?p=<category> from url
+  const queryParams = new URLSearchParams(location.search);
+  const categoryFromQuery = queryParams.get("p") || "chocolate bar";
+
+  const [open, setOpen] = useState<string>(categoryFromQuery);
   const [selectedCategory, setSelectedCategory] = useState<
     (typeof category)[keyof typeof category][number] | ""
   >("");
@@ -45,13 +50,11 @@ const Products = () => {
   const [imageView, setImageView] = useState<Record<string, any> | null>(null);
 
   useLayoutEffect(() => {
-    if (state) {
-      setOpen(state);
-    } else {
-      setOpen("chocolate bar");
-    }
-  }, [state]);
+    setOpen(categoryFromQuery);
+  }, [categoryFromQuery]);
+
   const products = productObj[open] || [];
+
   const productsToRender = useMemo(() => {
     if (!selectedCategory) {
       const map = new Map();
@@ -75,6 +78,7 @@ const Products = () => {
     }
     return Array.from(map.values());
   }, [products, selectedCategory]);
+
   return (
     <div className="w-full">
       <section className="relative h-[200px] flex items-center justify-center mb-10 overflow-hidden">
@@ -86,10 +90,7 @@ const Products = () => {
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover"
         ></video>
-        {/* Overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
-
-        {/* Title */}
         <h2 className="relative text-white text-2xl font-semibold z-10">
           Product Categories
         </h2>
@@ -105,6 +106,7 @@ const Products = () => {
         </p>
 
         <section className="max-w-[1240px] grid md:grid-cols-[auto_1fr] gap-16 px-6 mx-auto pt-20 pb-10">
+          {/* Sidebar Categories */}
           <div className="space-y-3 mx-auto">
             <h2 className="font-semibold text-xl pb-4">
               Product Categories
@@ -125,6 +127,15 @@ const Products = () => {
                     }
                     setSelectedCategory("");
                     setOpen(i.name);
+
+                    // also update url when selecting category
+                    const params = new URLSearchParams(location.search);
+                    params.set("p", i.name);
+                    window.history.replaceState(
+                      {},
+                      "",
+                      `${location.pathname}?${params.toString()}`
+                    );
                   }}
                 >
                   {i.name}
@@ -132,7 +143,10 @@ const Products = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* Products Section */}
           <section>
+            {/* Subcategory buttons */}
             <div className=" flex gap-x-6 md:gap-x-10  gap-y-5 mb-5 px-4 flex-wrap justify-center md:justify-start">
               {category?.[open as keyof typeof category].map((i) => (
                 <button
@@ -148,6 +162,8 @@ const Products = () => {
                 </button>
               ))}
             </div>
+
+            {/* Products grid */}
             <div
               className="grid grid-rows-[auto_1fr] grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6"
               ref={ref}
@@ -199,6 +215,8 @@ const Products = () => {
             </div>
           </section>
         </section>
+
+        {/* ViewMore modal */}
         <AnimatePresence>
           {viewMoreProducts.length > 0 && (
             <ViewMore
@@ -207,6 +225,8 @@ const Products = () => {
             />
           )}
         </AnimatePresence>
+
+        {/* Image modal */}
         <AnimatePresence>
           {imageView && (
             <motion.div
@@ -216,7 +236,7 @@ const Products = () => {
               exit={{ opacity: 0 }}
             >
               <motion.div
-                className="bg-white rounded-2xl shadow-xl w-auto max-h-[95vh]   overflow-y-auto p-6 px-12 relative"
+                className="bg-white rounded-2xl shadow-xl w-auto max-h-[95vh] overflow-y-auto p-6 px-12 relative"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}

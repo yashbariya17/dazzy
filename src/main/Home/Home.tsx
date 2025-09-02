@@ -7,6 +7,7 @@ import { Link } from "react-router";
 import Autoplay from "embla-carousel-autoplay";
 import "./home.css";
 import VideoSlider from "../../components/Swiper";
+import { useNavigate } from "react-router";
 
 type ProductsType = {
   name: string;
@@ -67,7 +68,7 @@ const Home = () => {
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
   const [] = useEmblaCarousel({ loop: true });
-
+  const navigate = useNavigate();
   const [aboutModal, setAboutModal] = useState(false);
   const [emblaSlideRef, emblaSlideApi] = useEmblaCarousel({
     loop: true,
@@ -82,6 +83,11 @@ const Home = () => {
     () => emblaSlideApi?.scrollNext(),
     [emblaSlideApi]
   );
+
+  const handleRedirect = (productName: string) => {
+    navigate(`/products?p=${encodeURIComponent(productName)}`);
+  };
+
   return (
     <div className="w-full overflow-x-hidden">
       <AnimatePresence mode="wait">
@@ -164,9 +170,7 @@ const Home = () => {
         <TextAnimation text="Our Products" />
         <p
           className="text-center mt-2 text-gray-500 "
-          style={{
-            wordSpacing: "2px",
-          }}
+          style={{ wordSpacing: "2px" }}
         >
           A Wide Range Of Confectionery Items
         </p>
@@ -175,31 +179,21 @@ const Home = () => {
           className="bg-[#f4f1ea] mt-[8rem] h-auto lg:h-[550px] w-full bg-cover bg-bottom bg-no-repeat"
           style={{ backgroundImage: "url('/images/rooftop.png')" }}
         >
-          <div className="max-w-[1000px] mx-auto grid  grid-cols-2  justify-items-center md:grid-cols-4 lg:grid-cols-5 grid-rows-2 justify-center px-5 gap-y-[8rem] gap-x-[4rem] relative -top-10 ">
+          <div className="max-w-[1000px] mx-auto grid grid-cols-2 justify-items-center md:grid-cols-4 lg:grid-cols-5 grid-rows-2 justify-center px-5 gap-y-[8rem] gap-x-[4rem] relative -top-10">
             {ProductsList.map((i) => (
               <div
                 key={i.name}
-                className="bg-white relative w-[150px]  flex  justify-center gap-2 rounded-lg shadow-2xl items-center pt-6 pb-2 "
+                onClick={() => handleRedirect(i.name)} // 👈 redirect with query param
+                className="cursor-pointer bg-white relative w-[150px] flex justify-center gap-2 rounded-lg shadow-2xl items-center pt-6 pb-2 hover:shadow-xl transition-shadow"
               >
                 <motion.img
-                  initial={{
-                    opacity: 0,
-                    y: "-75%",
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  viewport={{
-                    once: true,
-                    amount: 0.5,
-                  }}
-                  transition={{
-                    delay: 0.4,
-                    duration: 0.4,
-                  }}
+                  initial={{ opacity: 0, y: "-75%" }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ delay: 0.4, duration: 0.4 }}
                   src={i.url}
-                  className={`h-[100px]  absolute top-0 -translate-y-[80%] ${i.className}`}
+                  alt={i.name}
+                  className={`h-[100px] absolute top-0 -translate-y-[80%] ${i.className}`}
                 />
                 <p className="text-center uppercase text-gray-600 w-[60%]">
                   {i.name}
