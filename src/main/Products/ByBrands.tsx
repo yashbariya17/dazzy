@@ -23,10 +23,30 @@ const brandArr = [
   "cocos",
   "big rolle",
   "oh! wow",
+  "Glorious",
+  "King kong",
+  "Stacy",
+  "Ferola",
+  "Jellos",
+  "Caranut",
+  "Brevo",
+  "Milky Bliss",
+  "Bracker",
+  "Malai Kulfi",
+  "Oranja",
+  "Orientto",
+  "DryFruit Selection",
+  "Cocotana",
+  "Eclairs 2Rs",
+  "Frugo",
+  "Eclairs 1Rs",
+  "Tornutte",
+  "Chokers",
 ];
 const ByBrands = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
+
   const [selectedBrand, setSelectedBrand] = useState<string>(state || "");
   const [viewMoreProducts, setViewMoreProducts] = useState<any[]>([]);
 
@@ -117,7 +137,7 @@ const ByBrands = () => {
           </div>
         )}
         {selectedBrand ? (
-          <section className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3  gap-y-10 gap-x-6 my-10">
+          <section className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3  gap-y-10 gap-x-6 my-10 h-min">
             {productsToRender.map((product) => (
               <div
                 key={product.url + product.name}

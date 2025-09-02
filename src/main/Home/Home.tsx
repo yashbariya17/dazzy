@@ -15,6 +15,26 @@ type ProductsType = {
   className?: string;
 }[];
 
+const ByBrands = [
+  "endon",
+  "dairy kiss",
+  "d love",
+  "3 stix",
+  "big star",
+  "truffle",
+  "choco bon",
+  "double paan",
+  "bolivia",
+  "gold",
+  "delite",
+  "dr. teddy",
+  "kiss zone",
+  "double mango",
+  "emporio",
+  "cocos",
+  "big rolle",
+  "oh! wow",
+];
 export const ProductsList: ProductsType = [
   {
     name: "chocolate bar",
@@ -227,6 +247,9 @@ const Home = () => {
                     <img
                       src={`/images/logos/${index + 1}.png`}
                       alt={`Slide ${index + 1}`}
+                      onClick={() =>
+                        navigate("byBrands", { state: ByBrands[index] })
+                      }
                       className="w-28 object-contain aspect-auto transition duration-300 transform hover:scale-110"
                     />
                   </div>
@@ -356,7 +379,10 @@ const Home = () => {
                       className="absolute z-20 top-[15%] sm:top-[0%] mt-5 w-28 h-[150px] md:h-[200px]  sm:w-[155px]  object-contain animate-upDown"
                     />
 
-                    <button className="bg-red-600 text-white w-20 md:w-[100px] py-1 md:py-2 mt-auto mb-6 z-20 text-[12px]">
+                    <button
+                      className="bg-red-600 text-white w-20 md:w-[100px] py-1 md:py-2 mt-auto mb-6 z-20 text-[12px] cursor-pointer"
+                      onClick={() => navigate("/dealership")}
+                    >
                       READ MORE
                     </button>
                   </div>
