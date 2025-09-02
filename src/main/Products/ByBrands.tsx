@@ -86,7 +86,11 @@ const ByBrands = () => {
       </section>
 
       <h2 className="text-white text-xl font-semibold">By Brands</h2>
-      <div className="max-w-[1240px] grid md:grid-cols-[auto_1fr] gap-12 px-6 mx-auto pt-10 pb-10">
+      <div
+        className={`max-w-[1240px] grid ${
+          selectedBrand ? "md:grid-cols-[auto_1fr]" : ""
+        } gap-12 px-6 mx-auto pt-10 pb-10`}
+      >
         {selectedBrand && (
           <div className="space-y-3 mx-auto">
             <h2 className="font-semibold text-xl pb-4">
@@ -136,7 +140,7 @@ const ByBrands = () => {
             ))}
           </section>
         ) : (
-          <section className="pt-16 pb-20 mx-auto max-w-[1000px] px-10 lg:px-0">
+          <section className="pt-16 pb-20 mx-auto w-full px-10 lg:px-0">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full  gap-y-16 ">
               {brandArr.map((i, index) => (
                 <motion.div
