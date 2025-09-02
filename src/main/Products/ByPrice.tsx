@@ -35,7 +35,7 @@ const ByPrice = () => {
 
   return (
     <div className="w-full ">
-           <section className="relative h-[250px] flex items-center justify-center mb-10 overflow-hidden">
+           <section className="relative h-[250px] flex items-center justify-center  overflow-hidden">
         <video
           src="/CONTECT AS.mp4"
           autoPlay

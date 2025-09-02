@@ -1,8 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import productObj from "./AllProductList";
 import { useLocation, useNavigate } from "react-router";
-import { useEffect, useState } from "react";
-import { FiX } from "react-icons/fi";
+import { useEffect, useState, useMemo } from "react";
+import ViewMore from "./components/ViewMore";
 
 const brandArr = [
   "endon",
@@ -28,7 +28,39 @@ const ByBrands = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
   const [selectedBrand, setSelectedBrand] = useState<string>(state || "");
-  const [selectedProduct, setSelectedProduct] = useState<any>(null);
+  const [viewMoreProducts, setViewMoreProducts] = useState<any[]>([]);
+
+  const productsToRender = useMemo(() => {
+    if (selectedBrand) {
+      const map = new Map();
+      Object.values(productObj)
+        .flat()
+        .filter((i) => i.brand == selectedBrand.toLowerCase())
+        .forEach((i) =>
+          !map.has(i?.subCategory || i.name)
+            ? map.set(i?.subCategory || i.name, i)
+            : ""
+        );
+      return Array.from(map.values());
+    }
+    return [];
+  }, [selectedBrand]);
+
+  const handleOpen = (product: any) => {
+    if (product?.subCategory) {
+      const sameSubCatProducts = Object.values(productObj)
+        .flat()
+        .filter(
+          (i) =>
+            i.brand == selectedBrand.toLowerCase() &&
+            i.subCategory === product.subCategory
+        );
+      setViewMoreProducts(sameSubCatProducts);
+    } else {
+      setViewMoreProducts([product]);
+    }
+  };
+
   useEffect(() => {
     setSelectedBrand(state || "");
   }, [state]);
@@ -67,7 +99,7 @@ const ByBrands = () => {
                 className="bg-white w-[200px] rounded-full shadow-xl py-2 group"
               >
                 <p
-                  className={`text-[15px] hover:text-[#eb0029] w-full pl-6 pr-5 cursor-pointer flex justify-between items-center ${
+                  className={`text-[15px] hover:text-[#eb0029] w-full pl-6 pr-5 cursor-pointer flex justify-between items-center capitalize ${
                     selectedBrand == i ? "text-[#eb0029]" : "text-gray-600"
                   }`}
                   onClick={() => {
@@ -82,29 +114,26 @@ const ByBrands = () => {
         )}
         {selectedBrand ? (
           <section className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3  gap-y-10 gap-x-6 my-10">
-            {Object.values(productObj)
-              .flat()
-              .filter((i) => i.brand == selectedBrand.toLowerCase())
-              .map((product) => (
-                <div
-                  key={product.url + product.name}
-                  className="w-[160px] h-[240px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[320px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
-                >
-                  <motion.img
-                    src={product.url}
-                    alt={product.name}
-                    layoutId={product.url + product.name}
-                    className="w-[80%] h-[200px] object-contain mt-4"
-                    onClick={() => {
-                      setSelectedProduct(product);
-                    }}
-                  />
-                  <h3 className="font-semibold mt-2">{product.name}</h3>
-                  <p className="text-sm text-gray-600 mt-1 capitalize">
-                    {product.brand}
-                  </p>
-                </div>
-              ))}
+            {productsToRender.map((product) => (
+              <div
+                key={product.url + product.name}
+                className="w-[160px] h-[240px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[320px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
+              >
+                <motion.img
+                  src={product.url}
+                  alt={product.name}
+                  layoutId={product.url + product.name}
+                  className="w-[80%] h-[200px] object-contain mt-4"
+                  onClick={() => {
+                    handleOpen(product);
+                  }}
+                />
+                <h3 className="font-semibold mt-2">{product.name}</h3>
+                <p className="text-sm text-gray-600 mt-1 capitalize">
+                  {product.brand}
+                </p>
+              </div>
+            ))}
           </section>
         ) : (
           <section className="pt-16 pb-20 mx-auto max-w-[1000px] px-10 lg:px-0">
@@ -142,38 +171,12 @@ const ByBrands = () => {
           </section>
         )}
       </div>
-
       <AnimatePresence>
-        {selectedProduct && (
-          <motion.div
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <motion.div
-              className="bg-white rounded-xl p-6 max-w-md w-full relative"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-            >
-              <button
-                onClick={() => setSelectedProduct(null)}
-                className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
-              >
-                <FiX size={20} />
-              </button>
-              <img
-                src={selectedProduct.url}
-                alt={selectedProduct.name}
-                className="w-full h-48 object-contain mb-4"
-              />
-              <h2 className="text-lg font-bold text-purple-900 mb-2">
-                {selectedProduct.name}
-              </h2>
-              <p className="text-gray-700 text-sm">{selectedProduct?.brand}</p>
-            </motion.div>
-          </motion.div>
+        {viewMoreProducts.length > 0 && (
+          <ViewMore
+            products={viewMoreProducts}
+            onClose={() => setViewMoreProducts([])}
+          />
         )}
       </AnimatePresence>
     </div>
