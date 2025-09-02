@@ -25,9 +25,9 @@ const JoinDazzyFamily = () => {
           {/* Image replacing the map */}
           <div className="w-auto md:w-1/2">
             <img
-              src="/images/largeimage.png"
+              src="/videos/JOIN_OUR_TEAM.gif"
               alt="Ahmedabad"
-              className="w-full h-full object-cover rounded-md"
+              className=" object-cover rounded-md"
             />
           </div>
 

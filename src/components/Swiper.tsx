@@ -34,10 +34,11 @@ const VideoSlider: React.FC = () => {
           src="/videos/DOUBLE_CANDY_VIDEO_2.mp4"
           autoPlay
           muted
-          className="h-full w-auto object-cover"
+          className="h-full w-full !object-cover"
           onEnded={handleVideoEnd}
         />
       </SwiperSlide>
+
       <SwiperSlide>
         <video
           src="/videos/DAZZY_ALL_TOFFEE.mp4"
