@@ -37,6 +37,7 @@ const VideoSlider: React.FC = () => {
           className="h-auto w-full !object-cover as"
           onEnded={handleVideoEnd}
           loop
+          controls={false}
         />
       </SwiperSlide>
 
@@ -48,6 +49,7 @@ const VideoSlider: React.FC = () => {
           className="h-auto w-full object-cover"
           onEnded={handleVideoEnd}
           loop
+          controls={false}
         />
       </SwiperSlide>
 
@@ -59,6 +61,7 @@ const VideoSlider: React.FC = () => {
           className="h-auto w-full object-cover"
           onEnded={handleVideoEnd}
           loop
+          controls={false}
         />
       </SwiperSlide>
 
@@ -70,6 +73,7 @@ const VideoSlider: React.FC = () => {
           className="h-auto w-full object-cover"
           onEnded={handleVideoEnd}
           loop
+          controls={false}
         />
       </SwiperSlide>
     </Swiper>
