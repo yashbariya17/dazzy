@@ -339,7 +339,10 @@ const NavBar = () => {
                       {byType.map((i) => (
                         <NavLink
                           key={i.name}
-                          to={`/products`}
+                          to={{
+                            pathname: "/products",
+                            search: `?p=${i.state}`,
+                          }}
                           state={i.state}
                           className="relative block px-4  py-[2px] group"
                         >
