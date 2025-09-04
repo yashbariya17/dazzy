@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
         <div className="flex-1">
           <img
-            src="/images/EDLOGO.png"
+            src="/images/EDLOGO.webp"
             alt="Dazzy Logo"
             className="h-12 mb-4"
           />
@@ -23,7 +23,7 @@ const Footer = () => {
 
         <div className="flex-1">
           <img
-            src="/images/DPPLLOGO.png"
+            src="/images/DPPLLOGO.webp"
             alt="Dazzy Products Logo"
             className="h-12 mb-4"
           />
@@ -39,7 +39,7 @@ const Footer = () => {
 
         <div className="flex-1">
           <img
-            src="/images/DFILOGO.png"
+            src="/images/DFILOGO.webp"
             alt="Dazzy Food Industries Logo"
             className="h-12 mb-4"
           />
@@ -102,9 +102,9 @@ const Footer = () => {
         </div>
         <div className="flex-1">
           {/* <div className="flex mt-8 space-x-3">
-            <img src="/chocolate1.png" alt="Chocolate 1" className="h-16" />
-            <img src="/chocolate2.png" alt="Chocolate 2" className="h-16" />
-            <img src="/chocolate3.png" alt="Chocolate 3" className="h-16" />
+            <img src="/chocolate1.webp" alt="Chocolate 1" className="h-16" />
+            <img src="/chocolate2.webp" alt="Chocolate 2" className="h-16" />
+            <img src="/chocolate3.webp" alt="Chocolate 3" className="h-16" />
           </div> */}
         </div>
       </div>

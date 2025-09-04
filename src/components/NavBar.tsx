@@ -260,7 +260,7 @@ const NavBar = () => {
         <div className="" />
 
         <div className="flex justify-center">
-          <img src="/images/logo.png" alt="Dazzy Logo" className="w-32" />
+          <img src="/images/logo.webp" alt="Dazzy Logo" className="w-32" />
         </div>
 
         <div className="flex justify-end md:hidden">

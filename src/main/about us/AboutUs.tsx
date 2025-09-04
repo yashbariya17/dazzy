@@ -17,7 +17,7 @@ const aboutData = [
         <span className="font-bold">Dazzy Food Industries</span>.
       </p>
     ),
-    image: "/images/founder1.jpg",
+    image: "/images/founder1.webp",
     side: "right",
   },
   {
@@ -31,7 +31,7 @@ const aboutData = [
         portfolio, keeping quality and consumer delight at its core.
       </p>
     ),
-    image: "/images/founder2.jpg",
+    image: "/images/founder2.webp",
     side: "left",
   },
   {
@@ -49,7 +49,7 @@ const aboutData = [
         the confectionery sector.
       </p>
     ),
-    image: "/images/factory.jpg",
+    image: "/images/factory.webp",
     side: "right",
   },
   {
@@ -69,7 +69,7 @@ const aboutData = [
         .
       </p>
     ),
-    image: "/images/factory.jpg",
+    image: "/images/factory.webp",
     side: "left",
   },
   {
@@ -88,14 +88,14 @@ const aboutData = [
         , among many others.
       </p>
     ),
-    image: "/images/factory.jpg",
+    image: "/images/factory.webp",
     side: "right",
   },
   {
     title: "Today",
     description:
       "Today, Dazzy’s delectable creations are enjoyed across India and in multiple international markets. Known for their consistent taste, quality, and thoughtful packaging, Dazzy products have become an integral part of daily indulgence and gifting traditions—reflecting the brand’s commitment to excellence and joy in every bite. Driven by a dedicated team of over 1,000 professionals, Dazzy continues to innovate, grow, and deliver delight with every product it creates.",
-    image: "/images/factory.jpg",
+    image: "/images/factory.webp",
     side: "left",
   },
 ] as const;
@@ -295,19 +295,19 @@ const AboutUs = () => {
   //   {
   //     name: "Ralph Edwards",
   //     role: "Chef Lead",
-  //     image: "chef1.jpg",
+  //     image: "chef1.webp",
   //     borderColor: "border-red-500",
   //   },
   //   {
   //     name: "Leslie Alexander",
   //     role: "Chef Assistant",
-  //     image: "chef2.jpg",
+  //     image: "chef2.webp",
   //     borderColor: "border-orange-400",
   //   },
   //   {
   //     name: "Ronald Richards",
   //     role: "Chef Assistant",
-  //     image: "chef3.jpg",
+  //     image: "chef3.webp",
   //     borderColor: "border-red-500",
   //   },
   // ];
@@ -315,7 +315,7 @@ const AboutUs = () => {
   return (
     <main className="relative bg-[#fff8f0] min-h-[2100px] overflow-hidden">
       <img
-        src="/images/Quality You Can Trust,.png"
+        src="/images/Quality You Can Trust,.webp"
         alt="logo"
         loading="eager"
         fetchPriority="high"
@@ -342,7 +342,7 @@ const AboutUs = () => {
             }}
           ></div>
           <motion.img
-            src="/images/truck.png"
+            src="/images/truck.webp"
             alt="truck"
             style={{
               top: y,

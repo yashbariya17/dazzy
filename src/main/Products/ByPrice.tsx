@@ -5,11 +5,11 @@ import { useLocation } from "react-router";
 import { FiX } from "react-icons/fi";
 
 const priceOptions = [
-  { value: 0.5, img: "/images/001.png" },
-  { value: 1, img: "/images/002.png" },
-  { value: 2, img: "/images/003.png" },
-  { value: 5, img: "/images/004.png" },
-  { value: 10, img: "/images/005.png" },
+  { value: 0.5, img: "/images/001.webp" },
+  { value: 1, img: "/images/002.webp" },
+  { value: 2, img: "/images/003.webp" },
+  { value: 5, img: "/images/004.webp" },
+  { value: 10, img: "/images/005.webp" },
 ];
 
 const ByPrice = () => {
@@ -35,7 +35,7 @@ const ByPrice = () => {
 
   return (
     <div className="w-full ">
-           <section className="relative h-[250px] flex items-center justify-center  overflow-hidden">
+      <section className="relative h-[250px] flex items-center justify-center  overflow-hidden">
         <video
           src="/CONTECT AS.mp4"
           autoPlay

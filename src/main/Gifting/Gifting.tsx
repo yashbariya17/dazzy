@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiShoppingBag, FiX } from "react-icons/fi";
 
-
 type Product = {
   name: string;
   url: string;
@@ -12,72 +11,72 @@ type Product = {
 const products: Product[] = [
   {
     name: "Truffle Heart",
-    url: "/images/giftcart/Truffle Hart.png",
+    url: "/images/giftcart/Truffle Hart.webp",
     description: "Rich cocoa blended with creamy milk chocolate.",
   },
   {
     name: "Glorias Purple",
-    url: "/images/giftcart/Glorious Puruple.png",
+    url: "/images/giftcart/Glorious Puruple.webp",
     description: "Delicious coconut filling wrapped in smooth chocolate.",
   },
   {
     name: "Glorias Red",
-    url: "/images/giftcart/Glorious Red.png",
+    url: "/images/giftcart/Glorious Red.webp",
     description: "Smooth cocoa flavor with a creamy dairy twist.",
   },
   {
     name: "Glorias Brown",
-    url: "/images/giftcart/Glorious Brown.png",
+    url: "/images/giftcart/Glorious Brown.webp",
     description: "A perfect balance of rich dark and creamy milk chocolate.",
   },
   {
     name: "Truffles Octagon",
-    url: "/images/giftcart/Truffle Ogtagon_.png",
+    url: "/images/giftcart/Truffle Ogtagon_.webp",
     description: "Crunchy hazelnuts wrapped in silky smooth chocolate.",
   },
   {
     name: "Stacy Octagon",
-    url: "/images/giftcart/Stacy Octagon.png",
+    url: "/images/giftcart/Stacy Octagon.webp",
     description: "Classic creamy milk chocolate for all ages.",
   },
   {
     name: "Bolivia Container",
-    url: "/images/giftcart/Bolivia Container.png",
+    url: "/images/giftcart/Bolivia Container.webp",
     description: "Smooth milk chocolate with a playful sweet touch.",
   },
   {
     name: "Stacy Mini",
-    url: "/images/giftcart/Stacy Gifrt.png",
+    url: "/images/giftcart/Stacy Gifrt.webp",
     description: "Smooth milk chocolate with a playful sweet touch.",
   },
   {
     name: "Endon Container",
-    url: "/images/DAZZY LOGO.png",
+    url: "/images/DAZZY LOGO.webp",
     description: "A chocolate adventure with fun flavors.",
   },
   {
     name: "DGold Container ",
-    url: "/images/giftcart/DLOVE CONTAINER 5RS.png",
+    url: "/images/giftcart/DLOVE CONTAINER 5RS.webp",
     description: "Sweet strawberry flavor inside smooth chocolate.",
   },
   {
     name: "CocoTana",
-    url: "/images/DAZZY LOGO.png",
+    url: "/images/DAZZY LOGO.webp",
     description: "A luxurious collection of 30 rich and creamy truffles.",
   },
   {
     name: "DLove Gold Jar",
-    url: "/images/giftcart/Dlove Gold Jar.png",
+    url: "/images/giftcart/Dlove Gold Jar.webp",
     description: "A luxurious collection of 30 rich and creamy truffles.",
   },
   {
     name: "DLove Red Jar ",
-    url: "/images/giftcart/DLove Red Jar.png",
+    url: "/images/giftcart/DLove Red Jar.webp",
     description: "A luxurious collection of 30 rich and creamy truffles.",
   },
   {
     name: "DLove Jar",
-    url: "/images/giftcart/D LOVE Jar.png",
+    url: "/images/giftcart/D LOVE Jar.webp",
     description: "A luxurious collection of 30 rich and creamy truffles.",
   },
 ];
@@ -152,7 +151,7 @@ const Gifting = () => {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
             <div className="flex flex-col items-center gap-2">
               <img
-                src="/images/Gifting Icon/Elegant Packaging.png"
+                src="/images/Gifting Icon/Elegant Packaging.webp"
                 alt="icon"
                 className="w-16 h-16 object-contain"
               />
@@ -160,7 +159,7 @@ const Gifting = () => {
             </div>
             <div className="flex flex-col items-center gap-2">
               <img
-                src="/images/Gifting Icon/Made with Care.png"
+                src="/images/Gifting Icon/Made with Care.webp"
                 alt="icon"
                 className="w-16 h-16 object-contain"
               />
@@ -168,18 +167,15 @@ const Gifting = () => {
             </div>
             <div className="flex flex-col items-center gap-2">
               <img
-                src="/images/Gifting Icon/Perfect for Gifting.png"
+                src="/images/Gifting Icon/Perfect for Gifting.webp"
                 alt="icon"
                 className="w-16 h-16 object-contain"
               />
-              <p className="text-purple-900 font-medium">
-                Perfect for Gifting
-
-              </p>
+              <p className="text-purple-900 font-medium">Perfect for Gifting</p>
             </div>
             <div className="flex flex-col items-center gap-2">
               <img
-                src="/images/Gifting Icon/Premium Ingredients.png"
+                src="/images/Gifting Icon/Premium Ingredients.webp"
                 alt="icon"
                 className="w-16 h-16 object-contain"
               />

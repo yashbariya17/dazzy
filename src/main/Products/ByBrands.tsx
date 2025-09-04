@@ -181,7 +181,7 @@ const ByBrands = () => {
                 >
                   <motion.img
                     whileHover={{ scale: 0.8 }}
-                    src={`/images/logos/${index + 1}.png`}
+                    src={`/images/logos/${index + 1}.webp`}
                     alt={`Slide ${index + 1}`}
                     className="w-32 object-contain aspect-auto mix-blend-color-burn cursor-pointer"
                     onClick={() => {

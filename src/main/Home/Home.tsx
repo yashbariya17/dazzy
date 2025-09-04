@@ -38,45 +38,45 @@ const ByBrands = [
 export const ProductsList: ProductsType = [
   {
     name: "chocolate bar",
-    url: "/images/1stimg.png",
+    url: "/images/1stimg.webp",
   },
   {
     name: "centerfilled chocolate",
-    url: "/images/2ndimg.png",
+    url: "/images/2ndimg.webp",
   },
   {
     name: "decorative chocolate",
-    url: "/images/DECORATIVE-CHOCOLATE.png",
+    url: "/images/DECORATIVE-CHOCOLATE.webp",
   },
   {
     name: "Crunchy chocolate",
-    url: "/images/4thimg.png",
+    url: "/images/4thimg.webp",
     className: "left-[0px]",
   },
   {
     name: "nought bar",
-    url: "/images/5thimg.png",
+    url: "/images/5thimg.webp",
   },
   {
     name: "wafer rolls",
-    url: "/images/6thimg.png",
+    url: "/images/6thimg.webp",
   },
   {
     name: "candy",
-    url: "/images/CANDY.png",
+    url: "/images/CANDY.webp",
   },
   {
     name: "toffee",
-    url: "/images/TOFFEE.png",
+    url: "/images/TOFFEE.webp",
     className: "left-[25px] top-[10px]",
   },
   {
     name: "lollipop",
-    url: "/images/10thimg.png",
+    url: "/images/10thimg.webp",
   },
   {
     name: "jelly",
-    url: "/images/JELLY.png",
+    url: "/images/JELLY.webp",
   },
 ];
 
@@ -141,7 +141,7 @@ const Home = () => {
               <motion.img
                 layoutId="aboutImage"
                 className="w-[600px] max-w-full h-auto rounded-lg"
-                src="/images/25ywarsdashboard.png"
+                src="/images/25ywarsdashboard.webp"
                 transition={{
                   duration: 0.3,
                 }}
@@ -197,7 +197,7 @@ const Home = () => {
 
         <div
           className="bg-[#f4f1ea] mt-[8rem] h-auto lg:h-[550px] w-full bg-cover bg-bottom bg-no-repeat"
-          style={{ backgroundImage: "url('/images/rooftop.png')" }}
+          style={{ backgroundImage: "url('/images/rooftop.webp')" }}
         >
           <div className="max-w-[1000px] mx-auto grid grid-cols-2 justify-items-center md:grid-cols-4 lg:grid-cols-5 grid-rows-2 justify-center px-5 gap-y-[8rem] gap-x-[4rem] relative -top-10">
             {ProductsList.map((i) => (
@@ -245,7 +245,7 @@ const Home = () => {
                     key={index}
                   >
                     <img
-                      src={`/images/logos/${index + 1}.png`}
+                      src={`/images/logos/${index + 1}.webp`}
                       alt={`Slide ${index + 1}`}
                       onClick={() =>
                         navigate("byBrands", { state: ByBrands[index] })
@@ -303,7 +303,7 @@ const Home = () => {
           <section className="md:h-[650px] lg:h-[550px] max-w-[1000px] mx-auto  lg:mr-auto  mt-16 md:mt-8 lg:mt-16 grid md:grid-cols-2">
             <motion.img
               layoutId="aboutImage"
-              src="/images/25ywarsdashboard.png"
+              src="/images/25ywarsdashboard.webp"
               className="w-[90%] sm:w-[70%] md:w-[90%] xl:w-[600px] xl:-translate-x-[30%] !max-w-max md:my-auto  mx-auto lg:mr-auto lg:ml-0 my-8 "
             />
             <div className="bg-[#f4f1ea] pt-8 md:ml-auto flex ">
@@ -368,13 +368,13 @@ const Home = () => {
                   >
                     <div className="bg-white absolute bottom-0 w-full h-[50%] rounded-t-[70px] shadow-xl z-0"></div>
                     <img
-                      src="/images/brown.png"
+                      src="/images/brown.webp"
                       alt="brown background"
                       className="absolute bottom-20  left-5 md:left-3 w-[80%] md:w-[90%] md:h-auto z-10 pointer-events-none select-none"
                     />
 
                     <img
-                      src={`/images/BestSeller/${index + 1}.png`}
+                      src={`/images/BestSeller/${index + 1}.webp`}
                       alt={`Slide ${index + 1}`}
                       className="absolute z-20 top-[15%] sm:top-[0%] mt-5 w-28 h-[150px] md:h-[200px]  sm:w-[155px]  object-contain animate-upDown"
                     />
@@ -434,7 +434,7 @@ const Home = () => {
 
         <section
           className="h-[700px] overflow-hidden  mt-10 relative bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/sliderlarge.png')" }}
+          style={{ backgroundImage: "url('/images/sliderlarge.webp')" }}
         >
           <div className="flex  justify-center lg:justify-end h-full max-w-[1000px] mx-auto">
             <div className="bg-red-600 rounded-[50px] h-[450px] lg:h-[250px] w-[80%] md:w-[500px] flex flex-col gap-3 justify-center ml-5 mr-5 lg:ml-0  lg:mr-20 mt-auto mb-auto">
@@ -478,9 +478,9 @@ const Home = () => {
           ></video>
           <div className="text-center max-w-xl px-4">
             <div className="flex justify-center items-center gap-2 mb-4 text-orange-500 text-sm font-semibold">
-              <img src="/images/feedback.png" className="w-6 h-6 invert" />
+              <img src="/images/feedback.webp" className="w-6 h-6 invert" />
               <h2>TESTIMONIALS</h2>
-              <img src="/images/feedback.png" className="w-6 h-6 invert" />
+              <img src="/images/feedback.webp" className="w-6 h-6 invert" />
             </div>
             <h3 className="text-3xl font-bold mb-6">What Our Clients Say</h3>
             <Slider />
@@ -645,7 +645,7 @@ const Slide = forwardRef(function Slide(
     >
       <div className="flex items-center mb-4">
         <img
-          src="images/user.jpg"
+          src="images/user.webp"
           alt="Albert Flores"
           className="w-12 h-12 rounded-full mr-4 object-cover"
         />
