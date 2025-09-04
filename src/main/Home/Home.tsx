@@ -159,7 +159,7 @@ const Home = () => {
                 <div className="overflow-hidden">
                   <TextAnimation text="25 Years" />
                   <p className="font-bold uppercase">
-                    expierience in food industries
+                    experience in food industries
                   </p>
                   <p className="text-wrap w-[500px] mx-auto pb-2">
                     Founded in 2001, Dazzy is a family-owned confectionery house
@@ -180,7 +180,7 @@ const Home = () => {
 
       <section className="bg-[#eb0029]">
         <div className="max-w-[1000px] uppercase text-white  mx-auto font-semibold grid grid-cols-2 *:text-center md:flex justify-center md:gap-16 text-[12px] md:text-lg py-2 flex-col md:flex-row gap-2 items-center">
-          <p>fssai & iso certiefied</p>
+          <p>fssai & iso certified</p>
           <p>25+ year experience</p>
           <p>100%veg</p>
           <p>pan india delivery</p>
@@ -312,7 +312,7 @@ const Home = () => {
                   25 Years
                 </h2>
                 <p className="font-bold uppercase">
-                  of expierience in food industries
+                  of experience in food industries
                 </p>
                 <p className="lg:w-[400px] text-wrap w-[300px]">
                   Founded in 2001, Dazzy is a family-owned confectionery house

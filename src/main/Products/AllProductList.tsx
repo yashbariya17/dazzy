@@ -13,7 +13,7 @@ export type productType = {
 export const productObj: productType = {
   "chocolate bar": [
     {
-      name: "Cocoa Milk Choclate Bar",
+      name: "Cocoa Milk Chocolate Bar",
       url: "/images/chocolatebar/Cocoa Milk Choclate Bar.webp",
       price: 1,
     },
@@ -52,12 +52,12 @@ export const productObj: productType = {
     },
 
     {
-      name: "Dark Milk Choclate Bar",
+      name: "Dark Milk Chocolate Bar",
       url: "/images/chocolatebar/Dark Milk Choclate Bar.webp",
       price: 5,
     },
     {
-      name: "Milk Choclate Bar",
+      name: "Milk Chocolate Bar",
       url: "/images/chocolatebar/Milk Choclate Bar.webp",
       price: 5,
     },
@@ -150,7 +150,7 @@ export const productObj: productType = {
       brand: "truffle",
     },
     {
-      name: "Truffle Contaier",
+      name: "Truffle Container",
       url: "/images/centerfilledchocolate/TRUFFLE GIFT CONTAIER 5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -301,7 +301,7 @@ export const productObj: productType = {
       brand: "d love",
     },
     {
-      name: "Dlove Pruple",
+      name: "Dlove Purple",
       url: "/images/centerfilledchocolate/DLOVE PURPULE 5RS.webp",
       price: 5,
       category: "Pillow Pack",
@@ -378,7 +378,7 @@ export const productObj: productType = {
       subCategory: "Amore 30Pcs Container",
     },
     {
-      name: "Delight Pistaccio 70Pcs Box",
+      name: "Delight Pistachio 70Pcs Box",
       url: "/images/centerfilledchocolate/DELIGHT PISTACGIO 70PCS BOX 5RS.webp",
       price: 5,
       category: "Pillow Pack",
@@ -401,7 +401,7 @@ export const productObj: productType = {
       subCategory: "Delight 70pcs Box",
     },
     {
-      name: "Delight Cahewnut 70pcs Box",
+      name: "Delight Cashewnut 70pcs Box",
       url: "/images/centerfilledchocolate/DELIGHT CAHEWNUT 70PCS BOX 5RS.webp",
       price: 5,
       category: "Pillow Pack",
@@ -477,7 +477,7 @@ export const productObj: productType = {
     },
 
     {
-      name: "Bliss strawbery 125pcs Box",
+      name: "Bliss strawberry 125pcs Box",
       url: "/images/centerfilledchocolate/BLISS STRAWBERRY 1RS.webp",
       price: 1,
       category: "Pillow Pack",
