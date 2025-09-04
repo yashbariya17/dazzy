@@ -38,6 +38,7 @@ const VideoSlider: React.FC = () => {
           onEnded={handleVideoEnd}
           loop
           controls={false}
+          playsInline
         />
       </SwiperSlide>
 
@@ -50,6 +51,7 @@ const VideoSlider: React.FC = () => {
           onEnded={handleVideoEnd}
           loop
           controls={false}
+          playsInline
         />
       </SwiperSlide>
 
@@ -62,6 +64,7 @@ const VideoSlider: React.FC = () => {
           onEnded={handleVideoEnd}
           loop
           controls={false}
+          playsInline
         />
       </SwiperSlide>
 
@@ -74,6 +77,7 @@ const VideoSlider: React.FC = () => {
           onEnded={handleVideoEnd}
           loop
           controls={false}
+          playsInline
         />
       </SwiperSlide>
     </Swiper>
