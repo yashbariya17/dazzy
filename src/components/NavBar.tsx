@@ -91,7 +91,7 @@ const byBrands = [
   "Delite",
   "Emporio",
   "Cocos",
-  "Double Paan",
+  "double candy",
 ];
 
 const ContactUs = [

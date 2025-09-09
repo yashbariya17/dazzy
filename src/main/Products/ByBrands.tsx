@@ -12,7 +12,7 @@ const brandArr = [
   "big star",
   "truffle",
   "choco bon",
-  "double paan",
+  "double candy",
   "bolivia",
   "gold",
   "delite",

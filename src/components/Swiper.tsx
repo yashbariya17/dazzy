@@ -31,7 +31,7 @@ const VideoSlider: React.FC = () => {
     >
       <SwiperSlide>
         <video
-          src="/videos/DOUBLE_CANDY_VIDEO_2.mp4"
+          src="/videos/OH!WOW.mp4"
           autoPlay
           muted
           className="h-auto w-full !object-cover as"
@@ -44,7 +44,7 @@ const VideoSlider: React.FC = () => {
 
       <SwiperSlide>
         <video
-          src="/videos/DAZZY_ALL_TOFFEE.mp4"
+          src="/videos/D'LOVE SLIDER.mp4"
           autoPlay
           muted
           className="h-auto w-full object-cover"
@@ -57,7 +57,7 @@ const VideoSlider: React.FC = () => {
 
       <SwiperSlide>
         <video
-          src="/videos/DOUBLE_CANDY_VIDEO.mp4"
+          src="/videos/DAZZY CHOCO BON.mp4"
           autoPlay
           muted
           className="h-auto w-full object-cover"
@@ -70,7 +70,43 @@ const VideoSlider: React.FC = () => {
 
       <SwiperSlide>
         <video
-          src="/videos/DAZZY_ECLAIRS_TOFFEE.mp4"
+          src="/videos/BIG STAR.mp4"
+          autoPlay
+          muted
+          className="h-auto w-full object-cover"
+          onEnded={handleVideoEnd}
+          loop
+          controls={false}
+          playsInline
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <video
+          src="/videos/FRUIT JELLOS SLIDER.mp4"
+          autoPlay
+          muted
+          className="h-auto w-full object-cover"
+          onEnded={handleVideoEnd}
+          loop
+          controls={false}
+          playsInline
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <video
+          src="/videos/CHOCO & MILK STIX 3.mp4"
+          autoPlay
+          muted
+          className="h-auto w-full object-cover"
+          onEnded={handleVideoEnd}
+          loop
+          controls={false}
+          playsInline
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <video
+          src="/videos/DOUBLE CANDY VIDEO .mp4"
           autoPlay
           muted
           className="h-auto w-full object-cover"

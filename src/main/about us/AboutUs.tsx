@@ -17,7 +17,7 @@ const aboutData = [
         <span className="font-bold">Dazzy Food Industries</span>.
       </p>
     ),
-    image: "/images/founder1.webp",
+    image: "/images/founder2.webp",
     side: "right",
   },
   {
