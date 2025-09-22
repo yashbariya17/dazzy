@@ -13,12 +13,12 @@ export type productType = {
 export const productObj: productType = {
   "chocolate bar": [
     {
-      name: "Cocoa Milk Chocolate Bar",
+      name: "Dairy Kiss Cocoa Bar",
       url: "/images/chocolatebar/Cocoa Milk Choclate Bar.webp",
       price: 1,
     },
     {
-      name: "Dairy Kiss Cocoa",
+      name: "Dairy Kiss Cocoa Bar",
       url: "/images/centerMissing/Dairy Kiss Milk Cocoa.webp",
       price: 5,
       brand: "dairy kiss",
@@ -30,44 +30,44 @@ export const productObj: productType = {
       brand: "dairy kiss",
     },
     {
-      name: "StrawBerry Bar",
+      name: "Dairy Kiss StrawBerry Bar",
       url: "/images/chocolatebar/StrawBerry Bar.webp",
       price: 5,
     },
     {
-      name: "Black & White Bar",
+      name: "Dairy Kiss Black & White Bar",
       url: "/images/chocolatebar/Black & White Bar.webp",
       price: 5,
       category: "c-1",
     },
     {
-      name: "Milkies Milk Choclate Bar",
+      name: "Dairy Kiss Milk Bar",
       url: "/images/chocolatebar/Milkies Milk Choclate Bar.webp",
       price: 5,
     },
     {
-      name: "Coconut Bar",
+      name: "Dairy Kiss Coconut Bar",
       url: "/images/chocolatebar/Coconut Bar.webp",
       price: 5,
     },
 
     {
-      name: "Dark Milk Chocolate Bar",
+      name: "Dairy Kiss Dark Bar",
       url: "/images/chocolatebar/Dark Milk Choclate Bar.webp",
       price: 5,
     },
     {
-      name: "Milk Chocolate Bar",
+      name: "Dairy Kiss Gold Bar",
       url: "/images/chocolatebar/Milk Choclate Bar.webp",
       price: 5,
     },
     {
-      name: "HazelNut Bar",
+      name: "Dairy Kiss Hazelnut Bar",
       url: "/images/chocolatebar/HazelNut Bar.webp",
       price: 5,
     },
     {
-      name: "Dairy KIss Cocoa",
+      name: "Dairy Kiss Cocoa Bar",
       url: "/images/centerMissing/Dairy Kiss Milk Cocoa.webp",
       price: 5,
       brand: "dairy kiss",
@@ -142,15 +142,15 @@ export const productObj: productType = {
       brand: "truffle",
     },
     {
-      name: "Truffle 30 Pcs Container",
+      name: "Truffle Octagon Container",
       url: "/images/centerfilledchocolate/TRUFFLE CONTAINER 5RS.webp",
       price: 5,
       category: "Single Twist",
-      subCategory: "Truffles 30 Pcs Container",
+      // subCategory: "Truffles 30 Pcs Container",
       brand: "truffle",
     },
     {
-      name: "Truffle Container",
+      name: "Truffle Heart Container",
       url: "/images/centerfilledchocolate/TRUFFLE GIFT CONTAIER 5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -509,21 +509,21 @@ export const productObj: productType = {
     },
     {
       name: "Emporio 70Pcs Box",
-      url: "/images/centerfilledchocolate/EMPORIO 70PCS BOX 5RS.webp",
+      url: "/images/centerfilledchocolate/Emporio 70PCS BOX 5RS.webp",
       price: 5,
-      brand: "emporio",
+      brand: "Emporio",
     },
     {
       name: "Emporio Pouch",
-      url: "/images/centerfilledchocolate/EMPORIO POUCH  5RS.webp",
+      url: "/images/centerfilledchocolate/Emporio POUCH  5RS.webp",
       price: 5,
-      brand: "emporio",
+      brand: "Emporio",
     },
     {
       name: "Empirio Box",
       url: "/images/centerfilledchocolate/EMPIRIO BOX 5RS.webp",
       price: 5,
-      brand: "emporio",
+      brand: "Emporio",
     },
     {
       name: "DGold 60Pcs Box",
@@ -1147,7 +1147,7 @@ export const productObj: productType = {
       price: 10,
     },
     {
-      name: "Choco COAN 5RS",
+      name: "Choc Coan 5RS",
       url: "/images/decorativechocolate/CHOCO COAN 5RS.webp",
       price: 5,
     },
@@ -1795,7 +1795,7 @@ export const productObj: productType = {
       price: 1,
     },
     {
-      name: "Jellos Jelly Jar1",
+      name: "Jellos Jelly Jar",
       url: "/images/jelly/JELLOS JELLY JAR1.webp",
       price: 1,
     },
@@ -1913,7 +1913,7 @@ export const productObj: productType = {
       brand: "kiss zone",
     },
     {
-      name: "Kisszone01",
+      name: "Kisszone",
       url: "/images/candy/KISSZONE01 1RS.webp",
       price: 1,
       brand: "kiss zone",
@@ -2038,7 +2038,7 @@ export const productObj: productType = {
 
   lollipop: [
     {
-      name: "Fru Go Pop",
+      name: "Frugo Pop",
       url: "/images/lollipop/Fru Go Pop.webp",
       price: 5,
     },

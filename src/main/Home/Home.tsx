@@ -372,7 +372,6 @@ const Home = () => {
                       alt="brown background"
                       className="absolute bottom-20  left-5 md:left-3 w-[80%] md:w-[90%] md:h-auto z-10 pointer-events-none select-none"
                     />
-
                     <img
                       src={`/images/BestSeller/${index + 1}.webp`}
                       alt={`Slide ${index + 1}`}

@@ -5,40 +5,10 @@ import { useEffect, useRef, useState } from "react";
 
 const aboutData = [
   {
-    title: "Since 2001",
-    description: (
-      <p className="mb-2 text-sm md:text-base ">
-        "Since its inception in 2001, <span className="font-bold">Dazzy</span>{" "}
-        has been dedicated to crafting premium sugar confectionery and moulded
-        chocolate specialties that bring sweetness to life’s most cherished
-        moments. What began as a modest production unit in the Sayajipura area
-        of Vadodara has evolved into one of the world’s leading family-owned
-        confectionery enterprises—giving rise to{" "}
-        <span className="font-bold">Dazzy Food Industries</span>.
-      </p>
-    ),
-    image: "/images/founder2.webp",
-    side: "right",
-  },
-  {
-    title: "Since 2010",
-    description: (
-      <p className="mb-2 text-sm md:text-base ">
-        The journey began with the success of its flagship product,{" "}
-        <span className="font-bold">Éclair Gold</span>, which quickly gained
-        popularity and laid the foundation for the brand’s rapid growth and
-        innovation. Over the years, Dazzy has consistently expanded its product
-        portfolio, keeping quality and consumer delight at its core.
-      </p>
-    ),
-    image: "/images/founder2.webp",
-    side: "left",
-  },
-  {
     title: "Journey",
     description: (
       <p className="mb-2 text-sm md:text-base ">
-        "The company’s remarkable growth is attributed to the visionary
+        The company’s remarkable growth is attributed to the visionary
         leadership of <span className="font-bold">Mr. Dipak Kanani</span>,
         Chairman and CEO, ably supported by Managing Directors and his brothers
         - <span className="font-bold">Mr. Tushar Kanani</span> and{" "}
@@ -49,11 +19,41 @@ const aboutData = [
         the confectionery sector.
       </p>
     ),
+    image: "/images/founder2.webp",
+    side: "right",
+  },
+  {
+    title: "Since 2001",
+    description: (
+      <p className="mb-2 text-sm md:text-base ">
+        Since its inception in 2001, <span className="font-bold">Dazzy</span>{" "}
+        has been dedicated to crafting premium sugar confectionery and moulded
+        chocolate specialties that bring sweetness to life’s most cherished
+        moments. What began as a modest production unit in the Sayajipura area
+        of Vadodara has evolved into one of the world’s leading family-owned
+        confectionery enterprises—giving rise to{" "}
+        <span className="font-bold">Dazzy Food Industries</span>.
+      </p>
+    ),
+    image: "/images/founder2.webp",
+    side: "left",
+  },
+  {
+    title: "Since 2007",
+    description: (
+      <p className="mb-2 text-sm md:text-base ">
+        The journey began with the success of its flagship product,{" "}
+        <span className="font-bold">Éclair Gold</span>, which quickly gained
+        popularity and laid the foundation for the brand’s rapid growth and
+        innovation. Over the years, Dazzy has consistently expanded its product
+        portfolio, keeping quality and consumer delight at its core.
+      </p>
+    ),
     image: "/images/factory.webp",
     side: "right",
   },
   {
-    title: "2007",
+    title: "Since 2010",
     description: (
       <p className="mb-2 text-sm md:text-base ">
         Dazzy marked a significant milestone with the establishment of its
@@ -73,7 +73,7 @@ const aboutData = [
     side: "left",
   },
   {
-    title: "Journey",
+    title: "Since 2024",
     description: (
       <p className="mb-2 text-sm md:text-base ">
         Further expanding its capabilities, Dazzy launched its most advanced
@@ -384,7 +384,7 @@ const AboutUs = () => {
           is to craft
           <span className="font-semibold text-gray-900">
             {" "}
-            exceptional confectionery&nbsp;
+            exceptional confectionery
           </span>
           that brings
           <span className="font-bold text-red-600"> joy</span> to everyday
