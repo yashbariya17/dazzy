@@ -384,7 +384,7 @@ const AboutUs = () => {
           is to craft
           <span className="font-semibold text-gray-900">
             {" "}
-            exceptional confectionery
+            exceptional confectionery&nbsp;
           </span>
           that brings
           <span className="font-bold text-red-600"> joy</span> to everyday
