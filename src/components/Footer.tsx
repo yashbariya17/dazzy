@@ -34,7 +34,21 @@ const Footer = () => {
             <br />- 391775, Gujarat - INDIA
           </p>
         </div>
+        <div className="hidden md:block h-[200px] border-1 border-amber-800 mx-4" />
 
+  <div className="flex-1">
+          <img
+            src="/images/DPPLLOGO.webp"
+            alt="Dazzy Products Logo"
+            className="h-12 mb-4"
+          />
+          <h3 className="text-lg font-semibold">DAZZY PRODUCTS PVT. LTD.</h3>
+          <p className="text-sm mt-2 leading-relaxed">
+            <i className="fa fa-location-dot mr-2"></i>
+            E-74, Manjusar GIDC, Savli, Vadodara
+            <br />- 391775, Gujarat - INDIA
+          </p>
+        </div>
         <div className="hidden md:block h-[200px] border-1 border-amber-800 mx-4" />
 
         <div className="flex-1">
@@ -51,6 +65,7 @@ const Footer = () => {
             Vadodara - 390019, Gujarat - INDIA
           </p>
         </div>
+        
       </div>
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
         <div className="flex-1">

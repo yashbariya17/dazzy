@@ -51,13 +51,16 @@ const Products = () => {
   const [price, setPrice] = useState<number>(0);
   const [viewMoreProducts, setViewMoreProducts] = useState<Product[]>([]);
   const [imageView, setImageView] = useState<Record<string, any> | null>(null);
+  const [loadedCount, setLoadedCount] = useState(0);
 
   useLayoutEffect(() => {
     setOpen(categoryFromQuery);
   }, [categoryFromQuery]);
 
   const products = productObj[open] || [];
-
+  const handleImageLoad = () => {
+    setLoadedCount((prev) => prev + 1);
+  };
   const productsToRender = useMemo(() => {
     if (!selectedCategory) {
       const map = new Map();
@@ -83,6 +86,12 @@ const Products = () => {
   }, [products, selectedCategory]);
 
   return (
+    <>
+ {loadedCount < 2 && (
+        <div className="absolute inset-0 flex items-center justify-center bg-white z-10">
+          <img src="/videos/LODING GIF.gif" alt="" />
+        </div>
+      )}
     <div className="w-full">
       <section className="relative h-[200px] flex items-center justify-center overflow-hidden">
         <video
@@ -108,27 +117,29 @@ const Products = () => {
           A Wide Range Of Confectionery Items
         </p>
 
-        <div className="max-w-[1240px] grid md:grid-cols-[auto_1fr] gap-5 md:gap-16 px-6 mx-auto pt-20">
-          <h2 className="font-semibold text-xl pb-4 w-[270px]">
-            Filter By Price
-            <span className="block w-[20%] h-1 bg-[#eb0029] rounded-full mt-1"></span>
-          </h2>
-          <div className="flex gap-5 w-full justify-between flex-col md:flex-row">
-            {priceOptions?.map((i) => (
-              <button
-                key={i}
-                className={`${
-                  price !== i
-                    ? "border-2 border-solid border-[#eb0029] text-[#eb0029]"
-                    : "bg-[#eb0029] text-white font-semibold"
-                } py-1 min-w-16 px-3 rounded-full capitalize cursor-pointer h-min w-full max-w-[80%] transition-transform duration-200 active:scale-90`}
-                onClick={() => setPrice(i)}
-              >
-                {i}
-              </button>
-            ))}
-          </div>
-        </div>
+       <div className="max-w-[1240px] px-6 mx-auto pt-20">
+  <h2 className="font-semibold text-xl pb-4 w-[270px]">
+    Filter By Price
+    <span className="block w-[20%] h-1 bg-[#eb0029] rounded-full mt-1"></span>
+  </h2>
+
+  <div className="w-full mt-2">
+    <select
+      value={price}
+      onChange={(e) => setPrice(Number(e.target.value))}
+      className="border-2 border-solid border-[#eb0029] text-[#eb0029] rounded-full px-3 py-2 w-full max-w-[250px] focus:outline-none focus:ring-2 focus:ring-[#eb0029] cursor-pointer capitalize appearance-none"
+    >
+      <option value="" className="text-black">Select price</option>
+      {priceOptions?.map((i) => (
+        <option key={i} value={i} className="capitalize text-black">
+          {i}
+        </option>
+      ))}
+    </select>
+  </div>
+</div>
+
+
 
         <section className="max-w-[1240px] grid md:grid-cols-[auto_1fr] gap-16 px-6 mx-auto pt-10 pb-10">
           {/* Sidebar Categories */}
@@ -214,6 +225,7 @@ const Products = () => {
                             setViewMoreProducts([i]);
                           }
                         }}
+                        onLoad={handleImageLoad}
                       />
 
                       <p className="text-center text-sm sm:text-base font-semibold mt-2">
@@ -293,6 +305,8 @@ const Products = () => {
         </AnimatePresence>
       </section>
     </div>
+    </>
+
   );
 };
 
