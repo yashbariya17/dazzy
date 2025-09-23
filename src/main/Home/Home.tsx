@@ -1,6 +1,6 @@
 import { AnimatePresence, motion, usePresenceData, wrap } from "motion/react";
 import useEmblaCarousel from "embla-carousel-react";
-import { forwardRef, useCallback, useState } from "react";
+import { forwardRef, useCallback, useEffect, useState } from "react";
 import AnimatedNumber from "../../components/AnimatedNumber";
 import { TextAnimation } from "../../components/TextAnimation";
 import { Link } from "react-router";
@@ -112,396 +112,403 @@ const Home = () => {
   const handleImageLoad = () => {
     setLoadedCount((prev) => prev + 1);
   };
- 
+
+  useEffect(() => {
+    if (loadedCount < 5) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [loadedCount]);
+
   return (
     <>
-    {loadedCount < 5 && (
+      {loadedCount < 5 && (
         <div className="absolute inset-0 flex items-center justify-center bg-white z-10">
           <img src="/videos/LODING GIF.gif" alt="" />
         </div>
       )}
-    <div className="w-full overflow-x-hidden">
-      <AnimatePresence mode="wait">
-        {aboutModal && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: 1,
-            }}
-            exit={{
-              opacity: 0,
-            }}
-            transition={{
-              duration: 0.3,
-            }}
-            className="bg-[rgba(0,0,0,0.3)] fixed h-screen w-full z-10 top-0 flex justify-center items-center"
-            onClick={() => {
-              setAboutModal(false);
-              document.body.style.overflow = "auto";
-            }}
-          >
-            <motion.section
-              className="rounded-xl max-w-[90%]"
+      <div className="w-full overflow-x-hidden">
+        <AnimatePresence mode="wait">
+          {aboutModal && (
+            <motion.div
+              initial={{ opacity: 0 }}
               animate={{
-                backgroundColor: "#f4f1ea",
+                opacity: 1,
+              }}
+              exit={{
+                opacity: 0,
               }}
               transition={{
-                delay: 0.3,
+                duration: 0.3,
+              }}
+              className="bg-[rgba(0,0,0,0.3)] fixed h-screen w-full z-10 top-0 flex justify-center items-center"
+              onClick={() => {
+                setAboutModal(false);
+                document.body.style.overflow = "auto";
               }}
             >
-              <motion.img
-                layoutId="aboutImage"
-                className="w-[600px] max-w-full h-auto rounded-lg"
-                src="/images/25ywarsdashboard.webp"
-                transition={{
-                  duration: 0.3,
-                }}
-              />
-              <motion.div
-                className="*:text-center space-y-3 grid"
-                initial={{ gridTemplateRows: "0fr" }}
+              <motion.section
+                className="rounded-xl max-w-[90%]"
                 animate={{
-                  gridTemplateRows: "1fr",
+                  backgroundColor: "#f4f1ea",
                 }}
                 transition={{
-                  delay: 0.4,
+                  delay: 0.3,
                 }}
               >
-                <div className="overflow-hidden">
-                  <TextAnimation text="25 Years" />
-                  <p className="font-bold uppercase">
-                    experience in food industries
+                <motion.img
+                  layoutId="aboutImage"
+                  className="w-[600px] max-w-full h-auto rounded-lg"
+                  src="/images/25ywarsdashboard.webp"
+                  transition={{
+                    duration: 0.3,
+                  }}
+                />
+                <motion.div
+                  className="*:text-center space-y-3 grid"
+                  initial={{ gridTemplateRows: "0fr" }}
+                  animate={{
+                    gridTemplateRows: "1fr",
+                  }}
+                  transition={{
+                    delay: 0.4,
+                  }}
+                >
+                  <div className="overflow-hidden">
+                    <TextAnimation text="25 Years" />
+                    <p className="font-bold uppercase">
+                      experience in food industries
+                    </p>
+                    <p className="text-wrap w-[500px] mx-auto pb-2">
+                      Founded in 2001, Dazzy is a family-owned confectionery
+                      house producing high-quality sugar candies and moulded
+                      chocolate specialties. With decades of experience, Dazzy
+                      is now one of the largest and most trusted confectionery
+                      manufacturers in the world.
+                    </p>
+                  </div>
+                </motion.div>
+              </motion.section>
+            </motion.div>
+          )}
+        </AnimatePresence>
+        <section className="">
+          <VideoSlider />
+        </section>
+
+        <section className="bg-[#eb0029]">
+          <div className="max-w-[1000px] uppercase text-white  mx-auto font-semibold grid grid-cols-2 *:text-center md:flex justify-center md:gap-16 text-[12px] md:text-lg py-2 flex-col md:flex-row gap-2 items-center">
+            <p>fssai & iso certified</p>
+            <p>25+ year experience</p>
+            <p>100%veg</p>
+            <p>pan india delivery</p>
+          </div>
+        </section>
+        <section className="pt-8 bg-[#f4f1ea] ">
+          <TextAnimation text="Our Products" />
+          <p
+            className="text-center mt-2 text-gray-500 "
+            style={{ wordSpacing: "2px" }}
+          >
+            A Wide Range Of Confectionery Items
+          </p>
+
+          <div
+            className="bg-[#f4f1ea] mt-[8rem] h-auto lg:h-[550px] w-full bg-cover bg-bottom bg-no-repeat"
+            style={{ backgroundImage: "url('/images/rooftop.webp')" }}
+          >
+            <div className="max-w-[1000px] mx-auto grid grid-cols-2 justify-items-center md:grid-cols-4 lg:grid-cols-5 grid-rows-2 justify-center px-5 gap-y-[8rem] gap-x-[4rem] relative -top-10">
+              {ProductsList.map((i) => (
+                <div
+                  key={i.name}
+                  onClick={() => handleRedirect(i.name)} // 👈 redirect with query param
+                  className="cursor-pointer bg-white relative w-[150px] flex justify-center gap-2 rounded-lg shadow-2xl items-center pt-6 pb-2 hover:shadow-xl transition-shadow"
+                >
+                  <motion.img
+                    initial={{ opacity: 0, y: "-75%" }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ delay: 0.4, duration: 0.4 }}
+                    src={i.url}
+                    alt={i.name}
+                    onLoad={handleImageLoad}
+                    className={`h-[100px] absolute top-0 -translate-y-[80%] ${i.className}`}
+                  />
+                  <p className="text-center uppercase text-gray-600 w-[60%]">
+                    {i.name}
                   </p>
-                  <p className="text-wrap w-[500px] mx-auto pb-2">
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        <section className=" bg-[#f4f1ea] ">
+          <TextAnimation text="Our Brands" />
+          <p
+            className="text-center mt-2 text-gray-500 "
+            style={{
+              wordSpacing: "2px",
+            }}
+          >
+            A Wide Range Of Confectionery Items
+          </p>
+
+          <div className=" w-[54%] lg:w-[80%] max-w-[1000px] mx-auto relative mt-10 ">
+            <div className="overflow-hidden relative " ref={emblaRef}>
+              <div className="flex -ml-4">
+                {Array(18)
+                  .fill("")
+                  .map((_, index) => (
+                    <div
+                      className="relative flex-[0_0_100%]  lg:flex-[0_0_20%] md:pl-4 flex justify-center"
+                      key={index}
+                    >
+                      <img
+                        src={`/images/logos/${index + 1}.webp`}
+                        alt={`Slide ${index + 1}`}
+                        onClick={() =>
+                          navigate("byBrands", { state: ByBrands[index] })
+                        }
+                        onLoad={handleImageLoad}
+                        className="w-28 object-contain aspect-auto transition duration-300 transform hover:scale-110"
+                      />
+                    </div>
+                  ))}
+              </div>
+            </div>
+            <button
+              onClick={scrollPrev}
+              className="absolute top-1/2 -translate-x-full -translate-y-1/2 bg-[#eb0029] aspect-square h-12 font-bold text-white text-4xl rounded-full flex items-center justify-center"
+              aria-label="Previous"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+
+            <button
+              onClick={scrollNext}
+              className="absolute top-1/2 left-full   -translate-y-1/2 bg-[#eb0029] text-white aspect-square h-12 font-bold text-4xl rounded-full flex items-center justify-center"
+              aria-label="Next"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+          <section className="relative isolate ">
+            <div className="absolute h-full w-full bg-[#E90028]  -left-[20%] md:-left-[60%] rounded-tr-[250px] z-[-1] "></div>
+            <section className="md:h-[650px] lg:h-[550px] max-w-[1000px] mx-auto  lg:mr-auto  mt-16 md:mt-8 lg:mt-16 grid md:grid-cols-2">
+              <motion.img
+                layoutId="aboutImage"
+                src="/images/25ywarsdashboard.webp"
+                className="w-[90%] sm:w-[70%] md:w-[90%] xl:w-[600px] xl:-translate-x-[30%] !max-w-max md:my-auto  mx-auto lg:mr-auto lg:ml-0 my-8 "
+              />
+              <div className="bg-[#f4f1ea] pt-8 md:ml-auto flex ">
+                <div className="justify-self-center items-center self-center !h-fit mx-auto md:h-auto lg:mb-10">
+                  <h2 className="font-bold capitalize text-5xl text-[#eb0029] tracking-wider">
+                    25 Years
+                  </h2>
+                  <p className="font-bold uppercase">
+                    of experience in food industries
+                  </p>
+                  <p className="lg:w-[400px] text-wrap w-[300px]">
                     Founded in 2001, Dazzy is a family-owned confectionery house
                     producing high-quality sugar candies and moulded chocolate
                     specialties. With decades of experience, Dazzy is now one of
                     the largest and most trusted confectionery
                     manufacturers in the world.
                   </p>
-                </div>
-              </motion.div>
-            </motion.section>
-          </motion.div>
-        )}
-      </AnimatePresence>
-      <section className="">
-        <VideoSlider />
-      </section>
-
-      <section className="bg-[#eb0029]">
-        <div className="max-w-[1000px] uppercase text-white  mx-auto font-semibold grid grid-cols-2 *:text-center md:flex justify-center md:gap-16 text-[12px] md:text-lg py-2 flex-col md:flex-row gap-2 items-center">
-          <p>fssai & iso certified</p>
-          <p>25+ year experience</p>
-          <p>100%veg</p>
-          <p>pan india delivery</p>
-        </div>
-      </section>
-      <section className="pt-8 bg-[#f4f1ea] ">
-        <TextAnimation text="Our Products" />
-        <p
-          className="text-center mt-2 text-gray-500 "
-          style={{ wordSpacing: "2px" }}
-        >
-          A Wide Range Of Confectionery Items
-        </p>
-
-        <div
-          className="bg-[#f4f1ea] mt-[8rem] h-auto lg:h-[550px] w-full bg-cover bg-bottom bg-no-repeat"
-          style={{ backgroundImage: "url('/images/rooftop.webp')" }}
-        >
-          <div className="max-w-[1000px] mx-auto grid grid-cols-2 justify-items-center md:grid-cols-4 lg:grid-cols-5 grid-rows-2 justify-center px-5 gap-y-[8rem] gap-x-[4rem] relative -top-10">
-            {ProductsList.map((i) => (
-              <div
-                key={i.name}
-                onClick={() => handleRedirect(i.name)} // 👈 redirect with query param
-                className="cursor-pointer bg-white relative w-[150px] flex justify-center gap-2 rounded-lg shadow-2xl items-center pt-6 pb-2 hover:shadow-xl transition-shadow"
-              >
-                <motion.img
-                  initial={{ opacity: 0, y: "-75%" }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.5 }}
-                  transition={{ delay: 0.4, duration: 0.4 }}
-                  src={i.url}
-                  alt={i.name}
-                  onLoad={handleImageLoad} 
-                  className={`h-[100px] absolute top-0 -translate-y-[80%] ${i.className}`}
-                />
-                <p className="text-center uppercase text-gray-600 w-[60%]">
-                  {i.name}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section className=" bg-[#f4f1ea] ">
-        <TextAnimation text="Our Brands" />
-        <p
-          className="text-center mt-2 text-gray-500 "
-          style={{
-            wordSpacing: "2px",
-          }}
-        >
-          A Wide Range Of Confectionery Items
-        </p>
-
-        <div className=" w-[54%] lg:w-[80%] max-w-[1000px] mx-auto relative mt-10 ">
-          <div className="overflow-hidden relative " ref={emblaRef}>
-            <div className="flex -ml-4">
-              {Array(18)
-                .fill("")
-                .map((_, index) => (
-                  <div
-                    className="relative flex-[0_0_100%]  lg:flex-[0_0_20%] md:pl-4 flex justify-center"
-                    key={index}
+                  {/* <MouseComponent className="my-4 sm:mb-10 lg:mb-0 rounded-lg "> */}
+                  <motion.button
+                    whileHover={{ scale: 1.05, backgroundColor: "#c70022" }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-[#eb0029] text-white px-4 py-2 my-2 rounded"
                   >
-                    <img
-                      src={`/images/logos/${index + 1}.webp`}
-                      alt={`Slide ${index + 1}`}
-                      onClick={() =>
-                        navigate("byBrands", { state: ByBrands[index] })
-                      }
-                      onLoad={handleImageLoad}
-                      className="w-28 object-contain aspect-auto transition duration-300 transform hover:scale-110"
-                    />
-                  </div>
-                ))}
-            </div>
-          </div>
-          <button
-            onClick={scrollPrev}
-            className="absolute top-1/2 -translate-x-full -translate-y-1/2 bg-[#eb0029] aspect-square h-12 font-bold text-white text-4xl rounded-full flex items-center justify-center"
-            aria-label="Previous"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
+                    <Link to="/about-us" className="block">
+                      Read More
+                    </Link>
+                  </motion.button>
 
-          <button
-            onClick={scrollNext}
-            className="absolute top-1/2 left-full   -translate-y-1/2 bg-[#eb0029] text-white aspect-square h-12 font-bold text-4xl rounded-full flex items-center justify-center"
-            aria-label="Next"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
+                  {/* </MouseComponent> */}
+                </div>
+              </div>
+            </section>
+          </section>
+        </section>
+        <div className="w-full bg-[#f4f1ea] flex justify-center items-center">
+          <img
+            src="/videos/SUPER DELICIOUS TASTES CHOCOLATEY.gif"
+            className="w-full"
+            alt="Chocolatey Animation"
+          />
         </div>
-        <section className="relative isolate ">
-          <div className="absolute h-full w-full bg-[#E90028]  -left-[20%] md:-left-[60%] rounded-tr-[250px] z-[-1] "></div>
-          <section className="md:h-[650px] lg:h-[550px] max-w-[1000px] mx-auto  lg:mr-auto  mt-16 md:mt-8 lg:mt-16 grid md:grid-cols-2">
-            <motion.img
-              layoutId="aboutImage"
-              src="/images/25ywarsdashboard.webp"
-              className="w-[90%] sm:w-[70%] md:w-[90%] xl:w-[600px] xl:-translate-x-[30%] !max-w-max md:my-auto  mx-auto lg:mr-auto lg:ml-0 my-8 "
-            />
-            <div className="bg-[#f4f1ea] pt-8 md:ml-auto flex ">
-              <div className="justify-self-center items-center self-center !h-fit mx-auto md:h-auto lg:mb-10">
-                <h2 className="font-bold capitalize text-5xl text-[#eb0029] tracking-wider">
-                  25 Years
-                </h2>
-                <p className="font-bold uppercase">
-                  of experience in food industries
-                </p>
-                <p className="lg:w-[400px] text-wrap w-[300px]">
-                  Founded in 2001, Dazzy is a family-owned confectionery house
-                  producing high-quality sugar candies and moulded chocolate
-                  specialties. With decades of experience, Dazzy is now one of
-                  the largest and most trusted confectionery
-                  manufacturers in the world.
-                </p>
-                {/* <MouseComponent className="my-4 sm:mb-10 lg:mb-0 rounded-lg "> */}
-                <motion.button
-                  whileHover={{ scale: 1.05, backgroundColor: "#c70022" }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-[#eb0029] text-white px-4 py-2 my-2 rounded"
-                >
-                  <Link to="/about-us" className="block">
-                    Read More
-                  </Link>
-                </motion.button>
+        <section className="pt-8 bg-[#f4f1ea] ">
+          <TextAnimation text="Best Sellers" />
+          <p
+            className="text-center mt-2 text-gray-500 "
+            style={{
+              wordSpacing: "2px",
+            }}
+          >
+            A Wide Range Of Confectionery Items
+          </p>
 
-                {/* </MouseComponent> */}
+          <div className="w-[54%] md:w-[85%] max-w-[1000px] mx-auto relative md:mt-10">
+            <div className="overflow-hidden" ref={emblaSlideRef}>
+              <div className="flex md:px-10">
+                {Array(11)
+                  .fill("")
+                  .map((_, index) => (
+                    <div
+                      key={index}
+                      className="relative  flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_20%] h-[300px] mr-14 md:mr-5 flex flex-col items-center justify-center"
+                    >
+                      <div className="bg-white absolute bottom-0 w-full h-[50%] rounded-t-[70px] shadow-xl z-0"></div>
+                      <img
+                        src="/images/brown.webp"
+                        alt="brown background"
+                        className="absolute bottom-20  left-5 md:left-3 w-[80%] md:w-[90%] md:h-auto z-10 pointer-events-none select-none"
+                      />
+                      <img
+                        src={`/images/BestSeller/${index + 1}.webp`}
+                        alt={`Slide ${index + 1}`}
+                        className="absolute z-20 top-[15%] sm:top-[0%] mt-5 w-28 h-[150px] md:h-[200px]  sm:w-[155px]  object-contain animate-upDown"
+                      />
+
+                      <button
+                        className="bg-red-600 text-white w-20 md:w-[100px] py-1 md:py-2 mt-auto mb-6 z-20 text-[12px] cursor-pointer"
+                        onClick={() => navigate("/dealership")}
+                      >
+                        READ MORE
+                      </button>
+                    </div>
+                  ))}
+              </div>
+            </div>
+
+            <button
+              onClick={scrollSlidePrev}
+              className="absolute top-1/2 -translate-x-full -translate-y-1/2 bg-[#eb0029] aspect-square h-12 font-bold text-white rounded-full flex items-center justify-center ml-[-10px]"
+              aria-label="Previous Slide"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={scrollSlideNext}
+              className="absolute top-1/2 left-full -translate-y-1/2  bg-[#eb0029] text-white aspect-square h-12 font-bold rounded-full flex items-center justify-center ml-[10px]"
+              aria-label="Next Slide"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <section
+            className="h-[700px] overflow-hidden  mt-10 relative bg-cover bg-center"
+            style={{ backgroundImage: "url('/images/sliderlarge.webp')" }}
+          >
+            <div className="flex  justify-center lg:justify-end h-full max-w-[1000px] mx-auto">
+              <div className="bg-red-600 rounded-[50px] h-[450px] lg:h-[250px] w-[80%] md:w-[500px] flex flex-col gap-3 justify-center ml-5 mr-5 lg:ml-0  lg:mr-20 mt-auto mb-auto">
+                <h2 className="text-white lg:text-3xl font-semibold text-center">
+                  ABOUT DAZZY
+                </h2>
+                <div className="flex flex-col md:flex-row gap-5 justify-center text-center mt-5 items-center">
+                  <div className="text-white font-bold lg:text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
+                    <AnimatedNumber value={50} className="text-[24px]" /> +{" "}
+                    <p className="text-white text-xs font-bold">Brands</p>
+                  </div>
+                  <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
+                    <AnimatedNumber value={300} />+{" "}
+                    <p className="text-white text-xs font-bold">SKU</p>
+                  </div>
+                  <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
+                    <AnimatedNumber value={1000} />+{" "}
+                    <p className="text-white text-xs font-bold">Team</p>
+                  </div>
+                </div>
+                <p
+                  className="text-center mt-2 text-white font-bold text-lg"
+                  style={{
+                    wordSpacing: "2px",
+                    textShadow: "0px 2px 4px rgba(0,0,0,0.4)",
+                  }}
+                >
+                  Pan India Presence
+                </p>
               </div>
             </div>
           </section>
-        </section>
-      </section>
-      <div className="w-full bg-[#f4f1ea] flex justify-center items-center">
-        <img
-          src="/videos/SUPER DELICIOUS TASTES CHOCOLATEY.gif"
-          className="w-full"
-          alt="Chocolatey Animation"
-        />
-      </div>
-      <section className="pt-8 bg-[#f4f1ea] ">
-        <TextAnimation text="Best Sellers" />
-        <p
-          className="text-center mt-2 text-gray-500 "
-          style={{
-            wordSpacing: "2px",
-          }}
-        >
-          A Wide Range Of Confectionery Items
-        </p>
-
-        <div className="w-[54%] md:w-[85%] max-w-[1000px] mx-auto relative md:mt-10">
-          <div className="overflow-hidden" ref={emblaSlideRef}>
-            <div className="flex md:px-10">
-              {Array(11)
-                .fill("")
-                .map((_, index) => (
-                  <div
-                    key={index}
-                    className="relative  flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_20%] h-[300px] mr-14 md:mr-5 flex flex-col items-center justify-center"
-                  >
-                    <div className="bg-white absolute bottom-0 w-full h-[50%] rounded-t-[70px] shadow-xl z-0"></div>
-                    <img
-                      src="/images/brown.webp"
-                      alt="brown background"
-                      className="absolute bottom-20  left-5 md:left-3 w-[80%] md:w-[90%] md:h-auto z-10 pointer-events-none select-none"
-                    />
-                    <img
-                      src={`/images/BestSeller/${index + 1}.webp`}
-                      alt={`Slide ${index + 1}`}
-                      className="absolute z-20 top-[15%] sm:top-[0%] mt-5 w-28 h-[150px] md:h-[200px]  sm:w-[155px]  object-contain animate-upDown"
-                    />
-
-                    <button
-                      className="bg-red-600 text-white w-20 md:w-[100px] py-1 md:py-2 mt-auto mb-6 z-20 text-[12px] cursor-pointer"
-                      onClick={() => navigate("/dealership")}
-                    >
-                      READ MORE
-                    </button>
-                  </div>
-                ))}
-            </div>
-          </div>
-
-          <button
-            onClick={scrollSlidePrev}
-            className="absolute top-1/2 -translate-x-full -translate-y-1/2 bg-[#eb0029] aspect-square h-12 font-bold text-white rounded-full flex items-center justify-center ml-[-10px]"
-            aria-label="Previous Slide"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-          <button
-            onClick={scrollSlideNext}
-            className="absolute top-1/2 left-full -translate-y-1/2  bg-[#eb0029] text-white aspect-square h-12 font-bold rounded-full flex items-center justify-center ml-[10px]"
-            aria-label="Next Slide"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
-        </div>
-
-        <section
-          className="h-[700px] overflow-hidden  mt-10 relative bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/sliderlarge.webp')" }}
-        >
-          <div className="flex  justify-center lg:justify-end h-full max-w-[1000px] mx-auto">
-            <div className="bg-red-600 rounded-[50px] h-[450px] lg:h-[250px] w-[80%] md:w-[500px] flex flex-col gap-3 justify-center ml-5 mr-5 lg:ml-0  lg:mr-20 mt-auto mb-auto">
-              <h2 className="text-white lg:text-3xl font-semibold text-center">
-                ABOUT DAZZY
-              </h2>
-              <div className="flex flex-col md:flex-row gap-5 justify-center text-center mt-5 items-center">
-                <div className="text-white font-bold lg:text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-                  <AnimatedNumber value={50} className="text-[24px]" /> +{" "}
-                  <p className="text-white text-xs font-bold">Brands</p>
-                </div>
-                <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-                  <AnimatedNumber value={300} />+{" "}
-                  <p className="text-white text-xs font-bold">SKU</p>
-                </div>
-                <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-                  <AnimatedNumber value={1000} />+{" "}
-                  <p className="text-white text-xs font-bold">Team</p>
-                </div>
+          <section className="relative bg-[#111] text-white flex items-center justify-center min-h-[600px] px-6 isolate">
+            <video
+              src="/SUPER DELICIOUS TASTES CHOCOLATEY (1080 x 610 px) (1).mp4 "
+              loop
+              muted
+              autoPlay
+              playsInline
+              className="absolute h-full w-full z-[-1] object-cover"
+            ></video>
+            <div className="text-center max-w-xl px-4">
+              <div className="flex justify-center items-center gap-2 mb-4 text-orange-500 text-sm font-semibold">
+                <img src="/images/feedback.webp" className="w-6 h-6 invert" />
+                <h2>TESTIMONIALS</h2>
+                <img src="/images/feedback.webp" className="w-6 h-6 invert" />
               </div>
-              <p
-                className="text-center mt-2 text-white font-bold text-lg"
-                style={{
-                  wordSpacing: "2px",
-                  textShadow: "0px 2px 4px rgba(0,0,0,0.4)",
-                }}
-              >
-                Pan India Presence
-              </p>
+              <h3 className="text-3xl font-bold mb-6">What Our Clients Say</h3>
+              <Slider />
             </div>
-          </div>
+          </section>
         </section>
-        <section className="relative bg-[#111] text-white flex items-center justify-center min-h-[600px] px-6 isolate">
-          <video
-            src="/SUPER DELICIOUS TASTES CHOCOLATEY (1080 x 610 px) (1).mp4 "
-            loop
-            muted
-            autoPlay
-            playsInline
-            className="absolute h-full w-full z-[-1] object-cover"
-          ></video>
-          <div className="text-center max-w-xl px-4">
-            <div className="flex justify-center items-center gap-2 mb-4 text-orange-500 text-sm font-semibold">
-              <img src="/images/feedback.webp" className="w-6 h-6 invert" />
-              <h2>TESTIMONIALS</h2>
-              <img src="/images/feedback.webp" className="w-6 h-6 invert" />
-            </div>
-            <h3 className="text-3xl font-bold mb-6">What Our Clients Say</h3>
-            <Slider />
-          </div>
-        </section>
-      </section>
-    </div>
+      </div>
     </>
-
   );
 };
 
