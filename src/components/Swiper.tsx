@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -10,7 +10,7 @@ import { Navigation, Pagination } from "swiper/modules";
 
 const VideoSlider: React.FC = () => {
   const swiperRef = useRef<any>(null);
-
+  const [loading, setLoading] = useState(true);
   const handleVideoEnd = () => {
     if (swiperRef.current) {
       swiperRef.current.slideNext(); // go to next slide when video ends
@@ -18,6 +18,12 @@ const VideoSlider: React.FC = () => {
   };
 
   return (
+    <>
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-white z-10">
+          <img src="/videos/LODING GIF.gif" alt="" />
+        </div>
+      )}
     <Swiper
       modules={[Navigation, Pagination]}
       spaceBetween={0}
@@ -37,6 +43,7 @@ const VideoSlider: React.FC = () => {
           className="h-auto w-full !object-cover as"
           onEnded={handleVideoEnd}
           loop
+          onLoadedData={() => setLoading(false)}
           controls={false}
           playsInline
         />
@@ -117,6 +124,7 @@ const VideoSlider: React.FC = () => {
         />
       </SwiperSlide>
     </Swiper>
+    </>
   );
 };
 

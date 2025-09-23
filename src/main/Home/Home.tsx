@@ -90,6 +90,7 @@ const Home = () => {
   const [] = useEmblaCarousel({ loop: true });
   const navigate = useNavigate();
   const [aboutModal, setAboutModal] = useState(false);
+  const [loadedCount, setLoadedCount] = useState(0);
   const [emblaSlideRef, emblaSlideApi] = useEmblaCarousel({
     loop: true,
     align: "start",
@@ -108,7 +109,17 @@ const Home = () => {
     navigate(`/products?p=${encodeURIComponent(productName)}`);
   };
 
+  const handleImageLoad = () => {
+    setLoadedCount((prev) => prev + 1);
+  };
+ 
   return (
+    <>
+    {loadedCount < 5 && (
+        <div className="absolute inset-0 flex items-center justify-center bg-white z-10">
+          <img src="/videos/LODING GIF.gif" alt="" />
+        </div>
+      )}
     <div className="w-full overflow-x-hidden">
       <AnimatePresence mode="wait">
         {aboutModal && (
@@ -213,6 +224,7 @@ const Home = () => {
                   transition={{ delay: 0.4, duration: 0.4 }}
                   src={i.url}
                   alt={i.name}
+                  onLoad={handleImageLoad} 
                   className={`h-[100px] absolute top-0 -translate-y-[80%] ${i.className}`}
                 />
                 <p className="text-center uppercase text-gray-600 w-[60%]">
@@ -250,6 +262,7 @@ const Home = () => {
                       onClick={() =>
                         navigate("byBrands", { state: ByBrands[index] })
                       }
+                      onLoad={handleImageLoad}
                       className="w-28 object-contain aspect-auto transition duration-300 transform hover:scale-110"
                     />
                   </div>
@@ -487,6 +500,8 @@ const Home = () => {
         </section>
       </section>
     </div>
+    </>
+
   );
 };
 
