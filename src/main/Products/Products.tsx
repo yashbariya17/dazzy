@@ -34,6 +34,8 @@ const category = {
   jelly: [],
 };
 
+const priceOptions = [0.5, 1, 2, 5, 10];
+
 const Products = () => {
   const location = useLocation();
   const ref = useRef<HTMLDivElement>(null);
@@ -46,6 +48,7 @@ const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState<
     (typeof category)[keyof typeof category][number] | ""
   >("");
+  const [price, setPrice] = useState<number>(0);
   const [viewMoreProducts, setViewMoreProducts] = useState<Product[]>([]);
   const [imageView, setImageView] = useState<Record<string, any> | null>(null);
 
@@ -105,7 +108,29 @@ const Products = () => {
           A Wide Range Of Confectionery Items
         </p>
 
-        <section className="max-w-[1240px] grid md:grid-cols-[auto_1fr] gap-16 px-6 mx-auto pt-20 pb-10">
+        <div className="max-w-[1240px] grid md:grid-cols-[auto_1fr] gap-16 px-6 mx-auto pt-20">
+          <h2 className="font-semibold text-xl pb-4 w-[270px]">
+            Filter By Price
+            <span className="block w-[20%] h-1 bg-[#eb0029] rounded-full mt-1"></span>
+          </h2>
+          <div className="flex gap-5 w-full justify-between">
+            {priceOptions?.map((i) => (
+              <button
+                key={i}
+                className={`${
+                  price !== i
+                    ? "border-2 border-solid border-[#eb0029] text-[#eb0029]"
+                    : "bg-[#eb0029] text-white font-semibold"
+                } py-1 min-w-16 px-3 rounded-full capitalize cursor-pointer h-min w-full transition-transform duration-200 active:scale-90`}
+                onClick={() => setPrice(i)}
+              >
+                {i}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <section className="max-w-[1240px] grid md:grid-cols-[auto_1fr] gap-16 px-6 mx-auto pt-10 pb-10">
           {/* Sidebar Categories */}
           <div className="space-y-3 mx-auto">
             <h2 className="font-semibold text-xl pb-4">
@@ -168,50 +193,53 @@ const Products = () => {
               className="grid grid-rows-[auto_1fr] grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6"
               ref={ref}
             >
-              {productsToRender.map((i) => (
-                <div
-                  key={i.url + i.name + open}
-                  className="w-[160px] h-[240px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[320px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
-                >
-                  <motion.img
-                    layoutId={i.url + i.name}
-                    src={i.url}
-                    className="w-[80%] h-[200px] object-contain mt-4"
-                    onClick={() => {
-                      if (i?.subCategory) {
-                        const sameSubCatProducts = productObj[open].filter(
-                          (p) => p.subCategory === i.subCategory
-                        );
-                        setViewMoreProducts(sameSubCatProducts);
-                      } else {
-                        setViewMoreProducts([i]);
-                      }
-                    }}
-                  />
-
-                  <p className="text-center text-sm sm:text-base font-semibold mt-2">
-                    {i.name}
-                  </p>
-
-                  <div className="flex justify-center gap-3 mt-2 text-xs sm:text-sm">
-                    <button
-                      onClick={() => {
-                        if (i?.subCategory) {
-                          const sameSubCatProducts = productObj[open].filter(
-                            (p) => p.subCategory === i.subCategory
-                          );
-                          setViewMoreProducts(sameSubCatProducts);
-                        } else {
-                          setViewMoreProducts([i]);
-                        }
-                      }}
-                      className="flex items-center gap-1 text-green-700 hover:underline hover:cursor-pointer transition"
+              {productsToRender.map(
+                (i) =>
+                  (price === 0 || i.price === price) && (
+                    <div
+                      key={i.url + i.name + open}
+                      className="w-[160px] h-[240px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[320px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
                     >
-                      <FiShoppingBag size={14} /> Read More
-                    </button>
-                  </div>
-                </div>
-              ))}
+                      <motion.img
+                        layoutId={i.url + i.name}
+                        src={i.url}
+                        className="w-[80%] h-[200px] object-contain mt-4"
+                        onClick={() => {
+                          if (i?.subCategory) {
+                            const sameSubCatProducts = productObj[open].filter(
+                              (p) => p.subCategory === i.subCategory
+                            );
+                            setViewMoreProducts(sameSubCatProducts);
+                          } else {
+                            setViewMoreProducts([i]);
+                          }
+                        }}
+                      />
+
+                      <p className="text-center text-sm sm:text-base font-semibold mt-2">
+                        {i.name}
+                      </p>
+
+                      <div className="flex justify-center gap-3 mt-2 text-xs sm:text-sm">
+                        <button
+                          onClick={() => {
+                            if (i?.subCategory) {
+                              const sameSubCatProducts = productObj[
+                                open
+                              ].filter((p) => p.subCategory === i.subCategory);
+                              setViewMoreProducts(sameSubCatProducts);
+                            } else {
+                              setViewMoreProducts([i]);
+                            }
+                          }}
+                          className="flex items-center gap-1 text-green-700 hover:underline hover:cursor-pointer transition"
+                        >
+                          <FiShoppingBag size={14} /> Read More
+                        </button>
+                      </div>
+                    </div>
+                  )
+              )}
             </div>
           </section>
         </section>
