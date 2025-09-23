@@ -108,12 +108,12 @@ const Products = () => {
           A Wide Range Of Confectionery Items
         </p>
 
-        <div className="max-w-[1240px] grid md:grid-cols-[auto_1fr] gap-16 px-6 mx-auto pt-20">
+        <div className="max-w-[1240px] grid md:grid-cols-[auto_1fr] gap-5 md:gap-16 px-6 mx-auto pt-20">
           <h2 className="font-semibold text-xl pb-4 w-[270px]">
             Filter By Price
             <span className="block w-[20%] h-1 bg-[#eb0029] rounded-full mt-1"></span>
           </h2>
-          <div className="flex gap-5 w-full justify-between">
+          <div className="flex gap-5 w-full justify-between flex-col md:flex-row">
             {priceOptions?.map((i) => (
               <button
                 key={i}
@@ -121,7 +121,7 @@ const Products = () => {
                   price !== i
                     ? "border-2 border-solid border-[#eb0029] text-[#eb0029]"
                     : "bg-[#eb0029] text-white font-semibold"
-                } py-1 min-w-16 px-3 rounded-full capitalize cursor-pointer h-min w-full transition-transform duration-200 active:scale-90`}
+                } py-1 min-w-16 px-3 rounded-full capitalize cursor-pointer h-min w-full max-w-[80%] transition-transform duration-200 active:scale-90`}
                 onClick={() => setPrice(i)}
               >
                 {i}
