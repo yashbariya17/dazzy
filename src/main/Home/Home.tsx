@@ -1,6 +1,6 @@
 import { AnimatePresence, motion, usePresenceData, wrap } from "motion/react";
 import useEmblaCarousel from "embla-carousel-react";
-import { forwardRef, useCallback, useEffect, useState } from "react";
+import { forwardRef, useCallback, useState } from "react";
 import AnimatedNumber from "../../components/AnimatedNumber";
 import { TextAnimation } from "../../components/TextAnimation";
 import { Link } from "react-router";
@@ -113,18 +113,10 @@ const Home = () => {
     setLoadedCount((prev) => prev + 1);
   };
 
-  useEffect(() => {
-    if (loadedCount < 5) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [loadedCount]);
-
   return (
     <>
       {loadedCount < 5 && (
-        <div className="absolute inset-0 flex items-center justify-center bg-white z-10">
+        <div className="fixed top-0 inset-0 flex items-center justify-center bg-white z-10">
           <img src="/videos/LODING GIF.gif" alt="" />
         </div>
       )}

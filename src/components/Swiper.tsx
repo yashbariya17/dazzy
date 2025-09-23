@@ -20,7 +20,7 @@ const VideoSlider: React.FC = () => {
   return (
     <>
       {loading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-white z-10">
+        <div className="fixed top-0 inset-0 flex items-center justify-center bg-white z-10">
           <img src="/videos/LODING GIF.gif" alt="" />
         </div>
       )}
