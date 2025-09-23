@@ -13,13 +13,13 @@ export type productType = {
 export const productObj: productType = {
   "chocolate bar": [
     {
-      name: "Dairy Kiss Cocoa Bar",
+      name: "Dairy Kiss Blue ₹10 ",
       url: "/images/chocolatebar/Cocoa Milk Choclate Bar.webp",
       price: 1,
     },
     {
-      name: "Dairy Kiss Cocoa Bar",
-      url: "/images/centerMissing/Dairy Kiss Milk Cocoa.webp",
+      name: "Dairy Kiss Cocoa ₹5",
+      url: "/images/chocolatebar/Dairy Kiss Cocoa.webp",
       price: 5,
       brand: "dairy kiss",
     },
@@ -30,50 +30,50 @@ export const productObj: productType = {
       brand: "dairy kiss",
     },
     {
-      name: "Dairy Kiss StrawBerry Bar",
+      name: "Dairy Kiss Strawberry",
       url: "/images/chocolatebar/StrawBerry Bar.webp",
       price: 5,
     },
     {
-      name: "Dairy Kiss Black & White Bar",
+      name: "Dairy Kiss Black & White ",
       url: "/images/chocolatebar/Black & White Bar.webp",
       price: 5,
       category: "c-1",
     },
     {
-      name: "Dairy Kiss Milk Bar",
+      name: "Dairy Kiss Milk ",
       url: "/images/chocolatebar/Milkies Milk Choclate Bar.webp",
       price: 5,
     },
     {
-      name: "Dairy Kiss Coconut Bar",
+      name: "Dairy Kiss Coconut ",
       url: "/images/chocolatebar/Coconut Bar.webp",
       price: 5,
     },
 
     {
-      name: "Dairy Kiss Dark Bar",
+      name: "Dairy Kiss Dark",
       url: "/images/chocolatebar/Dark Milk Choclate Bar.webp",
       price: 5,
     },
     {
-      name: "Dairy Kiss Gold Bar",
+      name: "Dairy Kiss Gold",
       url: "/images/chocolatebar/Milk Choclate Bar.webp",
       price: 5,
     },
     {
-      name: "Dairy Kiss Hazelnut Bar",
+      name: "Dairy Kiss Hazelnut",
       url: "/images/chocolatebar/HazelNut Bar.webp",
       price: 5,
     },
     {
-      name: "Dairy Kiss Cocoa Bar",
+      name: "Dairy Kiss Blue ₹2",
       url: "/images/centerMissing/Dairy Kiss Milk Cocoa.webp",
       price: 5,
       brand: "dairy kiss",
     },
     {
-      name: "Dairy KIss Milkies",
+      name: "Dairy Kiss Milkies",
       url: "/images/centerMissing/Dairy Kiss Milk Box.webp",
       price: 5,
       brand: "dairy kiss",
@@ -86,7 +86,7 @@ export const productObj: productType = {
   ],
   "centerfilled chocolate": [
     {
-      name: "Truffles Milk 70 pcs",
+      name: "Truffles Milk 70Pcs",
       url: "/images/centerfilledchocolate/TRUFFLE MILK 70 PCS 5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -94,7 +94,7 @@ export const productObj: productType = {
       brand: "truffle",
     },
     {
-      name: "Truffle Blueberry 70 Pcs",
+      name: "Truffle Blueberry 70Pcs",
       url: "/images/centerfilledchocolate/TRUFFLE BLUBERRY 70 PCS 5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -102,7 +102,7 @@ export const productObj: productType = {
       brand: "truffle",
     },
     {
-      name: "Truffles Milk",
+      name: "Truffles Milk Gift Box",
       url: "/images/centerfilledchocolate/TRUFFLES MILK GIFT BOX 5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -110,7 +110,7 @@ export const productObj: productType = {
       brand: "truffle",
     },
     {
-      name: "Truffle Blue Berry",
+      name: "Truffle Blueberry",
       url: "/images/centerfilledchocolate/TRUFFLE BLUE BERRY GIFT BOX 5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -118,7 +118,7 @@ export const productObj: productType = {
       brand: "truffle",
     },
     {
-      name: "Truffle Milk",
+      name: "Truffle Milk Big",
       url: "/images/centerfilledchocolate/TRUFFLE MILK 150 PCS 5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -261,7 +261,7 @@ export const productObj: productType = {
     },
 
     {
-      name: "Dlove Gold 70Pcs Box",
+      name: "D'Love Gold 70 Pcs",
       url: "/images/centerfilledchocolate/DLOVE GOLD 5RS.webp",
       price: 5,
       category: "Pillow Pack",
@@ -269,7 +269,7 @@ export const productObj: productType = {
       brand: "d love",
     },
     {
-      name: "Dlove Gold Pouch",
+      name: "D'Love Gold Pouch",
       url: "/images/centerfilledchocolate/DLOVE GOLD POUCH 5RS.webp",
       price: 5,
       category: "Pillow Pack",
@@ -277,7 +277,7 @@ export const productObj: productType = {
       brand: "d love",
     },
     {
-      name: "Dlove Gold 30Pcs Container",
+      name: "D'Love Gold Container",
       url: "/images/DAZZY LOGO.webp",
       price: 5,
       category: "Pillow Pack",
@@ -285,7 +285,7 @@ export const productObj: productType = {
       brand: "d love",
     },
     {
-      name: "Dlove Gold 40Pcs Container",
+      name: "D'Love Assorted Container",
       url: "/images/DAZZY LOGO.webp",
       price: 5,
       category: "Pillow Pack",
@@ -293,7 +293,7 @@ export const productObj: productType = {
       brand: "d love",
     },
     {
-      name: "Dlove Gold 2Kg Box",
+      name: "D'Love Gold Big",
       url: "/images/centerMissing/D'Love Gold.webp",
       price: 5,
       category: "Pillow Pack",
@@ -301,7 +301,7 @@ export const productObj: productType = {
       brand: "d love",
     },
     {
-      name: "Dlove Purple",
+      name: "D'Love Assorted 70 Pcs",
       url: "/images/centerfilledchocolate/DLOVE PURPULE 5RS.webp",
       price: 5,
       category: "Pillow Pack",
@@ -310,13 +310,13 @@ export const productObj: productType = {
     },
 
     {
-      name: "Dlove Container",
+      name: "D'Love Container",
       url: "/images/centerfilledchocolate/DLOVE CONTAINER 5RS.webp",
       price: 5,
       brand: "d love",
     },
     {
-      name: "Dlove Green",
+      name: "D'Love Green",
       url: "/images/centerfilledchocolate/DLOVE GREEN5RS.webp",
       price: 5,
       category: "Pillow Pack",
@@ -324,7 +324,7 @@ export const productObj: productType = {
       brand: "d love",
     },
     {
-      name: "Dlove Pink",
+      name: "D'Love Pink",
       url: "/images/centerMissing/D'Love Pink.webp",
       price: 5,
       category: "Pillow Pack",
@@ -332,7 +332,7 @@ export const productObj: productType = {
       brand: "d love",
     },
     {
-      name: "Dlove Pastel Pouch",
+      name: "D'Love Assorted Pouch",
       url: "/images/centerfilledchocolate/DLOVE GREEN POUH 5RS.webp",
       price: 5,
       category: "Pillow Pack",
@@ -340,7 +340,7 @@ export const productObj: productType = {
       brand: "d love",
     },
     {
-      name: "Dlove Pink Pouch",
+      name: "D'Love Pink Pouch",
       url: "/images/centerfilledchocolate/DLOVE PINK POUCH 5RS.webp",
       price: 5,
       category: "Pillow Pack",
@@ -348,7 +348,7 @@ export const productObj: productType = {
       brand: "d love",
     },
     {
-      name: "Dlove Red 70Pcs Box",
+      name: "D'Love Red 70 Pcs",
       url: "/images/centerfilledchocolate/DLOVE RED 5RS.webp",
       price: 5,
       category: "Pillow Pack",
@@ -356,34 +356,51 @@ export const productObj: productType = {
       brand: "d love",
     },
     {
-      name: "Dlove Red Jar",
+      name: "D'Love Red Jar",
       url: "/images/DAZZY LOGO.webp",
       price: 5,
-      category: "Pillow Pack",
+      category: "Bunch Rape",
       subCategory: "Dlove Red Jar",
       brand: "d love",
     },
+        {
+      name: "D'Love Gold Jar",
+      url: "/images/DAZZY LOGO.webp",
+      price: 5,
+      category: "Bunch Rape",
+
+      brand: "d love",
+    },
+        {
+      name: "D'Love Assorted Jar",
+      url: "/images/DAZZY LOGO.webp",
+      price: 5,
+      category: "Bunch Rape",
+
+      brand: "d love",
+    },
     {
-      name: "Amore 70Pcs Box",
+      name: "Amore 70 Pcs",
       url: "/images/DAZZY LOGO.webp",
       price: 5,
       category: "Pillow Pack",
       subCategory: "Amore 70Pcs Box",
     },
     {
-      name: "Amore 30Pcs Container",
+      name: "Amore Container",
       url: "/images/DAZZY LOGO.webp",
       price: 5,
       category: "Pillow Pack",
       subCategory: "Amore 30Pcs Container",
     },
     {
-      name: "Delight Pistachio 70Pcs Box",
+      name: "Delight Pistachio 70 Pcs",
       url: "/images/centerfilledchocolate/DELIGHT PISTACGIO 70PCS BOX 5RS.webp",
       price: 5,
       category: "Pillow Pack",
       subCategory: "Delight 70pcs Box",
     },
+    
 
     {
       name: "Delight Rajbhog 70Pcs Box",
@@ -416,7 +433,7 @@ export const productObj: productType = {
     },
 
     {
-      name: "Delight Pistachio 150Pcs Box",
+      name: "Delite Pistachio Big",
       url: "/images/centerfilledchocolate/DELIGHT PISTACHIO 150PCS BOX 5RS.webp",
       price: 5,
       category: "Pillow Pack",
@@ -452,7 +469,7 @@ export const productObj: productType = {
       subCategory: "Delight 2Kg Box",
     },
     {
-      name: "Cocos 70pcs Box",
+      name: "Cocos 70 Pcs",
       url: "/images/centerfilledchocolate/COCOS  TRUFFLES BOX 5RS.webp",
       price: 5,
       category: "Pillow Pack",
@@ -469,7 +486,7 @@ export const productObj: productType = {
       brand: "cocos",
     },
     {
-      name: "Bliss Dark 125pcs Box",
+      name: "Bliss Dark 125 Pcs",
       url: "/images/centerfilledchocolate/BLISS DARK 1RS.webp",
       price: 1,
       category: "Pillow Pack",
@@ -477,7 +494,7 @@ export const productObj: productType = {
     },
 
     {
-      name: "Bliss strawberry 125pcs Box",
+      name: "Bliss Strawberry 125 Pcs",
       url: "/images/centerfilledchocolate/BLISS STRAWBERRY 1RS.webp",
       price: 1,
       category: "Pillow Pack",
@@ -485,14 +502,14 @@ export const productObj: productType = {
     },
 
     {
-      name: "Bliss white 125pcs Box",
+      name: "Bliss Milk 125 Pcs ",
       url: "/images/centerfilledchocolate/BLISS WHITE 1RS.webp",
       price: 1,
       category: "Pillow Pack",
       subCategory: "Bliss 125pcs Box",
     },
     {
-      name: "Gold 125Pcs Box",
+      name: "DeGold 125 Pcs",
       url: "/images/centerfilledchocolate/GOLD GIFTBOX2RS.webp",
       price: 2,
       category: "Pillow Pack",
@@ -500,7 +517,7 @@ export const productObj: productType = {
       brand: "gold",
     },
     {
-      name: "Gold 125Pcs Box",
+      name: "DeGold 125Pcs Box",
       url: "/images/centerfilledchocolate/GOLD GIFT BOX2RS 2.webp",
       price: 2,
       category: "Pillow Pack",
@@ -526,7 +543,7 @@ export const productObj: productType = {
       brand: "Emporio",
     },
     {
-      name: "DGold 60Pcs Box",
+      name: "DeGold 60 Pcs",
       url: "/images/centerfilledchocolate/GOLD BOX2RS 2.webp",
       price: 2,
       category: "Pillow Pack",
@@ -541,7 +558,7 @@ export const productObj: productType = {
       subCategory: "DGold 60Pcs Box",
     },
     {
-      name: "Endon 60Pcs Box",
+      name: "Endon 60 Pcs ",
       url: "/images/centerfilledchocolate/ENDON GIFT BOX 2RS.webp",
       price: 2,
       category: "Pillow Pack",
@@ -558,7 +575,7 @@ export const productObj: productType = {
       brand: "endon",
     },
     {
-      name: "Endon 125Pcs Box",
+      name: "Endon 125 Pcs",
       url: "/images/centerfilledchocolate/ENDON BOX 125 PCS 2RS.webp",
       price: 2,
       category: "Pillow Pack",
@@ -574,7 +591,7 @@ export const productObj: productType = {
       brand: "endon",
     },
     {
-      name: "Glorious Pistachio",
+      name: "Glorious Pistachio 70Pcs",
       url: "/images/centerfilledchocolate/GLORIOUS PISTACHIO5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -595,7 +612,7 @@ export const productObj: productType = {
       subCategory: "Glorious Gift Box",
     },
     {
-      name: "Glorious Cashewnut 2Kg Box",
+      name: "Glorious Cashewnut Big",
       url: "/images/centerMissing/Glorious Cashewnut.webp",
       price: 5,
       category: "Single Twist",
@@ -637,7 +654,7 @@ export const productObj: productType = {
     //   subCategory: "Glorious 70 pcs",
     // },
     {
-      name: "Glorious 30Pcs Container",
+      name: "Glorious Heart Container",
       url: "/images/centerfilledchocolate/GLORIOUS GIFT CONTAINER 5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -673,7 +690,7 @@ export const productObj: productType = {
     },
 
     {
-      name: "Gold Box",
+      name: "Gold 50 Pcs",
       url: "/images/centerfilledchocolate/GOLD GIFT BOX 2RS.webp",
       price: 2,
       category: "Bunch Rape",
@@ -689,7 +706,7 @@ export const productObj: productType = {
       brand: "gold",
     },
     {
-      name: "United Box",
+      name: "United 50 Pcs",
       url: "/images/centerfilledchocolate/UNITED GIFT BOX 2RS.webp",
       price: 2,
       category: "Bunch Rape",
@@ -701,13 +718,6 @@ export const productObj: productType = {
       price: 2,
       category: "Bunch Rape",
       subCategory: "United Jar",
-    },
-    {
-      name: "DLove Jar",
-      url: "/images/DAZZY LOGO.webp",
-      price: 2,
-      category: "Bunch Rape",
-      subCategory: "DLove Jar",
     },
     {
       name: "Stacy 20Pcs Box",
@@ -722,14 +732,14 @@ export const productObj: productType = {
       brand: "d love",
     },
     {
-      name: "Delight Cashewnuut 150pcs Box",
+      name: "Delight Cashewnut 150pcs Box",
       url: "/images/centerfilledchocolate/DELIGHT CASHEWNUUT 150PCS BOX 5RS.webp",
       price: 5,
       category: "Pillow Pack",
       subCategory: "Delight 2Kg Box",
     },
     {
-      name: "Merone 125pcs Box",
+      name: "MerOne 125 Pcs",
       url: "/images/centerfilledchocolate/MERONE 125PCS  2RS.webp",
       price: 2,
       category: "Pillow Pack",
@@ -757,7 +767,7 @@ export const productObj: productType = {
       price: 5,
     },
     {
-      name: "Bolivia 150 Pcs Box",
+      name: "Bolivia Big Box",
       url: "/images/centerfilledchocolate/BOLIVIA150 PCS BOX 5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -766,7 +776,7 @@ export const productObj: productType = {
     },
 
     {
-      name: "Delight Blueberry 70pcs Box",
+      name: "Delite Blueberry 70pcs Box",
       url: "/images/centerfilledchocolate/DELIGHT BLUEBERRY 70PCS BOX 5RS.webp",
       price: 5,
       category: "Pillow Pack",
@@ -774,7 +784,7 @@ export const productObj: productType = {
     },
 
     {
-      name: "Stacy 70pcs Box",
+      name: "Stacy 70 Pcs",
       url: "/images/centerfilledchocolate/STACY BOX 70PCS  5RS.webp",
       price: 5,
       category: "Double Twist",
@@ -795,7 +805,7 @@ export const productObj: productType = {
       subCategory: "Stacy Box 70pcs",
     },
     {
-      name: "Stacy Box 20pcs ",
+      name: "Stacy Gift Box ",
       url: "/images/centerfilledchocolate/STACY GIFT BOX 1  5RS.webp",
       price: 5,
       category: "Double Twist",
@@ -829,7 +839,7 @@ export const productObj: productType = {
     },
 
     {
-      name: "Bolivia 70 Pcs Box",
+      name: "Bolivia 70 Pcs",
       url: "/images/centerfilledchocolate/BOLIVIA 70 PCS BOX 5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -837,7 +847,7 @@ export const productObj: productType = {
       brand: "bolivia",
     },
     {
-      name: "Bolivia 25Pcs Box",
+      name: "Bolivia Gift Box",
       url: "/images/centerfilledchocolate/BOLIVIA GIFT BOX 5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -854,7 +864,7 @@ export const productObj: productType = {
       brand: "choco bon",
     },
     {
-      name: "Chocobon Pistachio",
+      name: "Chocobon Pistachio 70 Pcs",
       url: "/images/centerfilledchocolate/CHOCOBON PISTACHIO  5RS.webp",
       price: 5,
       category: "Double Twist",
@@ -887,7 +897,7 @@ export const productObj: productType = {
       brand: "choco bon",
     },
     {
-      name: "Ferola Milk",
+      name: "Ferola Milk 70 Pcs",
       url: "/images/centerfilledchocolate/FEROLA MILK  5RS.webp",
       price: 5,
       category: "Double Twist",
@@ -922,14 +932,14 @@ export const productObj: productType = {
       subCategory: "Ferola 70Pcs Box",
     },
     {
-      name: "Ferola 70pcs Container",
+      name: "Ferola Container",
       url: "/images/DAZZY LOGO.webp",
       price: 5,
       category: "Double Twist",
       subCategory: "Ferola 70Pcs Container",
     },
     {
-      name: "Stacy Mini MatkaJar",
+      name: "Stacy Mini Matka Jar",
       url: "/images/centerfilledchocolate/STACY MINIS JAR 2RS.webp",
       price: 2,
       category: "Double Twist",
@@ -943,21 +953,21 @@ export const productObj: productType = {
       subCategory: "Stacy Mini Container",
     },
     {
-      name: "Stacy Minis 50Pcs Box",
+      name: "Stacy Minis 50 Pcs",
       url: "/images/centerfilledchocolate/STACY MINIS GIFT BOX 2RS.webp",
       price: 2,
       category: "Double Twist",
       subCategory: "Stacy Minis 50Pcs Box",
     },
     {
-      name: "Stacy Minis 125 Pcs Box",
+      name: "Stacy Minis 125 Pcs",
       url: "/images/centerfilledchocolate/STACY MINIS 125 PCS BOX 2RS.webp",
       price: 2,
       category: "Double Twist",
       subCategory: "Stacy Minis 125 Pcs Box",
     },
     {
-      name: "Brevo 50Pcs Box",
+      name: "Brevo 50 Pcs",
       url: "/images/centerfilledchocolate/BREVO GIFT BOX 2RS.webp",
       price: 2,
       category: "Double Twist",
@@ -965,7 +975,7 @@ export const productObj: productType = {
     },
 
     {
-      name: "Brevo 125Pcs Box",
+      name: "Brevo 125 Pcs",
       url: "/images/centerfilledchocolate/BREVO 125 PCS BOX 2RS.webp",
       price: 2,
       category: "Double Twist",
@@ -980,7 +990,7 @@ export const productObj: productType = {
     },
 
     {
-      name: "Bolivia 70Pcs Container",
+      name: "Bolivia Container 70 Pcs",
       url: "/images/centerfilledchocolate/BOLIVIA CONTAINER 5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -988,7 +998,7 @@ export const productObj: productType = {
       brand: "bolivia",
     },
     {
-      name: "Bolivia 30Pcs Container",
+      name: "Bolivia Container 30 Pcs",
       url: "/images/centerMissing/Bolivia Container.webp",
       price: 5,
       category: "Single Twist",
@@ -1003,7 +1013,7 @@ export const productObj: productType = {
       subCategory: "Chocobon 70Pcs Box",
     },
     {
-      name: "Truffles 30 Pcs",
+      name: "Truffins 30 Pcs",
       url: "/images/centerfilledchocolate/TRUFFINS 30 PCS 5RS.webp",
       price: 5,
       category: "Double Twist",
@@ -1017,7 +1027,7 @@ export const productObj: productType = {
       subCategory: "Truffles 30 Pcs",
     },
     {
-      name: "Truffins 70Pcs Box",
+      name: "Truffins 70 Pcs",
       url: "/images/centerfilledchocolate/TRUFFINS 70 PCS  5RS.webp",
       price: 5,
       category: "Double Twist",
@@ -1039,7 +1049,7 @@ export const productObj: productType = {
     },
 
     {
-      name: "Orientto Coconut 70Pcs Box",
+      name: "Orientto Coconut 70 Pcs",
       url: "/images/centerMissing/Orientto Coconut.webp",
       price: 5,
       category: "Single Twist",
@@ -1081,7 +1091,7 @@ export const productObj: productType = {
     //   subCategory: "Oriento 2Kg Box",
     // },
     {
-      name: "Oriento 30pcs Container",
+      name: "Oriento Container 30 Pcs ",
       url: "/images/DAZZY LOGO.webp",
       price: 5,
       category: "Single Twist",
@@ -1095,21 +1105,21 @@ export const productObj: productType = {
       subCategory: "Maxic Box 125 Pcs",
     },
     {
-      name: "Maxic 50Pcs Box",
+      name: "Maxic 50 Pcs",
       url: "/images/centerfilledchocolate/MAXIC GIFT BOX 2RS.webp",
       price: 2,
       category: "Single Twist",
       subCategory: "Maxic 50Pcs Box",
     },
     {
-      name: "Belgium 125 Pcs Box",
+      name: "Belgium 125 Pcs ",
       url: "/images/centerfilledchocolate/BELGIUM 125 PCS 2RS.webp",
       price: 2,
       category: "Single Twist",
       subCategory: "Belgium 125 Pcs Box",
     },
     {
-      name: "Belgiam 50Pcs Box",
+      name: "Belgium 50 Pcs",
       url: "/images/centerfilledchocolate/BELGIAM GIFT BOX 2RS.webp",
       price: 2,
       category: "Single Twist",
@@ -1129,61 +1139,61 @@ export const productObj: productType = {
       price: 5,
     },
     {
-      name: "Dr Teddy",
+      name: "Dr.Teddy",
       url: "/images/decorativechocolate/DR TEDDY5RS.webp",
       price: 5,
       brand: "dr. teddy",
     },
     {
-      name: "Dr Teddy",
+      name: "Dr.Teddy",
       url: "/images/decorativechocolate/DR TEDDY25RS.webp",
       price: 25,
       brand: "dr. teddy",
     },
 
     {
-      name: "Choco Tocon 10RS",
+      name: "Choco Toco ₹10 ",
       url: "/images/decorativechocolate/CHOCO TOCON 10RS.webp",
       price: 10,
     },
     {
-      name: "Choc Coan 5RS",
+      name: "Choc Cone ₹5",
       url: "/images/decorativechocolate/CHOCO COAN 5RS.webp",
       price: 5,
     },
   ],
   "Crunchy chocolate": [
     {
-      name: "Oh Wow Big Box",
+      name: "Oh! Wow 70 Pcs",
       url: "/images/peanut chocolate/OH WOW BIG BOX.webp",
       price: 5,
       brand: "oh! wow",
     },
     {
-      name: "Oh Wow Pouch",
+      name: "Oh! Wow Pouch",
       url: "/images/peanut chocolate/OH WOW POUCH.webp",
       price: 2,
       brand: "oh! wow",
     },
     {
-      name: "Oh Wow Small Box",
+      name: "Oh! Wow Gift Box",
       url: "/images/peanut chocolate/OH WOW SMALL BOX.webp",
       price: 2,
       brand: "oh! wow",
     },
     {
-      name: "Oh Wow Standy Pouch",
+      name: "Oh! Wow Standy Pouch",
       url: "/images/peanut chocolate/OH WOW STANDY POUCH.webp",
       price: 2,
       brand: "oh! wow",
     },
     {
-      name: "Caranut Box",
+      name: "Caranut ",
       url: "/images/peanut chocolate/CARANUT BOX.webp",
       price: 5,
     },
     {
-      name: "Chokers Box",
+      name: "Chokers ",
       url: "/images/peanut chocolate/CHOKERS BOX.webp",
       price: 5,
     },
@@ -1195,13 +1205,13 @@ export const productObj: productType = {
   ],
   "nought bar": [
     {
-      name: "BIG STAR",
+      name: "Big Star Container",
       url: "/images/nugut bar/BIG STAR.webp",
       price: 5,
       brand: "big star",
     },
     {
-      name: "BIG STAR BOX",
+      name: "Big Star",
       url: "/images/nugut bar/BIG STAR BOX.webp",
       price: 5,
       brand: "big star",
@@ -1212,33 +1222,33 @@ export const productObj: productType = {
       price: 5,
     },
     {
-      name: "Chockers Box",
+      name: "Chockers",
       url: "/images/nugut bar/CHOKERS BOX5RS.webp",
       price: 5,
     },
     {
-      name: "TORNUTTE  BAR CONTAINER",
+      name: "Tornutte Container", 
       url: "/images/nugut bar/TORNUTTE  BAR CONTAINER.webp",
       price: 5,
     },
     {
-      name: "TORNUTTE  BAR BOX",
+      name: "Tornutte",
       url: "/images/nugut bar/TORNUTTE  BAR BOX.webp",
       price: 5,
     },
 
     {
-      name: "Caramet Cont",
+      name: "Caranut Container",
       url: "/images/DAZZY LOGO.webp",
       price: 5,
     },
     {
-      name: "Carafians Cont ",
+      name: "Carafins Container ",
       url: "/images/DAZZY LOGO.webp",
       price: 5,
     },
     {
-      name: "BRACKERS BOX",
+      name: "Brackers",
       url: "/images/nugut bar/BRACKERS BOX.webp",
       price: 5,
     },
@@ -1246,13 +1256,13 @@ export const productObj: productType = {
 
   "wafer rolls": [
     {
-      name: "3 Stix Chocofills",
+      name: "3 Stix Choco fills",
       url: "/images/wafffer rolls/3 stix chocofills.webp",
       price: 5,
       brand: "3 stix",
     },
     {
-      name: "3stix Milk Fills",
+      name: "3 Stix Milk Fills",
       url: "/images/wafffer rolls/3stix milk fills.webp",
       price: 5,
       brand: "3 stix",
@@ -1265,58 +1275,58 @@ export const productObj: productType = {
     },
 
     {
-      name: "Big Roll Chocolate",
+      name: "Big Rolle Chocolate",
       url: "/images/wafffer rolls/big roll chocolate.webp",
       price: 5,
       brand: "big rolle",
     },
     {
-      name: "Big Roll Dark",
+      name: "Big Rolle Dark",
       url: "/images/wafffer rolls/big roll dark.webp",
       price: 5,
       brand: "big rolle",
     },
     {
-      name: "Big Roll Milk",
+      name: "Big Rolle Milk",
       url: "/images/wafffer rolls/big roll milk.webp",
       price: 5,
       brand: "big rolle",
     },
     {
-      name: "Choco Stix",
+      name: "Choc Stix Jar",
       url: "/images/wafffer rolls/choco stix.webp",
       price: 5,
       brand: "3 stix",
     },
 
     {
-      name: "Rolle Stix",
+      name: "Rolle Stix Jar",
       url: "/images/wafffer rolls/rolle stix.webp",
       price: 5,
       brand: "3 stix",
     },
     {
-      name: "Dark Stix",
+      name: "Dark Stix Jar",
       url: "/images/wafffer rolls/dark stix.webp",
       price: 5,
       brand: "3 stix",
     },
     {
-      name: "Krack Stix",
+      name: "Krack Stix Jar",
       url: "/images/wafffer rolls/krack stix.webp",
       price: 5,
       brand: "3 stix",
     },
 
     {
-      name: "Wafeer Roll",
+      name: "Waffo Roll",
       url: "/images/wafffer rolls/wafeer roll.webp",
       price: 5,
     },
   ],
   toffee: [
     {
-      name: "Eclair Coconut Cream",
+      name: "Eclairs Coconut Cream",
       url: "/images/toffee/eclair coconut cream 2RS.webp",
       price: 2,
       category: "Pouch",
@@ -1330,7 +1340,7 @@ export const productObj: productType = {
       subCategory: "Cocotana Pouch",
     },
     {
-      name: "Dry Fruit Selection Gift Pouch",
+      name: "Dryfruit Selections Pouch",
       url: "/images/toffee/dry fruit selection gift pouch 2RS.webp",
       price: 2,
       category: "Pouch",
@@ -1358,7 +1368,7 @@ export const productObj: productType = {
       subCategory: "Malai Kulfi Kesar Kaju Jar",
     },
     {
-      name: "Soffitti Jar",
+      name: "Soffiti Jar",
       url: "/images/toffee/soffiti 2RS.webp",
       price: 2,
       category: "Jar",
@@ -1372,7 +1382,7 @@ export const productObj: productType = {
       subCategory: "Natural Jar",
     },
     {
-      name: "Eclair Gold Jar",
+      name: "Eclairs Gold Jar",
       url: "/images/toffee/ECLAIR GOLD JAR 1RS.webp",
       price: 1,
       category: "Jar",
@@ -1432,7 +1442,7 @@ export const productObj: productType = {
       subCategory: "Butterscotch Hut Box",
     },
     {
-      name: "Cocolille Hut Box",
+      name: "Cocoville Hut Box",
       url: "/images/toffee/COCOILLE ZUPADI BOX 1RS.webp",
       price: 1,
       category: "Box",
@@ -1440,14 +1450,14 @@ export const productObj: productType = {
     },
 
     {
-      name: "Eclair Dark Jar",
+      name: "Eclairs Dark Jar",
       url: "/images/toffee/eclair dark jar 1RS.webp",
       price: 1,
       category: "Jar",
       subCategory: "Eclair 1rs Jar",
     },
     {
-      name: "Goa Kaju jar",
+      name: "Goa Kaju Jar",
       url: "/images/toffee/GOA KAJU 2RS.webp",
       price: 2,
       category: "Jar",
@@ -1519,7 +1529,7 @@ export const productObj: productType = {
       subCategory: "Pista Butter Pouch",
     },
     {
-      name: "Swissdairy Pouch",
+      name: "Swiss Dairy Pouch",
       url: "/images/toffee/SWISSDAIRY POUCH RS1.webp",
       price: 1,
       category: "Pouch",
@@ -1548,7 +1558,7 @@ export const productObj: productType = {
     },
 
     {
-      name: "Eclair Coconut Box",
+      name: "Eclairs Coconut",
       url: "/images/toffee/eclair coconut cream gift box 2RS.webp",
       price: 2,
       category: "Box",
@@ -1556,26 +1566,26 @@ export const productObj: productType = {
     },
 
     {
-      name: "Eclair Hazelnut Gift Box",
+      name: "Eclairs Hazelnut",
       url: "/images/toffee/eclair hazelnut gif box 2RS.webp",
       price: 2,
     },
     {
-      name: "Eclair Milk Box",
+      name: "Eclairs Milk Box",
       url: "/images/toffee/eclair milk gift box 2RS.webp",
       price: 2,
       category: "Box",
       subCategory: "Eclair Box ",
     },
     {
-      name: "Cocotana Box",
+      name: "Cocotana",
       url: "/images/toffee/Cocotana.webp",
       price: 2,
       category: "Box",
       subCategory: "Cocotana Box ",
     },
     {
-      name: "Eclair Milk Jar",
+      name: "Eclairs Milk Jar",
       url: "/images/toffee/eclairs milk jar 1RS.webp",
       price: 1,
       category: "Jar",
@@ -1603,14 +1613,14 @@ export const productObj: productType = {
       subCategory: "Pan Bites Hut Box",
     },
     {
-      name: "Pista Harvest",
+      name: "Pista Harvest Container",
       url: "/images/toffee/pista harvest 2RS.webp",
       price: 2,
       category: "Container",
       subCategory: "Pista Harvest Container",
     },
     {
-      name: "Trasure",
+      name: "Treasure Container",
       url: "/images/toffee/Trasure 2RS.webp",
       price: 2,
       category: "Container",
@@ -1624,7 +1634,7 @@ export const productObj: productType = {
       subCategory: "Butter Feast Pouch",
     },
     {
-      name: "Caramal Honey",
+      name: "Honey Caramel Container",
       url: "/images/toffee/CARAMAL HONEY2RS.webp",
       price: 2,
       category: "Container",
@@ -1653,7 +1663,7 @@ export const productObj: productType = {
       subCategory: "Eclair Milk",
     },
     {
-      name: "Eclair Gold Box",
+      name: "Eclairs Gold Hut Box",
       url: "/images/toffee/ECLAIR GOLD 1RS.webp",
       price: 1,
       category: "Box",
@@ -1677,7 +1687,7 @@ export const productObj: productType = {
     },
 
     {
-      name: "Kesar Cream Hut Box",
+      name: "Kesar Creme Hut Box",
       url: "/images/toffee/KESAR CREAM ZUPADI BOX 1RS.webp",
       price: 1,
       category: "Box",
@@ -1707,7 +1717,7 @@ export const productObj: productType = {
       subCategory: "Butter Feast Hut Box",
     },
     {
-      name: "Choco Almond Grand",
+      name: "Choco Almonds Grand Container",
       url: "/images/toffee/CHOCO ALMOND GRAND 2RS.webp",
       price: 2,
       category: "Container",
@@ -1743,7 +1753,7 @@ export const productObj: productType = {
       subCategory: "Eclairs Hut Box",
     },
     {
-      name: "Dry Fruit Selection Box",
+      name: "Dryfruit Selections",
       url: "/images/toffee/dry fruit selection gift box 2RS.webp",
       price: 2,
       category: "Box",
@@ -1757,21 +1767,21 @@ export const productObj: productType = {
       subCategory: "Eclair Dark Pouch",
     },
     {
-      name: "Eclairs Carmallos",
+      name: "Eclairs Almond Pouch",
       url: "/images/toffee/eclairs carmallos 1RS.webp",
       price: 1,
       category: "Pouch",
       subCategory: "Eclair Dark Pouch",
     },
     {
-      name: "Eclair Hazelnut Pouch",
+      name: "Eclairs Hazelnut Pouch",
       url: "/images/toffee/eclair hazelnut pouch 1RS.webp",
       price: 1,
       category: "Pouch",
       subCategory: "Eclair Dark Pouch",
     },
     {
-      name: "Eclair Milk Pouch",
+      name: "Eclairs Milk Pouch",
       url: "/images/toffee/eclair milk pouch 1RS.webp",
       price: 1,
       category: "Pouch",
@@ -1779,72 +1789,70 @@ export const productObj: productType = {
     },
   ],
   jelly: [
-    {
-      name: "Jellos Guvava Jelly Jar",
-      url: "/images/jelly/JELLOS GUVAVA JELLY JAR.webp",
+        {
+      name: "Jellos Strawberry Jelly",
+      url: "/images/jelly/STRAWBERRY JELLY.webp",
       price: 1,
     },
-    {
+      {
+      name: "Jellos Strawberry Jelly Jar",
+      url: "/images/jelly/STRAWBERRY JELLY JAR.webp",
+      price: 1,
+    },
+        {
+      name: "Jellos Assorted Jelly",
+      url: "/images/jelly/JELLOS MIXFRUIT JELLY.webp",
+      price: 1,
+    },
+        {
+      name: "Jellos Assorted Jelly Jar",
+      url: "/images/jelly/JELLOS MIX FRUIT JELLY JAR.webp",
+      price: 1,
+    },
+        {
+      name: "Jellos Pineapple Jelly",
+      url: "/images/jelly/JELLOS PAINAPPLE JELLY.webp",
+      price: 1,
+    },
+        {
+      name: "Jellos Pineapple Jelly Jar",
+      url: "/images/jelly/JELLOS JELLY JAR1.webp",
+      price: 1,
+    },
+        {
       name: "Jellos Guvava Jelly",
       url: "/images/jelly/JELLOS GUVAVA JELLY.webp",
       price: 1,
     },
     {
-      name: "Jellos Jelly Jar",
-      url: "/images/jelly/JELLOS JELLY JAR.webp",
+      name: "Jellos Guava Jelly Jar",
+      url: "/images/jelly/JELLOS GUVAVA JELLY JAR.webp",
       price: 1,
     },
-    {
-      name: "Jellos Jelly Jar",
-      url: "/images/jelly/JELLOS JELLY JAR1.webp",
-      price: 1,
-    },
-    { name: "Jellos Jelly", url: "/images/jelly/JELLOS JELLY.webp", price: 1 },
-    {
-      name: "Jellos Mango Jelly Jar",
-      url: "/images/jelly/JELLOS MANGO JELLY JAR.webp",
-      price: 1,
-    },
-    {
+        {
       name: "Jellos Mango Jelly",
       url: "/images/jelly/JELLOS MANGO JELLY.webp",
       price: 1,
     },
-    {
-      name: "Jellos Mix Fruit Jelly Jar",
-      url: "/images/jelly/JELLOS MIX FRUIT JELLY JAR.webp",
+        {
+      name: "Jellos Mango Jelly Jar",
+      url: "/images/jelly/JELLOS MANGO JELLY JAR.webp",
       price: 1,
     },
+    { name: "Jellos Mix Fruit Jelly", url: "/images/jelly/JELLOS JELLY.webp", price: 1 },
+
     {
-      name: "Jellos Mixfruit Jelly",
-      url: "/images/jelly/JELLOS MIXFRUIT JELLY.webp",
+      name: "Jellos Pineapple Jar",
+      url: "/images/jelly/JELLOS JELLY JAR.webp",
       price: 1,
     },
-    {
-      name: "Jellos Orange Jelly Jar",
-      url: "/images/jelly/JELLOS ORANGE JELLY JAR.webp",
-      price: 1,
-    },
-    {
-      name: "Jellos Orange Jelly",
-      url: "/images/jelly/JELLOS ORANGE JELLY.webp",
-      price: 1,
-    },
-    {
-      name: "Jellos Painapple Jelly",
-      url: "/images/jelly/JELLOS PAINAPPLE JELLY.webp",
-      price: 1,
-    },
-    {
-      name: "Strawberry Jelly Jar",
-      url: "/images/jelly/STRAWBERRY JELLY JAR.webp",
-      price: 1,
-    },
-    {
-      name: "Strawberry Jelly",
-      url: "/images/jelly/STRAWBERRY JELLY.webp",
-      price: 1,
-    },
+
+    
+
+
+
+  
+
   ],
   candy: [
     {
@@ -1905,7 +1913,7 @@ export const productObj: productType = {
       price: 0.5,
     },
     {
-      name: "Kisszone 165Pcs",
+      name: "Kisszone 165 Pcs",
       url: "/images/candy/KISSZONE RS1.webp",
       price: 1,
       category: "Pouch",
@@ -1919,7 +1927,7 @@ export const productObj: productType = {
       brand: "kiss zone",
     },
     {
-      name: "Kisszone 50pcs",
+      name: "Kisszone 50 Pcs",
       url: "/images/candy/KISSZONE02 1RS.webp",
       price: 1,
       category: "Pouch",
@@ -1956,28 +1964,28 @@ export const productObj: productType = {
       subCategory: "Tambley",
     },
     {
-      name: "Kacha Aam Candy",
+      name: "Kacche Aam",
       url: "/images/candy/KACHA AAM CANDY 50 PAISA.webp",
       price: 0.5,
       category: "Pouch",
       subCategory: "Kacha Aam Candy",
     },
     {
-      name: "Londoncow",
+      name: "London Cow",
       url: "/images/candy/LONDONCOW RS1.webp",
       price: 1,
       category: "Pouch",
       subCategory: "Londoncow",
     },
     {
-      name: "Orage",
+      name: "Oranja",
       url: "/images/candy/ORAGE RS1.webp",
       price: 1,
       category: "Pouch",
       subCategory: "Orage",
     },
     {
-      name: "Fruit Bon ",
+      name: "Fruit Bon Bon ",
       url: "/images/candy/FRUIT BON BON 50 PAISA.webp",
       price: 0.5,
       category: "Pouch",
@@ -2038,12 +2046,12 @@ export const productObj: productType = {
 
   lollipop: [
     {
-      name: "Frugo Pop",
+      name: "Frugo Pop Stand",
       url: "/images/lollipop/Fru Go Pop.webp",
       price: 5,
     },
     {
-      name: "Frudoza",
+      name: "Frudoza Container",
       url: "/images/lollipop/Frudoza.webp",
       price: 5,
     },
@@ -2058,17 +2066,17 @@ export const productObj: productType = {
       price: 5,
     },
     {
-      name: "Frutos Lollipop Jar",
+      name: "Frutos Pops Jar",
       url: "/images/lollipop/FRUTOS LOLLIPOP JAR.webp",
       price: 5,
     },
     {
-      name: "Lolly Lollipop Pouch",
+      name: "Lolly Pouch",
       url: "/images/lollipop/LOLLY LOLLIPOP  POUCH.webp",
       price: 5,
     },
     {
-      name: "Lolly Lollipop",
+      name: "Lolly Container",
       url: "/images/lollipop/LOLLY LOLLIPOP.webp",
       price: 5,
     },

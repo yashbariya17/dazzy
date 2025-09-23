@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const WhatsAppButton: React.FC = () => {
-  const phoneNumber = "919737661418";
+  const phoneNumber = "919875158053";
 
   return (
     <div className="group fixed bottom-5 right-5 flex items-center z-50  bg-[#25d366] rounded-full">
