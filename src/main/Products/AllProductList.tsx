@@ -524,14 +524,14 @@ export const productObj: productType = {
       brand: "gold",
     },
     {
-      name: "Emporio 70Pcs Box",
-      url: "/images/centerfilledchocolate/Emporio 70PCS BOX 5RS.webp",
+      name: "Emporio 70 Pcs",
+      url: "/images/centerfilledchocolate/EMPORIO 70PCS BOX 5RS.webp",
       price: 5,
       brand: "Emporio",
     },
     {
       name: "Emporio Pouch",
-      url: "/images/centerfilledchocolate/Emporio POUCH  5RS.webp",
+      url: "/images/centerfilledchocolate/EMPORIO POUCH  5RS.webp",
       price: 5,
       brand: "Emporio",
     },
