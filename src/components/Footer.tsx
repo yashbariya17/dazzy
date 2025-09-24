@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
         <div className="hidden md:block h-[200px] border-1 border-amber-800 mx-4" />
 
-  <div className="flex-1">
+        <div className="flex-1">
           <img
             src="/images/DPPLLOGO.webp"
             alt="Dazzy Products Logo"
@@ -53,19 +53,17 @@ const Footer = () => {
 
         <div className="flex-1">
           <img
-            src="/images/DFILOGO.webp"
+            src="/images/DK LOGO.png"
             alt="Dazzy Food Industries Logo"
-            className="h-12 mb-4"
+            className="h-8 mb-7"
           />
-          <h3 className="text-lg font-semibold">DAZZY FOOD INDUSTRIES</h3>
+          <h3 className="text-lg font-semibold">D.K.INDUSTRIES</h3>
           <p className="text-sm mt-2 leading-relaxed">
             <i className="fa fa-location-dot mr-2"></i>
-            Plot No. 515, Sayaji Market, Sayajipura,
-            <br />
-            Vadodara - 390019, Gujarat - INDIA
+            Plot No. 571, Sayaji Market, Sayajipura, Vadodara
+            <br />- 390019, Gujarat - INDIA
           </p>
         </div>
-        
       </div>
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
         <div className="flex-1">

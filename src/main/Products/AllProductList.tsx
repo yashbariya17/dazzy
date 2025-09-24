@@ -363,7 +363,7 @@ export const productObj: productType = {
       subCategory: "Dlove Red Jar",
       brand: "d love",
     },
-        {
+    {
       name: "D'Love Gold Jar",
       url: "/images/DAZZY LOGO.webp",
       price: 5,
@@ -371,7 +371,7 @@ export const productObj: productType = {
 
       brand: "d love",
     },
-        {
+    {
       name: "D'Love Assorted Jar",
       url: "/images/DAZZY LOGO.webp",
       price: 5,
@@ -400,7 +400,6 @@ export const productObj: productType = {
       category: "Pillow Pack",
       subCategory: "Delight 70pcs Box",
     },
-    
 
     {
       name: "Delight Rajbhog 70Pcs Box",
@@ -1227,7 +1226,7 @@ export const productObj: productType = {
       price: 5,
     },
     {
-      name: "Tornutte Container", 
+      name: "Tornutte Container",
       url: "/images/nugut bar/TORNUTTE  BAR CONTAINER.webp",
       price: 5,
     },
@@ -1471,7 +1470,7 @@ export const productObj: productType = {
       subCategory: "Eclair 1rs Jar",
     },
     {
-      name: "Eclair Hazelnut",
+      name: "Eclairs Hazelnut",
       url: "/images/toffee/eclair hazelnut 2RS.webp",
       price: 2,
       category: "Pouch",
@@ -1789,37 +1788,37 @@ export const productObj: productType = {
     },
   ],
   jelly: [
-        {
+    {
       name: "Jellos Strawberry Jelly",
       url: "/images/jelly/STRAWBERRY JELLY.webp",
       price: 1,
     },
-      {
+    {
       name: "Jellos Strawberry Jelly Jar",
       url: "/images/jelly/STRAWBERRY JELLY JAR.webp",
       price: 1,
     },
-        {
+    {
       name: "Jellos Assorted Jelly",
       url: "/images/jelly/JELLOS MIXFRUIT JELLY.webp",
       price: 1,
     },
-        {
+    {
       name: "Jellos Assorted Jelly Jar",
       url: "/images/jelly/JELLOS MIX FRUIT JELLY JAR.webp",
       price: 1,
     },
-        {
+    {
       name: "Jellos Pineapple Jelly",
       url: "/images/jelly/JELLOS PAINAPPLE JELLY.webp",
       price: 1,
     },
-        {
+    {
       name: "Jellos Pineapple Jelly Jar",
       url: "/images/jelly/JELLOS JELLY JAR1.webp",
       price: 1,
     },
-        {
+    {
       name: "Jellos Guvava Jelly",
       url: "/images/jelly/JELLOS GUVAVA JELLY.webp",
       price: 1,
@@ -1829,30 +1828,27 @@ export const productObj: productType = {
       url: "/images/jelly/JELLOS GUVAVA JELLY JAR.webp",
       price: 1,
     },
-        {
+    {
       name: "Jellos Mango Jelly",
       url: "/images/jelly/JELLOS MANGO JELLY.webp",
       price: 1,
     },
-        {
+    {
       name: "Jellos Mango Jelly Jar",
       url: "/images/jelly/JELLOS MANGO JELLY JAR.webp",
       price: 1,
     },
-    { name: "Jellos Mix Fruit Jelly", url: "/images/jelly/JELLOS JELLY.webp", price: 1 },
+    {
+      name: "Jellos Mix Fruit Jelly",
+      url: "/images/jelly/JELLOS JELLY.webp",
+      price: 1,
+    },
 
     {
       name: "Jellos Pineapple Jar",
       url: "/images/jelly/JELLOS JELLY JAR.webp",
       price: 1,
     },
-
-    
-
-
-
-  
-
   ],
   candy: [
     {

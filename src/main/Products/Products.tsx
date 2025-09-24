@@ -51,16 +51,16 @@ const Products = () => {
   const [price, setPrice] = useState<number>(0);
   const [viewMoreProducts, setViewMoreProducts] = useState<Product[]>([]);
   const [imageView, setImageView] = useState<Record<string, any> | null>(null);
-  const [loadedCount, setLoadedCount] = useState(0);
+  // const [loadedCount, setLoadedCount] = useState(0);
 
   useLayoutEffect(() => {
     setOpen(categoryFromQuery);
   }, [categoryFromQuery]);
 
   const products = productObj[open] || [];
-  const handleImageLoad = () => {
-    setLoadedCount((prev) => prev + 1);
-  };
+  // const handleImageLoad = () => {
+  //   setLoadedCount((prev) => prev + 1);
+  // };
   const productsToRender = useMemo(() => {
     if (!selectedCategory) {
       const map = new Map();
@@ -87,153 +87,135 @@ const Products = () => {
 
   return (
     <>
- {loadedCount < 2 && (
+      {/*  {loadedCount < 2 && (
         <div className="fixed top-0 inset-0 flex items-center justify-center bg-white z-10">
           <img src="/videos/LODING GIF.gif" alt="" />
         </div>
       )}
-    <div className="w-full">
-      <section className="relative h-[200px] flex items-center justify-center overflow-hidden">
-        <video
-          src="/CONTECT AS.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover"
-        ></video>
-        <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
-        <h2 className="relative text-white text-2xl font-semibold z-10">
-          Product Categories
-        </h2>
-      </section>
+    */}
+      <div className="w-full">
+        <section className="relative h-[200px] flex items-center justify-center overflow-hidden">
+          <video
+            src="/CONTECT AS.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute top-0 left-0 w-full h-full object-cover"
+          ></video>
+          <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+          <h2 className="relative text-white text-2xl font-semibold z-10">
+            Product Categories
+          </h2>
+        </section>
 
-      <section className="pt-8 bg-[#f4f1ea]">
-        <TextAnimation text="Our Products" />
-        <p
-          className="text-center mt-2 text-gray-500"
-          style={{ wordSpacing: "2px" }}
-        >
-          A Wide Range Of Confectionery Items
-        </p>
+        <section className="pt-8 bg-[#f4f1ea]">
+          <TextAnimation text="Our Products" />
+          <p
+            className="text-center mt-2 text-gray-500"
+            style={{ wordSpacing: "2px" }}
+          >
+            A Wide Range Of Confectionery Items
+          </p>
 
-       <div className="max-w-[1240px] px-6 mx-auto pt-20">
-  <h2 className="font-semibold text-xl pb-4 w-[270px]">
-    Filter By Price
-    <span className="block w-[20%] h-1 bg-[#eb0029] rounded-full mt-1"></span>
-  </h2>
-
-  <div className="w-full mt-2">
-    <select
-      value={price}
-      onChange={(e) => setPrice(Number(e.target.value))}
-      className="border-2 border-solid border-[#eb0029] text-[#eb0029] rounded-full px-3 py-2 w-full max-w-[250px] focus:outline-none focus:ring-2 focus:ring-[#eb0029] cursor-pointer capitalize appearance-none"
-    >
-      <option value="" className="text-black">Select price</option>
-      {priceOptions?.map((i) => (
-        <option key={i} value={i} className="capitalize text-black">
-          {i}
-        </option>
-      ))}
-    </select>
-  </div>
-</div>
-
-
-
-        <section className="max-w-[1240px] grid md:grid-cols-[auto_1fr] gap-16 px-6 mx-auto pt-10 pb-10">
-          {/* Sidebar Categories */}
-          <div className="space-y-3 mx-auto">
-            <h2 className="font-semibold text-xl pb-4">
-              Product Categories
+          <div className="max-w-[1240px] px-6 mx-auto pt-20">
+            <h2 className="font-semibold text-xl pb-4 w-[270px]">
+              Filter By Price
               <span className="block w-[20%] h-1 bg-[#eb0029] rounded-full mt-1"></span>
             </h2>
-            {ProductsList.map((i, index) => (
-              <motion.div
-                key={index}
-                className="bg-white w-[270px] rounded-full shadow-2xl py-2 group"
-              >
-                <p
-                  className={`uppercase text-[15px] hover:text-[#eb0029] w-full pl-6 pr-5 cursor-pointer transition-colors duration-300 flex justify-between ${
-                    i.name === open ? "text-[#eb0029]" : "text-gray-600"
-                  }`}
-                  onClick={() => {
-                    if (window.innerWidth < 640) {
-                      ref.current?.scrollIntoView({ behavior: "smooth" });
-                    }
-                    setSelectedCategory("");
-                    setOpen(i.name);
 
-                    // also update url when selecting category
-                    const params = new URLSearchParams(location.search);
-                    params.set("p", i.name);
-                    window.history.replaceState(
-                      {},
-                      "",
-                      `${location.pathname}?${params.toString()}`
-                    );
-                  }}
-                >
-                  {i.name}
-                </p>
-              </motion.div>
-            ))}
+            <div className="w-full mt-2">
+              <select
+                value={price}
+                onChange={(e) => setPrice(Number(e.target.value))}
+                className="border-2 border-solid border-[#eb0029] text-[#eb0029] rounded-full px-3 py-2 w-full max-w-[250px] focus:outline-none focus:ring-2 focus:ring-[#eb0029] cursor-pointer capitalize appearance-none"
+              >
+                <option value="" className="text-black">
+                  Select price
+                </option>
+                {priceOptions?.map((i) => (
+                  <option key={i} value={i} className="capitalize text-black">
+                    {i}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
 
-          {/* Products Section */}
-          <section>
-            {/* Subcategory buttons */}
-            <div className=" flex gap-x-6 md:gap-x-10  gap-y-5 mb-5 px-4 flex-wrap justify-center md:justify-start">
-              {category?.[open as keyof typeof category].map((i) => (
-                <button
-                  key={i}
-                  className={`${
-                    selectedCategory !== i
-                      ? "border-2 border-solid border-[#eb0029] text-[#eb0029]"
-                      : "bg-[#eb0029] text-white font-semibold"
-                  } py-1 min-w-16 px-3 rounded-full capitalize cursor-pointer transition-transform duration-200 active:scale-90`}
-                  onClick={() => setSelectedCategory(i)}
+          <section className="max-w-[1240px] grid md:grid-cols-[auto_1fr] gap-16 px-6 mx-auto pt-10 pb-10">
+            {/* Sidebar Categories */}
+            <div className="space-y-3 mx-auto">
+              <h2 className="font-semibold text-xl pb-4">
+                Product Categories
+                <span className="block w-[20%] h-1 bg-[#eb0029] rounded-full mt-1"></span>
+              </h2>
+              {ProductsList.map((i, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white w-[270px] rounded-full shadow-2xl py-2 group"
                 >
-                  {i}
-                </button>
+                  <p
+                    className={`uppercase text-[15px] hover:text-[#eb0029] w-full pl-6 pr-5 cursor-pointer transition-colors duration-300 flex justify-between ${
+                      i.name === open ? "text-[#eb0029]" : "text-gray-600"
+                    }`}
+                    onClick={() => {
+                      if (window.innerWidth < 640) {
+                        ref.current?.scrollIntoView({ behavior: "smooth" });
+                      }
+                      setSelectedCategory("");
+                      setOpen(i.name);
+
+                      // also update url when selecting category
+                      const params = new URLSearchParams(location.search);
+                      params.set("p", i.name);
+                      window.history.replaceState(
+                        {},
+                        "",
+                        `${location.pathname}?${params.toString()}`
+                      );
+                    }}
+                  >
+                    {i.name}
+                  </p>
+                </motion.div>
               ))}
             </div>
 
-            {/* Products grid */}
-            <div
-              className="grid grid-rows-[auto_1fr] grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6"
-              ref={ref}
-            >
-              {productsToRender.map(
-                (i) =>
-                  (price === 0 || i.price === price) && (
-                    <div
-                      key={i.url + i.name + open}
-                      className="w-[160px] h-[240px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[320px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
-                    >
-                      <motion.img
-                        layoutId={i.url + i.name}
-                        src={i.url}
-                        className="w-[80%] h-[200px] object-contain mt-4"
-                        onClick={() => {
-                          if (i?.subCategory) {
-                            const sameSubCatProducts = productObj[open].filter(
-                              (p) => p.subCategory === i.subCategory
-                            );
-                            setViewMoreProducts(sameSubCatProducts);
-                          } else {
-                            setViewMoreProducts([i]);
-                          }
-                        }}
-                        onLoad={handleImageLoad}
-                      />
+            {/* Products Section */}
+            <section>
+              {/* Subcategory buttons */}
+              <div className=" flex gap-x-6 md:gap-x-10  gap-y-5 mb-5 px-4 flex-wrap justify-center md:justify-start">
+                {category?.[open as keyof typeof category].map((i) => (
+                  <button
+                    key={i}
+                    className={`${
+                      selectedCategory !== i
+                        ? "border-2 border-solid border-[#eb0029] text-[#eb0029]"
+                        : "bg-[#eb0029] text-white font-semibold"
+                    } py-1 min-w-16 px-3 rounded-full capitalize cursor-pointer transition-transform duration-200 active:scale-90`}
+                    onClick={() => setSelectedCategory(i)}
+                  >
+                    {i}
+                  </button>
+                ))}
+              </div>
 
-                      <p className="text-center text-sm sm:text-base font-semibold mt-2">
-                        {i.name}
-                      </p>
-
-                      <div className="flex justify-center gap-3 mt-2 text-xs sm:text-sm">
-                        <button
+              {/* Products grid */}
+              <div
+                className="grid grid-rows-[auto_1fr] grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6"
+                ref={ref}
+              >
+                {productsToRender.map(
+                  (i) =>
+                    (price === 0 || i.price === price) && (
+                      <div
+                        key={i.url + i.name + open}
+                        className="w-[160px] h-[240px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[320px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
+                      >
+                        <motion.img
+                          layoutId={i.url + i.name}
+                          src={i.url}
+                          className="w-[80%] h-[200px] object-contain mt-4"
                           onClick={() => {
                             if (i?.subCategory) {
                               const sameSubCatProducts = productObj[
@@ -244,69 +226,89 @@ const Products = () => {
                               setViewMoreProducts([i]);
                             }
                           }}
-                          className="flex items-center gap-1 text-green-700 hover:underline hover:cursor-pointer transition"
-                        >
-                          <FiShoppingBag size={14} /> Read More
-                        </button>
+                          // onLoad={handleImageLoad}
+                        />
+
+                        <p className="text-center text-sm sm:text-base font-semibold mt-2">
+                          {i.name}
+                        </p>
+
+                        <div className="flex justify-center gap-3 mt-2 text-xs sm:text-sm">
+                          <button
+                            onClick={() => {
+                              if (i?.subCategory) {
+                                const sameSubCatProducts = productObj[
+                                  open
+                                ].filter(
+                                  (p) => p.subCategory === i.subCategory
+                                );
+                                setViewMoreProducts(sameSubCatProducts);
+                              } else {
+                                setViewMoreProducts([i]);
+                              }
+                            }}
+                            className="flex items-center gap-1 text-green-700 hover:underline hover:cursor-pointer transition"
+                          >
+                            <FiShoppingBag size={14} /> Read More
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                  )
-              )}
-            </div>
+                    )
+                )}
+              </div>
+            </section>
           </section>
-        </section>
 
-        {/* ViewMore modal */}
-        <AnimatePresence>
-          {viewMoreProducts.length > 0 && (
-            <ViewMore
-              products={viewMoreProducts}
-              onClose={() => setViewMoreProducts([])}
-            />
-          )}
-        </AnimatePresence>
+          {/* ViewMore modal */}
+          <AnimatePresence>
+            {viewMoreProducts.length > 0 && (
+              <ViewMore
+                products={viewMoreProducts}
+                onClose={() => setViewMoreProducts([])}
+              />
+            )}
+          </AnimatePresence>
 
-        {/* Image modal */}
-        <AnimatePresence>
-          {imageView && (
-            <motion.div
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            >
+          {/* Image modal */}
+          <AnimatePresence>
+            {imageView && (
               <motion.div
-                className="bg-white rounded-2xl shadow-xl w-auto max-h-[95vh] overflow-y-auto p-6 px-12 relative"
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.8, opacity: 0 }}
-                transition={{ duration: 0.3 }}
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
               >
-                <button
-                  onClick={() => {
-                    setImageView(null);
-                  }}
-                  className="absolute top-4 right-4 text-gray-500 hover:text-gray-800"
+                <motion.div
+                  className="bg-white rounded-2xl shadow-xl w-auto max-h-[95vh] overflow-y-auto p-6 px-12 relative"
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.8, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
                 >
-                  <FiX size={24} />
-                </button>
+                  <button
+                    onClick={() => {
+                      setImageView(null);
+                    }}
+                    className="absolute top-4 right-4 text-gray-500 hover:text-gray-800"
+                  >
+                    <FiX size={24} />
+                  </button>
 
-                <div className="flex flex-wrap justify-center gap-4">
-                  <motion.img
-                    key={imageView.url + imageView.name}
-                    layoutId={imageView.url + imageView.name}
-                    src={imageView.url}
-                    className=" h-[400px] max-h-[90%] object-contain mt-4"
-                  />
-                </div>
+                  <div className="flex flex-wrap justify-center gap-4">
+                    <motion.img
+                      key={imageView.url + imageView.name}
+                      layoutId={imageView.url + imageView.name}
+                      src={imageView.url}
+                      className=" h-[400px] max-h-[90%] object-contain mt-4"
+                    />
+                  </div>
+                </motion.div>
               </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </section>
-    </div>
+            )}
+          </AnimatePresence>
+        </section>
+      </div>
     </>
-
   );
 };
 
