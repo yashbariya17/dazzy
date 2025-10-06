@@ -7,6 +7,10 @@ export type productType = {
     subCategory?: string;
     description?: string;
     brand?: string;
+    pkg?: string;
+    weight?: number;
+    mrp?: number;
+    masterPack?: number;
   }[];
 };
 

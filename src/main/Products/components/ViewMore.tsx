@@ -10,7 +10,7 @@ interface ViewMoreProps {
 }
 
 export default function ViewMore({ products, onClose }: ViewMoreProps) {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   return (
     <AnimatePresence>
       {products?.length > 0 && (
@@ -54,22 +54,22 @@ export default function ViewMore({ products, onClose }: ViewMoreProps) {
             <div className="flex flex-col justify-center items-center my-5">
               <div className=" bg-white rounded-3xl shadow-md flex gap-5  justify-between p-4 mx-auto">
                 <p>
-                  <strong>Pkg:</strong> Box
+                  <strong>Pkg:</strong> {products[0]?.pkg ?? "Box"}
                 </p>
                 <p>
-                  <strong>Weight:</strong> 240gm
+                  <strong>Weight:</strong> {products[0]?.weight ?? "gm"}
                 </p>
                 <p>
-                  <strong>PCS MRP:</strong> 500
+                  <strong>PCS MRP:</strong> {products[0]?.price ?? "500"}
                 </p>
                 <p>
-                  <strong>Masterpack:</strong> 20
+                  <strong>Masterpack:</strong> {products[0]?.masterPack ?? "20"}
                 </p>
               </div>
               <button
                 className="bg-[#eb0029] text-white font-semibold py-2 px-3 rounded-full hover:bg-red-700 transition-transform duration-200 active:scale-95 mt-4"
-                onClick={()=>{
-                  navigate("/dealership")
+                onClick={() => {
+                  navigate("/dealership");
                 }}
               >
                 Dealership
