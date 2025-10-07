@@ -7,11 +7,17 @@ export type productType = {
     subCategory?: string;
     description?: string;
     brand?: string;
-    pkg?: string;
-    weight?: number;
-    mrp?: number;
-    masterPack?: number;
+    desc?: {
+      pkg?: string;
+      weight?: number;
+      mrp?: number;
+      masterPack?: number;
+    };
   }[];
+};
+
+const descriptionObj = {
+  ch1: {},
 };
 
 export const productObj: productType = {
@@ -20,6 +26,7 @@ export const productObj: productType = {
       name: "Dairy Kiss Blue ₹10 ",
       url: "/images/chocolatebar/Cocoa Milk Choclate Bar.webp",
       price: 1,
+      desc: descriptionObj["ch1"],
     },
     {
       name: "Dairy Kiss Cocoa ₹5",
