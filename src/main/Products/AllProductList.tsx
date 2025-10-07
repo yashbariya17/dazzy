@@ -8,16 +8,571 @@ export type productType = {
     description?: string;
     brand?: string;
     desc?: {
-      pkg?: string;
-      weight?: number;
-      mrp?: number;
-      masterPack?: number;
+      packaging?: string; // Packaging
+      noOfPkt?: string | number; // Allow both string and number
+      noOfUnits?: number; // Number of units
+      mrp?: number; // MRP
     };
   }[];
 };
 
 const descriptionObj = {
-  ch1: {},
+  // ₹5/- WAFER STICKS
+  "BIG ROLLE CHOC": { packaging: "Box", noOfPkt: 24, noOfUnits: 30, mrp: 150 },
+  "BIG ROLLE MILK": { packaging: "Box", noOfPkt: 24, noOfUnits: 30, mrp: 150 },
+  "BIG ROLLE DARK": { packaging: "Box", noOfPkt: 24, noOfUnits: 30, mrp: 150 },
+  "ROLLE STIX": { packaging: "Jar", noOfPkt: 20, noOfUnits: 32, mrp: 160 },
+  "CHOC STIX": { packaging: "Jar", noOfPkt: 20, noOfUnits: 32, mrp: 160 },
+  "3 STIX CHOCO": { packaging: "Box", noOfPkt: 20, noOfUnits: 32, mrp: 160 },
+  "3 STIX MILK": { packaging: "Box", noOfPkt: 20, noOfUnits: 32, mrp: 160 },
+
+  // ₹5/- PREMIUM GIFT PACK
+  "GLORIOUS HEART": {
+    packaging: "Cont",
+    noOfPkt: 12,
+    noOfUnits: 240,
+    mrp: 185,
+  },
+  "TRUFFLE HEART": { packaging: "Cont", noOfPkt: 12, noOfUnits: 240, mrp: 185 },
+  "TRUFFLE OCTAGON": {
+    packaging: "Cont",
+    noOfPkt: 12,
+    noOfUnits: 300,
+    mrp: 220,
+  },
+  "BOLIVIA CONT": { packaging: "Cont", noOfPkt: 16, noOfUnits: 360, mrp: 230 },
+
+  // ₹5/- PREMIUM CHOCOLATE
+  FEROLA: { packaging: "Box", noOfPkt: 12, noOfUnits: 70, mrp: 350 },
+  GLORIOUS: { packaging: "Box", noOfPkt: 12, noOfUnits: 70, mrp: 350 },
+  "GLORIOUS CONT (30 PCS)": {
+    packaging: "Cont",
+    noOfPkt: 24,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+  "D'LOVE MIX": { packaging: "Box", noOfPkt: 12, noOfUnits: 70, mrp: 350 },
+  "D'LOVE GOLD": { packaging: "Box", noOfPkt: 12, noOfUnits: 70, mrp: 350 },
+  "D'LOVE RED": { packaging: "Box", noOfPkt: 12, noOfUnits: 70, mrp: 350 },
+  "D'LOVE MIX CONT (30 PCS)": {
+    packaging: "Cont",
+    noOfPkt: 24,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+  "D'LOVE GOLD CONT (30 PCS)": {
+    packaging: "Cont",
+    noOfPkt: 24,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+  "D'LOVE MIX JAR": { packaging: "Jar", noOfPkt: 24, noOfUnits: 40, mrp: 200 },
+  "D'LOVE GOLD JAR": { packaging: "Jar", noOfPkt: 24, noOfUnits: 40, mrp: 200 },
+  "D'LOVE MIX POUCH": {
+    packaging: "Pouch",
+    noOfPkt: 12,
+    noOfUnits: 60,
+    mrp: 0,
+  },
+  "D'LOVE GOLD POUCH": {
+    packaging: "Pouch",
+    noOfPkt: 12,
+    noOfUnits: 60,
+    mrp: 0,
+  },
+
+  EMPORIO: { packaging: "Box", noOfPkt: 12, noOfUnits: 70, mrp: 350 },
+  "EMPORIO CONT (30 PCS)": {
+    packaging: "Cont",
+    noOfPkt: 24,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+  DELITE: { packaging: "Box", noOfPkt: 12, noOfUnits: 70, mrp: 350 },
+  "DELITE CONT (30 PCS)": {
+    packaging: "Cont",
+    noOfPkt: 24,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+  TRUFFLE: { packaging: "Box", noOfPkt: 12, noOfUnits: 70, mrp: 350 },
+  "TRUFFLE SMALL": { packaging: "Box", noOfPkt: 35, noOfUnits: 20, mrp: 125 },
+  "TRUFFLE CONTAINER": {
+    packaging: "Cont",
+    noOfPkt: 12,
+    noOfUnits: 70,
+    mrp: 350,
+  },
+  "TRUFFLE CONTAINER (30 PCS)": {
+    packaging: "Cont",
+    noOfPkt: 24,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+  BOLIVIA: { packaging: "Box", noOfPkt: 12, noOfUnits: 70, mrp: 350 },
+  "BOLIVIA SMALL": { packaging: "Box", noOfPkt: 24, noOfUnits: 25, mrp: 175 },
+  "BOLIVIA CONT (30 PCS)": {
+    packaging: "Cont",
+    noOfPkt: 24,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+  STACY: { packaging: "Box", noOfPkt: 12, noOfUnits: 70, mrp: 350 },
+  "STACY SMALL": { packaging: "Box", noOfPkt: 35, noOfUnits: 20, mrp: 125 },
+  "STACY CONT": { packaging: "Cont", noOfPkt: 12, noOfUnits: 70, mrp: 350 },
+
+  "BIG TRUFFLE": { packaging: "Box", noOfPkt: 6, noOfUnits: 0, mrp: 750 },
+  "BIG BOLIVIA": { packaging: "Box", noOfPkt: 6, noOfUnits: 0, mrp: 750 },
+  "BIG GLORIOUS": { packaging: "Box", noOfPkt: 6, noOfUnits: 0, mrp: 750 },
+  "BIG D'LOVE": { packaging: "Box", noOfPkt: 6, noOfUnits: 0, mrp: 750 },
+  "BIG DELITE": { packaging: "Box", noOfPkt: 6, noOfUnits: 0, mrp: 750 },
+
+  "KING KONG": { packaging: "Box", noOfPkt: 20, noOfUnits: 40, mrp: 200 },
+  "DR. TEDDY": { packaging: "Box", noOfPkt: 20, noOfUnits: 40, mrp: 200 },
+  // ₹5/- DECORATIVE CHOCOLATE
+  "BIG STAR": { packaging: "Box", noOfPkt: 24, noOfUnits: 40, mrp: 200 },
+  CHOKERS: { packaging: "Box", noOfPkt: 24, noOfUnits: 40, mrp: 200 },
+  TORNUTTE: { packaging: "Box", noOfPkt: 24, noOfUnits: 40, mrp: 200 },
+  CARANUT: { packaging: "Box", noOfPkt: 24, noOfUnits: 40, mrp: 200 },
+  "BIG STAR CONT (30 PCS)": {
+    packaging: "Cont",
+    noOfPkt: 24,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+  "CHOKERS CONT (30 PCS)": {
+    packaging: "Cont",
+    noOfPkt: 24,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+  "TORNUTTE CONT (30 PCS)": {
+    packaging: "Cont",
+    noOfPkt: 24,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+  "CARANUT CONT (30 PCS)": {
+    packaging: "Cont",
+    noOfPkt: 24,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+
+  // ₹5/- CHOCOLATE BAR
+  "DAIRY KISS BLUE CONT (30 PCS)": {
+    packaging: "Cont",
+    noOfPkt: 24,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+  "DAIRY KISS BLUE": { packaging: "Box", noOfPkt: 24, noOfUnits: 30, mrp: 150 },
+  "DAIRY KISS GOLD": { packaging: "Box", noOfPkt: 24, noOfUnits: 30, mrp: 150 },
+  "DAIRY KISS BLACK & WHITE": {
+    packaging: "Box",
+    noOfPkt: 24,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+  "DAIRY KISS STRAWBERRY": {
+    packaging: "Box",
+    noOfPkt: 24,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+  "DAIRY KISS COCONUT": {
+    packaging: "Box",
+    noOfPkt: 24,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+  "DAIRY KISS HAZELNUT": {
+    packaging: "Box",
+    noOfPkt: 24,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+  "DAIRY KISS RED": { packaging: "Box", noOfPkt: 24, noOfUnits: 30, mrp: 150 },
+  "DAIRY KISS WHITE MILK": {
+    packaging: "Box",
+    noOfPkt: 24,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+
+  // ₹2/- PEANUT CHIKKI
+  "OH! WOW BOX": { packaging: "Box", noOfPkt: 12, noOfUnits: 125, mrp: 250 },
+  "OH! WOW CONT": { packaging: "Cont", noOfPkt: 12, noOfUnits: 100, mrp: 200 },
+
+  // ₹2/- PREMIUM CHOCOLATE
+  ENDON: { packaging: "Box", noOfPkt: 12, noOfUnits: 125, mrp: 300 },
+  "ENDON SMALL BOX": { packaging: "Box", noOfPkt: 24, noOfUnits: 60, mrp: 150 },
+  "DÉ GOLD": { packaging: "Box", noOfPkt: 12, noOfUnits: 125, mrp: 300 },
+  "DÉ GOLD SMALL BOX": {
+    packaging: "Box",
+    noOfPkt: 24,
+    noOfUnits: 60,
+    mrp: 150,
+  },
+  "STACY MINI'S BOX": {
+    packaging: "Box",
+    noOfPkt: 12,
+    noOfUnits: 125,
+    mrp: 300,
+  },
+  "STACY MINI'S MATKA JAR": {
+    packaging: "Jar",
+    noOfPkt: 8,
+    noOfUnits: 120,
+    mrp: 300,
+  },
+  "STACY MINI'S SMALL BOX": {
+    packaging: "Box",
+    noOfPkt: 24,
+    noOfUnits: 50,
+    mrp: 125,
+  },
+  "STACY MINI'S CONTAINER": {
+    packaging: "Cont",
+    noOfPkt: 12,
+    noOfUnits: 100,
+    mrp: 200,
+  },
+  BREVO: { packaging: "Box", noOfPkt: 12, noOfUnits: 125, mrp: 300 },
+  "BREVO SMALL BOX": { packaging: "Box", noOfPkt: 24, noOfUnits: 50, mrp: 125 },
+  "BREVO CONTAINER": {
+    packaging: "Cont",
+    noOfPkt: 12,
+    noOfUnits: 100,
+    mrp: 250,
+  },
+  "UNITED JAR": { packaging: "Jar", noOfPkt: 12, noOfUnits: 125, mrp: 250 },
+  "UNITED SMALL BOX": {
+    packaging: "Box",
+    noOfPkt: 24,
+    noOfUnits: 50,
+    mrp: 125,
+  },
+  "DAIRY KISS": { packaging: "Box", noOfPkt: 24, noOfUnits: 80, mrp: 160 },
+  "GOLD BOX": { packaging: "Box", noOfPkt: 24, noOfUnits: 50, mrp: 125 },
+  "GOLD JAR": { packaging: "Jar", noOfPkt: 12, noOfUnits: 125, mrp: 250 },
+  "SAFARI PARK": { packaging: "Cont", noOfPkt: 16, noOfUnits: 100, mrp: 200 },
+
+  // ₹1/- CHOCOLATE
+  "BLISS CHOCO": { packaging: "Box", noOfPkt: 24, noOfUnits: 125, mrp: 125 },
+  "BLISS DARK": { packaging: "Box", noOfPkt: 24, noOfUnits: 125, mrp: 125 },
+  "BLISS STRAWBERRY": {
+    packaging: "Box",
+    noOfPkt: 24,
+    noOfUnits: 125,
+    mrp: 125,
+  },
+
+  // ₹1/- JELLY
+  "JELLOS JAR": { packaging: "Jar", noOfPkt: 16, noOfUnits: 150, mrp: 150 },
+  "JELLOS BOX": { packaging: "Box", noOfPkt: 30, noOfUnits: 80, mrp: 80 },
+
+  // ₹5/- LOLLIPOP
+  "FRUGO POP JAR": { packaging: "Jar", noOfPkt: 12, noOfUnits: 100, mrp: 500 },
+  "FRUGO POP STAND": {
+    packaging: "Stand",
+    noOfPkt: 12,
+    noOfUnits: 60,
+    mrp: 300,
+  },
+  "FRUGO POP POUCH": {
+    packaging: "Pouch",
+    noOfPkt: 18,
+    noOfUnits: 80,
+    mrp: 400,
+  },
+  "FRUDOZA CONT": { packaging: "Cont", noOfPkt: 12, noOfUnits: 60, mrp: 300 },
+
+  // ₹2/- LOLLIPOP
+  "FRUTOS POP JAR": { packaging: "Jar", noOfPkt: 12, noOfUnits: 100, mrp: 200 },
+  "LOLLY CONT": { packaging: "Cont", noOfPkt: 6, noOfUnits: 120, mrp: 240 },
+  "TAMMY POP CONT": { packaging: "Cont", noOfPkt: 6, noOfUnits: 120, mrp: 240 },
+  "LOLLY POUCH": { packaging: "Pouch", noOfPkt: 18, noOfUnits: 100, mrp: 200 },
+  // ₹1/- HEART CENTERFILL CANDY
+  "KISSZONE 50 PCS SMALL": {
+    packaging: "Standy",
+    noOfPkt: 40,
+    noOfUnits: 50,
+    mrp: 50,
+  },
+  "KISSZONE ASSORTED": {
+    packaging: "Pouch",
+    noOfPkt: 20,
+    noOfUnits: 167,
+    mrp: 167,
+  },
+  "KISSZONE DARK": {
+    packaging: "Pouch",
+    noOfPkt: 20,
+    noOfUnits: 167,
+    mrp: 167,
+  },
+  "KISSZONE STRAWBERRY": {
+    packaging: "Pouch",
+    noOfPkt: 20,
+    noOfUnits: 167,
+    mrp: 167,
+  },
+  "BEATING HEART": {
+    packaging: "Pouch",
+    noOfPkt: 20,
+    noOfUnits: 167,
+    mrp: 167,
+  },
+  "PAN MEETHA": { packaging: "Pouch", noOfPkt: 20, noOfUnits: 167, mrp: 167 },
+  TAMBLEY: { packaging: "Pouch", noOfPkt: 20, noOfUnits: 167, mrp: 167 },
+
+  // ₹1/- CENTERFILL CANDY
+  "DOUBLE STRAWBERRY": {
+    packaging: "Pouch",
+    noOfPkt: 20,
+    noOfUnits: 150,
+    mrp: 150,
+  },
+  "DOUBLE COCONUT": {
+    packaging: "Pouch",
+    noOfPkt: 20,
+    noOfUnits: 150,
+    mrp: 150,
+  },
+  "DOUBLE GUAVA": { packaging: "Pouch", noOfPkt: 20, noOfUnits: 150, mrp: 150 },
+  "DOUBLE MANGO": { packaging: "Pouch", noOfPkt: 20, noOfUnits: 150, mrp: 150 },
+  "CHOCO ORANGE": { packaging: "Pouch", noOfPkt: 20, noOfUnits: 150, mrp: 150 },
+  "DOUBLE PAAN": { packaging: "Pouch", noOfPkt: 20, noOfUnits: 150, mrp: 150 },
+  "DOUBLE KACCHA AAM": {
+    packaging: "Pouch",
+    noOfPkt: 20,
+    noOfUnits: 150,
+    mrp: 150,
+  },
+  "CHOCO CRUNCHY": { packaging: "Jar", noOfPkt: 12, noOfUnits: 200, mrp: 200 },
+  "SPICY CRASH AAM": {
+    packaging: "Jar",
+    noOfPkt: 16,
+    noOfUnits: 150,
+    mrp: 150,
+  },
+
+  // ₹0.50/- CANDY
+  "LONDON COW": { packaging: "Pouch", noOfPkt: 40, noOfUnits: 100, mrp: 50 },
+  ORANJA: { packaging: "Pouch", noOfPkt: 40, noOfUnits: 100, mrp: 50 },
+  "KACCHE AAM": { packaging: "Pouch", noOfPkt: 40, noOfUnits: 100, mrp: 50 },
+  FRUITO: { packaging: "Pouch", noOfPkt: 40, noOfUnits: 100, mrp: 50 },
+  GUAVA: { packaging: "Pouch", noOfPkt: 40, noOfUnits: 160, mrp: 80 },
+  ORANGE: { packaging: "Pouch", noOfPkt: 40, noOfUnits: 160, mrp: 80 },
+  MANGO: { packaging: "Pouch", noOfPkt: 40, noOfUnits: 160, mrp: 80 },
+  STRAWBERRY: { packaging: "Pouch", noOfPkt: 40, noOfUnits: 160, mrp: 80 },
+  PINEAPPLE: { packaging: "Pouch", noOfPkt: 40, noOfUnits: 160, mrp: 80 },
+  IMLI: { packaging: "Pouch", noOfPkt: 40, noOfUnits: 160, mrp: 80 },
+  "KACHA AAM": { packaging: "Pouch", noOfPkt: 40, noOfUnits: 160, mrp: 80 },
+
+  // ₹2/- PREMIUM TOFFEE
+  "KESAR & KAJU KULFI": {
+    packaging: "Jar",
+    noOfPkt: 12,
+    noOfUnits: 125,
+    mrp: 250,
+  },
+  "COCONUT KULFI": { packaging: "Jar", noOfPkt: 12, noOfUnits: 125, mrp: 250 },
+  "MALAI KULFI": { packaging: "Jar", noOfPkt: 12, noOfUnits: 125, mrp: 250 },
+  SOFFITI: { packaging: "Jar", noOfPkt: 12, noOfUnits: 125, mrp: 250 },
+  "GOA ALMOND": { packaging: "Jar", noOfPkt: 24, noOfUnits: 50, mrp: 150 },
+  "GOA KAJU": { packaging: "Jar", noOfPkt: 24, noOfUnits: 50, mrp: 150 },
+
+  // ₹2/- ECLAIRS TOFFEE
+  "ECLAIRS DARK POUCH": {
+    packaging: "Standy",
+    noOfPkt: 24,
+    noOfUnits: 100,
+    mrp: 250,
+  },
+  "ECLAIRS MILK POUCH": {
+    packaging: "Standy",
+    noOfPkt: 24,
+    noOfUnits: 100,
+    mrp: 250,
+  },
+  "ECLAIRS HAZELNUT POUCH": {
+    packaging: "Standy",
+    noOfPkt: 24,
+    noOfUnits: 100,
+    mrp: 250,
+  },
+  "ECLAIRS ANJEER POUCH": {
+    packaging: "Standy",
+    noOfPkt: 24,
+    noOfUnits: 100,
+    mrp: 250,
+  },
+  "ECLAIRS COCONUT POUCH": {
+    packaging: "Standy",
+    noOfPkt: 24,
+    noOfUnits: 100,
+    mrp: 250,
+  },
+  "COCOTANA POUCH": {
+    packaging: "Standy",
+    noOfPkt: 24,
+    noOfUnits: 100,
+    mrp: 250,
+  },
+  "SELECTIONS POUCH": {
+    packaging: "Standy",
+    noOfPkt: 24,
+    noOfUnits: 100,
+    mrp: 250,
+  },
+  "ECLAIRS DARK BOX": {
+    packaging: "Box",
+    noOfPkt: 24,
+    noOfUnits: 50,
+    mrp: 125,
+  },
+  "ECLAIRS MILK BOX": {
+    packaging: "Box",
+    noOfPkt: 24,
+    noOfUnits: 50,
+    mrp: 125,
+  },
+  "ECLAIRS HAZELNUT BOX": {
+    packaging: "Box",
+    noOfPkt: 24,
+    noOfUnits: 50,
+    mrp: 125,
+  },
+  "ECLAIRS ANJEER BOX": {
+    packaging: "Box",
+    noOfPkt: 24,
+    noOfUnits: 50,
+    mrp: 125,
+  },
+  "ECLAIRS COCONUT BOX": {
+    packaging: "Box",
+    noOfPkt: 24,
+    noOfUnits: 50,
+    mrp: 125,
+  },
+  "COCOTANA BOX": { packaging: "Box", noOfPkt: 24, noOfUnits: 50, mrp: 125 },
+  "SELECTIONS BOX": { packaging: "Box", noOfPkt: 24, noOfUnits: 50, mrp: 125 },
+
+  // ₹2/- TOFFEE CONTAINER
+  "HONEY CARAMEL": { packaging: "Cont", noOfPkt: 18, noOfUnits: 60, mrp: 150 },
+  "CHOCO ALMOND": { packaging: "Cont", noOfPkt: 18, noOfUnits: 60, mrp: 150 },
+  TREASURE: { packaging: "Cont", noOfPkt: 18, noOfUnits: 60, mrp: 150 },
+  "PISTA HARVEST": { packaging: "Cont", noOfPkt: 18, noOfUnits: 60, mrp: 150 },
+  COCOTANA: { packaging: "Cont", noOfPkt: 18, noOfUnits: 60, mrp: 150 },
+  SELECTIONS: { packaging: "Cont", noOfPkt: 18, noOfUnits: 60, mrp: 150 },
+
+  // ₹1/- TATTOO ECLAIRS TOFFEE
+  "BLUE ÉCLAIR POUCH": {
+    packaging: "Pouch",
+    noOfPkt: 32,
+    noOfUnits: 100,
+    mrp: 100,
+  },
+  "RED ÉCLAIR POUCH": {
+    packaging: "Pouch",
+    noOfPkt: 32,
+    noOfUnits: 100,
+    mrp: 100,
+  },
+  "GOLD ÉCLAIR POUCH": {
+    packaging: "Pouch",
+    noOfPkt: 32,
+    noOfUnits: 100,
+    mrp: 100,
+  },
+  "WHITE ÉCLAIR POUCH": {
+    packaging: "Pouch",
+    noOfPkt: 32,
+    noOfUnits: 100,
+    mrp: 100,
+  },
+  "BLUE ÉCLAIR JAR": {
+    packaging: "Jar",
+    noOfPkt: 12,
+    noOfUnits: 220,
+    mrp: 220,
+  },
+  "RED ÉCLAIR JAR": { packaging: "Jar", noOfPkt: 12, noOfUnits: 220, mrp: 220 },
+  "GOLD ÉCLAIR JAR": {
+    packaging: "Jar",
+    noOfPkt: 12,
+    noOfUnits: 220,
+    mrp: 220,
+  },
+  "WHITE ÉCLAIR JAR": {
+    packaging: "Jar",
+    noOfPkt: 12,
+    noOfUnits: 220,
+    mrp: 220,
+  },
+
+  // ₹1/- TOFFEE JAR
+  "ÉCLAIR GOLD JAR": {
+    packaging: "Jar",
+    noOfPkt: 12,
+    noOfUnits: 200,
+    mrp: 200,
+  },
+  "KAJU BUTTER JAR": {
+    packaging: "Jar",
+    noOfPkt: 12,
+    noOfUnits: 200,
+    mrp: 200,
+  },
+  "PISTA BUTTER JAR": {
+    packaging: "Jar",
+    noOfPkt: 12,
+    noOfUnits: 200,
+    mrp: 200,
+  },
+  "NATURAL JAR": { packaging: "Jar", noOfPkt: 12, noOfUnits: 200, mrp: 200 },
+
+  // ₹1/- TOFFEE BOX (HUT STYLE)
+  "ÉCLAIR GOLD": { packaging: "Box", noOfPkt: 24, noOfUnits: 100, mrp: 100 },
+  ANJEER: { packaging: "Box", noOfPkt: 24, noOfUnits: 100, mrp: 100 },
+  "KAJU BUTTER": { packaging: "Box", noOfPkt: 24, noOfUnits: 100, mrp: 100 },
+  "PISTA BUTTER": { packaging: "Box", noOfPkt: 24, noOfUnits: 100, mrp: 100 },
+  "COCONUT BUTTER": { packaging: "Box", noOfPkt: 24, noOfUnits: 100, mrp: 100 },
+  "ALMOND GOLD": { packaging: "Box", noOfPkt: 24, noOfUnits: 100, mrp: 100 },
+  "RED ÉCLAIR": { packaging: "Box", noOfPkt: 24, noOfUnits: 100, mrp: 100 },
+  "DAIRY WAY": { packaging: "Box", noOfPkt: 24, noOfUnits: 100, mrp: 100 },
+  COCOVILLE: { packaging: "Box", noOfPkt: 24, noOfUnits: 100, mrp: 100 },
+  "KASATA CREAM": { packaging: "Box", noOfPkt: 24, noOfUnits: 100, mrp: 100 },
+  "BUTTER FEAST": { packaging: "Box", noOfPkt: 24, noOfUnits: 100, mrp: 100 },
+  "NATURAL ORGANIC": {
+    packaging: "Box",
+    noOfPkt: 24,
+    noOfUnits: 100,
+    mrp: 100,
+  },
+  "JEWEL DRY FRUIT": {
+    packaging: "Box",
+    noOfPkt: 24,
+    noOfUnits: 100,
+    mrp: 100,
+  },
+  "KESAR CREAM": { packaging: "Box", noOfPkt: 24, noOfUnits: 100, mrp: 100 },
+  "BUTTER SCOTCH": { packaging: "Box", noOfPkt: 24, noOfUnits: 100, mrp: 100 },
+  "SWISS DAIRY": { packaging: "Box", noOfPkt: 24, noOfUnits: 100, mrp: 100 },
+  "PAN TOFFEE": { packaging: "Box", noOfPkt: 24, noOfUnits: 100, mrp: 100 },
+
+  // ₹0.50/- TOFFEE POUCH
+  "COFFEE COMBO": { packaging: "Pouch", noOfPkt: 40, noOfUnits: 100, mrp: 50 },
+  "PURE COCONUT": { packaging: "Pouch", noOfPkt: 40, noOfUnits: 100, mrp: 50 },
+  "HAPPY BIRTHDAY": {
+    packaging: "Pouch",
+    noOfPkt: 40,
+    noOfUnits: 100,
+    mrp: 50,
+  },
+  "KESAR PENDA": { packaging: "Pouch", noOfPkt: 40, noOfUnits: 100, mrp: 50 },
 };
 
 export const productObj: productType = {
@@ -26,30 +581,34 @@ export const productObj: productType = {
       name: "Dairy Kiss Blue ₹10 ",
       url: "/images/chocolatebar/Cocoa Milk Choclate Bar.webp",
       price: 1,
-      desc: descriptionObj["ch1"],
+      desc: descriptionObj["BIG ROLLE CHOC"],
     },
     {
       name: "Dairy Kiss Cocoa ₹5",
       url: "/images/chocolatebar/Dairy Kiss Cocoa.webp",
       price: 5,
       brand: "dairy kiss",
+      desc: descriptionObj["BIG ROLLE CHOC"],
     },
     {
       name: "Dairy Kiss Container",
       url: "/images/centerMissing/Dairy Kiss Container.webp",
       price: 5,
       brand: "dairy kiss",
+      desc: descriptionObj["BIG ROLLE CHOC"],
     },
     {
       name: "Dairy Kiss Strawberry",
       url: "/images/chocolatebar/StrawBerry Bar.webp",
       price: 5,
+      desc: descriptionObj["BIG ROLLE CHOC"],
     },
     {
       name: "Dairy Kiss Black & White ",
       url: "/images/chocolatebar/Black & White Bar.webp",
       price: 5,
       category: "c-1",
+      desc: descriptionObj["BIG ROLLE CHOC"],
     },
     {
       name: "Dairy Kiss Milk ",
@@ -1348,6 +1907,7 @@ export const productObj: productType = {
       price: 2,
       category: "Pouch",
       subCategory: "Cocotana Pouch",
+      desc: descriptionObj["COCOTANA POUCH"],
     },
     {
       name: "Dryfruit Selections Pouch",
@@ -1593,6 +2153,7 @@ export const productObj: productType = {
       price: 2,
       category: "Box",
       subCategory: "Cocotana Box ",
+      desc: descriptionObj["COCOTANA POUCH"],
     },
     {
       name: "Eclairs Milk Jar",

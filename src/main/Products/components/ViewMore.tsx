@@ -54,16 +54,18 @@ export default function ViewMore({ products, onClose }: ViewMoreProps) {
             <div className="flex flex-col justify-center items-center my-5">
               <div className=" bg-white rounded-3xl shadow-md flex gap-5  justify-between p-4 mx-auto">
                 <p>
-                  <strong>Pkg:</strong> {products[0]?.desc?.pkg ?? "Box"}
+                  <strong>Pkg:</strong> {products[0]?.desc?.packaging ?? "Box"}
                 </p>
                 <p>
-                  <strong>Weight:</strong> {products[0]?.desc?.weight ?? "gm"}
+                  <strong>No Of PKT:</strong>{" "}
+                  {products[0]?.desc?.noOfPkt ?? "gm"}
                 </p>
                 <p>
-                  <strong>PCS MRP:</strong> {products[0]?.desc?.mrp ?? "500"}
+                  <strong>No Of Units:</strong>{" "}
+                  {products[0]?.desc?.noOfUnits ?? "500"}
                 </p>
                 <p>
-                  <strong>Masterpack:</strong> {products[0]?.desc?.masterPack ?? "20"}
+                  <strong>MRP:</strong> {products[0]?.desc?.mrp ?? "20"}
                 </p>
               </div>
               <button
