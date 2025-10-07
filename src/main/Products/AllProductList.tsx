@@ -2034,7 +2034,7 @@ export const productObj: productType = {
       subCategory: "Goa Kaju jar",
     },
     {
-      name: "Eclair Almond Jar",
+      name: "Eclairs Almond Jar",
       url: "/images/toffee/Eclairs Almond  Jar.webp",
       price: 1,
       category: "Jar",
@@ -2048,7 +2048,7 @@ export const productObj: productType = {
       subCategory: "Eclair Milk",
     },
     {
-      name: "Eclair Milk",
+      name: "Eclairs Milk",
       url: "/images/toffee/eclair milk 2RS.webp",
       price: 2,
       category: "Pouch",
@@ -2219,7 +2219,7 @@ export const productObj: productType = {
       subCategory: "Coconut Butter Hut Box",
     },
     {
-      name: "Eclair Anjeer Cream",
+      name: "Eclairs Anjeer Cream",
       url: "/images/toffee/eclair anjeer cream 2RS.webp",
       price: 2,
       category: "Pouch",
@@ -2227,7 +2227,7 @@ export const productObj: productType = {
     },
 
     {
-      name: "Eclair Dark Cream",
+      name: "Eclairs Dark Cream",
       url: "/images/toffee/eclair dark cream 2RS.webp",
       price: 2,
       category: "Pouch",
@@ -2242,7 +2242,7 @@ export const productObj: productType = {
       brand: "gold",
     },
     {
-      name: "Eclair Hazelnut Jar",
+      name: "Eclairs Hazelnut Jar",
       url: "/images/toffee/eclair hazelnut jar 1RS.webp",
       price: 1,
       category: "Jar",
@@ -2302,14 +2302,14 @@ export const productObj: productType = {
       subCategory: "Dairy Way Hut Box",
     },
     {
-      name: "Eclair Anjeer Box",
+      name: "Eclairs Anjeer Box",
       url: "/images/toffee/eclair anjeer cream gift box 2RS.webp",
       price: 2,
       category: "Box",
       subCategory: "Eclair Box ",
     },
     {
-      name: "Eclair Dark Box",
+      name: "Eclairs Dark Box",
       url: "/images/toffee/eclair dark cream gift box 2RS.webp",
       price: 2,
       category: "Box",
@@ -2331,7 +2331,7 @@ export const productObj: productType = {
       subCategory: "Dry Fruit Selection Box",
     },
     {
-      name: "Eclair Dark Pouch",
+      name: "Eclairs Dark Pouch",
       url: "/images/toffee/eclair dark pouch 1RS.webp",
       price: 1,
       category: "Pouch",
