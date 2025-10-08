@@ -12,19 +12,18 @@ export type productType = {
       noOfPkt?: string | number; // Allow both string and number
       noOfUnits?: number; // Number of units
       mrp?: number; // MRP
+      netweight?: number; // Number of units
     };
   }[];
 };
 
 const descriptionObj = {
   // ₹5/- WAFER STICKS
+  "DAIRY KISS1": { packaging: "Box", noOfPkt: 24, noOfUnits: 24, mrp: 240 },
+  "BIG WOFFO ROLL": { packaging: "Box", noOfPkt: 12, noOfUnits: 10, mrp: 300 },
   "BIG ROLLE CHOC": { packaging: "Box", noOfPkt: 24, noOfUnits: 30, mrp: 150 },
-  "BIG ROLLE MILK": { packaging: "Box", noOfPkt: 24, noOfUnits: 30, mrp: 150 },
-  "BIG ROLLE DARK": { packaging: "Box", noOfPkt: 24, noOfUnits: 30, mrp: 150 },
   "ROLLE STIX": { packaging: "Jar", noOfPkt: 20, noOfUnits: 32, mrp: 160 },
-  "CHOC STIX": { packaging: "Jar", noOfPkt: 20, noOfUnits: 32, mrp: 160 },
   "3 STIX CHOCO": { packaging: "Box", noOfPkt: 20, noOfUnits: 32, mrp: 160 },
-  "3 STIX MILK": { packaging: "Box", noOfPkt: 20, noOfUnits: 32, mrp: 160 },
 
   // ₹5/- PREMIUM GIFT PACK
   "GLORIOUS HEART": {
@@ -121,7 +120,7 @@ const descriptionObj = {
   "STACY SMALL": { packaging: "Box", noOfPkt: 35, noOfUnits: 20, mrp: 125 },
   "STACY CONT": { packaging: "Cont", noOfPkt: 12, noOfUnits: 70, mrp: 350 },
 
-  "BIG TRUFFLE": { packaging: "Box", noOfPkt: 6, noOfUnits: 0, mrp: 750 },
+  "BIG TRUFFLE": { packaging: "Box", noOfPkt: 6, noOfUnits: 2, mrp: 750 },// 2 kg no number of units 2 kg
   "BIG BOLIVIA": { packaging: "Box", noOfPkt: 6, noOfUnits: 0, mrp: 750 },
   "BIG GLORIOUS": { packaging: "Box", noOfPkt: 6, noOfUnits: 0, mrp: 750 },
   "BIG D'LOVE": { packaging: "Box", noOfPkt: 6, noOfUnits: 0, mrp: 750 },
@@ -161,7 +160,7 @@ const descriptionObj = {
 
   // ₹5/- CHOCOLATE BAR
   "DAIRY KISS BLUE CONT (30 PCS)": {
-    packaging: "Cont",
+    packaging: "Container",
     noOfPkt: 24,
     noOfUnits: 30,
     mrp: 150,
@@ -581,7 +580,7 @@ export const productObj: productType = {
       name: "Dairy Kiss Blue ₹10 ",
       url: "/images/chocolatebar/Cocoa Milk Choclate Bar.webp",
       price: 1,
-      desc: descriptionObj["BIG ROLLE CHOC"],
+      desc: descriptionObj["DAIRY KISS1"],
     },
     {
       name: "Dairy Kiss Cocoa ₹5",
@@ -595,7 +594,7 @@ export const productObj: productType = {
       url: "/images/centerMissing/Dairy Kiss Container.webp",
       price: 5,
       brand: "dairy kiss",
-      desc: descriptionObj["BIG ROLLE CHOC"],
+      desc: descriptionObj["DAIRY KISS BLUE CONT (30 PCS)"],
     },
     {
       name: "Dairy Kiss Strawberry",
@@ -614,44 +613,52 @@ export const productObj: productType = {
       name: "Dairy Kiss Milk ",
       url: "/images/chocolatebar/Milkies Milk Choclate Bar.webp",
       price: 5,
+      desc: descriptionObj["DAIRY KISS BLUE"],
     },
     {
       name: "Dairy Kiss Coconut ",
       url: "/images/chocolatebar/Coconut Bar.webp",
       price: 5,
+      desc: descriptionObj["DAIRY KISS BLUE"],
     },
 
     {
       name: "Dairy Kiss Dark",
       url: "/images/chocolatebar/Dark Milk Choclate Bar.webp",
       price: 5,
+      desc: descriptionObj["DAIRY KISS BLUE"],
     },
     {
       name: "Dairy Kiss Gold",
       url: "/images/chocolatebar/Milk Choclate Bar.webp",
       price: 5,
+      desc: descriptionObj["DAIRY KISS BLUE"],
     },
     {
       name: "Dairy Kiss Hazelnut",
       url: "/images/chocolatebar/HazelNut Bar.webp",
       price: 5,
+      desc: descriptionObj["DAIRY KISS BLUE"],
     },
     {
       name: "Dairy Kiss Blue ₹2",
       url: "/images/centerMissing/Dairy Kiss Milk Cocoa.webp",
-      price: 5,
+      price: 2,
       brand: "dairy kiss",
+      desc: descriptionObj["DAIRY KISS"],
     },
     {
       name: "Dairy Kiss Milkies",
       url: "/images/centerMissing/Dairy Kiss Milk Box.webp",
       price: 5,
       brand: "dairy kiss",
+      desc: descriptionObj["DAIRY KISS BLUE"],
     },
     {
       name: "Safari Park",
       url: "/images/chocolatebar/Safari Park.webp",
       price: 2,
+      desc: descriptionObj["SAFARI PARK"],
     },
   ],
   "centerfilled chocolate": [
@@ -662,6 +669,7 @@ export const productObj: productType = {
       category: "Single Twist",
       subCategory: "Truffles 70 pcs",
       brand: "truffle",
+      desc: descriptionObj["TRUFFLE"],
     },
     {
       name: "Truffle Blueberry 70Pcs",
@@ -678,6 +686,7 @@ export const productObj: productType = {
       category: "Single Twist",
       subCategory: "Truffles 20 pcs",
       brand: "truffle",
+      desc: descriptionObj["TRUFFLE SMALL"],
     },
     {
       name: "Truffle Blueberry",
@@ -694,6 +703,7 @@ export const productObj: productType = {
       category: "Single Twist",
       subCategory: "Truffles 2kg",
       brand: "truffle",
+      desc: descriptionObj["BIG TRUFFLE"],
     },
     {
       name: "Truffle Bueberry",
@@ -718,6 +728,7 @@ export const productObj: productType = {
       category: "Single Twist",
       // subCategory: "Truffles 30 Pcs Container",
       brand: "truffle",
+      desc: descriptionObj["GLORIOUS HEART"],
     },
     {
       name: "Truffle Heart Container",
@@ -726,13 +737,14 @@ export const productObj: productType = {
       category: "Single Twist",
       subCategory: "Truffles 30 Pcs Container",
       brand: "truffle",
+      desc: descriptionObj["GLORIOUS HEART"],
     },
-    {
-      name: "Truffle Milk 70 Pcs",
-      url: "/images/centerfilledchocolate/TRUFFLE MILK 70 PCS 5RS.webp",
-      price: 5,
-      brand: "truffle",
-    },
+    // {
+    //   name: "Truffle Milk 70 Pcs",
+    //   url: "/images/centerfilledchocolate/TRUFFLE MILK 70 PCS 5RS.webp",
+    //   price: 5,
+    //   brand: "truffle",
+    // },
     {
       name: "Truffle Pistachio 70 Pcs",
       url: "/images/centerfilledchocolate/TRUFFLE PISTACHIO 70 PCS 5RS.webp",
@@ -969,6 +981,7 @@ export const productObj: productType = {
       price: 5,
       category: "Pillow Pack",
       subCategory: "Delight 70pcs Box",
+      desc: descriptionObj["TRUFFLE"],
     },
 
     {
@@ -977,6 +990,7 @@ export const productObj: productType = {
       price: 5,
       category: "Pillow Pack",
       subCategory: "Delight 70pcs Box",
+      desc: descriptionObj["TRUFFLE"],
     },
 
     {
@@ -985,6 +999,7 @@ export const productObj: productType = {
       price: 5,
       category: "Pillow Pack",
       subCategory: "Delight 70pcs Box",
+      desc: descriptionObj["TRUFFLE"],
     },
     {
       name: "Delight Cashewnut 70pcs Box",
@@ -992,6 +1007,7 @@ export const productObj: productType = {
       price: 5,
       category: "Pillow Pack",
       subCategory: "Delight 70pcs Box",
+      desc: descriptionObj["TRUFFLE"],
     },
     {
       name: "Delight Mango 70pcs Box",
@@ -999,6 +1015,7 @@ export const productObj: productType = {
       price: 5,
       category: "Pillow Pack",
       subCategory: "Delight 70pcs Box",
+      desc: descriptionObj["TRUFFLE"],
     },
 
     {
@@ -1044,6 +1061,7 @@ export const productObj: productType = {
       category: "Pillow Pack",
       subCategory: "Cocos 70pcs Box",
       brand: "cocos",
+      desc: descriptionObj["TRUFFLE"],
     },
 
     {
@@ -1098,6 +1116,7 @@ export const productObj: productType = {
       url: "/images/centerfilledchocolate/EMPORIO 70PCS BOX 5RS.webp",
       price: 5,
       brand: "Emporio",
+      desc: descriptionObj["TRUFFLE"],
     },
     {
       name: "Emporio Pouch",
@@ -1165,6 +1184,7 @@ export const productObj: productType = {
       price: 5,
       category: "Single Twist",
       subCategory: "Glorious 70 pcs",
+      desc: descriptionObj["TRUFFLE"],
     },
     {
       name: "Glorious Chocolate",
@@ -1172,6 +1192,7 @@ export const productObj: productType = {
       price: 5,
       category: "Single Twist",
       subCategory: "Glorious 70 pcs",
+      desc: descriptionObj["TRUFFLE"],
     },
     {
       name: "Glorious Gift Box",
@@ -1328,6 +1349,7 @@ export const productObj: productType = {
       name: "Stacy Gift Container",
       url: "/images/centerfilledchocolate/STACY GIFT CONTAINER  5RS.webp",
       price: 5,
+      desc: descriptionObj["GLORIOUS HEART"],
     },
 
     {
@@ -1829,18 +1851,21 @@ export const productObj: productType = {
       url: "/images/wafffer rolls/3 stix chocofills.webp",
       price: 5,
       brand: "3 stix",
+      desc: descriptionObj["3 STIX CHOCO"],
     },
     {
       name: "3 Stix Milk Fills",
       url: "/images/wafffer rolls/3stix milk fills.webp",
       price: 5,
       brand: "3 stix",
+      desc: descriptionObj["3 STIX CHOCO"],
     },
     {
       name: "3 Stix Kraks",
       url: "/images/wafffer rolls/3 stix kraks.webp",
       price: 5,
       brand: "3 stix",
+      desc: descriptionObj["3 STIX CHOCO"],
     },
 
     {
@@ -1848,24 +1873,28 @@ export const productObj: productType = {
       url: "/images/wafffer rolls/big roll chocolate.webp",
       price: 5,
       brand: "big rolle",
+      desc: descriptionObj["BIG ROLLE CHOC"],
     },
     {
       name: "Big Rolle Dark",
       url: "/images/wafffer rolls/big roll dark.webp",
       price: 5,
       brand: "big rolle",
+      desc: descriptionObj["BIG ROLLE CHOC"],
     },
     {
       name: "Big Rolle Milk",
       url: "/images/wafffer rolls/big roll milk.webp",
       price: 5,
       brand: "big rolle",
+      desc: descriptionObj["BIG ROLLE CHOC"],
     },
     {
       name: "Choc Stix Jar",
       url: "/images/wafffer rolls/choco stix.webp",
       price: 5,
       brand: "3 stix",
+      desc: descriptionObj["ROLLE STIX"],
     },
 
     {
@@ -1873,24 +1902,28 @@ export const productObj: productType = {
       url: "/images/wafffer rolls/rolle stix.webp",
       price: 5,
       brand: "3 stix",
+      desc: descriptionObj["ROLLE STIX"],
     },
     {
       name: "Dark Stix Jar",
       url: "/images/wafffer rolls/dark stix.webp",
       price: 5,
       brand: "3 stix",
+      desc: descriptionObj["ROLLE STIX"],
     },
     {
       name: "Krack Stix Jar",
       url: "/images/wafffer rolls/krack stix.webp",
       price: 5,
       brand: "3 stix",
+      desc: descriptionObj["ROLLE STIX"],
     },
 
     {
       name: "Waffo Roll",
       url: "/images/wafffer rolls/wafeer roll.webp",
       price: 5,
+      desc: descriptionObj["BIG WOFFO ROLL"],
     },
   ],
   toffee: [
