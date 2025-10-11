@@ -241,7 +241,7 @@ const TimelineBlock = ({
           }}
           viewport={{
             once: true,
-            amount: "all",
+            amount: 0.5,
           }}
           transition={{
             duration: 0.4,
