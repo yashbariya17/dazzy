@@ -120,11 +120,11 @@ const descriptionObj = {
   "STACY SMALL": { packaging: "Box", noOfPkt: 35, noOfUnits: 20, mrp: 125 },
   "STACY CONT": { packaging: "Cont", noOfPkt: 12, noOfUnits: 70, mrp: 350 },
 
-  "BIG TRUFFLE": { packaging: "Box", noOfPkt: 6, noOfUnits: 2, mrp: 750 },// 2 kg no number of units 2 kg
-  "BIG BOLIVIA": { packaging: "Box", noOfPkt: 6, noOfUnits: 0, mrp: 750 },
-  "BIG GLORIOUS": { packaging: "Box", noOfPkt: 6, noOfUnits: 0, mrp: 750 },
-  "BIG D'LOVE": { packaging: "Box", noOfPkt: 6, noOfUnits: 0, mrp: 750 },
-  "BIG DELITE": { packaging: "Box", noOfPkt: 6, noOfUnits: 0, mrp: 750 },
+  "BIG TRUFFLE": { packaging: "Box", noOfPkt: 6 },// 2 kg no number of units 2 kg
+  "BIG BOLIVIA": { packaging: "Box", noOfPkt: 6 },
+  "BIG GLORIOUS": { packaging: "Box", noOfPkt: 6 },
+  "BIG D'LOVE": { packaging: "Box", noOfPkt: 6 },
+  "BIG DELITE": { packaging: "Box", noOfPkt: 6 },
 
   "KING KONG": { packaging: "Box", noOfPkt: 20, noOfUnits: 40, mrp: 200 },
   "DR. TEDDY": { packaging: "Box", noOfPkt: 20, noOfUnits: 40, mrp: 200 },
@@ -663,21 +663,22 @@ export const productObj: productType = {
   ],
   "centerfilled chocolate": [
     {
-      name: "Truffles Milk 70Pcs",
+      name: "Truffles Milk 70 Pcs",
       url: "/images/centerfilledchocolate/TRUFFLE MILK 70 PCS 5RS.webp",
       price: 5,
       category: "Single Twist",
       subCategory: "Truffles 70 pcs",
       brand: "truffle",
-      desc: descriptionObj["TRUFFLE"],
+      desc: descriptionObj["BIG TRUFFLE"],
     },
     {
-      name: "Truffle Blueberry 70Pcs",
+      name: "Truffle Blueberry 70 Pcs",
       url: "/images/centerfilledchocolate/TRUFFLE BLUBERRY 70 PCS 5RS.webp",
       price: 5,
       category: "Single Twist",
       subCategory: "Truffles 70 pcs",
       brand: "truffle",
+      desc: descriptionObj["BIG TRUFFLE"],
     },
     {
       name: "Truffles Milk Gift Box",
@@ -706,7 +707,7 @@ export const productObj: productType = {
       desc: descriptionObj["BIG TRUFFLE"],
     },
     {
-      name: "Truffle Bueberry",
+      name: "Truffle Bueberry Big",
       url: "/images/centerfilledchocolate/TRUFFLE BUEBERRY 150 PCS 5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -754,7 +755,7 @@ export const productObj: productType = {
       brand: "truffle",
     },
     {
-      name: "Truffle Pistachio 150 Pcs",
+      name: "Truffle Pistachio Big",
       url: "/images/centerfilledchocolate/TRUFFLE PISTACHIO 150 PCS 5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -770,7 +771,7 @@ export const productObj: productType = {
       brand: "truffle",
     },
     {
-      name: "Truffle Rajbhog",
+      name: "Truffle Rajbhog Big",
       url: "/images/centerfilledchocolate/TRUFFLE RAJBHOG 150 PCS 5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -794,7 +795,7 @@ export const productObj: productType = {
       brand: "truffle",
     },
     {
-      name: "Truffle Strawberry",
+      name: "Truffle Strawberry Big",
       url: "/images/centerfilledchocolate/TRUFFLE STRAWBERRY 150 PCS 5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -1179,7 +1180,7 @@ export const productObj: productType = {
       brand: "endon",
     },
     {
-      name: "Glorious Pistachio 70Pcs",
+      name: "Glorious Pistachio 70 Pcs",
       url: "/images/centerfilledchocolate/GLORIOUS PISTACHIO5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -1187,7 +1188,7 @@ export const productObj: productType = {
       desc: descriptionObj["TRUFFLE"],
     },
     {
-      name: "Glorious Chocolate",
+      name: "Glorious Chocolate 70 Pcs",
       url: "/images/centerfilledchocolate/GLORIOUS CHOCOLATE 5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -1265,14 +1266,14 @@ export const productObj: productType = {
       subCategory: "Glorious 30Pcs Container",
     },
     {
-      name: "Glorious Milk",
+      name: "Glorious Milk 70 Pcs",
       url: "/images/centerfilledchocolate/GLORIOUS MILK 5RS.webp",
       price: 5,
       category: "Single Twist",
       subCategory: "Glorious 70 pcs",
     },
     {
-      name: "Glorious Raajbhog",
+      name: "Glorious Raajbhog 70 Pcs",
       url: "/images/centerfilledchocolate/GLORIOUS RAAJBHOG 5RS.webp",
       price: 5,
       category: "Single Twist",
@@ -1983,6 +1984,7 @@ export const productObj: productType = {
       price: 1,
       category: "Jar",
       subCategory: "Natural Jar",
+      desc: descriptionObj["ÉCLAIR GOLD JAR"],
     },
     {
       name: "Eclairs Gold Jar",
@@ -1991,6 +1993,8 @@ export const productObj: productType = {
       category: "Jar",
       subCategory: "Eclair Gold Jar",
       brand: "gold",
+      desc: descriptionObj["ÉCLAIR GOLD JAR"],
+
     },
     {
       name: "Kaju Butter Jar",
@@ -1998,6 +2002,7 @@ export const productObj: productType = {
       price: 1,
       category: "Jar",
       subCategory: "Kaju Butter Jar",
+      desc: descriptionObj["ÉCLAIR GOLD JAR"],
     },
     {
       name: "Pista Butter Jar",
@@ -2005,6 +2010,7 @@ export const productObj: productType = {
       price: 1,
       category: "Jar",
       subCategory: "Pista Butter Jar",
+      desc: descriptionObj["ÉCLAIR GOLD JAR"],
     },
 
     {
@@ -2013,6 +2019,7 @@ export const productObj: productType = {
       price: 1,
       category: "Pouch",
       subCategory: "Kaju Butter Pouch",
+      desc: descriptionObj["BLUE ÉCLAIR POUCH"],
     },
 
     {
@@ -2021,6 +2028,7 @@ export const productObj: productType = {
       price: 1,
       category: "Pouch",
       subCategory: "Natural Pouch",
+      desc: descriptionObj["BLUE ÉCLAIR POUCH"],
     },
 
     {
@@ -2029,6 +2037,7 @@ export const productObj: productType = {
       price: 1,
       category: "Box",
       subCategory: "Swiss Dairy Hut Box",
+      desc: descriptionObj["ÉCLAIR GOLD"],
     },
     {
       name: "Almond Hut Box",
@@ -2036,6 +2045,7 @@ export const productObj: productType = {
       price: 1,
       category: "Box",
       subCategory: "Almond Hut Box ",
+      desc: descriptionObj["ÉCLAIR GOLD"],
     },
     {
       name: "Butterscotch Hut Box",
@@ -2043,6 +2053,7 @@ export const productObj: productType = {
       price: 1,
       category: "Box",
       subCategory: "Butterscotch Hut Box",
+      desc: descriptionObj["ÉCLAIR GOLD"],
     },
     {
       name: "Cocoville Hut Box",
@@ -2050,6 +2061,7 @@ export const productObj: productType = {
       price: 1,
       category: "Box",
       subCategory: "Cocolille Hut Box",
+      desc: descriptionObj["ÉCLAIR GOLD"],
     },
 
     {
@@ -2058,6 +2070,7 @@ export const productObj: productType = {
       price: 1,
       category: "Jar",
       subCategory: "Eclair 1rs Jar",
+      desc: descriptionObj["BLUE ÉCLAIR JAR"],
     },
     {
       name: "Goa Kaju Jar",
@@ -2072,6 +2085,7 @@ export const productObj: productType = {
       price: 1,
       category: "Jar",
       subCategory: "Eclair 1rs Jar",
+      desc: descriptionObj["ÉCLAIR GOLD JAR"],
     },
     {
       name: "Eclairs Hazelnut",
@@ -2094,6 +2108,7 @@ export const productObj: productType = {
       category: "Pouch",
       subCategory: "Eclairs Gold Pouch",
       brand: "gold",
+      desc: descriptionObj["BLUE ÉCLAIR POUCH"],
     },
     {
       name: "Goa Almond Jar",
@@ -2108,6 +2123,7 @@ export const productObj: productType = {
       price: 1,
       category: "Pouch",
       subCategory: "Jewels Pouch",
+      desc: descriptionObj["BLUE ÉCLAIR POUCH"],
     },
     {
       name: "Kaju Butter Hut Box",
@@ -2115,6 +2131,7 @@ export const productObj: productType = {
       price: 1,
       category: "Box",
       subCategory: "Kaju Butter Hut Box",
+      desc: descriptionObj["ÉCLAIR GOLD"],
     },
 
     {
@@ -2123,6 +2140,7 @@ export const productObj: productType = {
       price: 1,
       category: "Box",
       subCategory: "Natural Hut Box",
+      desc: descriptionObj["ÉCLAIR GOLD"],
     },
     {
       name: "Pista Butter Pouch",
@@ -2130,6 +2148,7 @@ export const productObj: productType = {
       price: 1,
       category: "Pouch",
       subCategory: "Pista Butter Pouch",
+      desc: descriptionObj["BLUE ÉCLAIR POUCH"],
     },
     {
       name: "Swiss Dairy Pouch",
@@ -2144,6 +2163,8 @@ export const productObj: productType = {
       price: 1,
       category: "Box",
       subCategory: "Anjeer Hut Box",
+      desc: descriptionObj["ÉCLAIR GOLD"],
+
     },
     {
       name: "Butterscotch Pouch",
@@ -2194,6 +2215,7 @@ export const productObj: productType = {
       price: 1,
       category: "Jar",
       subCategory: "Eclair 1rs Jar",
+      desc: descriptionObj["BLUE ÉCLAIR POUCH"],
     },
     {
       name: "Jewels Hut Box",
@@ -2201,6 +2223,7 @@ export const productObj: productType = {
       price: 1,
       category: "Box",
       subCategory: "Jewels Hut Box",
+      desc: descriptionObj["ÉCLAIR GOLD"],
     },
     {
       name: "Kasata Creme Hut Box",
@@ -2208,6 +2231,7 @@ export const productObj: productType = {
       price: 1,
       category: "Box",
       subCategory: "Kasata Creme Hut Box",
+      desc: descriptionObj["ÉCLAIR GOLD"],
     },
     {
       name: "Pan Bites Hut Box",
@@ -2215,6 +2239,7 @@ export const productObj: productType = {
       price: 1,
       category: "Box",
       subCategory: "Pan Bites Hut Box",
+      desc: descriptionObj["ÉCLAIR GOLD"],
     },
     {
       name: "Pista Harvest Container",
@@ -2250,6 +2275,7 @@ export const productObj: productType = {
       price: 1,
       category: "Box",
       subCategory: "Coconut Butter Hut Box",
+      desc: descriptionObj["ÉCLAIR GOLD"],
     },
     {
       name: "Eclairs Anjeer Cream",
@@ -2273,6 +2299,8 @@ export const productObj: productType = {
       category: "Box",
       subCategory: "Eclair Gold Box",
       brand: "gold",
+      desc: descriptionObj["ÉCLAIR GOLD"],
+
     },
     {
       name: "Eclairs Hazelnut Jar",
@@ -2288,6 +2316,7 @@ export const productObj: productType = {
       price: 1,
       category: "Pouch",
       subCategory: "Eclairs Pouch",
+      desc: descriptionObj["BLUE ÉCLAIR POUCH"],
     },
 
     {
@@ -2296,6 +2325,7 @@ export const productObj: productType = {
       price: 1,
       category: "Box",
       subCategory: "Kesar Cream Hut Box",
+      desc: descriptionObj["ÉCLAIR GOLD"],
     },
 
     {
@@ -2304,6 +2334,7 @@ export const productObj: productType = {
       price: 1,
       category: "Box",
       subCategory: "Pista Butter Hut Box",
+      desc: descriptionObj["ÉCLAIR GOLD"],
     },
     {
       name: "Almond Gold Pouch",
@@ -2312,6 +2343,7 @@ export const productObj: productType = {
       category: "Pouch",
       subCategory: "Almond Gold Pouch",
       brand: "gold",
+      desc: descriptionObj["BLUE ÉCLAIR POUCH"],
     },
     {
       name: "Butter Feast Hut Box",
@@ -2319,6 +2351,7 @@ export const productObj: productType = {
       price: 1,
       category: "Box",
       subCategory: "Butter Feast Hut Box",
+      desc: descriptionObj["ÉCLAIR GOLD"],
     },
     {
       name: "Choco Almonds Grand Container",
@@ -2333,6 +2366,8 @@ export const productObj: productType = {
       price: 1,
       category: "Box",
       subCategory: "Dairy Way Hut Box",
+      desc: descriptionObj["ÉCLAIR GOLD"],
+
     },
     {
       name: "Eclairs Anjeer Box",
@@ -2355,6 +2390,7 @@ export const productObj: productType = {
       price: 1,
       category: "Box",
       subCategory: "Eclairs Hut Box",
+      desc: descriptionObj["ÉCLAIR GOLD"],
     },
     {
       name: "Dryfruit Selections",
@@ -2369,6 +2405,7 @@ export const productObj: productType = {
       price: 1,
       category: "Pouch",
       subCategory: "Eclair Dark Pouch",
+      desc: descriptionObj["BLUE ÉCLAIR POUCH"],
     },
     {
       name: "Eclairs Almond Pouch",
@@ -2376,6 +2413,7 @@ export const productObj: productType = {
       price: 1,
       category: "Pouch",
       subCategory: "Eclair Dark Pouch",
+      desc: descriptionObj["BLUE ÉCLAIR POUCH"],
     },
     {
       name: "Eclairs Hazelnut Pouch",
@@ -2383,6 +2421,7 @@ export const productObj: productType = {
       price: 1,
       category: "Pouch",
       subCategory: "Eclair Dark Pouch",
+      desc: descriptionObj["BLUE ÉCLAIR POUCH"],
     },
     {
       name: "Eclairs Milk Pouch",
@@ -2390,6 +2429,7 @@ export const productObj: productType = {
       price: 1,
       category: "Pouch",
       subCategory: "Eclair Dark Pouch",
+      desc: descriptionObj["BLUE ÉCLAIR POUCH"],
     },
   ],
   jelly: [

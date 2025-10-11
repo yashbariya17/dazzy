@@ -58,15 +58,22 @@ export default function ViewMore({ products, onClose }: ViewMoreProps) {
                 </p>
                 <p>
                   <strong>No Of PKT:</strong>{" "}
-                  {products[0]?.desc?.noOfPkt ?? "gm"}
+                  {products[0]?.desc?.noOfPkt + ""}
                 </p>
-                <p>
+                {
+                  products[0]?.desc?.noOfUnits && (
+                    
+                    <p>
                   <strong>No Of Units:</strong>{" "}
                   {products[0]?.desc?.noOfUnits ?? "500"}
                 </p>
-                <p>
+                )}
+                {products[0]?.desc?.mrp && (
+
+                  <p>
                   <strong>MRP:</strong> {products[0]?.desc?.mrp ?? "20"}
                 </p>
+                )}
               </div>
               <button
                 className="bg-[#eb0029] text-white font-semibold py-2 px-3 rounded-full hover:bg-red-700 transition-transform duration-200 active:scale-95 mt-4"
