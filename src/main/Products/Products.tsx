@@ -22,7 +22,7 @@ const category = {
     "Single Twist",
     "Double Twist",
     "Pillow Pack",
-    "Bunch Rape",
+    "Bunch Wrap",
   ],
   "decorative chocolate": [],
   "Crunchy chocolate": [],
