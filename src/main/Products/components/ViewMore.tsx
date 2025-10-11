@@ -7,7 +7,7 @@ type SingleProduct = productType[string][number];
 interface ViewMoreProps {
   products: SingleProduct[];
   onClose: () => void;
-}
+}   
 
 export default function ViewMore({ products, onClose }: ViewMoreProps) {
   const navigate = useNavigate();
@@ -38,12 +38,12 @@ export default function ViewMore({ products, onClose }: ViewMoreProps) {
               {products.map((i, index) => (
                 <motion.div
                   key={i.url + i.name + index}
-                  className="w-[160px]  sm:w-[200px]  h-[300px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center  p-4"
+                  className={`  sm:w-[200px]   bg-gray-100 rounded-3xl shadow-md flex flex-col items-center  p-4 ${products?.length==1 ?"max-h-[70vh] h-[400px] !w-[350px]" :"w-[160px] h-[300px]"}`}
                 >
                   <motion.img
                     layoutId={i.url + i.name}
                     src={i.url}
-                    className=" h-[200px] object-contain mt-4"
+                    className={` object-contain mt-4 ${products?.length==1?"h-[80%] ":""}`}
                   />
                   <p className="text-center text-sm sm:text-base font-semibold mt-2">
                     {i.name}

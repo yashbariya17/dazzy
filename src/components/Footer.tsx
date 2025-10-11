@@ -42,11 +42,11 @@ const Footer = () => {
             alt="Dazzy Products Logo"
             className="h-12 mb-4"
           />
-          <h3 className="text-lg font-semibold">DAZZY PRODUCTS PVT. LTD.</h3>
-          <p className="text-sm mt-2 leading-relaxed">
+          <h3 className="text-lg font-semibold">DAZZY FOOD INDUSTRIES</h3>
+           <p className="text-sm mt-2 leading-relaxed">
             <i className="fa fa-location-dot mr-2"></i>
-            E-74, Manjusar GIDC, Savli, Vadodara
-            <br />- 391775, Gujarat - INDIA
+            Plot No. 515, Sayaji Market, Sayajipura, Vadodara
+            <br />- 390019, Gujarat - INDIA
           </p>
         </div>
         <div className="hidden md:block h-[200px] border-1 border-amber-800 mx-4" />
