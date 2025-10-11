@@ -139,6 +139,8 @@ const ByBrands = () => {
               </div>
             ))}
           </div>
+          <div className="block md:hidden">
+
            <Menu 
            overflow="auto"
            position="anchor"
@@ -214,6 +216,8 @@ const ByBrands = () => {
               </MenuItem>
             ))}
                     </Menu>
+          </div>
+
           </>
 
         )}
