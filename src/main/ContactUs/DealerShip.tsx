@@ -19,7 +19,7 @@ const DealerShip = () => {
 
         {/* Title */}
         <h2 className="relative text-white text-2xl font-semibold z-10">
-          DealerShip
+          Dealership
         </h2>
       </section>
       <div className="max-w-4xl mx-auto text-center p-4 text-sm text-gray-700 mb-8">
@@ -31,7 +31,7 @@ const DealerShip = () => {
       </div>
 
       {/* Map + About Dazzy */}
-      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
         {/* India Map */}
         <div className="flex justify-center">
           <img
@@ -42,45 +42,7 @@ const DealerShip = () => {
         </div>
 
         {/* About Dazzy Card */}
-        <div className="bg-red-600 rounded-[50px] h-[450px] lg:h-[300px] w-auto md:w-[500px] flex flex-col gap-3 justify-center ml-5 mr-5 lg:ml-0  lg:mr-20 mt-auto mb-auto">
-          <h2 className="text-white lg:text-4xl font-semibold text-center">
-            ABOUT DAZZY
-          </h2>
-          <div className="flex flex-col md:flex-row gap-5 justify-center text-center mt-5 items-center">
-            <div className="text-white font-bold lg:text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-              <AnimatedNumber value={50} /> +{" "}
-              <p className="text-white text-xs font-dark">Brands</p>
-            </div>
-            <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-              <AnimatedNumber value={300} />+{" "}
-              <p className="text-white text-xs font-dark">SKU</p>
-            </div>
-            <div className="text-white font-bold text-2xl bg-black rounded-2xl h-[80px] w-[100px] pt-2.5">
-              <AnimatedNumber value={100} />+{" "}
-              <p className="text-white text-xs font-dark">Team</p>
-            </div>
-          </div>
-          <p
-            className="text-center mt-2 font-bold text-white text-2xl px-4 py-2 rounded-lg bg-gradient-to-r from-red-500 via-red-600 to-red-700 shadow-lg"
-            style={{ wordSpacing: "2px" }}
-          >
-            <motion.span
-              animate={{ scale: [1, 1.2, 1] }} // zoom in and out
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="inline-block"
-            >
-              Pan India Presence
-            </motion.span>
-          </p>
-        </div>
-      </div>
-
-      {/* Form Section */}
-      <div className="bg-[#240404] px-6 py-12">
+        <div className="bg-[#240404] px-6 py-12 rounded-2xl">
         <div className="max-w-4xl mx-auto grid gap-6 text-white">
           <div className="grid md:grid-cols-2 gap-6">
             <div>
@@ -158,6 +120,10 @@ const DealerShip = () => {
           </button>
         </div>
       </div>
+      </div>
+
+      {/* Form Section */}
+      
     </main>
   );
 };

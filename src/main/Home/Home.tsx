@@ -468,7 +468,7 @@ const Home = () => {
                   </div>
                 </div>
                 <p
-                  className="text-center mt-2 text-white font-bold text-lg"
+                  className="text-center mt-2 text-white font-bold text-lg uppercase"
                   style={{
                     wordSpacing: "2px",
                     textShadow: "0px 2px 4px rgba(0,0,0,0.4)",
