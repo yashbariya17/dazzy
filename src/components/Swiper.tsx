@@ -11,9 +11,11 @@ import { Navigation, Pagination } from "swiper/modules";
 const VideoSlider: React.FC = () => {
   const swiperRef = useRef<any>(null);
   const [loading, setLoading] = useState(true);
-  const handleVideoEnd = () => {
+  const handleVideoEnd = (e:any) => {
+
     if (swiperRef.current) {
-      swiperRef.current.slideNext(); // go to next slide when video ends
+      swiperRef.current.slideNext(); 
+      e.currentTarget.play()
     }
   };
 
@@ -42,7 +44,6 @@ const VideoSlider: React.FC = () => {
             muted
             className="h-auto w-full !object-cover as"
             onEnded={handleVideoEnd}
-            loop
             onLoadedData={() => setLoading(false)}
             controls={false}
             playsInline
@@ -56,7 +57,6 @@ const VideoSlider: React.FC = () => {
             muted
             className="h-auto w-full object-cover"
             onEnded={handleVideoEnd}
-            loop
             controls={false}
             playsInline
           />
@@ -69,7 +69,6 @@ const VideoSlider: React.FC = () => {
             muted
             className="h-auto w-full object-cover"
             onEnded={handleVideoEnd}
-            loop
             controls={false}
             playsInline
           />
@@ -82,7 +81,6 @@ const VideoSlider: React.FC = () => {
             muted
             className="h-auto w-full object-cover"
             onEnded={handleVideoEnd}
-            loop
             controls={false}
             playsInline
           />
@@ -94,7 +92,6 @@ const VideoSlider: React.FC = () => {
             muted
             className="h-auto w-full object-cover"
             onEnded={handleVideoEnd}
-            loop
             controls={false}
             playsInline
           />
@@ -106,7 +103,6 @@ const VideoSlider: React.FC = () => {
             muted
             className="h-auto w-full object-cover"
             onEnded={handleVideoEnd}
-            loop
             controls={false}
             playsInline
           />
@@ -118,7 +114,6 @@ const VideoSlider: React.FC = () => {
             muted
             className="h-auto w-full object-cover"
             onEnded={handleVideoEnd}
-            loop
             controls={false}
             playsInline
           />
