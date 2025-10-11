@@ -180,7 +180,7 @@ const Products = () => {
                {ProductsList.map((i, index) => (
                 <MenuItem
                   key={index}
-                  className="bg-white w-[270px] rounded-full shadow-2xl py-2 group"
+                  className="bg-white w-[270px] rounded-fullpy-2 group"
                 >
                   <p
                     className={`uppercase text-[15px] hover:text-[#eb0029] w-full pl-6 pr-5 cursor-pointer transition-colors duration-300 flex justify-between ${
