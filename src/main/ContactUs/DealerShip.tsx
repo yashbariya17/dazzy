@@ -1,5 +1,3 @@
-import AnimatedNumber from "../../components/AnimatedNumber";
-import { motion } from "framer-motion";
 
 const DealerShip = () => {
   return (
