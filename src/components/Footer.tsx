@@ -8,7 +8,7 @@ const Footer = () => {
             alt="Dazzy Logo"
             className="h-12 mb-4"
           />
-          <h3 className="text-lg font-semibold">DAZZY FOOD PRIVATE LIMITED</h3>
+          <h3 className="text-lg font-semibold">DAZZY FOOD PVT.LTD.</h3>
           <p className="text-sm mt-2 leading-relaxed">
             <i className="fa fa-location-dot mr-2"></i>
             16, Shah Industrial Park 3, Kotambi,

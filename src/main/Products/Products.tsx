@@ -122,8 +122,8 @@ const Products = () => {
           </p>
 
           <div className="grid md:hidden grid-cols-2 border border-solid border-black border-x-0  mt-5">
-            <Menu
-              viewScroll="close"
+            <Menu 
+               viewScroll="close"
               gap={12}
               menuButton={
                 <MenuButton>
@@ -210,6 +210,7 @@ const Products = () => {
             </Menu>
             <Menu
               viewScroll="close"
+              gap={12}
               menuButton={
                 <MenuButton>
                   {" "}
@@ -224,8 +225,10 @@ const Products = () => {
               {priceOptions?.map((i) => (
                 <MenuItem
                   key={i}
+
                   onClick={() => setPrice(Number(i))}
-                  className={`capitalize  ${
+                  className={`capitalize
+                     ${
                       price ==i ? "text-[#eb0029]" : "text-black"
                     }`}
                 >

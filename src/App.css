@@ -27,7 +27,7 @@
   animation: float 3s ease-in-out infinite;
 }
 .szh-menu {
-  width: 100vh !important;
+  width: 100vw !important;
 } 
 
 @keyframes float {
