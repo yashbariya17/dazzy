@@ -3,6 +3,9 @@ import productObj from "./AllProductList";
 import { useLocation, useNavigate } from "react-router";
 import { useEffect, useState, useMemo } from "react";
 import ViewMore from "./components/ViewMore";
+import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
+import "@szhsin/react-menu/dist/index.css";
+import "@szhsin/react-menu/dist/transitions/zoom.css";
 
 const brandArr = [
   "endon",
@@ -112,7 +115,8 @@ const ByBrands = () => {
         } gap-12 px-6 mx-auto pt-10 pb-10`}
       >
         {selectedBrand && (
-          <div className="space-y-3 mx-auto">
+          <>
+          <div className=" hidden md:block space-y-3 mx-auto">
             <h2 className="font-semibold text-xl pb-4">
               Filter by Brands
               <span className="block w-[20%] h-1 bg-[#eb0029] rounded-full mt-1"></span>
@@ -135,7 +139,90 @@ const ByBrands = () => {
               </div>
             ))}
           </div>
+          <div className="block md:hidden">
+
+           <Menu 
+           overflow="auto"
+           position="anchor"
+                       viewScroll="close"
+                      gap={12}
+                      menuButton={
+                        <MenuButton>
+                          <div className=" flex gap-2 justify-center items-center border p-4 rounded-2xl border-solid border-black">
+                            <svg viewBox="0 0 24 24" fill="none" height={25}>
+                              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                              <g
+                                id="SVGRepo_tracerCarrier"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              ></g>
+                              <g id="SVGRepo_iconCarrier">
+                                {" "}
+                                <path
+                                  d="M5 10H7C9 10 10 9 10 7V5C10 3 9 2 7 2H5C3 2 2 3 2 5V7C2 9 3 10 5 10Z"
+                                  stroke="#292D32"
+                                  strokeWidth="1.5"
+                                  strokeMiterlimit="10"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                ></path>{" "}
+                                <path
+                                  d="M17 10H19C21 10 22 9 22 7V5C22 3 21 2 19 2H17C15 2 14 3 14 5V7C14 9 15 10 17 10Z"
+                                  stroke="#292D32"
+                                  strokeWidth="1.5"
+                                  strokeMiterlimit="10"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                ></path>{" "}
+                                <path
+                                  d="M17 22H19C21 22 22 21 22 19V17C22 15 21 14 19 14H17C15 14 14 15 14 17V19C14 21 15 22 17 22Z"
+                                  stroke="#292D32"
+                                  strokeWidth="1.5"
+                                  strokeMiterlimit="10"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                ></path>{" "}
+                                <path
+                                  d="M5 22H7C9 22 10 21 10 19V17C10 15 9 14 7 14H5C3 14 2 15 2 17V19C2 21 3 22 5 22Z"
+                                  stroke="#292D32"
+                                  strokeWidth="1.5"
+                                  strokeMiterlimit="10"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                ></path>{" "}
+                              </g>
+                            </svg>
+                            <p>Filter By Brands</p>
+                          </div>
+                        </MenuButton>
+                      }
+                      transition
+                    >
+                       {brandArr.map((i, index) => (
+              <MenuItem
+                key={index}
+                className="bg-white w-[200px] rounded-full py-2 group"
+              >
+                <p
+                  className={`text-[15px] hover:text-[#eb0029] w-full pl-6 pr-5 cursor-pointer flex justify-between items-center capitalize ${
+                    selectedBrand == i ? "text-[#eb0029]" : "text-gray-600"
+                  }`}
+                  onClick={() => {
+                    setSelectedBrand(i);
+                  }}
+                >
+                  {i}
+                </p>
+              </MenuItem>
+            ))}
+                    </Menu>
+          </div>
+
+          </>
+
         )}
+
+        
         {selectedBrand ? (
           <section className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3  gap-y-10 gap-x-6 my-10 h-min">
             {productsToRender.map((product) => (

@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { NavLink, useNavigate } from "react-router";
+import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
+import "@szhsin/react-menu/dist/index.css";
+import "@szhsin/react-menu/dist/transitions/zoom.css";
 
 const Products = [
   {
@@ -47,27 +50,27 @@ const Products = [
       </svg>
     ),
   },
-  {
-    name: "By Price",
-    url: "/byPrice",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="lucide lucide-tag-icon lucide-tag"
-      >
-        <path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" />
-        <circle cx="7.5" cy="7.5" r=".5" fill="currentColor" />
-      </svg>
-    ),
-  },
+  // {
+  //   name: "By Price",
+  //   url: "/byPrice",
+  //   icon: (
+  //     <svg
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       width="24"
+  //       height="24"
+  //       viewBox="0 0 24 24"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       strokeWidth="2"
+  //       strokeLinecap="round"
+  //       strokeLinejoin="round"
+  //       className="lucide lucide-tag-icon lucide-tag"
+  //     >
+  //       <path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" />
+  //       <circle cx="7.5" cy="7.5" r=".5" fill="currentColor" />
+  //     </svg>
+  //   ),
+  // },
 ];
 
 const byType = [
@@ -82,7 +85,6 @@ const byType = [
   { state: "candy", name: "Candy" },
   { state: "lollipop", name: "Lollipop" },
 ];
-const byPrice = ["0.50", "1", "2", "5", "10"];
 const byBrands = [
   "dairy kiss",
   "bolivia",
@@ -235,7 +237,7 @@ const NavBar = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  const downloadMultiplePdfs = () => {
+  const downloadMultiplePdfs = (num: number) => {
     const files = [
       {
         url: "/Files/Dazzy Chocolate Catalogue.pdf",
@@ -243,15 +245,13 @@ const NavBar = () => {
       },
       { url: "/Files/Dazzy CT Catalogue.pdf", name: "Dazzy CT Catalogue.pdf" },
     ];
-
-    files.forEach((file) => {
-      const link = document.createElement("a");
-      link.href = file.url;
-      link.download = file.name;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    });
+    const file = files[num];
+    const link = document.createElement("a");
+    link.href = file.url;
+    link.download = file.name;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -444,13 +444,24 @@ const NavBar = () => {
             <button className="relative">Contact</button>
             <DropdownMenu items={ContactUs} isOpen={hoverMenu === "contact"} />
           </div>
-
-          <button
-            className="bg-red-500 px-4 py-2 cursor-pointer transition-all duration-200 hover:bg-red-700 active:scale-90"
-            onClick={downloadMultiplePdfs}
+          <Menu
+            menuClassName={"!w-auto"}
+            menuButton={
+              <MenuButton>
+                <button className="bg-red-500 px-4 py-2 cursor-pointer transition-all duration-200 hover:bg-red-700 active:scale-90">
+                  Download Catalogue
+                </button>
+              </MenuButton>
+            }
+            transition
+            arrow
           >
-            Download Catalogue
-          </button>
+            <MenuItem onClick={() => downloadMultiplePdfs(1)}> Candy</MenuItem>
+            <MenuItem onClick={() => downloadMultiplePdfs(0)}>
+              {" "}
+              Chocolate
+            </MenuItem>
+          </Menu>
         </section>
       ) : (
         <section
@@ -498,13 +509,30 @@ const NavBar = () => {
                 closeMobileMenu={() => setIsOpen(false)}
               />
             </motion.li>
-            <motion.li
-              variants={itemVariants}
-              onClick={downloadMultiplePdfs}
-              className="bg-red-500 px-4 py-2"
+            <Menu
+              menuClassName={"!w-auto"}
+              menuButton={
+                <MenuButton>
+                  <motion.li
+                    variants={itemVariants}
+                    className="bg-red-500 px-4 py-2"
+                  >
+                    Download Catalogue{" "}
+                  </motion.li>
+                </MenuButton>
+              }
+              transition
+              arrow
             >
-              Download Catalogue{" "}
-            </motion.li>
+              <MenuItem onClick={() => downloadMultiplePdfs(1)}>
+                {" "}
+                Candy
+              </MenuItem>
+              <MenuItem onClick={() => downloadMultiplePdfs(0)}>
+                {" "}
+                Chocolate
+              </MenuItem>
+            </Menu>
           </motion.ul>
         </section>
       )}
