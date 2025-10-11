@@ -327,12 +327,12 @@ const Products = () => {
                     (price === 0 || i.price === price) && (
                       <div
                         key={i.url + i.name + open}
-                        className="w-[160px] h-[240px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[320px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
+                        className="w-[160px]  h-[290px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[320px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
                       >
                         <motion.img
                           layoutId={i.url + i.name}
                           src={i.url}
-                          className="w-[80%] h-[200px] object-contain mt-4"
+                          className="w-[80%] h-[200px] max-h-[70%] object-contain mt-4"
                           onClick={() => {
                             if (i?.subCategory) {
                               const sameSubCatProducts = productObj[
