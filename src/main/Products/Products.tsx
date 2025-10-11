@@ -6,6 +6,9 @@ import { FiShoppingBag, FiX } from "react-icons/fi";
 import ViewMore from "./components/ViewMore";
 import { productObj } from "./AllProductList";
 import { useLocation } from "react-router";
+import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
+import "@szhsin/react-menu/dist/index.css";
+import "@szhsin/react-menu/dist/transitions/zoom.css";
 
 type Product = {
   name: string;
@@ -118,7 +121,121 @@ const Products = () => {
             A Wide Range Of Confectionery Items
           </p>
 
-          <div className="max-w-[1240px] px-6 mx-auto pt-20">
+          <div className="grid md:hidden grid-cols-2 border border-solid border-black border-x-0  mt-5">
+            <Menu
+              viewScroll="close"
+              gap={12}
+              menuButton={
+                <MenuButton>
+                  <div className=" flex gap-2 justify-center items-center">
+                    <svg viewBox="0 0 24 24" fill="none" height={25}>
+                      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        {" "}
+                        <path
+                          d="M5 10H7C9 10 10 9 10 7V5C10 3 9 2 7 2H5C3 2 2 3 2 5V7C2 9 3 10 5 10Z"
+                          stroke="#292D32"
+                          strokeWidth="1.5"
+                          strokeMiterlimit="10"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        ></path>{" "}
+                        <path
+                          d="M17 10H19C21 10 22 9 22 7V5C22 3 21 2 19 2H17C15 2 14 3 14 5V7C14 9 15 10 17 10Z"
+                          stroke="#292D32"
+                          strokeWidth="1.5"
+                          strokeMiterlimit="10"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        ></path>{" "}
+                        <path
+                          d="M17 22H19C21 22 22 21 22 19V17C22 15 21 14 19 14H17C15 14 14 15 14 17V19C14 21 15 22 17 22Z"
+                          stroke="#292D32"
+                          strokeWidth="1.5"
+                          strokeMiterlimit="10"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        ></path>{" "}
+                        <path
+                          d="M5 22H7C9 22 10 21 10 19V17C10 15 9 14 7 14H5C3 14 2 15 2 17V19C2 21 3 22 5 22Z"
+                          stroke="#292D32"
+                          strokeWidth="1.5"
+                          strokeMiterlimit="10"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        ></path>{" "}
+                      </g>
+                    </svg>
+                    <p>Category</p>
+                  </div>
+                </MenuButton>
+              }
+              transition
+            >
+               {ProductsList.map((i, index) => (
+                <MenuItem
+                  key={index}
+                  className="bg-white w-[270px] rounded-full shadow-2xl py-2 group"
+                >
+                  <p
+                    className={`uppercase text-[15px] hover:text-[#eb0029] w-full pl-6 pr-5 cursor-pointer transition-colors duration-300 flex justify-between ${
+                      i.name === open ? "text-[#eb0029]" : "text-gray-600"
+                    }`}
+                    onClick={() => {
+                      if (window.innerWidth < 640) {
+                        ref.current?.scrollIntoView({ behavior: "smooth" });
+                      }
+                      setSelectedCategory("");
+                      setOpen(i.name);
+
+                      // also update url when selecting category
+                      const params = new URLSearchParams(location.search);
+                      params.set("p", i.name);
+                      window.history.replaceState(
+                        {},
+                        "",
+                        `${location.pathname}?${params.toString()}`
+                      );
+                    }}
+                  >
+                    {i.name}
+                  </p>
+                </MenuItem>
+              ))}
+            </Menu>
+            <Menu
+              viewScroll="close"
+              menuButton={
+                <MenuButton>
+                  {" "}
+                  <div className="flex gap-2 justify-center items-center border-l border-solid border-black">
+                    <span className="text-2xl text-[#292D32]">₹</span>
+                    <p>Price</p>
+                  </div>
+                </MenuButton>
+              }
+              transition
+            >
+              {priceOptions?.map((i) => (
+                <MenuItem
+                  key={i}
+                  onClick={() => setPrice(Number(i))}
+                  className={`capitalize  ${
+                      price ==i ? "text-[#eb0029]" : "text-black"
+                    }`}
+                >
+                  {i}
+                </MenuItem>
+              ))}
+            </Menu>
+          </div>
+
+          <div className="hidden md:block max-w-[1240px] px-6 mx-auto pt-20">
             <h2 className="font-semibold text-xl pb-4 w-[270px]">
               Filter By Price
               <span className="block w-[20%] h-1 bg-[#eb0029] rounded-full mt-1"></span>
@@ -142,9 +259,9 @@ const Products = () => {
             </div>
           </div>
 
-          <section className="max-w-[1240px] grid md:grid-cols-[auto_1fr] gap-16 px-6 mx-auto pt-10 pb-10">
+          <section className=" max-w-[1240px] grid md:grid-cols-[auto_1fr] gap-16 px-6 mx-auto pt-10 pb-10">
             {/* Sidebar Categories */}
-            <div className="space-y-3 mx-auto">
+            <div className="hidden md:block space-y-3 mx-auto">
               <h2 className="font-semibold text-xl pb-4">
                 Product Categories
                 <span className="block w-[20%] h-1 bg-[#eb0029] rounded-full mt-1"></span>
