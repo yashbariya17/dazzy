@@ -15,7 +15,7 @@ const JoinDazzyFamily = () => {
 
         {/* Title */}
         <h2 className="relative text-white text-2xl font-semibold z-10">
-          Join Dazzy Family
+          Join Dazzy 
         </h2>
       </section>
 

@@ -140,7 +140,7 @@ const ContactUs = [
     ),
   },
   {
-    name: "Join Dazzy Fam",
+    name: "Join Dazzy",
     url: "/joinDazzyFamily",
     icon: (
       <svg
