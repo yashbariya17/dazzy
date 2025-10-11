@@ -328,7 +328,7 @@ const NavBar = () => {
           shadow-2xl text-white w-auto z-50 py-2 
         "
                 >
-                  <section className="flex gap-x-4 px-5 py-3 w-[600px]">
+                  <section className="flex gap-x-4 px-5 py-3 w-[480px]">
                     <div>
                       <h2 className="px-4 py-2 whitespace-nowrap text-2xl relative">
                         <span className="relative inline-block">
@@ -360,7 +360,7 @@ const NavBar = () => {
                       ))}
                     </div>
                     <span className="block h-[280px] bg-[#442424] w-[1px] mt-auto"></span>
-                    <div>
+                    {/* <div>
                       <h2 className="px-4 py-2 whitespace-nowrap text-2xl relative">
                         <span className="relative inline-block">
                           By Price
@@ -376,17 +376,13 @@ const NavBar = () => {
                         >
                           <span className="relative inline-block capitalize font-normal ">
                             {i} Rs.
-                            {/* <span className="underline-bar absolute left-0 top-full w-full h-0.5 block"></span> */}
                           </span>
                           <motion.div
-                            // layoutId="indicator"
-                            // initial={{ opacity: 0 }}
-                            // whileHover={{ opacity: 1 }}
                             className="bg-amber-300 h-full absolute w-2 top-0 left-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"
                           ></motion.div>
                         </NavLink>
                       ))}
-                    </div>
+                    </div> */}
                     <span className="block h-[280px] bg-[#442424] w-[1px] mt-auto"></span>
                     <div>
                       <h2 className="px-4 py-2 whitespace-nowrap text-2xl relative">
