@@ -138,8 +138,8 @@ const products: Product[] = [
     },
   },
   {
-    name: "CocoTana",
-    url: "/images/DAZZY LOGO.webp",
+    name: "Celebration Gold",
+    url: "/images/centerMissing/CELEBRATION GOLD.png",
     description: "A luxurious collection of 30 rich and creamy truffles.",
     desc: {
       packaging: "Box of 12 sachets",
@@ -150,8 +150,8 @@ const products: Product[] = [
     },
   },
   {
-    name: "DLove Gold Jar",
-    url: "/images/giftcart/Dlove Gold Jar.webp",
+    name: "Celebration Red",
+    url: "/images/centerMissing/CELEBRATION RED.png",
     description: "A luxurious collection of 30 rich and creamy truffles.",
     desc: {
       packaging: "Box of 12 sachets",
@@ -162,8 +162,8 @@ const products: Product[] = [
     },
   },
   {
-    name: "DLove Red Jar ",
-    url: "/images/giftcart/DLove Red Jar.webp",
+    name: "Gold Box",
+    url: "/images/centerMissing/GOLD BOX.png",
     description: "A luxurious collection of 30 rich and creamy truffles.",
     desc: {
       packaging: "Box of 12 sachets",
@@ -174,8 +174,8 @@ const products: Product[] = [
     },
   },
   {
-    name: "DLove Jar",
-    url: "/images/giftcart/D LOVE Jar.webp",
+    name: "DLove Love Box",
+    url: "/images/centerMissing/LOVE BOX.png",
     description: "A luxurious collection of 30 rich and creamy truffles.",
     desc: {
       packaging: "Box of 12 sachets",
@@ -184,6 +184,8 @@ const products: Product[] = [
       mrp: 240,
       netweight: 600,
     },
+    
+    
   },
 ];
 

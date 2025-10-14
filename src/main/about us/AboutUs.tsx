@@ -35,7 +35,7 @@ const aboutData = [
         <span className="font-bold">Dazzy Food Industries</span>.
       </p>
     ),
-    image: "/images/founder2.webp",
+    image: "/images/1.png",
     side: "left",
   },
   {
@@ -49,7 +49,7 @@ const aboutData = [
         portfolio, keeping quality and consumer delight at its core.
       </p>
     ),
-    image: "/images/factory.webp",
+    image: "/images/2.png",
     side: "right",
   },
   {
@@ -69,7 +69,7 @@ const aboutData = [
         .
       </p>
     ),
-    image: "/images/factory.webp",
+    image: "/images/3.png",
     side: "left",
   },
   {
@@ -88,7 +88,7 @@ const aboutData = [
         , among many others.
       </p>
     ),
-    image: "/images/factory.webp",
+    image: "/images/4.png",
     side: "right",
   },
   {
@@ -315,7 +315,7 @@ const AboutUs = () => {
   return (
     <main className="relative bg-[#fff8f0] min-h-[2100px] overflow-hidden">
       <img
-        src="/images/Quality You Can Trust,.webp"
+        src="/images/Quality You Can Trust,.png"
         alt="logo"
         loading="eager"
         fetchPriority="high"

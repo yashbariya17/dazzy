@@ -508,23 +508,23 @@ export default Home;
 
 const testimonials = [
   {
-    name: "Albert Flores",
-    occupation: "Web Designer",
+    name: "Vaibhav Patel",
+    occupation: "Distributer",
     ratings: "★★★★☆",
     review:
-      " Penatibus magnis dis point parturient montes nascetur ridiculus mus Ut id lorem ac enim the vestibulum blandit nec sit amet felis. Fusce quis diam odio Cras mattis mi quis tincidunt",
+      "The quality of their toffees, candies, and chocolates is unmatched, and the unique packaging makes them easy to sell. But what really sets Dazzy apart is how they build relationships — warm, respectful, and always looking out for us. It feels more like a partnership than a business deal.",
     id: 1,
   },
   {
-    name: "Albert Flores",
-    occupation: "Web Designer",
+    name: "Vikas Shekhawat",
+    occupation: "Distributer",
     ratings: "★★★★☆",
     review:
-      " Penatibus magnis dis point parturient montes nascetur ridiculus mus Ut id lorem ac enim the vestibulum blandit nec sit amet felis. Fusce quis diam odio Cras mattis mi quis tincidunt",
+      " The support from [Your Company Name] has been incredible. Their chocolates and lollipops are customer favorites, and their packaging is creative and high-quality. But what we value most is their personal touch — they really care about us and our growth. It's more than business — it's a relationship built on trust.",
     id: 2,
   },
   {
-    name: "Albert Flores",
+    name: "Jigar Mistry",
     occupation: "Web Designer",
     ratings: "★★★★☆",
     review:
