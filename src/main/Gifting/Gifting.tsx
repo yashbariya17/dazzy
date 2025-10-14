@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiShoppingBag, FiX } from "react-icons/fi";
+import { useNavigate } from "react-router";
 
 type Product = {
   name: string;
@@ -187,6 +188,7 @@ const products: Product[] = [
 ];
 
 const Gifting = () => {
+  const navigate= useNavigate()
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   return (
     <main>
@@ -350,7 +352,14 @@ const Gifting = () => {
                 </p>
                 )}
               </div>
-             
+              <button
+                className="bg-[#eb0029] text-white font-semibold py-2 px-3 rounded-full hover:bg-red-700 transition-transform duration-200 active:scale-95 mt-4"
+                onClick={() => {
+                  navigate("/dealership");
+                }}
+              >
+                Dealership
+              </button>
             </div>
           </motion.div>
         </motion.div>
