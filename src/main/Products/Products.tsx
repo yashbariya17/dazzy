@@ -322,7 +322,7 @@ const Products = () => {
 
               {/* Products grid */}
               <div
-                className="grid grid-rows-[auto_1fr] grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6"
+                className="grid grid-rows-[auto_1fr] grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-6"
                 ref={ref}
               >
                 {productsToRender.map(
@@ -330,7 +330,7 @@ const Products = () => {
                     (price === 0 || i.price === price) && (
                       <div
                         key={i.url + i.name + open}
-                        className="w-[160px]  h-[290px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[320px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
+                        className="w-[160px]  h-[290px] sm:w-[200px] sm:h-[300px] lg:w-[240px] lg:h-[320px] bg-gray-100 rounded-3xl shadow-md flex flex-col items-center justify-between p-4 mx-auto"
                       >
                         <motion.img
                           layoutId={i.url + i.name}
