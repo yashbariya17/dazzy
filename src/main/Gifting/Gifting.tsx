@@ -6,6 +6,13 @@ type Product = {
   name: string;
   url: string;
   description: string;
+  desc?: {
+    packaging?: string;
+    noOfPkt?: string | number;
+    noOfUnits?: number;
+    mrp?: number;
+    netweight?: number;
+  };
 };
 
 const products: Product[] = [
@@ -13,77 +20,174 @@ const products: Product[] = [
     name: "Truffle Heart",
     url: "/images/giftcart/Truffle Hart.webp",
     description: "Rich cocoa blended with creamy milk chocolate.",
+    desc: {
+      packaging: "Box of 12 sachets",
+      noOfPkt: 12,
+      noOfUnits: 120,
+      mrp: 240,
+      netweight: 600,
+    },
   },
   {
     name: "Glorias Purple",
     url: "/images/giftcart/Glorious Puruple.webp",
     description: "Delicious coconut filling wrapped in smooth chocolate.",
+    desc: {
+      packaging: "Box of 12 sachets",
+      noOfPkt: 12,
+      noOfUnits: 120,
+      mrp: 240,
+      netweight: 600,
+    },
   },
   {
     name: "Glorias Red",
     url: "/images/giftcart/Glorious Red.webp",
     description: "Smooth cocoa flavor with a creamy dairy twist.",
+    desc: {
+      packaging: "Box of 12 sachets",
+      noOfPkt: 12,
+      noOfUnits: 120,
+      mrp: 240,
+      netweight: 600,
+    },
   },
   {
     name: "Glorias Brown",
     url: "/images/giftcart/Glorious Brown.webp",
     description: "A perfect balance of rich dark and creamy milk chocolate.",
+    desc: {
+      packaging: "Box of 12 sachets",
+      noOfPkt: 12,
+      noOfUnits: 120,
+      mrp: 240,
+      netweight: 600,
+    },
   },
   {
     name: "Truffles Octagon",
     url: "/images/giftcart/Truffle Ogtagon_.webp",
     description: "Crunchy hazelnuts wrapped in silky smooth chocolate.",
+    desc: {
+      packaging: "Box of 12 sachets",
+      noOfPkt: 12,
+      noOfUnits: 120,
+      mrp: 240,
+      netweight: 600,
+    },
   },
   {
     name: "Stacy Octagon",
     url: "/images/giftcart/Stacy Octagon.webp",
     description: "Classic creamy milk chocolate for all ages.",
+    desc: {
+      packaging: "Box of 12 sachets",
+      noOfPkt: 12,
+      noOfUnits: 120,
+      mrp: 240,
+      netweight: 600,
+    },
   },
   {
     name: "Bolivia Container",
     url: "/images/giftcart/Bolivia Container.webp",
     description: "Smooth milk chocolate with a playful sweet touch.",
+    desc: {
+      packaging: "Box of 12 sachets",
+      noOfPkt: 12,
+      noOfUnits: 120,
+      mrp: 240,
+      netweight: 600,
+    },
   },
   {
     name: "Stacy Mini",
     url: "/images/giftcart/Stacy Gifrt.webp",
     description: "Smooth milk chocolate with a playful sweet touch.",
+    desc: {
+      packaging: "Box of 12 sachets",
+      noOfPkt: 12,
+      noOfUnits: 120,
+      mrp: 240,
+      netweight: 600,
+    },
   },
   {
     name: "Endon Container",
     url: "/images/DAZZY LOGO.webp",
     description: "A chocolate adventure with fun flavors.",
+    desc: {
+      packaging: "Box of 12 sachets",
+      noOfPkt: 12,
+      noOfUnits: 120,
+      mrp: 240,
+      netweight: 600,
+    },
   },
   {
     name: "DGold Container ",
     url: "/images/giftcart/DLOVE CONTAINER 5RS.webp",
     description: "Sweet strawberry flavor inside smooth chocolate.",
+    desc: {
+      packaging: "Box of 12 sachets",
+      noOfPkt: 12,
+      noOfUnits: 120,
+      mrp: 240,
+      netweight: 600,
+    },
   },
   {
     name: "CocoTana",
     url: "/images/DAZZY LOGO.webp",
     description: "A luxurious collection of 30 rich and creamy truffles.",
+    desc: {
+      packaging: "Box of 12 sachets",
+      noOfPkt: 12,
+      noOfUnits: 120,
+      mrp: 240,
+      netweight: 600,
+    },
   },
   {
     name: "DLove Gold Jar",
     url: "/images/giftcart/Dlove Gold Jar.webp",
     description: "A luxurious collection of 30 rich and creamy truffles.",
+    desc: {
+      packaging: "Box of 12 sachets",
+      noOfPkt: 12,
+      noOfUnits: 120,
+      mrp: 240,
+      netweight: 600,
+    },
   },
   {
     name: "DLove Red Jar ",
     url: "/images/giftcart/DLove Red Jar.webp",
     description: "A luxurious collection of 30 rich and creamy truffles.",
+    desc: {
+      packaging: "Box of 12 sachets",
+      noOfPkt: 12,
+      noOfUnits: 120,
+      mrp: 240,
+      netweight: 600,
+    },
   },
   {
     name: "DLove Jar",
     url: "/images/giftcart/D LOVE Jar.webp",
     description: "A luxurious collection of 30 rich and creamy truffles.",
+    desc: {
+      packaging: "Box of 12 sachets",
+      noOfPkt: 12,
+      noOfUnits: 120,
+      mrp: 240,
+      netweight: 600,
+    },
   },
 ];
 
 const Gifting = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-
   return (
     <main>
       {/* Hero Section */}
@@ -188,37 +292,68 @@ const Gifting = () => {
       {/* Modal */}
       <AnimatePresence>
         {selectedProduct && (
+         <motion.div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
           <motion.div
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            className="bg-white rounded-2xl shadow-xl w-fit max-w-6xl max-h-[95vh]   overflow-y-auto p-10 relative"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.3 }}
           >
-            <motion.div
-              className="bg-white rounded-xl p-6 max-w-md w-full relative"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
+            <button
+              onClick={() => setSelectedProduct(null)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-800"
             >
-              <button
-                onClick={() => setSelectedProduct(null)}
-                className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
-              >
-                <FiX size={20} />
-              </button>
-              <img
-                src={selectedProduct.url}
-                alt={selectedProduct.name}
-                className="w-full h-48 object-contain mb-4"
-              />
-              <h2 className="text-lg font-bold text-purple-900 mb-2">
-                {selectedProduct.name}
-              </h2>
-              <p className="text-gray-700 text-sm">
-                {selectedProduct.description || "No description available."}
-              </p>
-            </motion.div>
+              <FiX size={24} />
+            </button>
+
+            <div className="flex flex-wrap justify-center gap-4">
+                <motion.div
+                  className={`  sm:w-[200px]   bg-gray-100 rounded-3xl shadow-md flex flex-col items-center  p-4 max-h-[60vh] h-[400px] !w-[350px]`}
+                >
+                  <motion.img
+                    src={selectedProduct.url}
+                     alt={selectedProduct.name}
+                    className={` object-contain mt-4 h-[80%] `}
+                  />
+                  <p className="text-center text-sm sm:text-base font-semibold mt-2">
+                    {selectedProduct.name}
+                  </p>
+                </motion.div>
+            </div>
+            <div className="flex flex-col justify-center items-center my-5">
+              <div className=" bg-white  flex-col md:flex-row rounded-3xl shadow-md flex gap-2  md:gap-5  justify-between p-4 mx-auto">
+                <p>
+                  <strong>Pkg:</strong> {selectedProduct?.desc?.packaging ?? "Box"}
+                </p>
+                <p>
+                  <strong>No Of PKT:</strong>{" "}
+                  {selectedProduct?.desc?.noOfPkt + ""}
+                </p>
+                {
+                  selectedProduct?.desc?.noOfUnits && (
+                    
+                    <p>
+                  <strong>No Of Units:</strong>{" "}
+                  {selectedProduct?.desc?.noOfUnits ?? "500"}
+                </p>
+                )}
+                {selectedProduct?.desc?.mrp && (
+
+                  <p>
+                  <strong>MRP:</strong> {selectedProduct?.desc?.mrp ?? "20"}
+                </p>
+                )}
+              </div>
+             
+            </div>
           </motion.div>
+        </motion.div>
         )}
       </AnimatePresence>
     </main>

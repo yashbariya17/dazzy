@@ -38,12 +38,12 @@ export default function ViewMore({ products, onClose }: ViewMoreProps) {
               {products.map((i, index) => (
                 <motion.div
                   key={i.url + i.name + index}
-                  className={`  sm:w-[200px]   bg-gray-100 rounded-3xl shadow-md flex flex-col items-center  p-4 ${products?.length==1 ?"max-h-[70vh] h-[400px] !w-[350px]" :"w-[160px] h-[300px]"}`}
+                  className={`  sm:w-[200px]   bg-gray-100 rounded-3xl shadow-md flex flex-col items-center  p-4 ${products?.length==1 ?"!max-h-[50vh] h-[380px] !w-[350px]" :"w-[160px] h-[300px]"}`}
                 >
                   <motion.img
                     layoutId={i.url + i.name}
                     src={i.url}
-                    className={` object-contain mt-4 ${products?.length==1?"h-[80%] ":""}`}
+                    className={` object-contain mt-4 ${products?.length==1?"h-[80%] ":"h-[70%]"}`}
                   />
                   <p className="text-center text-sm sm:text-base font-semibold mt-2">
                     {i.name}
@@ -52,7 +52,7 @@ export default function ViewMore({ products, onClose }: ViewMoreProps) {
               ))}
             </div>
             <div className="flex flex-col justify-center items-center my-5">
-              <div className=" bg-white rounded-3xl shadow-md flex gap-5  justify-between p-4 mx-auto">
+              <div className=" bg-white rounded-3xl shadow-md flex flex-col md:flex-row md:gap-5  justify-between p-4 mx-auto">
                 <p>
                   <strong>Pkg:</strong> {products[0]?.desc?.packaging ?? "Box"}
                 </p>
