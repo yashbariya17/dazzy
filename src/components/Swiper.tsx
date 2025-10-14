@@ -60,6 +60,10 @@ const VideoSlider: React.FC = () => {
             muted
             className="h-auto w-full object-cover"
             onEnded={handleVideoEnd}
+            onLoadedData={(e) => {
+              setLoading(false)
+               e.currentTarget.play()
+            }}
             controls={false}
             playsInline
           />
@@ -72,6 +76,10 @@ const VideoSlider: React.FC = () => {
             muted
             className="h-auto w-full object-cover"
             onEnded={handleVideoEnd}
+            onLoadedData={(e) => {
+              setLoading(false)
+               e.currentTarget.play()
+            }}
             controls={false}
             playsInline
           />
@@ -84,6 +92,10 @@ const VideoSlider: React.FC = () => {
             muted
             className="h-auto w-full object-cover"
             onEnded={handleVideoEnd}
+             onLoadedData={(e) => {
+              setLoading(false)
+               e.currentTarget.play()
+            }}
             controls={false}
             playsInline
           />
@@ -95,6 +107,10 @@ const VideoSlider: React.FC = () => {
             muted
             className="h-auto w-full object-cover"
             onEnded={handleVideoEnd}
+             onLoadedData={(e) => {
+              setLoading(false)
+               e.currentTarget.play()
+            }}
             controls={false}
             playsInline
           />
@@ -106,6 +122,10 @@ const VideoSlider: React.FC = () => {
             muted
             className="h-auto w-full object-cover"
             onEnded={handleVideoEnd}
+             onLoadedData={(e) => {
+              setLoading(false)
+               e.currentTarget.play()
+            }}
             controls={false}
             playsInline
           />
@@ -117,6 +137,10 @@ const VideoSlider: React.FC = () => {
             muted
             className="h-auto w-full object-cover"
             onEnded={handleVideoEnd}
+             onLoadedData={(e) => {
+              setLoading(false)
+               e.currentTarget.play()
+            }}
             controls={false}
             playsInline
           />
