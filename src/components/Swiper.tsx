@@ -44,7 +44,10 @@ const VideoSlider: React.FC = () => {
             muted
             className="h-auto w-full !object-cover as"
             onEnded={handleVideoEnd}
-            onLoadedData={() => setLoading(false)}
+            onLoadedData={(e) => {
+              setLoading(false)
+               e.currentTarget.play()
+            }}
             controls={false}
             playsInline
           />
