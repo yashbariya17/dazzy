@@ -23,7 +23,7 @@ const Footer = () => {
 
         <div className="flex-1">
           <img
-            src="/images/DFILOGO.webp"
+            src="/images/DPPLLOGO.webp"
             alt="Dazzy Products Logo"
             className="h-12 mb-4"
           />
@@ -38,7 +38,7 @@ const Footer = () => {
 
         <div className="flex-1">
           <img
-            src="/images/DPPLLOGO.webp"
+            src="/images/DFILOGO.webp"
             alt="Dazzy Products Logo"
             className="h-12 mb-4"
           />
@@ -102,7 +102,7 @@ const Footer = () => {
             <a href="#">
               <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/dazzyconfectionery?igsh=d2NqOWQ2Z3NlZmk4" target="_blank">
               <i className="fab fa-instagram"></i>
             </a>
             <a href="#">

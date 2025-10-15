@@ -22,8 +22,8 @@ const VideoSlider: React.FC = () => {
   return (
     <>
       {loading && (
-        <div className="fixed top-0 inset-0 flex items-center justify-center bg-transparent z-10 backdrop-blur-lg">
-          <img src="/videos/LODING GIF.gif" alt="" />
+        <div className="fixed top-0 inset-0 flex items-center justify-center bg-white z-10 ">
+          <img src="loader.gif" alt="" className="max-h-[75vh]"/>
         </div>
       )}
       <Swiper
