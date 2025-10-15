@@ -117,7 +117,7 @@ const Home = () => {
     <>
       {loadedCount < 5 && (
         <div className="fixed top-0 inset-0 flex items-center justify-center bg-transparent z-10 backdrop-blur-lg">
-          <img src="/videos/LODING GIF.gif" alt="" />
+          <img src="/videos/LODING GIF.gif" alt="" className=" !max-h-[75vh] object-contain"/>
         </div>
       )}
       <div className="w-full overflow-x-hidden">
@@ -520,7 +520,7 @@ const testimonials = [
     occupation: "Distributer",
     ratings: "★★★★☆",
     review:
-      " The support from [Your Company Name] has been incredible. Their chocolates and lollipops are customer favorites, and their packaging is creative and high-quality. But what we value most is their personal touch — they really care about us and our growth. It's more than business — it's a relationship built on trust.",
+      " The support from Dazzy has been incredible. Their chocolates and lollipops are customer favorites, and their packaging is creative and high-quality. But what we value most is their personal touch — they really care about us and our growth. It's more than business — it's a relationship built on trust.",
     id: 2,
   },
   {
@@ -658,7 +658,7 @@ const Slide = forwardRef(function Slide(
     >
       <div className="flex items-center mb-4">
         <img
-          src="images/user.webp"
+          src="images/user-icon.jpg"
           alt="Albert Flores"
           className="w-12 h-12 rounded-full mr-4 object-cover"
         />

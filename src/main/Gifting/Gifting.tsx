@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiShoppingBag, FiX } from "react-icons/fi";
 import { useNavigate } from "react-router";
+import productObj from "../Products/AllProductList";
 
 type Product = {
   name: string;
@@ -17,126 +18,6 @@ type Product = {
 };
 
 const products: Product[] = [
-  {
-    name: "Truffle Heart",
-    url: "/images/giftcart/Truffle Hart.webp",
-    description: "Rich cocoa blended with creamy milk chocolate.",
-    desc: {
-      packaging: "Box of 12 sachets",
-      noOfPkt: 12,
-      noOfUnits: 120,
-      mrp: 240,
-      netweight: 600,
-    },
-  },
-  {
-    name: "Glorias Purple",
-    url: "/images/giftcart/Glorious Puruple.webp",
-    description: "Delicious coconut filling wrapped in smooth chocolate.",
-    desc: {
-      packaging: "Box of 12 sachets",
-      noOfPkt: 12,
-      noOfUnits: 120,
-      mrp: 240,
-      netweight: 600,
-    },
-  },
-  {
-    name: "Glorias Red",
-    url: "/images/giftcart/Glorious Red.webp",
-    description: "Smooth cocoa flavor with a creamy dairy twist.",
-    desc: {
-      packaging: "Box of 12 sachets",
-      noOfPkt: 12,
-      noOfUnits: 120,
-      mrp: 240,
-      netweight: 600,
-    },
-  },
-  {
-    name: "Glorias Brown",
-    url: "/images/giftcart/Glorious Brown.webp",
-    description: "A perfect balance of rich dark and creamy milk chocolate.",
-    desc: {
-      packaging: "Box of 12 sachets",
-      noOfPkt: 12,
-      noOfUnits: 120,
-      mrp: 240,
-      netweight: 600,
-    },
-  },
-  {
-    name: "Truffles Octagon",
-    url: "/images/giftcart/Truffle Ogtagon_.webp",
-    description: "Crunchy hazelnuts wrapped in silky smooth chocolate.",
-    desc: {
-      packaging: "Box of 12 sachets",
-      noOfPkt: 12,
-      noOfUnits: 120,
-      mrp: 240,
-      netweight: 600,
-    },
-  },
-  {
-    name: "Stacy Octagon",
-    url: "/images/giftcart/Stacy Octagon.webp",
-    description: "Classic creamy milk chocolate for all ages.",
-    desc: {
-      packaging: "Box of 12 sachets",
-      noOfPkt: 12,
-      noOfUnits: 120,
-      mrp: 240,
-      netweight: 600,
-    },
-  },
-  {
-    name: "Bolivia Container",
-    url: "/images/giftcart/Bolivia Container.webp",
-    description: "Smooth milk chocolate with a playful sweet touch.",
-    desc: {
-      packaging: "Box of 12 sachets",
-      noOfPkt: 12,
-      noOfUnits: 120,
-      mrp: 240,
-      netweight: 600,
-    },
-  },
-  {
-    name: "Stacy Mini",
-    url: "/images/giftcart/Stacy Gifrt.webp",
-    description: "Smooth milk chocolate with a playful sweet touch.",
-    desc: {
-      packaging: "Box of 12 sachets",
-      noOfPkt: 12,
-      noOfUnits: 120,
-      mrp: 240,
-      netweight: 600,
-    },
-  },
-  {
-    name: "Endon Container",
-    url: "/images/DAZZY LOGO.webp",
-    description: "A chocolate adventure with fun flavors.",
-    desc: {
-      packaging: "Box of 12 sachets",
-      noOfPkt: 12,
-      noOfUnits: 120,
-      mrp: 240,
-      netweight: 600,
-    },
-  },
-  {
-    name: "DGold Container ",
-    url: "/images/giftcart/DLOVE CONTAINER 5RS.webp",
-    description: "Sweet strawberry flavor inside smooth chocolate.",
-    desc: {
-      packaging: "Box of 12 sachets",
-      noOfPkt: 12,
-      noOfUnits: 120,
-      mrp: 240,
-      netweight: 600,
-    },
-  },
   {
     name: "Celebration Gold",
     url: "/images/centerMissing/CELEBRATION GOLD.png",
@@ -184,14 +65,17 @@ const products: Product[] = [
       mrp: 240,
       netweight: 600,
     },
-    
-    
   },
 ];
 
 const Gifting = () => {
   const navigate= useNavigate()
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const giftingFromAllProducts = Object.entries(productObj)
+  .flatMap(([key, products]) =>
+    products.filter((item) => item.isGifting).map((item) => ({ ...item, key }))
+  );
+  const giftingProducts = [...giftingFromAllProducts, ...products];
   return (
     <main>
       {/* Hero Section */}
@@ -211,7 +95,7 @@ const Gifting = () => {
       <section className="bg-gradient-to-b from-[#fff8ff] via-[#fce8f8] to-[#f9e6ff] py-14">
         <div className="max-w-[1100px] mx-auto px-6">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
-            {products.map((product) => (
+            {giftingProducts.map((product) => (
               <motion.div
                 key={product.url + product.name}
                 transition={{
@@ -234,14 +118,14 @@ const Gifting = () => {
                   src={product.url}
                   className="w-full h-[180px] object-contain mt-4 drop-shadow-md"
                   alt={product.name}
-                  onClick={() => setSelectedProduct(product)}
+                  onClick={() => setSelectedProduct(product as Product)}
                 />
                 <p className="text-center text-sm sm:text-base font-semibold mt-2 text-purple-900">
                   {product.name}
                 </p>
                 <div className="flex justify-center gap-3 mt-3 text-xs sm:text-sm z-10">
                   <button
-                    onClick={() => setSelectedProduct(product)}
+                    onClick={() => setSelectedProduct(product as Product)}
                     className="flex items-center gap-1 text-pink-600 hover:text-purple-600 hover:underline transition"
                   >
                     <FiShoppingBag size={14} /> Read More
