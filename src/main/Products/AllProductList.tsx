@@ -86,6 +86,12 @@ const descriptionObj = {
     noOfUnits: 60,
     mrp: 350,
   },
+  "Cocotana Changed": {
+    packaging: "Box",
+    noOfPkt: 24,
+    noOfUnits: 50,
+    mrp: 125,
+  },
 
   EMPORIO: { packaging: "Box", noOfPkt: 12, noOfUnits: 70, mrp: 350 },
   "EMPORIO CONT (30 PCS)": {
@@ -228,6 +234,18 @@ const descriptionObj = {
     noOfUnits: 125,
     mrp: 300,
   },
+  "D-BON Coconut Jar": {
+    packaging: "Jar",
+    noOfPkt: 9,
+    noOfUnits: 250,
+    mrp: 250,
+  },
+  "Double Mango Jar": {
+    packaging: "Jar",
+    noOfPkt: 12,
+    noOfUnits: 210,
+    mrp: 210,
+  },
   "STACY MINI'S MATKA JAR": {
     packaging: "Jar",
     noOfPkt: 8,
@@ -334,7 +352,12 @@ const descriptionObj = {
   },
   "PAN MEETHA": { packaging: "Pouch", noOfPkt: 20, noOfUnits: 167, mrp: 167 },
   TAMBLEY: { packaging: "Pouch", noOfPkt: 20, noOfUnits: 167, mrp: 167 },
-
+    "Endon Containerss": {
+    packaging: "Cont",
+    noOfPkt: 18,
+    noOfUnits: 40,
+    mrp: 200,
+  },
   // ₹1/- CENTERFILL CANDY
   "DOUBLE STRAWBERRY": {
     packaging: "Pouch",
@@ -371,7 +394,7 @@ const descriptionObj = {
   ORANJA: { packaging: "Pouch", noOfPkt: 40, noOfUnits: 100, mrp: 50 },
   "KACCHE AAM": { packaging: "Pouch", noOfPkt: 40, noOfUnits: 100, mrp: 50 },
   FRUITO: { packaging: "Pouch", noOfPkt: 40, noOfUnits: 100, mrp: 50 },
-  GUAVA: { packaging: "Pouch", noOfPkt: 40, noOfUnits: 160, mrp: 80 },
+  GUAVA: { packaging: "Pouch", noOfPkt: 40, noOfUnits: 150, mrp: 75 },
   ORANGE: { packaging: "Pouch", noOfPkt: 40, noOfUnits: 160, mrp: 80 },
   MANGO: { packaging: "Pouch", noOfPkt: 40, noOfUnits: 160, mrp: 80 },
   STRAWBERRY: { packaging: "Pouch", noOfPkt: 40, noOfUnits: 160, mrp: 80 },
@@ -842,6 +865,13 @@ export const productObj: productType = {
       brand: "truffle",
     },
     {
+      name: "Truffle Container",
+      url: "/images/centerfilledchocolate/TRUFFLE.png",
+      price: 5,
+      category: "Single Twist",
+      desc: descriptionObj["TRUFFLE CONTAINER (30 PCS)"],
+    },
+    {
       name: "Truffle Strawberry Gift Box",
       url: "/images/centerfilledchocolate/TRUFFLES STRAWBERRY GIFT BOX 5RS.webp",
       price: 5,
@@ -1175,6 +1205,7 @@ export const productObj: productType = {
       category: "Pillow Pack",
       desc: descriptionObj["TRUFFLE POUCH"],
     },
+
     {
       name: "Emporio Container",
       url: "/images/centerMissing/EMPORIO CONTAINER.png",
@@ -1253,8 +1284,10 @@ export const productObj: productType = {
       price: 2,
       category: "Pillow Pack",
 
-      brand: "endon", //matter pending
+      brand: "endon", 
       isGifting: true,
+      desc: descriptionObj["Endon Containerss"]
+
     },
     {
       name: "Glorious Pistachio 70 Pcs",
@@ -1367,10 +1400,18 @@ export const productObj: productType = {
     },
     {
       name: "Glorious Cashewnut 70 Pcs",
-      url: "/images/centerfilledchocolate/GLORIOUS RAAJBHOG 5RS.webp",
+      url: "/images/centerfilledchocolate/KAJUNUT.png",
       price: 5,
       category: "Single Twist",
       subCategory: "Glorious 70 pcs",
+    },
+        {
+      name: "Glorious Container ",
+      url: "/images/centerfilledchocolate/GLORIOUS.png",
+      price: 5,
+      category: "Single Twist",
+      desc: descriptionObj["TRUFFLE CONTAINER (30 PCS)"]
+
     },
 
     {
@@ -1417,7 +1458,7 @@ export const productObj: productType = {
     },
     {
       name: "D'Love Pestal Big",
-      url: "/images/DAZZY LOGO.webp",
+      url: "/images/HAPPY DHANTERAS DAZZY (1).png",
       price: 5,
       brand: "d love",
       desc: descriptionObj["BIG DELITE"],
@@ -1667,7 +1708,8 @@ export const productObj: productType = {
       price: 5,
       category: "Double Twist",
       subCategory: "Ferola 70Pcs Container",
-      desc: descriptionObj["TRUFFLE CONTAINER"],
+      desc: descriptionObj["TRUFFLE CONTAINER (30 PCS)"],
+
       isGifting: true,
     },
     {
@@ -1678,6 +1720,7 @@ export const productObj: productType = {
       subCategory: "Ferola 70Pcs Container",
       desc: descriptionObj["TRUFFLE CONTAINER"],
     },
+
     {
       name: "Stacy Mini's Matka Jar",
       url: "/images/centerfilledchocolate/STACY MINIS JAR 2RS.webp",
@@ -1746,6 +1789,15 @@ export const productObj: productType = {
       subCategory: "Bolivia 70Pcs Container",
       brand: "bolivia",
       desc: descriptionObj["STACY CONT"],
+    },
+    {
+      name: "Bolivia Container 30 Pcs",
+      url: "/images/centerfilledchocolate/BOLIVIA CONTAINER 5RS.webp",
+      price: 5,
+      category: "Single Twist",
+      brand: "bolivia",
+      desc: descriptionObj["TRUFFLE CONTAINER (30 PCS)"]
+
     },
     {
       name: "Bolivia Container 30 Pcs",
@@ -2326,7 +2378,7 @@ export const productObj: productType = {
       desc: descriptionObj["GOA ALMOND"],
     },
     {
-      name: "Jewels Pouch",
+      name: "Jewels DryFruits Pouch",
       url: "/images/toffee/JEWELS POUCH RS1.webp",
       price: 1,
       category: "Pouch",
@@ -2364,6 +2416,7 @@ export const productObj: productType = {
       price: 1,
       category: "Pouch",
       subCategory: "Swissdairy Pouch",
+      desc: descriptionObj["BLUE ÉCLAIR POUCH"],
     },
     {
       name: "Anjeer Hut Box",
@@ -2379,6 +2432,7 @@ export const productObj: productType = {
       price: 1,
       category: "Pouch",
       subCategory: "Butterscotch Pouch",
+      desc: descriptionObj["BLUE ÉCLAIR POUCH"],
     },
     {
       name: "Coconut Butter Pouch",
@@ -2386,6 +2440,7 @@ export const productObj: productType = {
       price: 1,
       category: "Pouch",
       subCategory: "Coconut Butter Pouch",
+      desc: descriptionObj["BLUE ÉCLAIR POUCH"],
     },
 
     {
@@ -2401,6 +2456,7 @@ export const productObj: productType = {
       name: "Eclairs Hazelnut",
       url: "/images/toffee/eclair hazelnut gif box 2RS.webp",
       price: 2,
+      subCategory: "Eclair Box ",
       desc: descriptionObj["ECLAIRS DARK BOX"],
       isGifting: true,
     },
@@ -2418,7 +2474,7 @@ export const productObj: productType = {
       price: 2,
       category: "Box",
       subCategory: "Cocotana Box ",
-      desc: descriptionObj["COCOTANA POUCH"],
+      desc: descriptionObj["Cocotana Changed"],
       isGifting: true,
     },
     {
@@ -2430,7 +2486,7 @@ export const productObj: productType = {
       desc: descriptionObj["BLUE ÉCLAIR POUCH"],
     },
     {
-      name: "Jewels Hut Box",
+      name: "Jewels DryFruits Hut Box",
       url: "/images/toffee/JEWELS ZUPADI BOX 1RS.webp",
       price: 1,
       category: "Box",
@@ -2476,6 +2532,7 @@ export const productObj: productType = {
       price: 1,
       category: "Pouch",
       subCategory: "Butter Feast Pouch",
+      desc: descriptionObj["BLUE ÉCLAIR POUCH"],
     },
     {
       name: "Honey Caramel Container",
@@ -2762,7 +2819,7 @@ export const productObj: productType = {
       desc: descriptionObj["DOUBLE STRAWBERRY"],
     },
     {
-      name: "Double Orange",
+      name: "Choco Orange",
       url: "/images/candy/DOUBLE ORANGE RS1.webp",
       price: 1,
       category: "Pouch",
@@ -2770,7 +2827,7 @@ export const productObj: productType = {
       desc: descriptionObj["DOUBLE STRAWBERRY"],
     },
     {
-      name: "Double Guvava",
+      name: "Double Guava",
       url: "/images/candy/DOUBLE GUVAVA RS1.webp",
       price: 1,
       category: "Pouch",
@@ -2786,15 +2843,10 @@ export const productObj: productType = {
       brand: "double paan",
       desc: descriptionObj["DOUBLE STRAWBERRY"],
     },
+    {
+      name: "Kisszone 167 Pcs",
+      url: "/images/candy/KISSZONE02 1RS.webp",
 
-    {
-      name: "Kacha Aam",
-      url: "/images/candy/KACHA AAM 50 PAISA.webp",
-      price: 0.5,
-    },
-    {
-      name: "Kisszone 165 Pcs",
-      url: "/images/candy/KISSZONE RS1.webp",
       price: 1,
       category: "Pouch",
       subCategory: "Kisszone 165Pcs",
@@ -2809,7 +2861,7 @@ export const productObj: productType = {
     },
     {
       name: "Kisszone 50 Pcs",
-      url: "/images/candy/KISSZONE02 1RS.webp",
+      url: "/images/candy/KISSZONE RS1.webp",
       price: 1,
       category: "Pouch",
       subCategory: "Kisszone 50pcs",
@@ -2931,12 +2983,20 @@ export const productObj: productType = {
       desc: descriptionObj["GUAVA"],
     },
     {
+      name: "Kacha Aam",
+      url: "/images/candy/KACHA AAM 50 PAISA.webp",
+      price: 0.5,
+      category: "Pouch",
+      subCategory: "China Candy",
+    },
+    {
       name: "Double Mango Jar ",
       url: "/images/centerMissing/Double Mango .webp",
       price: 0.5,
       category: "Jar",
       subCategory: "Double Mango Jar",
       brand: "double mango",
+      desc: descriptionObj["Double Mango Jar"],
     },
     {
       name: "D-BON Coconut Jar ",
@@ -2945,6 +3005,7 @@ export const productObj: productType = {
       category: "Jar",
       subCategory: "D-BON Coconut Jar",
       brand: "double mango",
+      desc: descriptionObj["D-BON Coconut Jar"],
     },
     {
       name: "D-BON Guava Jar ",
