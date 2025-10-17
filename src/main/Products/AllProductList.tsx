@@ -25,7 +25,67 @@ const descriptionObj = {
   "BIG ROLLE CHOC": { packaging: "Box", noOfPkt: 24, noOfUnits: 30, mrp: 150 },
   "ROLLE STIX": { packaging: "Jar", noOfPkt: 20, noOfUnits: 32, mrp: 160 },
   "3 STIX CHOCO": { packaging: "Box", noOfPkt: 20, noOfUnits: 32, mrp: 160 },
-
+  // added last ones //
+    "COcos Pouch": {
+    packaging: "Pouch",
+    noOfPkt: 24,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+  "TRUFFLE POUCH1": {
+    packaging: "Pouch",
+    noOfPkt: 12,
+    noOfUnits: 70,
+    mrp: 350,
+  },
+  "EMPORIO POUCH": {
+    packaging: "Pouch",
+    noOfPkt: 12,
+    noOfUnits: 70,
+    mrp: 350,
+  },
+    "Truffins Cont": {
+    packaging: "Cont",
+    noOfPkt: 12,
+    noOfUnits: 70,
+    mrp: 350,
+  },
+  "CHOCO TOCO": {
+    packaging: "Pouch",
+    noOfPkt: 18,
+    noOfUnits: 24,
+    mrp: 240,
+  },
+  "CHOC CONE": {
+    packaging: "Jar",
+    noOfPkt: 30,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+  "OH WOW BIG": {
+    packaging: "Box",
+    noOfPkt: 12,
+    noOfUnits: 125,
+    mrp: 250,
+  },
+  "OH WOW CENTERSEAL POUCH": {
+    packaging: "Pouch",
+    noOfPkt: 12,
+    noOfUnits: 100,
+    mrp: 200,
+  },
+  "OH WOW GIFT BOX": {
+    packaging: "Box",
+    noOfPkt: 24,
+    noOfUnits: 50,
+    mrp: 125,
+  },
+  "OH WOW STANDEE POUCH": {
+    packaging: "Pouch",
+    noOfPkt: 24,
+    noOfUnits: 50,
+    mrp: 100,
+  },
   // ₹5/- PREMIUM GIFT PACK
   "GLORIOUS HEART": {
     packaging: "Cont",
@@ -35,13 +95,25 @@ const descriptionObj = {
   },
     "TRuffle OCtagon": {
     packaging: "Cont",
-    noOfPkt: 20,
+    noOfPkt: 12,
     netWeight: 240,
     mrp: 200,
   },
+     "Stacy MIni COnt": {
+    packaging: "Cont",
+    noOfPkt: 30,
+    netWeight: 180,
+    mrp: 150,
+  },
+       "BOlivia MIni COnt": {
+    packaging: "Cont",
+    noOfPkt: 16,
+    netWeight: 360,
+    mrp: 250,
+  },
     "TRuffle OCtagon heart": {
     packaging: "Cont",
-    noOfPkt: 25,
+    noOfPkt: 12,
     netWeight: 300,
     mrp: 240,
   },
@@ -51,6 +123,12 @@ const descriptionObj = {
     noOfPkt: 12,
     noOfUnits: 300,
     mrp: 220,
+  },
+    "BOlivia gift box": {
+    packaging: "Box",
+    noOfPkt: 24,
+    noOfUnits: 25,
+    mrp: 175,
   },
   "BOLIVIA CONT": { packaging: "Cont", noOfPkt: 16, noOfUnits: 360, mrp: 230 },
 
@@ -129,6 +207,12 @@ const descriptionObj = {
   },
   "TRUFFLE CONTAINER (30 PCS)": {
     packaging: "Cont",
+    noOfPkt: 24,
+    noOfUnits: 30,
+    mrp: 150,
+  },
+    "Truffins Box 3opcs": {
+    packaging: "Box",
     noOfPkt: 24,
     noOfUnits: 30,
     mrp: 150,
@@ -1146,7 +1230,8 @@ export const productObj: productType = {
       price: 5,
       category: "Pillow Pack",
       subCategory: "Cocos Pouch",
-      brand: "cocos", /// matter pending
+      brand: "cocos", 
+      desc: descriptionObj["COcos Pouch"]
     },
     {
       name: "Bliss Dark 125 Pcs",
@@ -1197,8 +1282,10 @@ export const productObj: productType = {
       url: "/images/centerMissing/D GOLD CONTAINER.png",
       price: 2,
       category: "Pillow Pack",
-      brand: "endon", //matter pending
+      brand: "endon", 
       isGifting: true,
+      desc: descriptionObj["Endon Containerss"]
+      
     },
     {
       name: "Emporio 70 Pcs",
@@ -1322,8 +1409,8 @@ export const productObj: productType = {
       url: "/images/centerfilledchocolate/GLORIOUS GIFT BOX 5RS.webp",
       price: 5,
       category: "Single Twist",
-      subCategory: "Glorious Gift Box", //matter have to change
-      desc: descriptionObj["BOLIVIA SMALL"],
+      subCategory: "Glorious Gift Box",
+      desc: descriptionObj["BOlivia gift box"],
       isGifting: true,
     },
     {
@@ -1491,11 +1578,6 @@ export const productObj: productType = {
       desc: descriptionObj["ENDON"],
     },
     {
-      name: "Stacy Chocolate Container",
-      url: "/images/centerfilledchocolate/STACY CHOCOLATE CANTAINER  5RS.webp",
-      price: 5,
-    },
-    {
       name: "Stacy Octagon Container",
       url: "/images/centerfilledchocolate/STACY GIFT CONTAINER  5RS.webp",
       price: 5,
@@ -1606,7 +1688,7 @@ export const productObj: productType = {
       category: "Single Twist",
       subCategory: "Bolivia 25Pcs Box",
       brand: "bolivia",
-      desc: descriptionObj["BOLIVIA SMALL"],
+      desc: descriptionObj["BOlivia gift box"],
       isGifting: true,
     },
 
@@ -1753,6 +1835,15 @@ export const productObj: productType = {
       category: "Double Twist",
       subCategory: "Stacy Minis 125 Pcs Box",
       desc: descriptionObj["STACY MINI'S BOX"],
+      
+    },
+        {
+      name: "Stacy Mini's Container",
+      url: "/images/centerfilledchocolate/STACY CHOCOLATE CANTAINER  5RS.webp",
+      price: 2,
+      category: "Double Twist",
+      desc: descriptionObj["Stacy MIni COnt"],
+      brand:"Stacy",
     },
     {
       name: "Brevo 50 Pcs",
@@ -1800,13 +1891,13 @@ export const productObj: productType = {
 
     },
     {
-      name: "Bolivia Container 30 Pcs",
+      name: "Bolivia Jewel Container",
       url: "/images/centerMissing/Bolivia Container.webp",
       price: 5,
       category: "Single Twist",
       subCategory: "Bolivia Container",
       brand: "bolivia",
-      desc: descriptionObj["BOLIVIA CONT (30 PCS)"],
+      desc: descriptionObj["BOlivia MIni COnt"],
       isGifting: true,
     },
     {
@@ -1822,10 +1913,11 @@ export const productObj: productType = {
       url: "/images/centerfilledchocolate/TRUFFINS 30 PCS 5RS.webp",
       price: 5,
       category: "Double Twist",
-      subCategory: "Truffles 30 Pcs", //METTER PANDING
+      subCategory: "Truffles 30 Pcs", 
+      desc: descriptionObj["Truffins Box 3opcs"],
     },
     {
-      name: "Truffle 30 Pcs",
+      name: "Truffins 30 Pcs",
       url: "/images/centerfilledchocolate/TRUFFINS 30 PCS 1  5RS.webp",
       price: 5,
       category: "Double Twist",
@@ -1852,7 +1944,8 @@ export const productObj: productType = {
       url: "/images/centerfilledchocolate/TRUFFINS CONTAINER  5RS.webp",
       price: 5,
       category: "Double Twist",
-      subCategory: "Truffins Container", //METTER PANDING
+      subCategory: "Truffins Container", 
+      desc: descriptionObj["Truffins Cont"],
     },
 
     {
@@ -1902,13 +1995,13 @@ export const productObj: productType = {
     //   category: "Single Twist",
     //   subCategory: "Oriento 2Kg Box",
     // },
-    {
-      name: "Oriento Container 30 Pcs ",
-      url: "/images/DAZZY LOGO.webp",
-      price: 5,
-      category: "Single Twist",
-      subCategory: "Oriento 30pcs Container", ///matter lest
-    },
+    // {
+    //   name: "Oriento Container 30 Pcs ",
+    //   url: "/images/DAZZY LOGO.webp",
+    //   price: 5,
+    //   category: "Single Twist",
+    //   subCategory: "Oriento 30pcs Container", ///matter lest
+    // },
     {
       name: "Maxic Box 125 Pcs",
       url: "/images/centerfilledchocolate/MAXIC  BOX 125 PCS 2RS.webp",
@@ -1978,17 +2071,20 @@ export const productObj: productType = {
     {
       name: "Choco Toco ₹10 ",
       url: "/images/decorativechocolate/CHOCO TOCON 10RS.webp",
-      price: 10, //metter pending
+      price: 10, 
+      desc: descriptionObj["CHOCO TOCO"],
     },
     {
       name: "Choc Cone ₹5",
       url: "/images/decorativechocolate/CHOCO COAN 5RS.webp",
-      price: 5, //meter pending
+      price: 5,
+      desc: descriptionObj["CHOC CONE"],
+
     },
   ],
   "Crunchy chocolate": [
     {
-      name: "Oh! Wow 70 Pcs",
+      name: "Oh! Wow 125 Pcs",
       url: "/images/peanut chocolate/OH WOW BIG BOX.webp",
       price: 5,
       brand: "oh! wow",
@@ -1999,18 +2095,21 @@ export const productObj: productType = {
       url: "/images/peanut chocolate/OH WOW POUCH.webp",
       price: 2,
       brand: "oh! wow",
+      desc: descriptionObj["OH WOW CENTERSEAL POUCH"],
     },
     {
       name: "Oh! Wow Gift Box",
       url: "/images/peanut chocolate/OH WOW SMALL BOX.webp",
       price: 2,
       brand: "oh! wow",
+      desc: descriptionObj["OH WOW GIFT BOX"],
     },
     {
       name: "Oh! Wow Standy Pouch",
       url: "/images/peanut chocolate/OH WOW STANDY POUCH.webp",
       price: 2,
       brand: "oh! wow",
+      desc: descriptionObj["OH WOW STANDEE POUCH"],
     },
     {
       name: "Oh! Wow Container",
