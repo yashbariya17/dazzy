@@ -7,7 +7,7 @@ type SingleProduct = productType[string][number];
 interface ViewMoreProps {
   products: SingleProduct[];
   onClose: () => void;
-}   
+}
 
 export default function ViewMore({ products, onClose }: ViewMoreProps) {
   const navigate = useNavigate();
@@ -38,12 +38,18 @@ export default function ViewMore({ products, onClose }: ViewMoreProps) {
               {products.map((i, index) => (
                 <motion.div
                   key={i.url + i.name + index}
-                  className={`  sm:w-[200px]   bg-gray-100 rounded-3xl shadow-md flex flex-col items-center  p-4 ${products?.length==1 ?"!max-h-[50vh] h-[380px] !w-[350px]" :"w-[160px] h-[300px]"}`}
+                  className={`  sm:w-[200px]   bg-gray-100 rounded-3xl shadow-md flex flex-col items-center  p-4 ${
+                    products?.length == 1
+                      ? "!max-h-[50vh] h-[380px] !w-[350px]"
+                      : "w-[160px] h-[300px]"
+                  }`}
                 >
                   <motion.img
                     layoutId={i.url + i.name}
                     src={i.url}
-                    className={` object-contain mt-4 ${products?.length==1?"h-[80%] ":"h-[70%]"}`}
+                    className={` object-contain mt-4 ${
+                      products?.length == 1 ? "h-[80%] " : "h-[70%]"
+                    }`}
                   />
                   <p className="text-center text-sm sm:text-base font-semibold mt-2">
                     {i.name}
@@ -57,22 +63,22 @@ export default function ViewMore({ products, onClose }: ViewMoreProps) {
                   <strong>Pkg:</strong> {products[0]?.desc?.packaging ?? "Box"}
                 </p>
                 <p>
-                  <strong>No Of PKT:</strong>{" "}
-                  {products[0]?.desc?.noOfPkt + ""}
+                  <strong>No Of PKT:</strong> {products[0]?.desc?.noOfPkt + ""}
                 </p>
-                {
-                  products[0]?.desc?.noOfUnits && (
-                    
-                    <p>
-                  <strong>No Of Units:</strong>{" "}
-                  {products[0]?.desc?.noOfUnits ?? "500"}
-                </p>
-                )}
-                {products[0]?.desc?.mrp && (
-
+                {products[0]?.desc?.noOfUnits ? (
                   <p>
-                  <strong>MRP:</strong> {products[0]?.desc?.mrp ?? "20"}
-                </p>
+                    <strong>No Of Units:</strong> {products[0].desc.noOfUnits}
+                  </p>
+                ) : products[0]?.desc?.netWeight ? (
+                  <p>
+                    <strong>Net Weight:</strong> {products[0].desc.netWeight} gm
+                  </p>
+                ) : null}
+
+                {products[0]?.desc?.mrp && (
+                  <p>
+                    <strong>MRP:</strong> {products[0]?.desc?.mrp ?? "20"}
+                  </p>
                 )}
               </div>
               <button

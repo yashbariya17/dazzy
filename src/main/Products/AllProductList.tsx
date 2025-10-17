@@ -13,7 +13,7 @@ export type productType = {
       noOfPkt?: string | number; // Allow both string and number
       noOfUnits?: number; // Number of units
       mrp?: number; // MRP
-      netweight?: number; // Number of units
+      netWeight?: number; // Number of units
     };
   }[];
 };
@@ -32,6 +32,18 @@ const descriptionObj = {
     noOfPkt: 20,
     noOfUnits: 240,
     mrp: 185,
+  },
+    "TRuffle OCtagon": {
+    packaging: "Cont",
+    noOfPkt: 20,
+    netWeight: 240,
+    mrp: 200,
+  },
+    "TRuffle OCtagon heart": {
+    packaging: "Cont",
+    noOfPkt: 25,
+    netWeight: 300,
+    mrp: 240,
   },
   "TRUFFLE HEART": { packaging: "Cont", noOfPkt: 12, noOfUnits: 240, mrp: 185 },
   "TRUFFLE OCTAGON": {
@@ -763,7 +775,7 @@ export const productObj: productType = {
       category: "Single Twist",
       // subCategory: "Truffles 30 Pcs Container",
       brand: "truffle",
-      desc: descriptionObj["GLORIOUS HEART"], //gram instead of units
+      desc: descriptionObj["TRuffle OCtagon heart"], //gram instead of units
       isGifting: true,
     },
     {
@@ -773,7 +785,7 @@ export const productObj: productType = {
       category: "Single Twist",
       subCategory: "Truffles 30 Pcs Container",
       brand: "truffle",
-      desc: descriptionObj["GLORIOUS HEART"], //gram instead of units
+      desc: descriptionObj["TRuffle OCtagon"], //gram instead of units
       isGifting: true,
     },
     // {
@@ -1367,7 +1379,7 @@ export const productObj: productType = {
       price: 5,
       category: "Single Twist",
       subCategory: "Glorious 30Pcs Container",
-      desc: descriptionObj["GLORIOUS HEART"], //gram instead of units
+      desc: descriptionObj["TRuffle OCtagon"], //gram instead of units
       isGifting: true,
     },
     {
@@ -1483,34 +1495,12 @@ export const productObj: productType = {
       url: "/images/centerfilledchocolate/STACY CHOCOLATE CANTAINER  5RS.webp",
       price: 5,
     },
-    // {
-    //   name: "Stacy Box",
-    //   url: "/images/centerfilledchocolate/STACY BOX 70PCS 2  5RS.webp",
-    //   price: 5,
-
-    // },
     {
-      name: "Stacy Gift Container",
+      name: "Stacy Octagon Container",
       url: "/images/centerfilledchocolate/STACY GIFT CONTAINER  5RS.webp",
       price: 5,
-      desc: descriptionObj["GLORIOUS HEART"],
+      desc: descriptionObj["TRuffle OCtagon heart"], //gram instead of units
     },
-
-    {
-      name: "Boliva Container",
-      url: "/images/centerfilledchocolate/BOLIVA CONTAINER 5RS.webp",
-      price: 5,
-    },
-    {
-      name: "Bolivia Big Box",
-      url: "/images/centerfilledchocolate/BOLIVIA150 PCS BOX 5RS.webp",
-      price: 5,
-      category: "Single Twist",
-      subCategory: "Bolivia 150 Pcs Box",
-      brand: "bolivia",
-      desc: descriptionObj["BIG DELITE"],
-    },
-
     {
       name: "Delite Blueberry 70 Pcs",
       url: "/images/centerfilledchocolate/DELIGHT BLUEBERRY 70PCS BOX 5RS.webp",
@@ -1568,14 +1558,14 @@ export const productObj: productType = {
       subCategory: "Stacy Box 20pcs",
       desc: descriptionObj["STACY SMALL"],
     },
-    {
-      name: "Stacy Octagon",
-      url: "/images/centerMissing/STACY OCTAGON.png",
-      price: 5,
-      category: "Double Twist",
-      desc: descriptionObj["TRUFFLE OCTAGON"],
-      isGifting: true,
-    },
+    // {
+    //   name: "Stacy Octagon",
+    //   url: "/images/centerMissing/STACY OCTAGON.png",
+    //   price: 5,
+    //   category: "Double Twist",
+    //   desc: descriptionObj["TRUFFLE OCTAGON"],
+    //   isGifting: true,
+    // },
     {
       name: "Stacy Container",
       url: "/images/centerfilledchocolate/STACY CONTAINER  5RS.webp",
@@ -1598,6 +1588,16 @@ export const productObj: productType = {
       subCategory: "Bolivia 70 Pcs Box",
       brand: "bolivia",
       desc: descriptionObj["TRUFFLE"],
+    },
+
+        {
+      name: "Bolivia Big Box",
+      url: "/images/centerfilledchocolate/BOLIVIA150 PCS BOX 5RS.webp",
+      price: 5,
+      category: "Single Twist",
+      subCategory: "Bolivia 150 Pcs Box",
+      brand: "bolivia",
+      desc: descriptionObj["BIG DELITE"],
     },
     {
       name: "Bolivia Gift Box",
