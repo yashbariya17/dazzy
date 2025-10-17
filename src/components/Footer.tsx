@@ -96,19 +96,16 @@ const Footer = () => {
             +91 98751 58053
           </p>
           <div className="flex space-x-4 text-xl">
-            <a href="#">
-              <i className="fab fa-youtube"></i>
-            </a>
-            <a href="#">
+            <a href="https://www.facebook.com/p/Dazzy-Confectionery-61560189746290/">
               <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.instagram.com/dazzyconfectionery?igsh=d2NqOWQ2Z3NlZmk4" target="_blank">
+            <a href="https://www.instagram.com/dazzyconfectionery/" target="_blank">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="#">
+            <a href="https://share.google/cDX51qTsszi1NOV74">
               <i className="fab fa-google-plus-g"></i>
             </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/company/dazzyconfectionary/">
               <i className="fab fa-linkedin-in"></i>
             </a>
           </div>
