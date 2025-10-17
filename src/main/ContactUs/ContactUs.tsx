@@ -26,8 +26,8 @@ const ContactUs = () => {
           {/* Map */}
           <div className="md:w-1/2">
             <iframe
-              title="Ahmedabad Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.8028975180253!2d72.57136231542126!3d23.033863921837776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f288a5e2ef%3A0x5d5f3ee40f79a7be!2sAhmedabad%2C%20Gujarat%2C%20India!5e0!3m2!1sen!2sus!4v1718027738241!5m2!1sen!2sus"
+              title="Baroda Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3688.5889133578994!2d73.29028037507264!3d22.40684967961021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fd30038f8b4b9%3A0x6a3217d1ad78c4f2!2sDazzy%20Food%20Pvt%20Ltd!5e0!3m2!1sta!2sin!4v1760702847359!5m2!1sta!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}

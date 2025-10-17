@@ -510,7 +510,7 @@ const testimonials = [
   {
     name: "Vaibhav Patel",
     occupation: "Distributer",
-    ratings: "★★★★☆",
+    // ratings: "★★★★☆",
     review:
       "The quality of their toffees, candies, and chocolates is unmatched, and the unique packaging makes them easy to sell. But what really sets Dazzy apart is how they build relationships — warm, respectful, and always looking out for us. It feels more like a partnership than a business deal.",
     id: 1,
@@ -518,18 +518,34 @@ const testimonials = [
   {
     name: "Vikas Shekhawat",
     occupation: "Distributer",
-    ratings: "★★★★☆",
+    // ratings: "★★★★☆",
     review:
       " The support from Dazzy has been incredible. Their chocolates and lollipops are customer favorites, and their packaging is creative and high-quality. But what we value most is their personal touch — they really care about us and our growth. It's more than business — it's a relationship built on trust.",
     id: 2,
   },
   {
-    name: "Jigar Mistry",
+    name: "Yash Khanna",
     occupation: "Web Designer",
-    ratings: "★★★★☆",
+    // ratings: "★★★★☆",
+    review:
+      " The support from Dazzy has been incredible. Their chocolates and lollipops are customer favorites, and their packaging is creative and high-quality. But what we value most is their personal touch — they really care about us and our growth. It's more than business — it's a relationship built on trust.",
+    id: 3,
+  },
+  {
+    name: "Bhavesh Vadodariya",
+    occupation: "Web Designer",
+    // ratings: "★★★★☆",
+    review:
+      " We’ve been distributing their products for over three years now, and our experience has been fantastic. Not only do customers love the taste, but the packaging helps the products stand out in any store. More importantly, the company has always treated us like a part of their extended family",
+    id: 4,
+  },
+  {
+    name: "Rakesh Bariya",
+    occupation: "Web Designer",
+    // ratings: "★★★★☆",
     review:
       " Penatibus magnis dis point parturient montes nascetur ridiculus mus Ut id lorem ac enim the vestibulum blandit nec sit amet felis. Fusce quis diam odio Cras mattis mi quis tincidunt",
-    id: 3,
+    id: 5,
   },
 ];
 
@@ -554,7 +570,7 @@ const Slider = () => {
           <Slide
             name={selectedItem.name}
             occupation={selectedItem.occupation}
-            ratings={selectedItem.ratings}
+            // ratings={selectedItem.ratings}
             review={selectedItem.review}
             key={selectedItem.id}
           />
@@ -624,12 +640,12 @@ const Slide = forwardRef(function Slide(
   {
     name,
     occupation,
-    ratings,
+    // ratings,
     review,
   }: {
     name: string;
     occupation: string;
-    ratings: string;
+    // ratings: string;
     review: string;
   },
   ref: React.Ref<HTMLDivElement>
@@ -665,7 +681,7 @@ const Slide = forwardRef(function Slide(
         <div>
           <h3 className="font-bold text-sm md:text-lg">{name}</h3>
           <p className="text-sm text-gray-500">{occupation}</p>
-          <div className="text-yellow-500 mt-1">{ratings}</div>
+          {/* <div className="text-yellow-500 mt-1">{ratings}</div> */}
         </div>
       </div>
       <p className="text-gray-600 text-sm md:text-[16px]">{review}</p>
