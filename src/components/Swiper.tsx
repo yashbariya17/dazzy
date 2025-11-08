@@ -7,7 +7,7 @@ import { Navigation, Pagination } from "swiper/modules";
 
 const videos = [
   "/videos/OH!WOW.mp4",
-  "/videos/D'LOVE SLIDER.mp4",
+  "/videos/DLOVE SLIDER.mp4",
   "/videos/DAZZY CHOCO BON.mp4",
   "/videos/BIG STAR.mp4",
   "/videos/FRUIT JELLOS SLIDER.mp4",
