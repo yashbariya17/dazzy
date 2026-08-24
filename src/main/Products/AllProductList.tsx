@@ -106,7 +106,7 @@ const descriptionObj = {
     netWeight: 180,
     mrp: 150,
   },
-       "BOlivia MIni COnt": {
+  "BOlivia MIni COnt": {
     packaging: "Cont",
     noOfPkt: 16,
     netWeight: 360,
@@ -239,6 +239,8 @@ const descriptionObj = {
 
   "KING KONG": { packaging: "Box", noOfPkt: 20, noOfUnits: 40, mrp: 200 },
   "DR. TEDDY": { packaging: "Box", noOfPkt: 20, noOfUnits: 40, mrp: 200 },
+    "BLISS MILKIES": { packaging: "Cont", noOfPkt: 12, noOfUnits: 200, mrp: 200 },
+
   // ₹5/- DECORATIVE CHOCOLATE
   "BIG STAR": { packaging: "Box", noOfPkt: 24, noOfUnits: 40, mrp: 200 },
   CHOKERS: { packaging: "Box", noOfPkt: 24, noOfUnits: 40, mrp: 200 },
@@ -1341,7 +1343,6 @@ export const productObj: productType = {
       desc: descriptionObj["TRUFFLE"],
       brand: "delite",
     },
-
     {
       name: "Delite Strawberry 70 Pcs ",
       url: "/images/centerfilledchocolate/DELIGHT STRAWBERRY 70PCS BOX 5RS.webp",
@@ -1369,7 +1370,6 @@ export const productObj: productType = {
       desc: descriptionObj["TRUFFLE"],
       brand: "delite",
     },
-
     {
       name: "Delite Pistachio Big",
       url: "/images/centerfilledchocolate/DELIGHT PISTACHIO 150PCS BOX 5RS.webp",
@@ -1439,7 +1439,7 @@ export const productObj: productType = {
       subCategory: "Bliss 125pcs Box",
       desc: descriptionObj["BLISS CHOCO"],
       brand: "Milky Bliss",
-     
+
     },
 
     {
@@ -1458,6 +1458,49 @@ export const productObj: productType = {
       price: 1,
       category: "Pillow Pack",
       subCategory: "Bliss 125pcs Box",
+      desc: descriptionObj["BLISS CHOCO"],
+      brand: "Milky Bliss",
+    },
+        {
+      name: "Bliss Dark Container",
+      url: "/images/centerfilledchocolate/choco container.png",
+      price: 1,
+      category: "Pillow Pack",
+      subCategory: "Bliss Container",
+      desc: descriptionObj["BLISS MILKIES"],
+      brand: "Milky Bliss",
+    },
+      {
+      name: "Bliss Strawberry Container",
+      url: "/images/centerfilledchocolate/straw container.png",
+      price: 1,
+      category: "Pillow Pack",
+      subCategory: "Bliss Container",
+      desc: descriptionObj["BLISS CHOCO"],
+      brand: "Milky Bliss",
+    },
+      {
+      name: "Bliss Milk Container",
+      url: "/images/centerfilledchocolate/white container.png",
+      price: 1,
+      category: "Pillow Pack",
+      subCategory: "Bliss Container",
+      desc: descriptionObj["BLISS CHOCO"],
+      brand: "Milky Bliss",
+    },
+       {
+      name: "Milks Cube Container",
+      url: "/images/centerfilledchocolate/milky container.png",
+      price: 1,
+      category: "Pillow Pack",
+      desc: descriptionObj["BLISS MILKIES"],
+      brand: "Milky Bliss",
+    },
+      {
+      name: "Milks Cube ",
+      url: "/images/centerfilledchocolate/cube box .png",
+      price: 1,
+      category: "Pillow Pack",
       desc: descriptionObj["BLISS CHOCO"],
       brand: "Milky Bliss",
     },
@@ -2017,7 +2060,6 @@ export const productObj: productType = {
       subCategory: "Ferola 70Pcs Container",
       desc: descriptionObj["TRUFFLE CONTAINER (30 PCS)"],
       brand: "Ferola",
-
       isGifting: true,
     },
     {
@@ -2029,7 +2071,24 @@ export const productObj: productType = {
       desc: descriptionObj["TRUFFLE CONTAINER"],
       brand: "Ferola",
     },
-
+    {
+      name: "Ferola Container",
+      url: "/images/centerMissing/02.png",
+      price: 5,
+      category: "Double Twist",
+      subCategory: "Ferola Container",
+      desc: descriptionObj["STACY CONT"],
+      brand: "Ferola",
+    },
+                {
+      name: "Ferola Container",
+      url: "/images/centerMissing/01.png",
+      price: 5,
+      category: "Double Twist",
+      subCategory: "Ferola Container",
+      desc: descriptionObj["STACY CONT"],
+      brand: "Ferola",
+    },
     {
       name: "Stacy Mini's Matka Jar",
       url: "/images/centerfilledchocolate/STACY MINIS JAR 2RS.webp",
@@ -2126,7 +2185,7 @@ export const productObj: productType = {
     },
     {
       name: "Bolivia Jewel Container",
-      url: "/images/centerMissing/Bolivia Container.webp",
+      url: "/images/centerMissing/bolivia gift .png",
       price: 5,
       category: "Single Twist",
       subCategory: "Bolivia Container",
@@ -2189,6 +2248,42 @@ export const productObj: productType = {
       category: "Single Twist",
       subCategory: "Oriento 70Pcs Box",
       desc: descriptionObj["TRUFFLE"],
+      brand: "Orientto",
+    },
+    {
+      name: "Orientto Container",
+      url: "/images/centerMissing/oriento container.png",
+      price: 5,
+      category: "Single Twist",
+      subCategory: "Oriento container",
+      desc: descriptionObj["Truffle Container 70"],
+      brand: "Orientto",
+    },
+    {
+      name: "Orientto Container",
+      url: "/images/centerMissing/oriento container1.png",
+      price: 5,
+      category: "Single Twist",
+      subCategory: "Oriento container",
+      desc: descriptionObj["Truffle Container 70"],
+      brand: "Orientto",
+    },
+    {
+      name: "Orientto Container",
+      url: "/images/centerMissing/oriento dabba.png",
+      price: 5,
+      category: "Single Twist",
+      subCategory: "container Box",
+      desc: descriptionObj["GLORIOUS CONT (30 PCS)"],
+      brand: "Orientto",
+    },
+        {
+      name: "Orientto Container",
+      url: "/images/centerMissing/oriento dabba1.png",
+      price: 5,
+      category: "Single Twist",
+      subCategory: "container Box",
+      desc: descriptionObj["GLORIOUS CONT (30 PCS)"],
       brand: "Orientto",
     },
     {
@@ -2293,6 +2388,14 @@ export const productObj: productType = {
       subCategory: "Belgiam 50Pcs Box",
       brand: "King kong",
     },
+        {
+      name: "King Kong",
+      url: "/images/decorativechocolate/01.png",
+      price: 5,
+      desc: descriptionObj["KING KONG"],
+      subCategory: "Belgiam 50Pcs Box",
+      brand: "King kong",
+    },
     {
       name: "Dr.Teddy",
       url: "/images/decorativechocolate/DR TEDDY5RS.webp",
@@ -2389,6 +2492,13 @@ export const productObj: productType = {
       brand: "big star",
       desc: descriptionObj["BIG STAR CONT (30 PCS)"],
     },
+       {
+      name: "Carafins Container",
+      url: "/images/nugut bar/01.png",
+      price: 5,
+      brand: "big star",
+      desc: descriptionObj["BIG STAR CONT (30 PCS)"],
+    },
     {
       name: "Big Star",
       url: "/images/nugut bar/BIG STAR BOX.webp",
@@ -2467,6 +2577,14 @@ export const productObj: productType = {
       brand: "3 stix",
       desc: descriptionObj["3 STIX CHOCO"],
     },
+      {
+      name: "3 Pan Rolle",
+      url: "/images/wafffer rolls/01.png",
+      price: 5,
+      brand: "3 stix",
+      desc: descriptionObj["3 STIX CHOCO"],
+    },
+
 
     {
       name: "Big Rolle Chocolate",
@@ -2485,6 +2603,20 @@ export const productObj: productType = {
     {
       name: "Big Rolle Milk",
       url: "/images/wafffer rolls/big roll milk.webp",
+      price: 5,
+      brand: "big rolle",
+      desc: descriptionObj["BIG ROLLE CHOC"],
+    },
+      {
+      name: "Pan Rolle",
+      url: "/images/wafffer rolls/pan.png",
+      price: 5,
+      brand: "big rolle",
+      desc: descriptionObj["BIG ROLLE CHOC"],
+    },
+     {
+      name: "Kri Kat Rolle",
+      url: "/images/wafffer rolls/kitkat.png",
       price: 5,
       brand: "big rolle",
       desc: descriptionObj["BIG ROLLE CHOC"],
@@ -3087,7 +3219,14 @@ export const productObj: productType = {
   jelly: [
     {
       name: "Jellos Strawberry Jelly",
-      url: "/images/jelly/STRAWBERRY JELLY.webp",
+      url: "/images/jelly/STRAWBERRY JELLY.png",
+      price: 1,
+      desc: descriptionObj["JELLOS BOX"],
+      brand: "Jellos",
+    },
+     {
+      name: "Jellos Orange Jelly",
+      url: "/images/jelly/orange.png",
       price: 1,
       desc: descriptionObj["JELLOS BOX"],
       brand: "Jellos",
@@ -3356,7 +3495,6 @@ export const productObj: productType = {
       subCategory: "China Candy",
       desc: descriptionObj["GUAVA"],
     },
-
     {
       name: "Pineapple Candy",
       url: "/images/candy/PINEAPPLE CANDY 50 PAISA.webp",
@@ -3484,6 +3622,22 @@ export const productObj: productType = {
       name: "Lolly Container",
       url: "/images/lollipop/LOLLY LOLLIPOP.webp",
       price: 5,
+      desc: descriptionObj["LOLLY CONT"],
+    },
+     {
+      name: "Shooter Pops",
+      url: "/images/lollipop/shooter pops.png",
+            subCategory: "shooter pops",
+
+      price: 5,
+      desc: descriptionObj["LOLLY CONT"],
+    },
+     {
+      name: "Shooter Pops",
+      url: "/images/lollipop/shooter pops1.png",
+      price: 5,
+            subCategory: "shooter pops",
+
       desc: descriptionObj["LOLLY CONT"],
     },
     {
